@@ -421,24 +421,35 @@
     </section> <!-- end of testimonial section -->
 
 
- <!-- contact form -->
-<form action="https://formspree.io/engomari6@gmail.com" method="POST">
+    <!-- contact form -->
+    <form
+    action="https://formspree.io/f/xoqooyrz"
+    method="POST"
+    >
     <div class="form-row">
         <div class="form-group col-sm-6">
-            <input type="text" name="name" size="50" class="form-control" placeholder="Your Name" required>
+        <label>
+            Your Name:
+            <input type="text" name="name" class="form-control" required>
+        </label>
         </div>
         <div class="form-group col-sm-6">
-            <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+        <label>
+            Your Email:
+            <input type="email" name="email" class="form-control" required>
+        </label>
         </div>
         <div class="form-group col-sm-12">
-            <textarea name="comment" id="comment" rows="6" class="form-control" placeholder="Write Something"></textarea>
+        <label>
+            Your Message:
+            <textarea name="message" rows="6" class="form-control" required></textarea>
+        </label>
         </div>
         <div class="form-group col-sm-12 mt-3">
-            <input type="submit" value="Send Message" class="btn btn-outline-dark rounded">
+        <button type="submit" class="btn btn-outline-dark rounded">Send Message</button>
         </div>
     </div>
-</form><!-- end of contact form -->
-
+    </form><!-- end of contact form -->
     </div><!-- end of container -->
 </section><!-- end of contact section -->
 
