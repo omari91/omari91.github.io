@@ -35,15 +35,11 @@
                 <li class="item">
                     <a class="link" href="#testmonial">Testmonial</a>
                 </li>
-                <li class="item">
-                    <a class="link" href="#blog">Blog</a>
-                </li>
+                
                 <li class="item">
                     <a class="link" href="#contact">Contact</a>
                 </li>
-                <li class="item ml-md-3">
-                    <a href="components.html" class="btn btn-primary">Components</a>
-                </li>
+                
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
@@ -63,7 +59,10 @@
             </h1>
             <p class="header-subtitle">Product & Customer specialist</p>            
 
-            <button class="btn btn-primary">Visit My Works</button>
+            <button class="btn btn-primary">
+                <a href="#portfolio" style="color: #fff; text-decoration: none;">Visit My Works</a>
+            </button>
+            
         </div>              
     </header><!-- end of page header -->
 
@@ -421,37 +420,32 @@
     </section> <!-- end of testimonial section -->
 
 
-    <!-- contact form -->
-    <form
-    action="https://formspree.io/f/xoqooyrz"
-    method="POST"
-    >
-    <div class="form-row">
-        <div class="form-group col-sm-6">
-        <label>
-            Your Name:
-            <input type="text" name="name" class="form-control" required>
-        </label>
+    <!-- Contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">Get in Touch</p>
+            <h6 class="section-title mb-6">Contact Me</h6>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm" action="https://formspree.io/f/xoqooyrz" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="form-group col-sm-6">
-        <label>
-            Your Email:
-            <input type="email" name="email" class="form-control" required>
-        </label>
-        </div>
-        <div class="form-group col-sm-12">
-        <label>
-            Your Message:
-            <textarea name="message" rows="6" class="form-control" required></textarea>
-        </label>
-        </div>
-        <div class="form-group col-sm-12 mt-3">
-        <button type="submit" class="btn btn-outline-dark rounded">Send Message</button>
-        </div>
-    </div>
-    </form><!-- end of contact form -->
-    </div><!-- end of container -->
-</section><!-- end of contact section -->
+    </section>
+
 
     <!-- footer -->
     <footer class="footer" style="background-color: #695aa6; color: #e35a5a;">
