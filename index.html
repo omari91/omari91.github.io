@@ -20,8 +20,8 @@
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- </head>
- <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
 <!-- Page Navbar -->
 <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
@@ -31,7 +31,16 @@
         </a>
         <a class="logo" href="#">Clifford Omari</a>
         <!-- Language Selector -->
-        <div id="google_translate_element"></div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Language
+            </button>
+            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                <a class="dropdown-item" href="#" onclick="translateLanguage('en')">English</a>
+                <a class="dropdown-item" href="#" onclick="translateLanguage('de')">German</a>
+            </div>
+        </div>
+        <div id="google_translate_element" style="display: none;"></div>
         <!-- Updated navigation structure with the About dropdown -->
         <ul class="nav">
             <li class="item">
@@ -59,18 +68,6 @@
             <li class="item">
                 <a class="link" href="#contact">Contact</a>
             </li>
-            <!-- Language dropdown -->
-            <li class="item">
-                <div class="dropdown">
-                    <a class="link dropdown-toggle" href="#" role="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Language
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <a class="dropdown-item" href="?lang=en">English</a>
-                        <a class="dropdown-item" href="?lang=de">German</a>
-                    </div>
-                </div>
-            </li>
         </ul>
 
         <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
@@ -88,7 +85,7 @@
         <div class="header-content container">
             <h1 class="header-title">
                 <span class="up">HI!</span>
-                <span class="down">I am Clifford Omari</span>
+                <span class="down">I am Clifford Omari Ondieki</span>
             </h1>
             <p class="header-subtitle">Product & Customer specialist</p>            
 
@@ -542,6 +539,13 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    function translateLanguage(lang) {
+        var translateElement = new google.translate.TranslateElement();
+        translateElement.translatePageTo(lang);
+    }
+</script>
 </body>
 
 </html>
