@@ -1,0 +1,31 @@
+{
+  "name": "clifford-ondieki-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Clifford Omari Ondieki - Technical Program Manager & Hybrid Innovator",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completed - static files ready for deployment'",
+    "start": "echo 'Starting development server' && python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "portfolio",
+    "technical-program-manager",
+    "engineering",
+    "innovation",
+    "kenya",
+    "berlin"
+  ],
+  "author": "Clifford Omari Ondieki",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clifford-ondieki/portfolio"
+  },
+  "homepage": "https://clifford-ondieki.netlify.app"
+}
