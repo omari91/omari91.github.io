@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Clifford Omari Ondieki">
+    <title>Über mich - Clifford Omari Ondieki | Die Reise eines Hybrid-Innovators</title>
+    <meta name="description" content="Von Kitales Neugier zu Berlins Innovation - entdecken Sie die Geschichte hinter dem Hybrid-Innovator, der technische Exzellenz mit zweckorientierten Lösungen verbindet.">
+    
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-switcher a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 2px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher a.active {
+            background: #695aa6;
+            color: white;
+        }
+        
+        .journey-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .journey-item {
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #695aa6;
+            border-radius: 50%;
+        }
+        
+        .journey-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e9ecef;
+        }
+        
+        .journey-item:last-child::after {
+            display: none;
+        }
+        
+        .story-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid #695aa6;
+        }
+        
+        .quote-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Language Switcher -->
+<div class="language-switcher">
+    <a href="about.html">EN</a>
+    <a href="about-de.html" class="active">DE</a>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index-de.html">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            <span class="ml-2">Clifford Ondieki <small class="text-muted">| Hybrid-Innovator</small></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index-de.html">Startseite</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about-de.html">Über mich</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects-de.html">Projekte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="philosophy-de.html">Philosophie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog-de.html">Einblicke</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact-de.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="section bg-primary text-white">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Die Reise eines Hybrid-Innovators</h1>
+        <p class="lead">Von Kitales Neugier zu Berlins Innovation – Ingenieurswesen mit Sinn</p>
+    </div>
+</section>
+
+<!-- Main Story Section -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="story-card">
+                    <h3 class="mb-4">Wer ich bin</h3>
+                    <p class="lead">Ich bin Clifford Omari Ondieki, ein Technical Program Manager, der glaubt, dass wahre Innovation aus dem tiefen Verständnis von Systemen entspringt—seien es Stromnetze oder menschliche Verbindungen.</p>
+                    <p>Meine Reise, von den lebendigen Gemeinschaften Kitales in Kenia bis zur dynamischen Tech-Landschaft Berlins, war ein kontinuierlicher Weg der Entwicklung von Ingenieurslösungen und der Verkörperung von Sinn. Jede Herausforderung war eine Umleitung zum Wachstum, jeder Rückschlag eine Lektion in Widerstandsfähigkeit, die nun prägt, wie ich sowohl technische Architektur als auch Teamführung angehe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Spark - Defining Moments -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Der Funke: Prägende Momente</h2>
+                
+                <div class="journey-timeline">
+                    <div class="journey-item">
+                        <h4>Das Radio, das alles veränderte</h4>
+                        <p class="text-muted mb-2">Kitale, Kenia - 12 Jahre alt</p>
+                        <p>Es begann mit einem kaputten Radio in unserem Familienhaus in Kitale. Während andere Kinder draußen spielten, war ich fasziniert von den komplexen Schaltkreisen im Inneren. Dieser Moment, etwas Komplexes auseinanderzunehmen und zu verstehen, wie jede Komponente dem ganzen System dient—das war mein erster Geschmack dessen, was ich heute "Ingenieurswesen mit Empathie" nenne.</p>
+                        <p>Es ging nicht nur darum, ein Radio zu reparieren; es ging darum zu verstehen, dass jedes System, egal wie komplex, einen Zweck hat und jede Komponente eine Rolle spielt. Dieses Prinzip leitet heute alles, von der Art, wie ich SaaS-Lösungen entwerfe, bis hin zur Art, wie ich Teams aufbaue und führe.</p>
+                    </div>
+                    
+                    <div class="journey-item">
+                        <h4>Das Universitätsprojekt, das mir das Scheitern beibrachte</h4>
+                        <p class="text-muted mb-2">JKUAT, Kenia - 2014</p>
+                        <p>Während meines Elektrotechnikstudiums leitete ich ein Teamprojekt zur Optimierung von Energiesystemen, das zunächst spektakulär scheiterte. Wir hatten das technische Wissen, aber übersahen völlig das menschliche Element—wie die Lösung tatsächlich von echten Menschen in echten Gemeinschaften umgesetzt werden würde.</p>
+                        <p>Dieses Scheitern lehrte mich, dass <strong>"Scheitern eine Umleitung ist"</strong>—eine Grundüberzeugung, die nun meinen Innovationsansatz prägt. Es geht nicht darum, Scheitern zu vermeiden; es geht darum, so schnell und gründlich daraus zu lernen, dass jeder Rückschlag zu einem strategischen Vorteil wird.</p>
+                    </div>
+                    
+                    <div class="journey-item">
+                        <h4>Die Entscheidung, Welten zu verbinden</h4>
+                        <p class="text-muted mb-2">Nairobi nach Berlin - 2023</p>
+                        <p>Der Umzug nach Berlin war nicht nur ein Karriereschritt; es war eine bewusste Entscheidung, eine Brücke zwischen der gemeinschaftsorientierten Problemlösung, die ich in Kenia gelernt habe, und dem innovationsgetriebenen Tech-Ökosystem Europas zu werden. Mir wurde klar, dass mein einzigartiger Wert nicht nur in technischer Expertise liegt, sondern darin, eine andere Perspektive darauf zu bringen, wie wir Lösungen entwickeln und skalieren.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Challenges & Growth -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Überwinden & Entwickeln</h2>
+                
+                <div class="story-card">
+                    <h4>Der Balanceakt</h4>
+                    <p>Eine meiner größten Herausforderungen war es zu lernen, Universitätsstudium, Arbeitsverantwortung und Führungsrollen zu balancieren, ohne auszubrennen. Ich versuchte, in Elektrotechnik-Kursen zu glänzen, während ich Teilzeit arbeitete und Studentenorganisationen leitete.</p>
+                    <p>Das lehrte mich, was ich heute <strong>"Intelligente Faulheit"</strong> nenne—die Kunst, Systeme so tief zu verstehen, dass man die eine Änderung identifizieren kann, die zehn Probleme eliminiert. Es geht nicht darum, härter zu arbeiten; es geht darum, mit systemischer Intelligenz zu arbeiten.</p>
+                </div>
+                
+                <div class="story-card">
+                    <h4>Kulturelle Navigation</h4>
+                    <p>Die Eingewöhnung in Berlin brachte einzigartige Herausforderungen mit sich—nicht nur Sprach- und Kulturunterschiede, sondern zu lernen, meinen kenianischen Ansatz zu Gemeinschaftsaufbau und kollaborativer Problemlösung in einem anderen kulturellen Kontext zu kommunizieren.</p>
+                    <p>Diese Erfahrung vertiefte mein Verständnis dafür, dass kulturelle Vielfalt nicht nur schön zu haben ist—sie ist ein Wettbewerbsvorteil. Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit, Prinzipien, die stärkere, widerstandsfähigere technische Teams und nachhaltigere Lösungen schaffen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Inspirations & Mentors -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Meine Leitsterne</h2>
+                
+                <div class="quote-card">
+                    <h4 class="mb-3">Großvaters Weisheit</h4>
+                    <blockquote class="mb-0">
+                        <p class="mb-3">"Verstehen ist wichtiger als Auswendiglernen"</p>
+                        <footer class="blockquote-footer text-light">Die Worte meines Großvaters, die meinen Lern- und Problemlösungsansatz prägten</footer>
+                    </blockquote>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="story-card">
+                            <h5>Technische Mentoren</h5>
+                            <p>Die Ingenieure, die mir beibrachten, dass die elegantesten Lösungen oft die einfachsten sind, und dass wahre technische Meisterschaft aus dem Verständnis des 'Warum' hinter jeder Entscheidung kommt.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="story-card">
+                            <h5>Gemeinschaftsführer</h5>
+                            <p>Die Gemeinschaftsorganisatoren in Kenia, die mir zeigten, dass nachhaltiger Wandel geschieht, wenn man andere befähigt, ihre eigenen Probleme zu lösen, nicht wenn man Probleme für sie löst.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills in Context -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Durch Erfahrung geschmiedete Fähigkeiten</h2>
+                <p class="text-center mb-5">Meine Reise hat ein einzigartiges Fähigkeitsset geschmiedet, das technische Expertise mit tiefem menschlichen Verständnis verbindet—immer mit einem Blick für die menschliche Wirkung hinter jeder Lösung.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h5>Systemarchitektur</h5>
+                        <p>Von 11kV-Stromleitungen zu SaaS-Pipelines—verstehen, wie komplexe Systeme sich vernetzen und skalieren.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Interkulturelle Führung</h5>
+                        <p>Führung vielfältiger Teams durch Überbrückung verschiedener kultureller Ansätze zur Problemlösung und Zusammenarbeit.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Predictive Analytics</h5>
+                        <p>Daten nutzen, nicht nur um zu verstehen, was passiert ist, sondern um Probleme zu antizipieren und zu verhindern, bevor sie auftreten.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Change Management</h5>
+                        <p>Organisationen und Teams bei der Navigation von Transformationen helfen, indem man sich auf die menschlichen Elemente technischer Veränderungen konzentriert.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Produktstrategie</h5>
+                        <p>Technische Fähigkeiten mit Nutzerbedürfnissen und Geschäftszielen durch empathisches Verständnis abstimmen.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Stakeholder-Kommunikation</h5>
+                        <p>Komplexe technische Konzepte in klare, umsetzbare Erkenntnisse für verschiedene Zielgruppen übersetzen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Future Vision -->
+<section class="section bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Blick nach vorn</h2>
+                <p class="lead mb-4">Ich bin angetrieben, Projekte zu leiten, die technische Exzellenz mit KI-gesteuerten Lösungen in Automatisierung und Effizienz verbinden. Mein Ziel ist es, Systeme zu bauen, die sowohl technische Exzellenz als auch menschlichen Zweck dienen.</p>
+                <p class="mb-4">Letztendlich möchte ich die nächste Generation von Ingenieuren mentorieren, MINT-Bildung in Afrika fördern und weiterhin Barrieren durchbrechen, während ich meiner Leidenschaft für zweckorientierte Problemlösung treu bleibe.</p>
+                <a href="contact-de.html" class="btn btn-light btn-lg">Lassen Sie uns gemeinsam die Zukunft gestalten</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+    <div class="container">
+        <div class="social-links text-center m-auto ml-sm-auto">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+                <i class="ti-linkedin"></i>
+            </a>
+        </div>
+        <p class="mb-0" style="margin-top: 10px;">
+            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
+            <a href="#" style="color: #fff;">Clifford Ondieki - Mit Sinn entwickelt</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Core JavaScript -->
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
