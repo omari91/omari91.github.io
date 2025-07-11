@@ -1,0 +1,420 @@
+/* Tech-Earth Fusion Color Theme */
+:root {
+  /* Primary Palette (Clean & Professional) */
+  --midnight-blue: #1C2B4A;
+  --sky-white: #F9FAFB;
+  --steel-gray: #697A90;
+  
+  /* Accent Palette (Human-Centered & Energetic) */
+  --kenyan-earth-red: #C1440E;
+  --lime-green: #A4DE02;
+  --sun-gold: #F5B700;
+  
+  /* Additional colors for better contrast */
+  --dark-gray: #333333;
+  --light-border: #E5E7EB;
+}
+
+/* Global Overrides */
+body {
+  background-color: var(--sky-white);
+  color: var(--dark-gray);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--midnight-blue) !important;
+  border-bottom: 2px solid var(--kenyan-earth-red);
+}
+
+.navbar-brand {
+  color: var(--sky-white) !important;
+}
+
+.navbar-brand:hover {
+  color: var(--lime-green) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--sky-white) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--lime-green) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--steel-gray);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--steel-gray);
+}
+
+.header-title {
+  color: var(--sky-white) !important;
+}
+
+.header-subtitle {
+  color: var(--steel-gray) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--kenyan-earth-red);
+  border-color: var(--kenyan-earth-red);
+  color: var(--sky-white);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #A03A0C;
+  border-color: #A03A0C;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--kenyan-earth-red);
+  border-color: var(--kenyan-earth-red);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--kenyan-earth-red);
+  border-color: var(--kenyan-earth-red);
+}
+
+.btn-light {
+  background-color: var(--sky-white);
+  border-color: var(--sky-white);
+  color: var(--midnight-blue);
+}
+
+.btn-light:hover {
+  background-color: var(--lime-green);
+  border-color: var(--lime-green);
+  color: var(--midnight-blue);
+}
+
+/* Links */
+a {
+  color: var(--lime-green);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--kenyan-earth-red);
+  text-decoration: none;
+}
+
+/* Cards and Sections */
+.service-card,
+.portfolio-card,
+.philosophy-card,
+.story-card,
+.project-detail,
+.contact-card {
+  background-color: var(--sky-white);
+  border: 1px solid var(--light-border);
+  box-shadow: 0 4px 6px rgba(28, 43, 74, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover,
+.philosophy-card:hover,
+.story-card:hover,
+.project-detail:hover,
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(28, 43, 74, 0.15);
+}
+
+/* Section backgrounds */
+.section {
+  background-color: var(--sky-white);
+}
+
+.section.bg-light {
+  background-color: #F3F4F6 !important;
+}
+
+.section.bg-primary,
+.section-sm.bg-primary {
+  background-color: var(--midnight-blue) !important;
+}
+
+/* Hero Section */
+.header {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+}
+
+.hero-tagline {
+  color: var(--lime-green);
+}
+
+/* Language Switcher */
+.language-switcher {
+  background: rgba(249, 250, 251, 0.95);
+  border: 1px solid var(--light-border);
+}
+
+.language-switcher a {
+  color: var(--steel-gray);
+}
+
+.language-switcher a.active,
+.language-switcher a:hover {
+  background: var(--kenyan-earth-red);
+  color: var(--sky-white);
+}
+
+/* Philosophy Cards */
+.philosophy-card {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  color: var(--sky-white);
+  border-left: 4px solid var(--lime-green);
+}
+
+.principle-card {
+  background: linear-gradient(135deg, var(--kenyan-earth-red) 0%, #A03A0C 100%);
+  color: var(--sky-white);
+}
+
+/* Project Cards */
+.portfolio-card-overlay {
+  background: linear-gradient(135deg, rgba(28, 43, 74, 0.9) 0%, rgba(193, 68, 14, 0.9) 100%);
+}
+
+.tech-badge {
+  background: var(--lime-green);
+  color: var(--midnight-blue);
+}
+
+/* Impact Metrics */
+.impact-metrics {
+  background: var(--sky-white);
+  border: 1px solid var(--light-border);
+}
+
+.metric-number {
+  color: var(--kenyan-earth-red);
+}
+
+/* Contact Methods */
+.contact-method {
+  background: var(--sky-white);
+  border: 1px solid var(--light-border);
+}
+
+.contact-method:hover {
+  background: var(--midnight-blue);
+  color: var(--sky-white);
+}
+
+/* Journey Timeline */
+.journey-item::before {
+  background: var(--kenyan-earth-red);
+}
+
+.journey-item::after {
+  background: var(--light-border);
+}
+
+/* Quote Sections */
+.quote-card,
+.quote-section {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  color: var(--sky-white);
+}
+
+.rotating-insight {
+  background: linear-gradient(45deg, var(--kenyan-earth-red), var(--midnight-blue));
+  color: var(--sky-white);
+}
+
+/* Blog Cards */
+.blog-card {
+  background: var(--sky-white);
+  border-left: 4px solid var(--lime-green);
+}
+
+.blog-card.featured-post {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  color: var(--sky-white);
+  border-left: 4px solid var(--sun-gold);
+}
+
+.blog-tag {
+  background: var(--lime-green);
+  color: var(--midnight-blue);
+}
+
+.featured-post .blog-tag {
+  background: var(--sun-gold);
+  color: var(--midnight-blue);
+}
+
+/* LinkedIn CTA */
+.linkedin-cta {
+  background: var(--kenyan-earth-red);
+  color: var(--sky-white);
+}
+
+.linkedin-cta a {
+  color: var(--sky-white);
+}
+
+.linkedin-cta a:hover {
+  color: var(--lime-green);
+}
+
+/* Collaboration Cards */
+.collaboration-card {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  color: var(--sky-white);
+}
+
+/* Berlin Focus */
+.berlin-focus {
+  background: var(--sky-white);
+  border-left: 4px solid var(--sun-gold);
+  border: 1px solid var(--light-border);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--midnight-blue) !important;
+  color: var(--sky-white) !important;
+  border-top: 3px solid var(--kenyan-earth-red);
+}
+
+.footer a {
+  color: var(--sky-white) !important;
+}
+
+.footer a:hover {
+  color: var(--lime-green) !important;
+}
+
+/* Form Controls */
+.form-control {
+  border-color: var(--light-border);
+  background-color: var(--sky-white);
+}
+
+.form-control:focus {
+  border-color: var(--lime-green);
+  box-shadow: 0 0 0 0.2rem rgba(164, 222, 2, 0.25);
+}
+
+/* Skills Grid */
+.skill-card {
+  background: var(--sky-white);
+  border: 1px solid var(--light-border);
+}
+
+.skill-card:hover {
+  border-color: var(--lime-green);
+}
+
+/* Reflection Cards */
+.reflection-card {
+  background: var(--sky-white);
+  border-left: 4px solid var(--sun-gold);
+  border: 1px solid var(--light-border);
+}
+
+/* Lesson Cards */
+.lesson-card {
+  background: linear-gradient(135deg, var(--kenyan-earth-red) 0%, #A03A0C 100%);
+  color: var(--sky-white);
+}
+
+/* Story Section */
+.story-section {
+  background: #F3F4F6;
+}
+
+/* Hero Backgrounds */
+.contact-hero,
+.philosophy-hero,
+.blog-hero,
+.project-hero {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  color: var(--sky-white);
+}
+
+/* Highlights and Accents */
+.section-title {
+  color: var(--steel-gray);
+}
+
+.section-subtitle {
+  color: var(--kenyan-earth-red);
+}
+
+/* Text Colors */
+.text-muted {
+  color: var(--steel-gray) !important;
+}
+
+.lead {
+  color: var(--dark-gray);
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.rotating-insight {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Accessibility Improvements */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus {
+  outline: 2px solid var(--lime-green);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .language-switcher,
+  .navbar,
+  .footer {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
