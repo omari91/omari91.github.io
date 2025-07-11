@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Clifford Omari Ondieki - Hybrid Innovator | Technical Program Manager</title>
-    <meta name="description" content="Technical Program Manager bridging engineering excellence with purpose-driven innovation. From Kenya's power grids to Berlin's tech landscape.">
+    <title>About - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
+    <meta name="description" content="From Kitale's curiosity to Berlin's innovation - discover the story behind the hybrid innovator bridging engineering excellence with purpose-driven solutions.">
     
     <!-- Font Icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -14,26 +14,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     
-    <!-- Custom Styles for Enhanced Design -->
     <style>
-        .header-content {
-            padding-top: 120px; /* Pushes hero content below fixed navbar */
+        body {
+            padding-top: 120px; /* Increased to ensure hero section is not overlapped */
         }
-        .hero-tagline {
-            font-size: 1.5rem;
-            color: #fff;
-            background: rgba(105, 90, 166, 0.85); /* Adds contrast and visibility */
-            padding: 1rem 2rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            font-weight: 500;
-            display: inline-block;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-        }
-        
+
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -61,28 +47,13 @@
             color: white;
         }
         
-        .philosophy-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .story-section {
-            background: #f8f9fa;
-            padding: 4rem 0;
-            margin: 2rem 0;
-        }
-        
         .journey-timeline {
             position: relative;
             padding: 2rem 0;
         }
         
         .journey-item {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             padding-left: 3rem;
             position: relative;
         }
@@ -111,32 +82,68 @@
         .journey-item:last-child::after {
             display: none;
         }
+        
+        .story-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid #695aa6;
+        }
+        
+        .quote-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body>
 
 <!-- Language Switcher -->
 <div class="language-switcher">
-    <a href="index.html" class="active">EN</a>
-    <a href="index-de.html">DE</a>
+    <a href="about.html" class="active">EN</a>
+    <a href="about-de.html">DE</a>
 </div>
 
-<!-- Enhanced Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top" data-spy="affix" data-offset-top="20">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
@@ -156,157 +163,172 @@
     </div>
 </nav>
 
-<!-- Enhanced Hero Section -->
-<header id="home" class="header">
-    <div class="overlay"></div>
-    <div class="header-content container">
-        <div class="hero-tagline">From Kitale's curiosity to Berlin's innovation – Engineering with Purpose</div>
-        <h1 class="header-title">
-            <span class="up">HELLO!</span>
-            <span class="down">I'm Clifford Omari Ondieki</span>
-        </h1>
-        <p class="header-subtitle">Technical Program Manager & Purpose-Driven Innovator</p>
-        <p class="lead text-white-50 mb-4">Bridging Engineering Excellence with Soulful Innovation</p>
-        
-        <div class="mt-4">
-            <a href="projects.html" class="btn btn-primary btn-lg mr-3">Explore My Work</a>
-            <a href="contact.html" class="btn btn-outline-light btn-lg">Let's Energize Change Together ⚡</a>
-        </div>
+<!-- Hero Section -->
+<section class="section bg-primary text-white">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">The Journey of a Hybrid Innovator</h1>
+        <p class="lead" style="color: #fff;">From Kitale's curiosity to Berlin's innovation – Engineering with
+        </p>
     </div>
-</header>
+</section>
 
-<!-- Story Preview Section -->
-<section class="story-section">
+<!-- Main Story Section -->
+<section class="section">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h2 class="mb-4">The Journey of a Hybrid Innovator</h2>
-                <p class="lead">My path from Kenya's power grids to Berlin's tech landscape has been one of continuous evolution—engineering solutions while embodying purpose.</p>
-                <p>I believe true innovation springs from deeply understanding systems, whether they're electrical networks or human connections. Every challenge has been a redirection toward growth, every setback a lesson in resilience.</p>
-                <a href="about.html" class="btn btn-primary">Discover My Story</a>
-            </div>
-            <div class="col-lg-6">
-                <div class="philosophy-card">
-                    <h4 class="mb-3">Engineering Empathy</h4>
-                    <p class="mb-0">"The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose. My Kenyan heritage emphasizes community and collaboration, principles that deeply inform my approach to building high-performing, empathetic teams."</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Quick Highlights -->
-<section class="section">
-    <div class="container text-center">
-        <h6 class="section-title mb-6">What Drives Me</h6>
         <div class="row">
-            <div class="col-md-4">
-                <div class="service-card">
-                    <div class="body">
-                        <img src="assets/imgs/analytics.svg" alt="Systems Thinking" class="icon">
-                        <h6 class="title">Systems Thinking</h6>
-                        <p class="subtitle">From 11kV power lines to SaaS pipelines—understanding interconnected systems is my superpower.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-card">
-                    <div class="body">
-                        <img src="assets/imgs/responsive.svg" alt="Cultural Bridge" class="icon">
-                        <h6 class="title">Cultural Bridge</h6>
-                        <p class="subtitle">Bringing Kenyan community values to Berlin's innovation ecosystem—collaboration over competition.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-card">
-                    <div class="body">
-                        <img src="assets/imgs/toolbox.svg" alt="Purpose-Driven" class="icon">
-                        <h6 class="title">Purpose-Driven Innovation</h6>
-                        <p class="subtitle">Every technical solution I build serves a deeper human need—that's where true impact lives.</p>
-                    </div>
+            <div class="col-lg-8 mx-auto">
+                <div class="story-card">
+                    <h3 class="mb-4">Who I Am</h3>
+                    <p class="lead">I'm Clifford Omari Ondieki, a Technical Program Manager who believes true innovation springs from deeply understanding systems—whether they're power grids or human connections.</p>
+                    <p>My journey, from the vibrant communities of Kitale, Kenya, to the dynamic tech landscape of Berlin, has been a continuous path of engineering solutions and embodying purpose. Every challenge has been a redirection toward growth, every setback a lesson in resilience that now informs how I approach both technical architecture and team leadership.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Featured Projects Preview -->
+<!-- The Spark - Defining Moments -->
 <section class="section bg-light">
-    <div class="container text-center">
-        <p class="section-subtitle">Featured Work</p>
-        <h6 class="section-title mb-6">Engineering with Impact</h6>
+    <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <a href="projects.html#kinangop" class="portfolio-card">
-                    <img src="assets/imgs/Data-Driven.png" class="portfolio-card-img" alt="Kinangop Wind Integration">    
-                    <span class="portfolio-card-overlay">
-                        <span class="portfolio-card-caption">
-                            <h4>Kinangop Wind Integration</h4>
-                            <p class="font-weight-normal">Grid stability meets renewable innovation—a lesson in systemic resilience that now informs my SaaS architecture thinking.</p>
-                        </span>                         
-                    </span>                     
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="projects.html#predictive-ai" class="portfolio-card">
-                    <img class="portfolio-card-img" src="assets/imgs/collaboration.png" alt="Predictive Maintenance AI">
-                    <span class="portfolio-card-overlay">
-                        <span class="portfolio-card-caption">
-                            <h4>Predictive Maintenance AI</h4>
-                            <p class="font-weight-normal">Geothermal optimization that taught me how data-driven decisions create human-centric solutions.</p>
-                        </span>                         
-                    </span>                         
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="projects.html#health-tech" class="portfolio-card">
-                    <img class="portfolio-card-img" src="assets/imgs/change.png" alt="Health Tech Innovation">    
-                    <span class="portfolio-card-overlay">
-                        <span class="portfolio-card-caption">
-                            <h4>Health Tech Load Balancing</h4>
-                            <p class="font-weight-normal">Applying power grid principles to healthcare access—proving that engineering empathy scales across domains.</p>
-                        </span>                         
-                    </span>                     
-                </a>
-            </div>
-        </div>
-        <div class="mt-4">
-            <a href="projects.html" class="btn btn-primary">View All Projects</a>
-        </div>
-    </div>
-</section>
-
-<!-- Philosophy Preview -->
-<section class="section">
-    <div class="container text-center">
-        <p class="section-subtitle">Core Beliefs</p>
-        <h6 class="section-title mb-6">My Philosophy</h6>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="philosophy-card">
-                    <h4 class="mb-3">"Smart Laziness" & Systemic Efficiency</h4>
-                    <p class="mb-3">"True efficiency isn't about working harder—it's about understanding systems so deeply that you can identify the one change that eliminates ten problems."</p>
-                    <p class="mb-0">This principle, learned from debugging transformers in Kenya, now guides how I approach everything from code architecture to team dynamics.</p>
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">The Spark: Defining Moments</h2>
+                
+                <div class="journey-timeline">
+                    <div class="journey-item">
+                        <h4>The Radio That Changed Everything</h4>
+                        <p class="text-muted mb-2">Kitale, Kenya - Age 12</p>
+                        <p>It started with a broken radio in our family home in Kitale. While other kids played outside, I was fascinated by the intricate circuits inside. That moment of taking apart something complex and understanding how each component served the whole system—that was my first taste of what I now call "Engineering Empathy."</p>
+                        <p>This wasn't just about fixing a radio; it was about understanding that every system, no matter how complex, has a purpose and every component has a role. This principle now guides everything from how I architect SaaS solutions to how I build and lead teams.</p>
+                    </div>
+                    
+                    <div class="journey-item">
+                        <h4>The University Project That Taught Me Failure</h4>
+                        <p class="text-muted mb-2">JKUAT, Kenya - 2015</p>
+                        <p>During my electrical engineering studies, I led a team project on power system optimization that initially failed spectacularly. We had the technical knowledge but completely missed the human element—how the solution would actually be implemented by real people in real communities.</p>
+                        <p>This failure taught me that <strong>"failure is redirection"</strong>—a core belief that now shapes my approach to innovation. It's not about avoiding failure; it's about learning from it so quickly and thoroughly that each setback becomes a strategic advantage.</p>
+                    </div>
+                    
+                    <div class="journey-item">
+                        <h4>The Decision to Bridge Worlds</h4>
+                        <p class="text-muted mb-2">Nairobi to Berlin - 2025</p>
+                        <p>Moving to Berlin wasn't just a career move; it was a conscious decision to become a bridge between the community-focused problem-solving I learned in Kenya and the innovation-driven tech ecosystem of Europe. I realized that my unique value lies not just in technical expertise, but in bringing a different perspective to how we build and scale solutions.</p>
+                    </div>
                 </div>
-                <a href="philosophy.html" class="btn btn-outline-primary mt-3">Explore My Philosophy</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="section-sm bg-primary">
-    <div class="container text-center text-sm-left">
-        <div class="row align-items-center">
-            <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                <h6 class="title text-light">Ready to Innovate Together?</h6>
-                <p class="m-0 text-light">Let's build systems that serve both technical excellence and human purpose</p>
+<!-- Challenges & Growth -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Overcoming & Evolving</h2>
+                
+                <div class="story-card">
+                    <h4>The Balancing Act</h4>
+                    <p>One of my greatest challenges was learning to balance university studies, work responsibilities, and leadership roles without burning out. I was trying to excel in electrical engineering coursework while working part-time and leading student organizations.</p>
+                    <p>This taught me what I now call <strong>"Smart Laziness"</strong>—the art of understanding systems so deeply that you can identify the one change that eliminates ten problems. It's not about working harder; it's about working with systemic intelligence.</p>
+                </div>
+                
+                <div class="story-card">
+                    <h4>Cultural Navigation</h4>
+                    <p>Settling in Berlin presented unique challenges—not just language and cultural differences, but learning to communicate my Kenyan approach to community-building and collaborative problem-solving in a different cultural context.</p>
+                    <p>This experience deepened my understanding of how cultural diversity isn't just nice to have—it's a competitive advantage. My Kenyan heritage emphasizes community and collaboration, principles that I've found create stronger, more resilient technical teams and more sustainable solutions.</p>
+                </div>
             </div>
-            <div class="col-sm offset-sm-2 offset-md-3">
-                <a href="contact.html" class="btn btn-lg my-font btn-light rounded">
-                    Let's Energize Change Together ⚡
-                </a>
+        </div>
+    </div>
+</section>
+
+<!-- Inspirations & Mentors -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">My Guiding Stars</h2>
+                
+                <div class="quote-card">
+                    <h4 class="mb-3">Grandfather's Wisdom</h4>
+                    <blockquote class="mb-0">
+                        <p class="mb-3">"Understanding is more important than memorization"</p>
+                        <footer class="blockquote-footer text-light">My grandfather's words that shaped my approach to learning and problem-solving</footer>
+                    </blockquote>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="story-card">
+                            <h5>Technical Mentors</h5>
+                            <p>The engineers who taught me that the most elegant solutions are often the simplest ones, and that true technical mastery comes from understanding the 'why' behind every decision.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="story-card">
+                            <h5>Community Leaders</h5>
+                            <p>The community organizers in Kenya who showed me that sustainable change happens when you empower others to solve their own problems, not when you solve problems for them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills in Context -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Skills Forged Through Experience</h2>
+                <p class="text-center mb-5">My journey has forged a unique skill set, blending technical expertise with deep human understanding—always with an eye for the human impact behind every solution.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h5>Systems Architecture</h5>
+                        <p>From 11kV power lines to SaaS pipelines—understanding how complex systems interconnect and scale.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Cross-Cultural Leadership</h5>
+                        <p>Leading diverse teams by bridging different cultural approaches to problem-solving and collaboration.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Predictive Analytics</h5>
+                        <p>Using data not just to understand what happened, but to anticipate and prevent problems before they occur.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Change Management</h5>
+                        <p>Helping organizations and teams navigate transformation by focusing on the human elements of technical change.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Product Strategy</h5>
+                        <p>Aligning technical capabilities with user needs and business objectives through empathetic understanding.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h5>Stakeholder Communication</h5>
+                        <p>Translating complex technical concepts into clear, actionable insights for diverse audiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Future Vision -->
+<section class="section bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Looking Ahead</h2>
+                <p class="lead mb-4" style="color: #fff;">
+                    I'm driven to lead projects that merge engineering excellence with AI-driven solutions in automation and efficiency. My goal is to build systems that serve both technical excellence and human purpose.
+                </p>
+                <p class="mb-4" style="color: #fff;">
+                    Ultimately, I aim to mentor the next generation of engineers, foster STEM education in Africa, and continue to break barriers while staying true to my passion for purpose-driven problem-solving.
+                </p>
+                <a href="contact.html" class="btn btn-light btn-lg">Let's Build the Future Together</a>
             </div>
         </div>
     </div>
@@ -330,7 +352,6 @@
 <!-- Core JavaScript -->
 <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 <script src="assets/js/script.js"></script>
 
 </body>
