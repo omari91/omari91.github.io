@@ -25,10 +25,14 @@ body {
 .navbar {
   background-color: var(--midnight-blue) !important;
   border-bottom: 2px solid var(--kenyan-earth-red);
+  padding: 0.5rem 0 !important;
+  min-height: 60px;
 }
 
 .navbar-brand {
   color: var(--sky-white) !important;
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
 }
 
 .navbar-brand:hover {
@@ -38,6 +42,8 @@ body {
 .navbar-nav .nav-link {
   color: var(--sky-white) !important;
   transition: color 0.3s ease;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.95rem;
 }
 
 .navbar-nav .nav-link:hover,
@@ -47,6 +53,7 @@ body {
 
 .navbar-toggler {
   border-color: var(--steel-gray);
+  padding: 0.25rem 0.5rem;
 }
 
 /* Headings */
@@ -60,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-subtitle {
   color: var(--steel-gray) !important;
+  color: var(--sky-white) !important;
 }
 
 /* Buttons */
@@ -149,8 +157,64 @@ a:hover {
 /* Hero Section */
 .header {
   background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  padding-top: 80px; /* Account for fixed navbar */
 }
 
+/* Fix text visibility on dark backgrounds */
+.section.bg-primary,
+.section-sm.bg-primary,
+.philosophy-hero,
+.contact-hero,
+.blog-hero,
+.project-hero {
+  color: var(--sky-white) !important;
+}
+
+.section.bg-primary h1,
+.section.bg-primary h2,
+.section.bg-primary h3,
+.section.bg-primary h4,
+.section.bg-primary h5,
+.section.bg-primary h6,
+.philosophy-hero h1,
+.philosophy-hero h2,
+.philosophy-hero h3,
+.philosophy-hero h4,
+.philosophy-hero h5,
+.philosophy-hero h6,
+.contact-hero h1,
+.contact-hero h2,
+.contact-hero h3,
+.contact-hero h4,
+.contact-hero h5,
+.contact-hero h6,
+.blog-hero h1,
+.blog-hero h2,
+.blog-hero h3,
+.blog-hero h4,
+.blog-hero h5,
+.blog-hero h6,
+.project-hero h1,
+.project-hero h2,
+.project-hero h3,
+.project-hero h4,
+.project-hero h5,
+.project-hero h6 {
+  color: var(--sky-white) !important;
+}
+
+.section.bg-primary p,
+.section.bg-primary .lead,
+.philosophy-hero p,
+.philosophy-hero .lead,
+.contact-hero p,
+.contact-hero .lead,
+.blog-hero p,
+.blog-hero .lead,
+.project-hero p,
+.project-hero .lead {
+  color: var(--sky-white) !important;
+}
 .hero-tagline {
   color: var(--lime-green);
 }
@@ -178,11 +242,30 @@ a:hover {
   border-left: 4px solid var(--lime-green);
 }
 
+.philosophy-card h1,
+.philosophy-card h2,
+.philosophy-card h3,
+.philosophy-card h4,
+.philosophy-card h5,
+.philosophy-card h6,
+.philosophy-card p,
+.philosophy-card .lead {
+  color: var(--sky-white) !important;
+}
 .principle-card {
   background: linear-gradient(135deg, var(--kenyan-earth-red) 0%, #A03A0C 100%);
   color: var(--sky-white);
 }
 
+.principle-card h1,
+.principle-card h2,
+.principle-card h3,
+.principle-card h4,
+.principle-card h5,
+.principle-card h6,
+.principle-card p {
+  color: var(--sky-white) !important;
+}
 /* Project Cards */
 .portfolio-card-overlay {
   background: linear-gradient(135deg, rgba(28, 43, 74, 0.9) 0%, rgba(193, 68, 14, 0.9) 100%);
@@ -230,11 +313,36 @@ a:hover {
   color: var(--sky-white);
 }
 
+.quote-card h1,
+.quote-card h2,
+.quote-card h3,
+.quote-card h4,
+.quote-card h5,
+.quote-card h6,
+.quote-card p,
+.quote-section h1,
+.quote-section h2,
+.quote-section h3,
+.quote-section h4,
+.quote-section h5,
+.quote-section h6,
+.quote-section p {
+  color: var(--sky-white) !important;
+}
 .rotating-insight {
   background: linear-gradient(45deg, var(--kenyan-earth-red), var(--midnight-blue));
   color: var(--sky-white);
 }
 
+.rotating-insight h1,
+.rotating-insight h2,
+.rotating-insight h3,
+.rotating-insight h4,
+.rotating-insight h5,
+.rotating-insight h6,
+.rotating-insight p {
+  color: var(--sky-white) !important;
+}
 /* Blog Cards */
 .blog-card {
   background: var(--sky-white);
@@ -247,6 +355,16 @@ a:hover {
   border-left: 4px solid var(--sun-gold);
 }
 
+.featured-post h1,
+.featured-post h2,
+.featured-post h3,
+.featured-post h4,
+.featured-post h5,
+.featured-post h6,
+.featured-post p,
+.featured-post .lead {
+  color: var(--sky-white) !important;
+}
 .blog-tag {
   background: var(--lime-green);
   color: var(--midnight-blue);
@@ -263,6 +381,15 @@ a:hover {
   color: var(--sky-white);
 }
 
+.linkedin-cta h1,
+.linkedin-cta h2,
+.linkedin-cta h3,
+.linkedin-cta h4,
+.linkedin-cta h5,
+.linkedin-cta h6,
+.linkedin-cta p {
+  color: var(--sky-white) !important;
+}
 .linkedin-cta a {
   color: var(--sky-white);
 }
@@ -277,6 +404,15 @@ a:hover {
   color: var(--sky-white);
 }
 
+.collaboration-card h1,
+.collaboration-card h2,
+.collaboration-card h3,
+.collaboration-card h4,
+.collaboration-card h5,
+.collaboration-card h6,
+.collaboration-card p {
+  color: var(--sky-white) !important;
+}
 /* Berlin Focus */
 .berlin-focus {
   background: var(--sky-white);
@@ -333,6 +469,15 @@ a:hover {
   color: var(--sky-white);
 }
 
+.lesson-card h1,
+.lesson-card h2,
+.lesson-card h3,
+.lesson-card h4,
+.lesson-card h5,
+.lesson-card h6,
+.lesson-card p {
+  color: var(--sky-white) !important;
+}
 /* Story Section */
 .story-section {
   background: #F3F4F6;
@@ -380,6 +525,15 @@ a:hover {
 .rotating-insight {
   animation: fadeIn 2s ease-in-out;
 }
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6,
+.footer p {
+  color: var(--sky-white) !important;
+}
 
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
@@ -394,6 +548,15 @@ a:hover {
   .language-switcher {
     top: 10px;
     right: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem !important;
   }
 }
 
