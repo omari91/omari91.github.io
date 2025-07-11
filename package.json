@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "build": "echo 'Build completed - static files ready for deployment'",
-    "start": "echo 'Starting development server' && python3 -m http.server 3000",
-    "dev": "python3 -m http.server 3000"
+    "start": "echo 'Starting development server' && npx http-server -p 3000",
+    "dev": "npx http-server -p 3000"
   },
   "dependencies": {
     "jquery": "^3.4.1",
