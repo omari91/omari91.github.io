@@ -52,7 +52,7 @@
 
 html {
   font-family: sans-serif;
-  line-height: 1.15;
+  line-height: 1.0;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -735,6 +735,34 @@ pre code {
       -ms-flex: 0 0 91.66667%;
           flex: 0 0 91.66667%;
   max-width: 91.66667%;
+}
+.language-switcher {
+  position: fixed;
+  top: 80px; /* Ensure it's visible below navbar */
+  right: 20px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 5px;
+}
+
+.language-switcher a {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.language-switcher a.active {
+  background: #695aa6;
+  color: white;
 }
 
 .col-12 {
