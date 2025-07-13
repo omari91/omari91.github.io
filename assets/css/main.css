@@ -761,6 +761,17 @@ pre code {
   display: flex; /* ensures side-by-side layout */
   gap: 5px;
 }
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 140px;
+    right: 10px;
+    flex-direction: column;
+  }
+
+  .language-switcher a {
+    margin: 4px 0;
+  }
+}
 
 .col-12 {
   -webkit-box-flex: 0;
