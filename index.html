@@ -334,6 +334,18 @@
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 <script src="assets/js/script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.language-switcher a');
+    links.forEach(link => {
+      if (window.location.pathname.includes(link.getAttribute('href'))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
