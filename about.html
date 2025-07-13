@@ -2,96 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>About - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
+    title>About - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
     <meta name="description" content="From Kitale's curiosity to Berlin's innovation - discover the story behind the hybrid innovator bridging engineering excellence with purpose-driven solutions.">
     
-    <!-- Font Icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap CSS -->
     <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     
     <style>
-        body {
-            padding-top: 80px; /* Increased to ensure hero section is not overlapped */
+        /* Custom styles to push language toggles to the very right */
+        .navbar-language-toggles {
+            margin-left: auto; /* Pushes these toggles to the far right */
+            display: flex; /* Ensures they stay inline */
+            align-items: center; /* Vertically aligns them */
         }
 
-        .language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .navbar-language-toggles .nav-item {
+            margin-left: 5px; /* Small space between language links */
+            margin-right: 5px;
         }
-        
-        .language-switcher a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 2px;
+
+        .navbar-language-toggles .nav-link {
+            padding: 8px 12px; /* Adjust padding for a compact look */
             border-radius: 20px;
-            text-decoration: none;
-            color: #333;
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
-        .language-switcher a.active {
+
+        .navbar-language-toggles .nav-link.active {
             background: #695aa6;
             color: white;
         }
-        
-        .journey-timeline {
-            position: relative;
-            padding: 2rem 0;
+
+        /* General spacing for main nav items */
+        .navbar-nav .nav-item {
+            margin-right: 15px; /* Adjust spacing between main nav items */
+        }
+
+        .contact-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 7rem 0;
         }
         
-        .journey-item {
-            margin-bottom: 3rem;
-            padding-left: 3rem;
-            position: relative;
-        }
-        
-        .journey-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: #695aa6;
-            border-radius: 50%;
-        }
-        
-        .journey-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 12px;
-            width: 2px;
-            height: calc(100% + 1rem);
-            background: #e9ecef;
-        }
-        
-        .journey-item:last-child::after {
-            display: none;
-        }
-        
-        .story-card {
-            background: #f8f9fa;
-            padding: 2rem;
+        .contact-card {
+            background: white;
             border-radius: 15px;
+            padding: 2.5rem;
             margin: 2rem 0;
-            border-left: 4px solid #695aa6;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        .quote-card {
+        .contact-method {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            background: #695aa6;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-method i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 30px;
+        }
+        
+        .contact-method a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .form-control:focus {
+            border-color: #695aa6;
+            box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
+        }
+        
+        .btn-primary {
+            background-color: #695aa6;
+            border-color: #695aa6;
+        }
+        
+        .btn-primary:hover {
+            background-color: #5a4a8a;
+            border-color: #5a4a8a;
+        }
+        
+        .collaboration-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 2rem;
@@ -100,23 +108,12 @@
             text-align: center;
         }
         
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-card {
-            background: white;
+        .berlin-focus {
+            background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
+            border-left: 4px solid #695aa6;
+            margin: 1.5rem 0;
         }
     </style>
 </head>
