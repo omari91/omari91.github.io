@@ -762,9 +762,6 @@ pre code {
   gap: 5px;
 }
 
-.language-switcher a.active { background: #695aa6; color: white;
-                            }
-
 .col-12 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
