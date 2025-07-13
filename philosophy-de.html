@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Projekte - Clifford Omari Ondieki | Ingenieurwesen mit Wirkung</title>
-    <meta name="description" content="Entdecken Sie Projekte, die technische Exzellenz mit zielgerichteter Innovation verbinden – von Kenias Stromnetzen bis zu Berlins Tech-Lösungen.">
+    <title>Philosophie - Clifford Omari Ondieki | Engineering Empathy & Smart Laziness</title>
+    <meta name="description" content="Entdecken Sie die Kernphilosophien, die Innovationen antreiben: Engineering Empathy, Smart Laziness und die Prinzipien, die technische Exzellenz mit menschlicher Zielsetzung verbinden.">
     
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
@@ -41,61 +41,73 @@
             color: white;
         }
         
-        .project-detail {
+        .philosophy-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 7rem 0; /* Increased padding for more space */
+        }
+        
+        .philosophy-card {
             background: white;
             border-radius: 15px;
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 2rem 0;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-left: 4px solid #695aa6;
+            transition: transform 0.3s ease;
         }
         
-        .project-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 6rem 0; /* Increased padding for more space */
-            margin-bottom: 2rem;
+        .philosophy-card:hover {
+            transform: translateY(-5px);
         }
         
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        
-        .tech-badge {
-            background: #695aa6;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.875rem;
-        }
-        
-        .impact-metrics {
+        .quote-section {
             background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-        }
-        
-        .metric-item {
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 2rem 0;
             text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .metric-number {
-            font-size: 2rem;
-            font-weight: bold;
+            font-style: italic;
+            font-size: 1.2rem;
             color: #695aa6;
         }
         
-        .lesson-card {
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .principle-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .reflection-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #695aa6;
+        }
+        
+        .rotating-insight {
+            background: linear-gradient(45deg, #695aa6, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -113,201 +125,104 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html">Startseite</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">Über mich</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="projects.html">Projekte</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="philosophy.html">Philosophie</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="blog.html">Einblicke</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Kontakt</a>
+                    <a class="nav-link" href="contact.html">Verbinden</a>
                 </li>
                 <li class="nav-item">
-    <a href="projects.html" class="nav-link language-toggle en">EN</a>
+    <a href="philosophy.html" class="nav-link language-toggle en">EN</a>
   </li>
   <li class="nav-item">
-    <a href="projects-de.html" class="nav-link language-toggle de active">DE</a>
+    <a href="philosophy-de.html" class="nav-link language-toggle de active">DE</a>
   </li>
 </ul>
         </div>
     </div>
 </nav>
 
-<section class="project-hero">
+<section class="philosophy-hero">
     <div class="container text-center">
-        <h1 class="display-4 mb-4"style="color: #fff;">Ingenieurwesen mit Wirkung</h1>
-        <p class="lead"style="color: #fff;">Projekte, die technische Exzellenz mit menschlicher Zielsetzung verbinden</p>
+        <h1 class="display-4 mb-4"style="color: #fff;">Ingenieurs-Empathie</h1>
+        <p class="lead"style="color: #fff;">Die Philosophie, die technische Exzellenz mit menschlicher Zielsetzung verbindet</p>
     </div>
 </section>
 
-<section class="section" id="kinangop">
+<section class="section">
     <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">Integration von Kinangop-Windenergie</h2>
-                    <p class="lead"> Eine dynamische Spannungsstabilitätsanalyse zur Integration der Kinangop-Windenergie in das 59-Bus-Stromnetz Kenias, mit Simulationen modelliert in DIgSILENT PowerFactory. 
-            <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank">Lesen Sie den vollständigen technischen Bericht</a>.
-          </p>
-                    <h4>Die Herausforderung</h4>
-                    <p>Kenias Stromnetz musste die intermittierende Natur der Windenergie aus dem Kinangop Windpark aufnehmen und gleichzeitig die Systemstabilität aufrechterhalten. Die Herausforderung bestand darin, sicherzustellen, dass Spannungsschwankungen durch die Windenergieerzeugung nicht das gesamte Netz destabilisieren würden, das Millionen von Kenianern versorgt.</p>
-                    
-                    <h4>Mein Ansatz</h4>
-                    <p>Ich habe eine umfassende dynamische Spannungsstabilitätsanalyse mit DIgSILENT PowerFactory entwickelt und dabei das gesamte kenianische Stromsystem mit der vorgeschlagenen Windintegration modelliert. Der Schlüssel lag darin zu verstehen, dass Netzstabilität nicht nur technische Parameter betrifft – es geht darum, eine zuverlässige Stromversorgung für Gemeinden sicherzustellen, die davon für Gesundheitswesen, Bildung und wirtschaftliche Entwicklung abhängig sind.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">DIgSILENT PowerFactory</span>
-                        <span class="tech-badge">Stromsystemanalyse</span>
-                        <span class="tech-badge">Integration erneuerbarer Energien</span>
-                        <span class="tech-badge">Netzstabilitätsmodellierung</span>
-                        <span class="tech-badge">Dynamische Spannungsstabilität</span>
-                        <span class="tech-badge">Simulation</span>
-                          <span class="tech-badge">DFIG Modellierung</span>
-                        <span class="tech-badge">Windenergieprognose</span>
-                        <span class="tech-badge">Lastflussanalyse</span>
-                    </div>
-                    
-                    <h4>Auswirkungen & Ergebnisse</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">25%</div>
-                                <div>Verbesserte Netzstabilität</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">60MW</div>
-                                <div>Integrierte saubere Energie</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">100k+</div>
-                                <div>Haushalte profitierten</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/Data-Driven.png" class="img-fluid rounded" alt="Kinangop Wind Integration">
-                    
-                    <div class="lesson-card">
-                        <h5>Wichtigste Lektion</h5>
-                        <p class="mb-0">Dieses Projekt lehrte mich, dass Resilienz nicht nur für Stromleitungen gilt – sie ist auch für den Zugang der Menschen zu wichtigen Dienstleistungen entscheidend. Das hier entwickelte systemische Denken prägt nun meinen Ansatz für SaaS-Architektur und Lastverteilung.</p>
-                    </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="philosophy-card">
+                    <h2 class="mb-4">Meine Kernphilosophie: Ingenieurs-Empathie</h2>
+                    <p class="lead">Die robustesten Systeme – ob technisch oder menschlich – werden mit tiefem Verständnis und einem Engagement für ein gemeinsames Ziel aufgebaut.</p>
+                    <p>Diese Philosophie entspringt der Überzeugung, dass wahre Innovation mehr als nur technisches Fachwissen erfordert. Sie verlangt die Fähigkeit, den menschlichen Kontext hinter jedem Problem zu verstehen, die kulturellen Nuancen, die die Aufnahme von Lösungen prägen, und die Empathie, Systeme zu bauen, die echten menschlichen Bedürfnissen dienen.</p>
+                    <p>Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit – Prinzipien, die meinen Ansatz beim Aufbau leistungsstarker, empathischer Teams zutiefst beeinflussen. Bei jedem Projekt frage ich nicht nur „Wie können wir das bauen?“, sondern „Wie wird dies den Menschen dienen, die es am dringendsten brauchen?“</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section bg-light" id="predictive-ai">
+<section class="section bg-light">
     <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">KI für vorausschauende Wartung in Geothermiekraftwerken</h2>
-                    <p class="lead">Maschinelles Lernsystem zur Vorhersage von Geräteausfällen in der geothermischen Stromerzeugung.
-                      <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank">Vollständige Dokumentation ansehen</a>.
-                    </p>
-
-                    <h4>Die Herausforderung</h4>
-                    <p>Geothermiekraftwerke im kenianischen Rift Valley erlebten unerwartete Geräteausfälle, was zu kostspieligen Ausfallzeiten und einer reduzierten Erzeugung sauberer Energie führte. Traditionelle Wartungspläne waren ineffizient und reaktiv statt präventiv.</p>
-                    
-                    <h4>Meine Lösung</h4>
-                    <p>Ich entwickelte ein System zur vorausschauenden Wartung, das mithilfe von Algorithmen des maschinellen Lernens Sensordaten über wichtige Geräte hinweg analysiert. Das System lernte, Muster zu identifizieren, die Ausfällen vorausgingen, und ermöglichte so eine proaktive Wartungsplanung.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">TensorFlow</span>
-                        <span class="tech-badge">Zeitreihenanalyse</span>
-                        <span class="tech-badge">IoT-Sensoren</span>
-                        <span class="tech-badge">Datenvisualisierung</span>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="philosophy-card">
+                    <h2 class="mb-4">„Smarte Faulheit“ & Systemische Effizienz</h2>
+                    <div class="quote-section">
+                        „Wahre Effizienz bedeutet nicht, härter zu arbeiten – sie bedeutet, Systeme so tief zu verstehen, dass man die eine Änderung identifizieren kann, die zehn Probleme beseitigt.“
                     </div>
+                    <p>Dieses Prinzip, das ich beim Debuggen von Transformatoren in Kenia gelernt habe, leitet mich heute bei allem, von der Code-Architektur bis zur Teamdynamik. Es geht nicht darum, Arbeit zu vermeiden; es geht darum, mit systemischer Intelligenz zu arbeiten.</p>
                     
-                    <h4>Auswirkungen & Ergebnisse</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">40%</div>
-                                <div>Reduzierung der Ausfallzeiten</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">$2M</div>
-                                <div>Jährliche Kosteneinsparungen</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">95%</div>
-                                <div>Vorhersagegenauigkeit</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/collaboration.png" class="img-fluid rounded" alt="Predictive Maintenance AI">
-                    
-                    <div class="lesson-card">
-                        <h5>Wichtige Erkenntnis</h5>
-                        <p class="mb-0">Dieses Projekt zeigte, wie datengestützte Entscheidungen menschenzentrierte Lösungen schaffen. Die hier gelernten Prinzipien der Optimierung und Effizienz prägen nun meinen Ansatz für SaaS-Uptime und operative Exzellenz bei Produkten.</p>
-                    </div>
+                    <h4>Wie smarte Faulheit funktioniert:</h4>
+                    <ul>
+                        <li><strong style="color:#222;">Tiefes Systemverständnis:</strong> <span style="color:#222;">Bevor ich optimiere, investiere ich Zeit, um wirklich zu verstehen, wie alle Komponenten interagieren.</span></li>
+                        <li><strong style="color:#222;">Fokus auf die Grundursache:</strong> <span style="color:#222;">Anstatt Symptome zu beheben, identifiziere ich die zugrunde liegenden Muster, die mehrere Probleme verursachen.</span></li>
+                        <li><strong style="color:#222;">Hebelpunkte:</strong> <span style="color:#222;">Ich suche nach minimalen Änderungen, die maximale positive Auswirkungen auf das gesamte System haben.</span></li>
+                        <li><strong style="color:#222;">Automatisierungsphilosophie:</strong> <span style="color:#222;">Wenn ich etwas mehr als zweimal tun muss, baue ich ein System, das es automatisch erledigt.</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="health-tech">
+<section class="section">
     <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">Lastverteilungssystem für Gesundheitstechnologie</h2>
-                    <p class="lead">Anwendung von Stromnetzprinzipien zur Optimierung der Gesundheitsversorgungsverteilung im ländlichen Kenia</p>
-                    
-                    <h4>Die Herausforderung</h4>
-                    <p>Ländliche Gesundheitseinrichtungen in Kenia erlebten ungleichmäßige Patientenbelastungen, wobei einige überlastet waren, während andere unterausgelastet blieben. Dies führte zu längeren Wartezeiten, reduzierter Versorgungsqualität und ineffizienter Ressourcenverteilung.</p>
-                    
-                    <h4>Meine Innovation</h4>
-                    <p>Ausgehend von meiner Erfahrung mit Stromnetzen entwickelte ich einen Lastverteilungsalgorithmus, der den Patientenfluss wie elektrischen Strom behandelt. Das System verteilt Patienten dynamisch, um die Ressourcennutzung zu optimieren und gleichzeitig Reisezeit und Wartezeiten zu minimieren.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">Node.js</span>
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">MongoDB</span>
-                        <span class="tech-badge">Lastverteilungsalgorithmen</span>
-                        <span class="tech-badge">Geospatiale Analyse</span>
-                        <span class="tech-badge">Echtzeit-Analysen</span>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center mb-5">Leitprinzipien</h2>
+                <div class="principle-grid">
+                    <div class="principle-card">
+                        <h4 class="mb-3">Scheitern ist Neuausrichtung</h4>
+                        <p>Jeder Rückschlag enthält wertvolle Informationen über bessere Wege nach vorne. Ich habe gelernt, schnell zu scheitern, schneller zu lernen und jedes Scheitern als strategische Intelligenz für zukünftigen Erfolg zu nutzen.</p>
                     </div>
                     
-                    <h4>Auswirkungen & Ergebnisse</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">50%</div>
-                                <div>Reduzierung der Wartezeiten</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">30%</div>
-                                <div>Verbesserte Ressourcennutzung</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">15k+</div>
-                                <div>Monatlich versorgte Patienten</div>
-                            </div>
-                        </div>
+                    <div class="principle-card">
+                        <h4 class="mb-3">Gemeinschaft über Wettbewerb</h4>
+                        <p>Meine kenianischen Wurzeln lehrten mich, dass nachhaltige Lösungen aus Zusammenarbeit, nicht aus Wettbewerb, entstehen. Die besten Innovationen entstehen, wenn vielfältige Perspektiven auf ein gemeinsames Ziel hin zusammenkommen.</p>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/change.png" class="img-fluid rounded" alt="Health Tech Load Balancing">
                     
-                    <div class="lesson-card">
-                        <h5>Domänenübergreifende Innovation</h5>
-                        <p class="mb-0">Dieses Projekt bewies, dass Ingenieur-Empathie über Domänen hinweg skaliert. Stromnetzprinzipien, angewendet auf den Zugang zur Gesundheitsversorgung, zeigen, wie systemisches Denken scheinbar unzusammenhängende Probleme lösen kann.</p>
+                    <div class="principle-card">
+                        <h4 class="mb-3">Stille ist Kraft</h4>
+                        <p>In einer Welt der ständigen Bewegung entsteht wahre Klarheit aus der Stille. Ich praktiziere tägliche Reflexion und Achtsamkeit, um die Perspektive zu bewahren und Entscheidungen aus einem Ort ruhiger Weisheit zu treffen.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <h4 class="mb-3">Systemisches Denken</h4>
+                        <p>Ob beim Debuggen von Stromnetzen oder der Optimierung von Teamdynamiken, ich gehe Herausforderungen an, indem ich die Zusammenhänge und Rückkopplungsschleifen verstehe, die emergente Verhaltensweisen erzeugen.</p>
                     </div>
                 </div>
             </div>
@@ -317,52 +232,65 @@
 
 <section class="section bg-light">
     <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">SaaS Performance-Optimierungsplattform</h2>
-                    <p class="lead">Laufendes Berliner Projekt zur Anwendung von "Smart Laziness"-Prinzipien zur Automatisierung der Erkennung von Performance-Engpässen</p>
-                    
-                    <h4>Die Herausforderung</h4>
-                    <p>Ein schnell wachsendes SaaS-Unternehmen mit Sitz in Berlin hatte mit Anwendungsproblemen zu kämpfen, die eine ständige manuelle Überwachung und Intervention erforderten. Das Ingenieurteam verbrachte 60% seiner Zeit mit reaktiven Performance-Korrekturen statt mit der Entwicklung neuer Funktionen.</p>
-                    
-                    <h4>Meine "Smart Laziness"-Lösung</h4>
-                    <p>Anstatt weitere Überwachungstools hinzuzufügen, wandte ich meine "Smart Laziness"-Philosophie an – das System so tiefgehend zu verstehen, dass eine Änderung zehn Probleme beseitigt. Ich baute eine intelligente Performance-Optimierungsplattform, die gängige Engpässe automatisch identifiziert und behebt.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">TypeScript</span>
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">Kubernetes</span>
-                        <span class="tech-badge">Prometheus</span>
-                        <span class="tech-badge">Maschinelles Lernen</span>
-                        <span class="tech-badge">Auto-Skalierung</span>
-                    </div>
-                    
-                    <h4>Auswirkungen & Ergebnisse</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">80%</div>
-                                <div>Reduzierung manueller Eingriffe</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">3x</div>
-                                <div>Schnellere Reaktionszeiten</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">Laufend</div>
-                                <div>Funktionserweiterung & Tests</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Tägliche Reflexionen</h2>
+                
+                <div class="reflection-card">
+                    <h4>Über Selbstführung</h4>
+                    <p><em>„Wo verhandle ich noch mit meinem alten Ich?“</em></p>
+                    <p>Diese Frage leitet meine tägliche Praxis der Selbstführung. Wachstum erfordert eine ehrliche Einschätzung, wo ich an Mustern festhalte, die meiner Entwicklung oder meiner Fähigkeit, anderen effektiv zu dienen, nicht mehr dienlich sind.</p>
                 </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/Data-Driven.png" class="img-fluid rounded" alt="SaaS Performance Optimization">
+                
+                <div class="reflection-card">
+                    <h4>Über technische Meisterschaft</h4>
+                    <p><em>„Beim Debuggen von Transformatoren lernte ich systemisches Denken; meine Tochter großzuziehen lehrte mich Geduld und die tiefgreifende Einfachheit der Präsenz.“</em></p>
+                    <p>Die wichtigsten Lektionen kommen oft aus unerwarteten Quellen. Technische Fähigkeiten und Lebensweisheit befruchten sich gegenseitig und schaffen so umfassendere Lösungen.</p>
+                </div>
+                
+                <div class="reflection-card">
+                    <h4>Über Innovation</h4>
+                    <p><em>„Agil ist nicht nur für Software – es ist auch für Stromnetze. Es geht darum, sich anzupassen, zu lernen und Klarheit über Chaos zu finden.“</em></p>
+                    <p>Die Prinzipien, die die Softwareentwicklung effektiv machen – Iteration, Feedback-Schleifen, kontinuierliche Verbesserung – gelten für jedes komplexe System, einschließlich persönliches Wachstum und organisatorische Veränderungen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Gelebte Philosophie</h2>
+                <div class="rotating-insight" id="rotatingInsight">
+                    <h4 class="mb-3">Die heutige Reflexion</h4>
+                    <p class="mb-0">„Verständnis ist wichtiger als Auswendiglernen“ – Die Weisheit meines Großvaters, die weiterhin prägt, wie ich an Lernen, Problemlösung und Innovation herangehe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="philosophy-card">
+                    <h2 class="mb-4">Philosophie in der Praxis</h2>
+                    <p class="lead">Dies sind nicht nur abstrakte Konzepte – es sind die praktischen Rahmenwerke, die ich täglich in der technischen Führung und Innovation nutze.</p>
                     
-                    <div class="lesson-card">
-                        <h5>Philosophie in Aktion</h5>
-                        <p class="mb-0">Das Ziel ist nicht, alles zu überwachen, sondern Systeme zu entwerfen, die sich selbst heilen. Dieses Projekt verkörpert, wie strategische Faulheit, gestützt durch tiefe Einblicke, zu eleganter, skalierbarer Ingenieurkunst führt.</p>
-                    </div>
+                    <h4>In der technischen Architektur:</h4>
+                    <p>Ich entwerfe Systeme mit Empathie für die Entwickler, die sie warten werden, die Benutzer, die von ihnen abhängig sein werden, und die Geschäftsinteressenten, die sie verstehen müssen.</p>
+                    
+                    <h4>In der Teamführung:</h4>
+                    <p>Ich schaffe psychologische Sicherheit, wo Scheitern als wertvolle Daten behandelt wird, wo unterschiedliche Perspektiven aktiv gesucht werden und wo individuelles Wachstum dem kollektiven Erfolg dient.</p>
+                    
+                    <h4>In der Problemlösung:</h4>
+                    <p>Ich investiere Zeit, um den menschlichen Kontext hinter technischen Herausforderungen zu verstehen und sicherzustellen, dass Lösungen nicht nur das unmittelbare Problem, sondern auch die zugrunde liegenden Bedürfnisse ansprechen.</p>
+                    
+                    <h4>In der Innovation:</h4>
+                    <p>Ich überbrücke verschiedene Wissensbereiche – bringe Stromnetzprinzipien in Gesundheitssysteme ein, wende kenianische Gemeinschaftswerte in Berliner Tech-Teams an – denn die besten Innovationen entstehen an der Schnittstelle verschiedener Welten.</p>
                 </div>
             </div>
         </div>
@@ -371,9 +299,9 @@
 
 <section class="section bg-primary text-white">
     <div class="container text-center">
-        <h2 class="mb-4">Bereit, etwas Wirkungsvolles zu schaffen?</h2>
-        <p class="lead mb-4" style="color: #fff;">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich wichtig sind.</p>
-        <a href="contact.html" class="btn btn-light btn-lg">Lassen Sie uns gemeinsam Veränderungen vorantreiben ⚡</a>
+        <h2 class="mb-4">Lassen Sie uns zielgerichtet bauen</h2>
+        <p class="lead mb-4" style="color: #fff;">Wenn diese Prinzipien bei Ihnen Anklang finden, lassen Sie uns erkunden, wie wir Lösungen schaffen können, die sowohl technische Exzellenz als auch menschliches Gedeihen fördern.</p>
+        <a href="contact.html" class="btn btn-light btn-lg">Ein bedeutungsvolles Gespräch beginnen</a>
     </div>
 </section>
 
@@ -394,6 +322,47 @@
 <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 <script src="assets/js/script.js"></script>
+
+<script>
+// Rotating insights functionality
+const insights = [
+    {
+        title: "Die heutige Reflexion",
+        text: "„Verständnis ist wichtiger als Auswendiglernen“ – Die Weisheit meines Großvaters, die weiterhin prägt, wie ich an Lernen, Problemlösung und Innovation herangehe."
+    },
+    {
+        title: "Über Systeme",
+        text: "Jedes komplexe System hat einfache Prinzipien im Kern. Die Kunst besteht darin, diese Prinzipien zu finden und um sie herum zu entwerfen, anstatt gegen sie anzukämpfen."
+    },
+    {
+        title: "Über Wachstum",
+        text: "Wo verhandle ich noch mit meinem alten Ich? Diese tägliche Frage hält mich ehrlich in Bezug auf die Muster, die ich loslassen muss, um auf meinem höchsten Niveau zu dienen."
+    },
+    {
+        title: "Über Innovation",
+        text: "Die besten Lösungen entstehen oft durch die Überbrückung verschiedener Welten – das Denken des Stromnetzes in die Softwarearchitektur zu bringen oder kenianische Gemeinschaftswerte in Berliner Tech-Teams."
+    },
+    {
+        title: "Über Führung",
+        text: "Wahre Führung bedeutet nicht, alle Antworten zu haben – sie bedeutet, die Bedingungen zu schaffen, unter denen die besten Antworten aus der kollektiven Weisheit des Teams entstehen können."
+    }
+];
+
+let currentInsight = 0;
+
+function rotateInsight() {
+    const insightElement = document.getElementById('rotatingInsight');
+    currentInsight = (currentInsight + 1) % insights.length;
+    
+    insightElement.innerHTML = `
+        <h4 class="mb-3">${insights[currentInsight].title}</h4>
+        <p class="mb-0">${insights[currentInsight].text}</p>
+    `;
+}
+
+// Rotate insights every 10 seconds
+setInterval(rotateInsight, 10000);
+</script>
 
 </body>
 </html>
