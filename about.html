@@ -1,438 +1,751 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Clifford Omari Ondieki">
-    <title>About - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
-    <meta name="description" content="From Kitale's curiosity to Berlin's innovation - discover the story behind the hybrid innovator bridging engineering excellence with purpose-driven solutions.">
-    
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    
-    <style>
-        /* Custom styles to push language toggles to the very right */
-        .navbar-language-toggles {
-            margin-left: auto; /* Pushes these toggles to the far right */
-            display: flex; /* Ensures they stay inline */
-            align-items: center; /* Vertically aligns them */
-        }
 
-        .navbar-language-toggles .nav-item {
-            margin-left: 5px; /* Small space between language links */
-            margin-right: 5px;
-        }
+    <meta charset="utf-8">
 
-        .navbar-language-toggles .nav-link {
-            padding: 8px 12px; /* Adjust padding for a compact look */
-            border-radius: 20px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .navbar-language-toggles .nav-link.active {
-            background: #695aa6;
-            color: white;
-        }
+    <meta name="author" content="Clifford Omari Ondieki">
 
-        /* General spacing for main nav items */
-        .navbar-nav .nav-item {
-            margin-right: 15px; /* Adjust spacing between main nav items */
-        }
+    <title>About - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
 
-        /* Hero Section styles - specific to this page if needed */
-        .section.bg-primary.text-white {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 7rem 0;
-        }
+    <meta name="description" content="From Kitale's curiosity to Berlin's innovation - discover the story behind the hybrid innovator bridging engineering excellence with purpose-driven solutions.">
 
-        /* Story Card styles */
-        .story-card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
+    
 
-        .story-card p {
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        
-        .story-card h3 {
-            color: #695aa6; /* Primary color for headings */
-        }
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 
-        /* Image specific style */
-        .goat-img {
-            object-fit: cover;
-            width: 100%;
-            max-width: 400px; /* Max width for image */
-            height: auto;
-            object-position: 50% 50%;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
+    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
 
-        /* Highlight Quote */
-        .highlight-quote {
-            font-size: 1.25rem;
-            font-style: italic;
-            color: #555;
-            margin-top: 1rem;
-            max-width: 400px;
-            text-align: center;
-            line-height: 1.6;
-        }
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-        /* Journey Timeline */
-        .journey-timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 2px solid #ddd;
-        }
+    <link rel="stylesheet" href="assets/css/main.css">
 
-        .journey-item {
-            margin-bottom: 2.5rem;
-            position: relative;
-        }
+    <link rel="stylesheet" href="assets/css/theme.css">
 
-        .journey-item:last-child {
-            margin-bottom: 0;
-        }
+    
 
-        .journey-item::before {
-            content: '';
-            position: absolute;
-            left: -38px; /* Adjust to align with the border */
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            background-color: #695aa6;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            box-shadow: 0 0 0 2px #695aa6;
-        }
+    <style>
 
-        .journey-item h4 {
-            color: #695aa6;
-            margin-bottom: 0.5rem;
-        }
+        /* Custom styles to push language toggles to the very right */
 
-        .journey-item p {
-            margin-bottom: 0.5rem;
-        }
+        .navbar-language-toggles {
 
-        /* Quote Card */
-        .quote-card {
-            background-color: #695aa6; /* Primary color */
-            color: #fff;
-            padding: 2.5rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
+            margin-left: auto; /* Pushes these toggles to the far right */
 
-        .quote-card blockquote {
-            border-left: none;
-            padding: 0;
-            margin: 0;
-        }
+            display: flex; /* Ensures they stay inline */
 
-        .quote-card blockquote p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            color: #fff; /* Ensure text is white */
-        }
+            align-items: center; /* Vertically aligns them */
 
-        .quote-card .blockquote-footer {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-        }
+        }
 
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
 
-        .skill-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
+        .navbar-language-toggles .nav-item {
 
-        .skill-card h5 {
-            color: #695aa6;
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
-        }
+            margin-left: 5px; /* Small space between language links */
 
-        .skill-card p {
-            color: #555;
-        }
-    </style>
+            margin-right: 5px;
+
+        }
+
+
+
+        .navbar-language-toggles .nav-link {
+
+            padding: 8px 12px; /* Adjust padding for a compact look */
+
+            border-radius: 20px;
+
+            font-weight: 500;
+
+            transition: all 0.3s ease;
+
+        }
+
+
+
+        .navbar-language-toggles .nav-link.active {
+
+            background: #695aa6;
+
+            color: white;
+
+        }
+
+
+
+        /* General spacing for main nav items */
+
+        .navbar-nav .nav-item {
+
+            margin-right: 15px; /* Adjust spacing between main nav items */
+
+        }
+
+
+
+        .contact-hero {
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            color: white;
+
+            padding: 7rem 0;
+
+        }
+
+        
+
+        .contact-card {
+
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 2.5rem;
+
+            margin: 2rem 0;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        }
+
+        
+
+        .contact-method {
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 1rem;
+
+            margin: 1rem 0;
+
+            background: #f8f9fa;
+
+            border-radius: 10px;
+
+            transition: all 0.3s ease;
+
+        }
+
+        
+
+        .contact-method:hover {
+
+            background: #695aa6;
+
+            color: white;
+
+            transform: translateY(-2px);
+
+        }
+
+        
+
+        .contact-method i {
+
+            font-size: 1.5rem;
+
+            margin-right: 1rem;
+
+            width: 30px;
+
+        }
+
+        
+
+        .contact-method a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+        
+
+        .form-control:focus {
+
+            border-color: #695aa6;
+
+            box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
+
+        }
+
+        
+
+        .btn-primary {
+
+            background-color: #695aa6;
+
+            border-color: #695aa6;
+
+        }
+
+        
+
+        .btn-primary:hover {
+
+            background-color: #5a4a8a;
+
+            border-color: #5a4a8a;
+
+        }
+
+        
+
+        .collaboration-card {
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            color: white;
+
+            padding: 2rem;
+
+            border-radius: 15px;
+
+            margin: 2rem 0;
+
+            text-align: center;
+
+        }
+
+        
+
+        .berlin-focus {
+
+            background: #f8f9fa;
+
+            padding: 1.5rem;
+
+            border-radius: 10px;
+
+            border-left: 4px solid #695aa6;
+
+            margin: 1.5rem 0;
+
+        }
+
+    </style>
+
 </head>
+
 <body>
 
+
+
+<!-- Navigation -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
-        </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container">
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="philosophy.html">Philosophy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Insights</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Connect</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav navbar-language-toggles">
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link language-toggle en active">EN</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about-de.html" class="nav-link language-toggle de">DE</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+        <a class="navbar-brand" href="index.html">
+
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
+
+            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
+
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="index.html">Home</a>
+
+                </li>
+
+                <li class="nav-item active">
+
+                    <a class="nav-link" href="about.html">About</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="projects.html">Projects</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="philosophy.html">Philosophy</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="blog.html">Insights</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="contact.html">Connect</a>
+
+                </li>
+
+            <!-- Language switcher integrated as nav item -->
+
+  <li class="nav-item">
+
+    <a href="about.html" class="nav-link language-toggle en">EN</a>
+
+  </li>
+
+  <li class="nav-item">
+
+    <a href="about-de.html" class="nav-link language-toggle de">DE</a>
+
+  </li>
+
+</ul>
+
+          
+
+        </div>
+
+    </div>
+
 </nav>
 
-<section class="section bg-primary text-white">
-    <div class="container text-center">
-        <h1 class="display-4 mb-4">The Journey of a Hybrid Innovator</h1>
-        <p class="lead" style="color: #fff;">From Kitale's curiosity to Berlin's innovation – Engineering with Purpose
-        </p>
-    </div>
-</section>
 
-<section class="section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="story-card">
-                    <h3 class="mb-4">Who I Am</h3>
-                    <p class="lead">
-                        I'm Clifford Ondieki, a Technical specialist who believes true innovation springs from deeply understanding systems—whether they're power grids or human connections.
-                    </p>
-                    <p>
-                        My journey, from the vibrant communities of Kitale, Kenya, to the dynamic landscape of Berlin, has been a continuous path of engineering solutions and embodying purpose. Every challenge has been a redirection toward growth, every setback a lesson in resilience with re-aligning with what truly matters that now informs how I approach both technical architecture and team leadership.
-                    </p>
-                    <p>
-                        As I grow into what’s next, I know that for me, building systems won’t just be about efficiency—it’ll be about building bridges between people, purpose, and possibility.
-                    </p>
-                </div>
-            </div>
 
-            <div class="col-md-6 text-center d-flex flex-column align-items-center">
-                <img src="assets/imgs/GOAT.jpg" alt="The GOAT"
-                    class="goat-img mb-3"
-                    width="300" height="340"
-                    loading="lazy"
-                    style="object-fit: cover; width: 100%; max-width: 400px; height: auto; object-position: 50% 50%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);">
-                <p class="highlight-quote fade-in-on-scroll">From Kitale’s hills to Europe code—where cliffs become stairways, each step carved with quiet Strength. 🐐</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="text-center mb-5">The Spark: Defining Moments</h2>
-                
-                <div class="journey-timeline">
-                    <div class="journey-item">
-                        <h4>The Radio That Changed Everything</h4>
-                        <p class="text-muted mb-2">Kitale, Kenya - Age 12</p>
-                        <p>It started with a broken radio in our family home in Kitale. While other kids played outside, I was fascinated by the intricate circuits inside. That moment of taking apart something complex and understanding how each component served the whole system—that was my first taste of what I now call "Engineering Empathy."</p>
-                        <p>This wasn't just about fixing a radio; it was about understanding that every system, no matter how complex, has a purpose and every component has a role. This principle now guides everything from how I architect SaaS solutions to how I build and lead teams.</p>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <h4>The University Project That Taught Me Failure</h4>
-                        <p class="text-muted mb-2">JKUAT, Kenya - 2015</p>
-                        <p>During my electrical engineering studies, I led a team project on power system optimization that initially failed spectacularly. We had the technical knowledge but completely missed the human element—how the solution would actually be implemented by real people in real communities.</p>
-                        <p>This failure taught me that **"failure is redirection"**—a core belief that now shapes my approach to innovation. It's not about avoiding failure; it's about learning from it so quickly and thoroughly that each setback becomes a strategic advantage.</p>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <h4>The Decision to Bridge Worlds</h4>
-                        <p class="text-muted mb-2">Nairobi to Berlin - 2025</p>
-                        <p>Moving to Berlin wasn't just a career move; it was a conscious decision to become a bridge between the community-focused problem-solving I learned in Kenya and the innovation-driven tech ecosystem of Europe. I realized that my unique value lies not just in technical expertise, but in bringing a different perspective to how we build and scale solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="text-center mb-5">Overcoming & Evolving</h2>
-                
-                <div class="story-card">
-                    <h4>The Balancing Act</h4>
-                    <p>One of my greatest challenges was learning to balance university studies, work responsibilities, and leadership roles without burning out. I was trying to excel in electrical engineering coursework while working part-time and leading student organizations.</p>
-                    <p>This taught me what I now call **"Smart Laziness"**—the art of understanding systems so deeply that you can identify the one change that eliminates ten problems. It's not about working harder; it's about working with systemic intelligence.</p>
-                </div>
-                
-                <div class="story-card">
-                    <h4>Cultural Navigation</h4>
-                    <p>Settling in Berlin presented unique challenges—not just language and cultural differences, but learning to communicate my Kenyan approach to community-building and collaborative problem-solving in a different cultural context.</p>
-                    <p>This experience deepened my understanding of how cultural diversity isn't just nice to have—it's a competitive advantage. My Kenyan heritage emphasizes community and collaboration, principles that I've found create stronger, more resilient technical teams and more sustainable solutions.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="text-center mb-5">My Guiding Stars</h2>
-                
-                <div class="quote-card">
-                    <h4 class="mb-3">Grandfather's Wisdom</h4>
-                    <blockquote class="mb-0">
-                        <p class="mb-3">"Understanding is more important than memorization"</p>
-                        <footer class="blockquote-footer text-light">My grandfather's words that shaped my approach to learning and problem-solving</footer>
-                    </blockquote>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="story-card">
-                            <h5>Technical Mentors</h5>
-                            <p>The engineers who taught me that the most elegant solutions are often the simplest ones, and that true technical mastery comes from understanding the 'why' behind every decision.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="story-card">
-                            <h5>Community Leaders</h5>
-                            <p>The community organizers in Kenya who showed me that sustainable change happens when you empower others to solve their own problems, not when you solve problems for them.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="text-center mb-5">Skills Forged Through Experience</h2>
-                <p class="text-center mb-5">My journey has forged a unique skill set, blending technical expertise with deep human understanding—always with an eye for the human impact behind every solution.</p>
-                
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h5>Systems Architecture</h5>
-                        <p>From 11kV power lines to SaaS pipelines—understanding how complex systems interconnect and scale.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h5>Cross-Cultural Leadership</h5>
-                        <p>Leading diverse teams by bridging different cultural approaches to problem-solving and collaboration.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h5>Predictive Analytics</h5>
-                        <p>Using data not just to understand what happened, but to anticipate and prevent problems before they occur.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h5>Change Management</h5>
-                        <p>Helping organizations and teams navigate transformation by focusing on the human elements of technical change.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h5>Product Strategy</h5>
-                        <p>Aligning technical capabilities with user needs and business objectives through empathetic understanding.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h5>Stakeholder Communication</h5>
-                        <p>Translating complex technical concepts into clear, actionable insights for diverse audiences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Hero Section -->
 
 <section class="section bg-primary text-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="mb-4">Looking Ahead</h2>
-                <p class="lead mb-4" style="color: #fff;">
-                    I'm driven to lead projects that merge engineering excellence with AI-driven solutions in automation and efficiency. My goal is to build systems that serve both technical excellence and human purpose.
-                </p>
-                <p class="mb-4" style="color: #fff;">
-                    Ultimately, I aim to mentor the next generation of engineers, foster STEM education in Africa, and continue to break barriers while staying true to my passion for purpose-driven problem-solving.
-                </p>
-                <a href="contact.html" class="btn btn-light btn-lg">Let's Build the Future Together</a>
-            </div>
-        </div>
-    </div>
+
+    <div class="container text-center">
+
+        <h1 class="display-4 mb-4">The Journey of a Hybrid Innovator</h1>
+
+        <p class="lead" style="color: #fff;">From Kitale's curiosity to Berlin's innovation – Engineering with Purpose
+
+        </p>
+
+    </div>
+
 </section>
+
+
+
+<!-- Main Story Section -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <!-- Text Column -->
+
+      <div class="col-md-6">
+
+        <div class="story-card">
+
+          <h3 class="mb-4">Who I Am</h3>
+
+          <p class="lead">
+
+            I'm Clifford Ondieki, a Technical specialist who believes true innovation springs from deeply understanding systems—whether they're power grids or human connections.
+
+          </p>
+
+          <p>
+
+            My journey, from the vibrant communities of Kitale, Kenya, to the dynamic landscape of Berlin, has been a continuous path of engineering solutions and embodying purpose. Every challenge has been a redirection toward growth, every setback a lesson in resilience with re-aligning with what truly matters that now informs how I approach both technical architecture and team leadership.
+
+          </p>
+
+          <p>
+
+            As I grow into what’s next, I know that for me, building systems won’t just be about efficiency—it’ll be about building bridges between people, purpose, and possibility.
+
+          </p>
+
+        
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Image Column -->
+
+<div class="col-md-6 text-center d-flex flex-column align-items-center">
+
+  <img src="assets/imgs/GOAT.jpg" alt="The GOAT"
+
+       class="goat-img mb-3"
+
+       width="300" height="340"
+
+       loading="lazy"
+
+       style="object-fit: cover; width: 100%; max-width: 400px; height: auto; object-position: 50% 50%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);">
+
+  <p class="highlight-quote fade-in-on-scroll">From Kitale’s hills to Europe code—where cliffs become stairways, each step carved with quiet Strength. 🐐</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- The Spark - Defining Moments -->
+
+<section class="section bg-light">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-10 mx-auto">
+
+                <h2 class="text-center mb-5">The Spark: Defining Moments</h2>
+
+                
+
+                <div class="journey-timeline">
+
+                    <div class="journey-item">
+
+                        <h4>The Radio That Changed Everything</h4>
+
+                        <p class="text-muted mb-2">Kitale, Kenya - Age 12</p>
+
+                        <p>It started with a broken radio in our family home in Kitale. While other kids played outside, I was fascinated by the intricate circuits inside. That moment of taking apart something complex and understanding how each component served the whole system—that was my first taste of what I now call "Engineering Empathy."</p>
+
+                        <p>This wasn't just about fixing a radio; it was about understanding that every system, no matter how complex, has a purpose and every component has a role. This principle now guides everything from how I architect SaaS solutions to how I build and lead teams.</p>
+
+                    </div>
+
+                    
+
+                    <div class="journey-item">
+
+                        <h4>The University Project That Taught Me Failure</h4>
+
+                        <p class="text-muted mb-2">JKUAT, Kenya - 2015</p>
+
+                        <p>During my electrical engineering studies, I led a team project on power system optimization that initially failed spectacularly. We had the technical knowledge but completely missed the human element—how the solution would actually be implemented by real people in real communities.</p>
+
+                        <p>This failure taught me that <strong>"failure is redirection"</strong>—a core belief that now shapes my approach to innovation. It's not about avoiding failure; it's about learning from it so quickly and thoroughly that each setback becomes a strategic advantage.</p>
+
+                    </div>
+
+                    
+
+                    <div class="journey-item">
+
+                        <h4>The Decision to Bridge Worlds</h4>
+
+                        <p class="text-muted mb-2">Nairobi to Berlin - 2025</p>
+
+                        <p>Moving to Berlin wasn't just a career move; it was a conscious decision to become a bridge between the community-focused problem-solving I learned in Kenya and the innovation-driven tech ecosystem of Europe. I realized that my unique value lies not just in technical expertise, but in bringing a different perspective to how we build and scale solutions.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Challenges & Growth -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-10 mx-auto">
+
+                <h2 class="text-center mb-5">Overcoming & Evolving</h2>
+
+                
+
+                <div class="story-card">
+
+                    <h4>The Balancing Act</h4>
+
+                    <p>One of my greatest challenges was learning to balance university studies, work responsibilities, and leadership roles without burning out. I was trying to excel in electrical engineering coursework while working part-time and leading student organizations.</p>
+
+                    <p>This taught me what I now call <strong>"Smart Laziness"</strong>—the art of understanding systems so deeply that you can identify the one change that eliminates ten problems. It's not about working harder; it's about working with systemic intelligence.</p>
+
+                </div>
+
+                
+
+                <div class="story-card">
+
+                    <h4>Cultural Navigation</h4>
+
+                    <p>Settling in Berlin presented unique challenges—not just language and cultural differences, but learning to communicate my Kenyan approach to community-building and collaborative problem-solving in a different cultural context.</p>
+
+                    <p>This experience deepened my understanding of how cultural diversity isn't just nice to have—it's a competitive advantage. My Kenyan heritage emphasizes community and collaboration, principles that I've found create stronger, more resilient technical teams and more sustainable solutions.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Inspirations & Mentors -->
+
+<section class="section bg-light">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-10 mx-auto">
+
+                <h2 class="text-center mb-5">My Guiding Stars</h2>
+
+                
+
+                <div class="quote-card">
+
+                    <h4 class="mb-3">Grandfather's Wisdom</h4>
+
+                    <blockquote class="mb-0">
+
+                        <p class="mb-3">"Understanding is more important than memorization"</p>
+
+                        <footer class="blockquote-footer text-light">My grandfather's words that shaped my approach to learning and problem-solving</footer>
+
+                    </blockquote>
+
+                </div>
+
+                
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <div class="story-card">
+
+                            <h5>Technical Mentors</h5>
+
+                            <p>The engineers who taught me that the most elegant solutions are often the simplest ones, and that true technical mastery comes from understanding the 'why' behind every decision.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="story-card">
+
+                            <h5>Community Leaders</h5>
+
+                            <p>The community organizers in Kenya who showed me that sustainable change happens when you empower others to solve their own problems, not when you solve problems for them.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Skills in Context -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-10 mx-auto">
+
+                <h2 class="text-center mb-5">Skills Forged Through Experience</h2>
+
+                <p class="text-center mb-5">My journey has forged a unique skill set, blending technical expertise with deep human understanding—always with an eye for the human impact behind every solution.</p>
+
+                
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+
+                        <h5>Systems Architecture</h5>
+
+                        <p>From 11kV power lines to SaaS pipelines—understanding how complex systems interconnect and scale.</p>
+
+                    </div>
+
+                    <div class="skill-card">
+
+                        <h5>Cross-Cultural Leadership</h5>
+
+                        <p>Leading diverse teams by bridging different cultural approaches to problem-solving and collaboration.</p>
+
+                    </div>
+
+                    <div class="skill-card">
+
+                        <h5>Predictive Analytics</h5>
+
+                        <p>Using data not just to understand what happened, but to anticipate and prevent problems before they occur.</p>
+
+                    </div>
+
+                    <div class="skill-card">
+
+                        <h5>Change Management</h5>
+
+                        <p>Helping organizations and teams navigate transformation by focusing on the human elements of technical change.</p>
+
+                    </div>
+
+                    <div class="skill-card">
+
+                        <h5>Product Strategy</h5>
+
+                        <p>Aligning technical capabilities with user needs and business objectives through empathetic understanding.</p>
+
+                    </div>
+
+                    <div class="skill-card">
+
+                        <h5>Stakeholder Communication</h5>
+
+                        <p>Translating complex technical concepts into clear, actionable insights for diverse audiences.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Future Vision -->
+
+<section class="section bg-primary text-white">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8 mx-auto text-center">
+
+                <h2 class="mb-4">Looking Ahead</h2>
+
+                <p class="lead mb-4" style="color: #fff;">
+
+                    I'm driven to lead projects that merge engineering excellence with AI-driven solutions in automation and efficiency. My goal is to build systems that serve both technical excellence and human purpose.
+
+                </p>
+
+                <p class="mb-4" style="color: #fff;">
+
+                    Ultimately, I aim to mentor the next generation of engineers, foster STEM education in Africa, and continue to break barriers while staying true to my passion for purpose-driven problem-solving.
+
+                </p>
+
+                <a href="contact.html" class="btn btn-light btn-lg">Let's Build the Future Together</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Footer -->
 
 <footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
-    <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
-                <i class="ti-linkedin"></i>
-            </a>
-        </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
-        </p>
-    </div>
+
+    <div class="container">
+
+        <div class="social-links text-center m-auto ml-sm-auto">
+
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+
+                <i class="ti-linkedin"></i>
+
+            </a>
+
+        </div>
+
+        <p class="mb-0" style="margin-top: 10px;">
+
+            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
+
+            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
+
+        </p>
+
+    </div>
+
 </footer>
 
+
+
+<!-- Core JavaScript -->
+
 <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
 <script src="assets/js/script.js"></script>
 
+
+
 </body>
+
 </html>
