@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Clifford Omari Ondieki - Hybrid-Innovator | Technical Program Manager</title>
-    <meta name="description" content="Technical Program Manager, der technische Exzellenz mit zweckorientierten Innovationen verbindet. Von Kenias Stromnetzen zu Berlins Tech-Landschaft.">
+    <title>Clifford Ondieki - Hybrid Innovator | Technical Program Manager</title>
+    <meta name="description" content="Technical Program Manager, der technische Exzellenz mit zielgerichteter Innovation verbindet. Von Kenias Stromnetzen zur Berliner Tech-Landschaft.">
     
     <!-- Font Icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -19,11 +19,21 @@
     
     <!-- Custom Styles for Enhanced Design -->
     <style>
+        /* CSS bleibt unverändert */
+        .header-content {
+            padding-top: 600px;
+            padding-bottom: 600px;
+        }
         .hero-tagline {
-            font-size: 1.2rem;
-            color: #695aa6;
+            font-size: 1.5rem;
+            color: #fff;
+            background: rgba(105, 90, 166, 0.85);
+            padding: 1rem 2rem;
+            border-radius: 20px;
             margin-bottom: 2rem;
-            font-weight: 300;
+            font-weight: 500;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
         }
         
         .language-switcher {
@@ -66,6 +76,43 @@
             background: #f8f9fa;
             padding: 4rem 0;
             margin: 2rem 0;
+            margin-top: 40px;
+        }
+        
+        .journey-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .journey-item {
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #695aa6;
+            border-radius: 50%;
+        }
+        
+        .journey-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e9ecef;
+        }
+        
+        .journey-item:last-child::after {
+            display: none;
         }
     </style>
 </head>
@@ -80,11 +127,11 @@
 <!-- Enhanced Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top" data-spy="affix" data-offset-top="20">
     <div class="container">
-        <a class="navbar-brand" href="index-de.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid-Innovator</small></span>
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="Logo">
+            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -93,19 +140,19 @@
                     <a class="nav-link" href="#home">Startseite</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about-de.html">Über mich</a>
+                    <a class="nav-link" href="about.html">Über mich</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="projects-de.html">Projekte</a>
+                    <a class="nav-link" href="projects.html">Projekte</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="philosophy-de.html">Philosophie</a>
+                    <a class="nav-link" href="philosophy.html">Philosophie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog-de.html">Einblicke</a>
+                    <a class="nav-link" href="blog.html">Einblicke</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact-de.html">Kontakt</a>
+                    <a class="nav-link" href="contact.html">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -116,17 +163,16 @@
 <header id="home" class="header">
     <div class="overlay"></div>
     <div class="header-content container">
-        <div class="hero-tagline">Von Kitales Neugier zu Berlins Innovation – Ingenieurswesen mit Sinn</div>
         <h1 class="header-title">
-            <span class="up">HALLO!</span>
-            <span class="down">Ich bin Clifford Omari Ondieki</span>
+            <span class="down">Ich bin Clifford Ondieki</span>
         </h1>
-        <p class="header-subtitle">Technical Program Manager & Zweckorientierter Innovator</p>
-        <p class="lead text-white-50 mb-4">Verbindung von technischer Exzellenz mit sinnvoller Innovation</p>
-        
-        <div class="mt-4">
-            <a href="projects-de.html" class="btn btn-primary btn-lg mr-3">Meine Arbeit Entdecken</a>
-            <a href="contact-de.html" class="btn btn-outline-light btn-lg">Lassen Sie uns gemeinsam Veränderungen bewirken ⚡</a>
+        <p class="header-subtitle">Technical Program Manager & Sinnorientierter Innovator</p>
+        <p class="lead mb-4" style="color: #000000; background: #ffffff; padding: 1rem 2rem; border-radius: 15px; font-weight: 500; display: inline-block;">
+            Technische Exzellenz mit sinnvoller Innovation verbinden
+        </p>
+        <div class="mt-4 d-flex justify-content-center">
+            <a href="projects.html" class="btn btn-primary btn-lg mr-3">Meine Arbeit erkunden</a>
+            <a href="contact.html" class="btn btn-primary btn-lg mr-3">Lass uns gemeinsam Veränderung bewirken ⚡</a>
         </div>
     </div>
 </header>
@@ -137,14 +183,15 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h2 class="mb-4">Die Reise eines Hybrid-Innovators</h2>
-                <p class="lead">Mein Weg von Kenias Stromnetzen zu Berlins Tech-Landschaft war geprägt von kontinuierlicher Entwicklung—Ingenieurslösungen entwickeln und dabei Sinn verkörpern.</p>
-                <p>Ich glaube, dass wahre Innovation aus dem tiefen Verständnis von Systemen entspringt, seien es elektrische Netzwerke oder menschliche Verbindungen. Jede Herausforderung war eine Umleitung zum Wachstum, jeder Rückschlag eine Lektion in Widerstandsfähigkeit.</p>
-                <a href="about-de.html" class="btn btn-primary">Meine Geschichte Entdecken</a>
+                <p class="lead">Mein Weg von Kenias Stromnetzen zur Berliner Tech-Landschaft war eine stetige Entwicklung - Lösungen entwickeln und Sinnhaftigkeit verkörpern.</p>
+                <p>Ich glaube, dass wahre Innovation aus dem tiefen Verständnis von Systemen entsteht, seien es elektrische Netze oder menschliche Verbindungen. Jede Herausforderung war eine Neuausrichtung zum Wachstum, jeder Rückschlag eine Lektion in Resilienz.</p>
+                <a href="about.html" class="btn btn-primary">Meine Geschichte entdecken</a>
             </div>
             <div class="col-lg-6">
                 <div class="philosophy-card">
-                    <h4 class="mb-3">Ingenieurswesen mit Empathie</h4>
-                    <p class="mb-0">"Die robustesten Systeme—ob technisch oder menschlich—werden mit tiefem Verständnis und einem Engagement für gemeinsame Ziele gebaut. Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit, Prinzipien, die meinen Ansatz beim Aufbau leistungsstarker, empathischer Teams tiefgreifend prägen."</p>
+                    <h4 class="mb-3" style="color: #fff;">Engineering Empathy</h4>
+                    <p class="mb-0" style="color: #fff;">
+    "Die robustesten Systeme - ob technisch oder menschlich - werden mit tiefem Verständnis und Engagement für gemeinsame Ziele aufgebaut. Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit, Prinzipien, die meinen Ansatz für hochleistungsfähige, empathische Teams prägen."</p>
                 </div>
             </div>
         </div>
@@ -161,7 +208,7 @@
                     <div class="body">
                         <img src="assets/imgs/analytics.svg" alt="Systemdenken" class="icon">
                         <h6 class="title">Systemdenken</h6>
-                        <p class="subtitle">Von 11kV-Stromleitungen zu SaaS-Pipelines—das Verständnis vernetzter Systeme ist meine Superkraft.</p>
+                        <p class="subtitle">Von 11kV-Stromleitungen bis SaaS-Pipelines - vernetzte Systeme zu verstehen ist meine Superkraft.</p>
                     </div>
                 </div>
             </div>
@@ -170,16 +217,16 @@
                     <div class="body">
                         <img src="assets/imgs/responsive.svg" alt="Kulturelle Brücke" class="icon">
                         <h6 class="title">Kulturelle Brücke</h6>
-                        <p class="subtitle">Kenianische Gemeinschaftswerte in Berlins Innovations-Ökosystem einbringen—Zusammenarbeit statt Konkurrenz.</p>
+                        <p class="subtitle">Kenianische Gemeinschaftswerte im Berliner Innovationsökosystem - Zusammenarbeit vor Wettbewerb.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card">
                     <div class="body">
-                        <img src="assets/imgs/toolbox.svg" alt="Zweckorientiert" class="icon">
-                        <h6 class="title">Zweckorientierte Innovation</h6>
-                        <p class="subtitle">Jede technische Lösung, die ich entwickle, dient einem tieferen menschlichen Bedürfnis—dort liegt wahre Wirkung.</p>
+                        <img src="assets/imgs/toolbox.svg" alt="Sinnorientierte Innovation" class="icon">
+                        <h6 class="title">Sinnorientierte Innovation</h6>
+                        <p class="subtitle">Jede technische Lösung dient einem menschlichen Bedürfnis - dort entsteht wahre Wirkung.</p>
                     </div>
                 </div>
             </div>
@@ -190,45 +237,45 @@
 <!-- Featured Projects Preview -->
 <section class="section bg-light">
     <div class="container text-center">
-        <p class="section-subtitle">Ausgewählte Arbeiten</p>
-        <h6 class="section-title mb-6">Ingenieurswesen mit Wirkung</h6>
+        <p class="section-subtitle">Ausgewählte Projekte</p>
+        <h6 class="section-title mb-6">Technik mit Wirkung</h6>
         <div class="row">
             <div class="col-md-4">
-                <a href="projects-de.html#kinangop" class="portfolio-card">
+                <a href="projects.html#kinangop" class="portfolio-card">
                     <img src="assets/imgs/Data-Driven.png" class="portfolio-card-img" alt="Kinangop Wind Integration">    
                     <span class="portfolio-card-overlay">
                         <span class="portfolio-card-caption">
                             <h4>Kinangop Wind Integration</h4>
-                            <p class="font-weight-normal">Netzstabilität trifft auf erneuerbare Innovation—eine Lektion in systemischer Widerstandsfähigkeit, die nun mein SaaS-Architektur-Denken prägt.</p>
+                            <p class="font-weight-normal">Netzstabilität trifft auf erneuerbare Innovation - eine Lektion in systemischer Resilienz, die heute mein SaaS-Denken prägt.</p>
                         </span>                         
                     </span>                     
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="projects-de.html#predictive-ai" class="portfolio-card">
-                    <img class="portfolio-card-img" src="assets/imgs/collaboration.png" alt="Predictive Maintenance AI">
+                <a href="projects.html#predictive-ai" class="portfolio-card">
+                    <img class="portfolio-card-img" src="assets/imgs/collaboration.png" alt="Predictive Maintenance KI">
                     <span class="portfolio-card-overlay">
                         <span class="portfolio-card-caption">
-                            <h4>Predictive Maintenance AI</h4>
-                            <p class="font-weight-normal">Geothermische Optimierung, die mir beibrachte, wie datengesteuerte Entscheidungen menschenzentrierte Lösungen schaffen.</p>
+                            <h4>Predictive Maintenance KI</h4>
+                            <p class="font-weight-normal">Geothermie-Optimierung, die mir zeigte, wie datengestützte Entscheidungen menschenzentrierte Lösungen schaffen.</p>
                         </span>                         
                     </span>                         
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="projects-de.html#health-tech" class="portfolio-card">
+                <a href="projects.html#health-tech" class="portfolio-card">
                     <img class="portfolio-card-img" src="assets/imgs/change.png" alt="Health Tech Innovation">    
                     <span class="portfolio-card-overlay">
                         <span class="portfolio-card-caption">
-                            <h4>Health Tech Load Balancing</h4>
-                            <p class="font-weight-normal">Anwendung von Stromnetz-Prinzipien auf den Gesundheitszugang—Beweis, dass Ingenieurswesen mit Empathie domänenübergreifend skaliert.</p>
+                            <h4>Health Tech Lastenausgleich</h4>
+                            <p class="font-weight-normal">Stromnetzprinzipien im Gesundheitswesen - Beweis, dass Engineering Empathy domänenübergreifend skaliert.</p>
                         </span>                         
                     </span>                     
                 </a>
             </div>
         </div>
         <div class="mt-4">
-            <a href="projects-de.html" class="btn btn-primary">Alle Projekte Ansehen</a>
+            <a href="projects.html" class="btn btn-primary">Alle Projekte ansehen</a>
         </div>
     </div>
 </section>
@@ -236,16 +283,16 @@
 <!-- Philosophy Preview -->
 <section class="section">
     <div class="container text-center">
-        <p class="section-subtitle">Grundüberzeugungen</p>
+        <p class="section-subtitle">Kernüberzeugungen</p>
         <h6 class="section-title mb-6">Meine Philosophie</h6>
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="philosophy-card">
-                    <h4 class="mb-3">"Intelligente Faulheit" & Systemische Effizienz</h4>
-                    <p class="mb-3">"Wahre Effizienz bedeutet nicht, härter zu arbeiten—es bedeutet, Systeme so tief zu verstehen, dass man die eine Änderung identifizieren kann, die zehn Probleme eliminiert."</p>
-                    <p class="mb-0">Dieses Prinzip, gelernt beim Debuggen von Transformatoren in Kenia, leitet nun meinen Ansatz bei allem—von Code-Architektur bis hin zu Teamdynamik.</p>
+                    <h4 class="mb-3" style="color: #fff;">"Intelligente Faulheit" & Systemeffizienz</h4>
+                    <p class="mb-3" style="color: #fff;">"Wahre Effizienz bedeutet nicht härter zu arbeiten - sondern Systeme so tief zu verstehen, dass man die eine Änderung findet, die zehn Probleme löst."</p>
+                    <p class="mb-0" style="color: #fff;">Dieses Prinzip, gelernt beim Debuggen von Transformatoren in Kenia, leitet heute meinen Ansatz für Code-Architektur und Teamdynamik.</p>
                 </div>
-                <a href="philosophy-de.html" class="btn btn-outline-primary mt-3">Meine Philosophie Erkunden</a>
+                <a href="philosophy.html" class="btn btn-outline-primary mt-3">Meine Philosophie erkunden</a>
             </div>
         </div>
     </div>
@@ -256,12 +303,12 @@
     <div class="container text-center text-sm-left">
         <div class="row align-items-center">
             <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                <h6 class="title text-light">Bereit, gemeinsam zu innovieren?</h6>
-                <p class="m-0 text-light">Lassen Sie uns Systeme bauen, die sowohl technische Exzellenz als auch menschlichen Zweck dienen</p>
+                <h6 class="title text-light">Bereit für gemeinsame Innovation?</h6>
+                <p class="m-0 text-light">Lass uns Systeme bauen, die technischer Exzellenz und menschlichem Sinn dienen</p>
             </div>
             <div class="col-sm offset-sm-2 offset-md-3">
-                <a href="contact-de.html" class="btn btn-lg my-font btn-light rounded">
-                    Lassen Sie uns gemeinsam Veränderungen bewirken ⚡
+                <a href="contact.html" class="btn btn-lg my-font btn-light rounded">
+                    Lass uns gemeinsam Veränderung bewirken ⚡
                 </a>
             </div>
         </div>
@@ -272,7 +319,7 @@
 <footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profil">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
@@ -288,6 +335,18 @@
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 <script src="assets/js/script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.language-switcher a');
+    links.forEach(link => {
+      if (window.location.pathname.includes(link.getAttribute('href'))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
