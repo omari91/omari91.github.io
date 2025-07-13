@@ -513,16 +513,18 @@ a:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.caption {
-  font-size: 1.05rem;
+.highlight-quote {
+  font-size: 1rem;
   font-style: italic;
-  color: #6c757d;
+  line-height: 1.6;
+  color: #4c4c4c;
   background: linear-gradient(135deg, #f3f3f3, #eae0f0);
-  padding: 16px 20px;
+  padding: 14px 18px;
   border-left: 4px solid #695aa6;
   border-radius: 10px;
-  margin-top: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-top: 12px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease, background 0.8s ease;
@@ -532,6 +534,7 @@ a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Accessibility Improvements */
 .btn:focus,
 .form-control:focus,
