@@ -514,10 +514,20 @@ a:hover {
 }
 
 .caption {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-style: italic;
   color: #6c757d;
-  margin-top: 10px;
+  background: linear-gradient(135deg, #f3f3f3, #eae0f0);
+  padding: 12px 18px;
+  border-left: 4px solid #695aa6;
+  border-radius: 8px;
+  margin-top: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
+
+.highlight-quote:hover {
+  background: linear-gradient(135deg, #eae0f0, #d0c4eb);
 }
 
 /* Accessibility Improvements */
