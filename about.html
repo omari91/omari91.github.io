@@ -14,180 +14,182 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     
     <style>
-        /* Custom styles to push language toggles to the very right */
+        /* General Body and Text Color Inversion */
+        body {
+            background-color: #222; /* Dark background for the body */
+            color: #ddd; /* Light text color */
+        }
+
+        /* Navigation Bar Inversion */
+        .navbar.bg-light {
+            background-color: #333 !important; /* Darker navbar background */
+        }
+        .navbar-brand,
+        .navbar-brand span,
+        .navbar-brand small {
+            color: #eee !important; /* Light text for brand */
+        }
+        .navbar-nav .nav-link {
+            color: #ccc !important; /* Light text for nav links */
+        }
+        .navbar-nav .nav-item.active .nav-link,
+        .navbar-nav .nav-link:hover {
+            color: #fff !important; /* Whiter text for active/hover */
+        }
+        .navbar-toggler-icon {
+            filter: invert(1); /* Invert toggler icon color for visibility */
+        }
+
+
+        /* Custom styles for language toggles */
         .navbar-language-toggles {
-            margin-left: auto; /* Pushes these toggles to the far right */
-            display: flex; /* Ensures they stay inline */
-            align-items: center; /* Vertically aligns them */
+            margin-left: auto; 
+            display: flex; 
+            align-items: center; 
         }
 
         .navbar-language-toggles .nav-item {
-            margin-left: 5px; /* Small space between language links */
+            margin-left: 5px; 
             margin-right: 5px;
         }
 
         .navbar-language-toggles .nav-link {
-            padding: 8px 12px; /* Adjust padding for a compact look */
+            padding: 8px 12px; 
             border-radius: 20px;
             font-weight: 500;
             transition: all 0.3s ease;
+            background: #444; /* Darker background for toggles */
+            color: #eee; /* Lighter text for toggles */
         }
 
         .navbar-language-toggles .nav-link.active {
-            background: #695aa6;
+            background: #887ac7; /* Lighter shade of primary color */
             color: white;
         }
 
         /* General spacing for main nav items */
         .navbar-nav .nav-item {
-            margin-right: 15px; /* Adjust spacing between main nav items */
+            margin-right: 15px; 
         }
 
-        /* Hero Section styles - specific to this page */
-        /* This rule now combines the gradient background and compact padding */
-        .section.bg-primary.text-white {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 80%);
-            /* 'color: white;' here is redundant if text-white is on h2/p, but harmless */
-            padding: 3rem 0; /* Reduced vertical padding for a more compact look */
+        /* Hero Section (Primary Color Section) - Inverted to light background */
+        .section.bg-primary.text-white { /* This class will now be the 'light' section */
+            background: linear-gradient(135deg, #e0e7fa 0%, #d8cde9 100%); /* Lighter gradient */
+            color: #333; /* Dark text for readability */
+            padding: 3rem 0; 
+        }
+        .section.bg-primary.text-white h2,
+        .section.bg-primary.text-white p {
+            color: #333 !important; /* Ensure text is dark */
+        }
+        /* Ensure buttons inside this section are dark */
+        .section.bg-primary.text-white .btn-light {
+            background-color: #695aa6; /* Primary color for the button */
+            color: white;
+            border-color: #695aa6;
+        }
+        .section.bg-primary.text-white .btn-light:hover {
+            background-color: #5a4a8a;
+            border-color: #5a4a8a;
         }
 
-        /* Story Card styles */
+        /* Regular Sections (Default .section and .section.bg-light) - Inverted to dark background */
+        .section {
+            background-color: #2a2a2a; /* Dark background */
+            color: #ddd; /* Light text */
+        }
+        .section.bg-light { /* This was light, now it's a slightly different dark */
+            background-color: #2f2f2f; /* Slightly lighter dark for contrast */
+            color: #ddd;
+        }
+
+        /* Story Card styles - Inverted */
         .story-card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            background: #3a3a3a; /* Darker card background */
+            color: #eee; /* Lighter text */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Darker shadow */
         }
-
-        .story-card p {
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        
         .story-card h3 {
-            color: #695aa6; /* Primary color for headings */
+            color: #887ac7; /* Lighter primary color for headings */
         }
 
-        /* Image specific style */
+        /* Image specific style (no change, image remains the same) */
         .goat-img {
             object-fit: cover;
             width: 100%;
-            max-width: 400px; /* Max width for image */
+            max-width: 400px;
             height: auto;
             object-position: 50% 50%;
             border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Darker shadow */
         }
 
-        /* Highlight Quote */
+        /* Highlight Quote - Inverted */
         .highlight-quote {
-            font-size: 1.25rem;
-            font-style: italic;
-            color: #555;
-            margin-top: 1rem;
-            max-width: 400px;
-            text-align: center;
-            line-height: 1.6;
+            color: #bbb; /* Lighter grey for quote */
         }
 
-        /* Journey Timeline */
+        /* Journey Timeline - Inverted */
         .journey-timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 2px solid #ddd;
-        }
-
-        .journey-item {
-            margin-bottom: 2.5rem;
-            position: relative;
-        }
-
-        .journey-item:last-child {
-            margin-bottom: 0;
+            border-left: 2px solid #555; /* Darker border */
         }
 
         .journey-item::before {
-            content: '';
-            position: absolute;
-            left: -38px; /* Adjust to align with the border */
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            background-color: #695aa6;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            box-shadow: 0 0 0 2px #695aa6;
+            background-color: #887ac7; /* Lighter primary color for circles */
+            border: 3px solid #333; /* Darker border around circle */
+            box-shadow: 0 0 0 2px #887ac7;
         }
 
         .journey-item h4 {
-            color: #695aa6;
-            margin-bottom: 0.5rem;
+            color: #887ac7; /* Lighter primary color for headings */
+        }
+        .journey-item p.text-muted {
+            color: #aaa !important; /* Lighter muted text */
         }
 
-        .journey-item p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Quote Card */
+        /* Quote Card - Inverted */
         .quote-card {
-            background-color: #695aa6; /* Primary color */
-            color: #fff;
-            padding: 2.5rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            background-color: #5a4a8a; /* Darker primary color */
+            color: #fff; /* White text */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Darker shadow */
         }
-
-        .quote-card blockquote {
-            border-left: none;
-            padding: 0;
-            margin: 0;
-        }
-
         .quote-card blockquote p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
             color: #fff; /* Ensure text is white */
         }
-
         .quote-card .blockquote-footer {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
+        /* Skills Grid - Inverted */
         .skill-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #3a3a3a; /* Darker card background */
+            color: #eee; /* Lighter text */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
         .skill-card h5 {
-            color: #695aa6;
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
+            color: #887ac7; /* Lighter primary color */
         }
 
         .skill-card p {
-            color: #555;
+            color: #bbb; /* Lighter grey for skill description */
+        }
+
+        /* Footer - Inverted */
+        .footer {
+            background-color: #444 !important; /* Darker footer */
+            color: #eee !important; /* Lighter text */
+        }
+        .footer .social-links a {
+            color: #eee !important; /* Lighter social icons */
+        }
+        .footer a {
+            color: #887ac7 !important; /* Lighter primary color for footer links */
         }
     </style>
 </head>
@@ -239,8 +241,8 @@
 
 <section class="section bg-primary text-white">
     <div class="container text-center">
-        <h2 class="mb-2 text-white">The Journey of a Hybrid Innovator</h2> 
-        <p class="lead mb-0 text-white">From Kitale's curiosity to Berlin's innovation – Engineering with Purpose</p>
+        <h2 class="mb-2">The Journey of a Hybrid Innovator</h2> 
+        <p class="lead mb-0">From Kitale's curiosity to Berlin's innovation – Engineering with Purpose</p>
     </div>
 </section>
 
@@ -338,7 +340,7 @@
                     <h4 class="mb-3">Grandfather's Wisdom</h4>
                     <blockquote class="mb-0">
                         <p class="mb-3">"Understanding is more important than memorization"</p>
-                        <footer class="blockquote-footer text-light">My grandfather's words that shaped my approach to learning and problem-solving</footer>
+                        <footer class="blockquote-footer">My grandfather's words that shaped my approach to learning and problem-solving</footer>
                     </blockquote>
                 </div>
                 
@@ -404,10 +406,10 @@
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="mb-4">Looking Ahead</h2>
-                <p class="lead mb-4" style="color: #fff;">
+                <p class="lead mb-4">
                     I'm driven to lead projects that merge engineering excellence with AI-driven solutions in automation and efficiency. My goal is to build systems that serve both technical excellence and human purpose.
                 </p>
-                <p class="mb-4" style="color: #fff;">
+                <p class="mb-4">
                     Ultimately, I aim to mentor the next generation of engineers, foster STEM education in Africa, and continue to break barriers while staying true to my passion for purpose-driven problem-solving.
                 </p>
                 <a href="contact.html" class="btn btn-light btn-lg">Let's Build the Future Together</a>
@@ -416,16 +418,16 @@
     </div>
 </section>
 
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+<footer class="footer" style="background-color: #444; color: #eee; text-align: center;">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #eee; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
         <p class="mb-0" style="margin-top: 10px;">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
+            <a href="#" style="color: #887ac7;">Clifford Ondieki - Engineered with Purpose</a>
         </p>
     </div>
 </footer>
