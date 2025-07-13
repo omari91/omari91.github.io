@@ -43,94 +43,168 @@
             margin-right: 15px; /* Adjust spacing between main nav items */
         }
 
-        .contact-hero {
+        /* Hero Section styles - specific to this page if needed */
+        .section.bg-primary.text-white {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 7rem 0;
         }
-        
-        .contact-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            margin: 1rem 0;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-method:hover {
-            background: #695aa6;
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        .contact-method i {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            width: 30px;
-        }
-        
-        .contact-method a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        .form-control:focus {
-            border-color: #695aa6;
-            box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
-        }
-        
-        .btn-primary {
-            background-color: #695aa6;
-            border-color: #695aa6;
-        }
-        
-        .btn-primary:hover {
-            background-color: #5a4a8a;
-            border-color: #5a4a8a;
-        }
-        
-        .collaboration-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+
+        /* Story Card styles */
+        .story-card {
+            background: #fff;
             padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .story-card p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
         }
         
-        .berlin-focus {
+        .story-card h3 {
+            color: #695aa6; /* Primary color for headings */
+        }
+
+        /* Image specific style */
+        .goat-img {
+            object-fit: cover;
+            width: 100%;
+            max-width: 400px; /* Max width for image */
+            height: auto;
+            object-position: 50% 50%;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Highlight Quote */
+        .highlight-quote {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #555;
+            margin-top: 1rem;
+            max-width: 400px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Journey Timeline */
+        .journey-timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #ddd;
+        }
+
+        .journey-item {
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .journey-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            left: -38px; /* Adjust to align with the border */
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background-color: #695aa6;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #695aa6;
+        }
+
+        .journey-item h4 {
+            color: #695aa6;
+            margin-bottom: 0.5rem;
+        }
+
+        .journey-item p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Quote Card */
+        .quote-card {
+            background-color: #695aa6; /* Primary color */
+            color: #fff;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .quote-card blockquote {
+            border-left: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .quote-card blockquote p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #fff; /* Ensure text is white */
+        }
+
+        .quote-card .blockquote-footer {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
             background: #f8f9fa;
             padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #695aa6;
-            margin: 1.5rem 0;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .skill-card h5 {
+            color: #695aa6;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .skill-card p {
+            color: #555;
         }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
@@ -149,20 +223,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Connect</a>
                 </li>
-            <!-- Language switcher integrated as nav item -->
-  <li class="nav-item">
-    <a href="about.html" class="nav-link language-toggle en">EN</a>
-  </li>
-  <li class="nav-item">
-    <a href="about-de.html" class="nav-link language-toggle de">DE</a>
-  </li>
-</ul>
-          
+            </ul>
+            <ul class="navbar-nav navbar-language-toggles">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link language-toggle en active">EN</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about-de.html" class="nav-link language-toggle de">DE</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="section bg-primary text-white">
     <div class="container text-center">
         <h1 class="display-4 mb-4">The Journey of a Hybrid Innovator</h1>
@@ -171,41 +244,36 @@
     </div>
 </section>
 
-<!-- Main Story Section -->
 <section class="section">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Text Column -->
-      <div class="col-md-6">
-        <div class="story-card">
-          <h3 class="mb-4">Who I Am</h3>
-          <p class="lead">
-            I'm Clifford Ondieki, a Technical specialist who believes true innovation springs from deeply understanding systems—whether they're power grids or human connections.
-          </p>
-          <p>
-            My journey, from the vibrant communities of Kitale, Kenya, to the dynamic landscape of Berlin, has been a continuous path of engineering solutions and embodying purpose. Every challenge has been a redirection toward growth, every setback a lesson in resilience with re-aligning with what truly matters that now informs how I approach both technical architecture and team leadership.
-          </p>
-          <p>
-            As I grow into what’s next, I know that for me, building systems won’t just be about efficiency—it’ll be about building bridges between people, purpose, and possibility.
-          </p>
-        
-        </div>
-      </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="story-card">
+                    <h3 class="mb-4">Who I Am</h3>
+                    <p class="lead">
+                        I'm Clifford Ondieki, a Technical specialist who believes true innovation springs from deeply understanding systems—whether they're power grids or human connections.
+                    </p>
+                    <p>
+                        My journey, from the vibrant communities of Kitale, Kenya, to the dynamic landscape of Berlin, has been a continuous path of engineering solutions and embodying purpose. Every challenge has been a redirection toward growth, every setback a lesson in resilience with re-aligning with what truly matters that now informs how I approach both technical architecture and team leadership.
+                    </p>
+                    <p>
+                        As I grow into what’s next, I know that for me, building systems won’t just be about efficiency—it’ll be about building bridges between people, purpose, and possibility.
+                    </p>
+                </div>
+            </div>
 
-      <!-- Image Column -->
-<div class="col-md-6 text-center d-flex flex-column align-items-center">
-  <img src="assets/imgs/GOAT.jpg" alt="The GOAT"
-       class="goat-img mb-3"
-       width="300" height="340"
-       loading="lazy"
-       style="object-fit: cover; width: 100%; max-width: 400px; height: auto; object-position: 50% 50%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);">
-  <p class="highlight-quote fade-in-on-scroll">From Kitale’s hills to Europe code—where cliffs become stairways, each step carved with quiet Strength. 🐐</p>
-      </div>
+            <div class="col-md-6 text-center d-flex flex-column align-items-center">
+                <img src="assets/imgs/GOAT.jpg" alt="The GOAT"
+                    class="goat-img mb-3"
+                    width="300" height="340"
+                    loading="lazy"
+                    style="object-fit: cover; width: 100%; max-width: 400px; height: auto; object-position: 50% 50%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);">
+                <p class="highlight-quote fade-in-on-scroll">From Kitale’s hills to Europe code—where cliffs become stairways, each step carved with quiet Strength. 🐐</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- The Spark - Defining Moments -->
 <section class="section bg-light">
     <div class="container">
         <div class="row">
@@ -224,7 +292,7 @@
                         <h4>The University Project That Taught Me Failure</h4>
                         <p class="text-muted mb-2">JKUAT, Kenya - 2015</p>
                         <p>During my electrical engineering studies, I led a team project on power system optimization that initially failed spectacularly. We had the technical knowledge but completely missed the human element—how the solution would actually be implemented by real people in real communities.</p>
-                        <p>This failure taught me that <strong>"failure is redirection"</strong>—a core belief that now shapes my approach to innovation. It's not about avoiding failure; it's about learning from it so quickly and thoroughly that each setback becomes a strategic advantage.</p>
+                        <p>This failure taught me that **"failure is redirection"**—a core belief that now shapes my approach to innovation. It's not about avoiding failure; it's about learning from it so quickly and thoroughly that each setback becomes a strategic advantage.</p>
                     </div>
                     
                     <div class="journey-item">
@@ -238,7 +306,6 @@
     </div>
 </section>
 
-<!-- Challenges & Growth -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -248,7 +315,7 @@
                 <div class="story-card">
                     <h4>The Balancing Act</h4>
                     <p>One of my greatest challenges was learning to balance university studies, work responsibilities, and leadership roles without burning out. I was trying to excel in electrical engineering coursework while working part-time and leading student organizations.</p>
-                    <p>This taught me what I now call <strong>"Smart Laziness"</strong>—the art of understanding systems so deeply that you can identify the one change that eliminates ten problems. It's not about working harder; it's about working with systemic intelligence.</p>
+                    <p>This taught me what I now call **"Smart Laziness"**—the art of understanding systems so deeply that you can identify the one change that eliminates ten problems. It's not about working harder; it's about working with systemic intelligence.</p>
                 </div>
                 
                 <div class="story-card">
@@ -261,7 +328,6 @@
     </div>
 </section>
 
-<!-- Inspirations & Mentors -->
 <section class="section bg-light">
     <div class="container">
         <div class="row">
@@ -295,7 +361,6 @@
     </div>
 </section>
 
-<!-- Skills in Context -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -334,7 +399,6 @@
     </div>
 </section>
 
-<!-- Future Vision -->
 <section class="section bg-primary text-white">
     <div class="container">
         <div class="row">
@@ -352,7 +416,6 @@
     </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
@@ -367,7 +430,6 @@
     </div>
 </footer>
 
-<!-- Core JavaScript -->
 <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 <script src="assets/js/script.js"></script>
