@@ -509,7 +509,7 @@ a:hover {
   }
 }
 .goat-img {
-  max-width: 300px;
+  max-width: 100px;
   width: 100%;
   height: 50%;
   object-fit: cover;
