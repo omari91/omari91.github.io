@@ -214,8 +214,8 @@ a:hover {
 .project-hero {
   background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
   color: var(--sky-white);
-  padding: 4rem 0 !important;
-  min-height: 50vh;
+  padding: 2.5rem 0 !important;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   margin-top: 60px; /* Account for fixed navbar */
