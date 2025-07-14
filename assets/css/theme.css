@@ -25,18 +25,18 @@ body {
 .navbar {
   background-color: var(--midnight-blue) !important;
   border-bottom: 2px solid var(--kenyan-earth-red);
-  padding: 0.25rem 0 !important;
-  min-height: 50px;
+  padding: 0.5rem 0 !important;
+  min-height: 60px;
 }
 
 .navbar .container {
-  max-width: 50% !important;
+  max-width: 100% !important;
 }
 
 .navbar-brand {
   color: var(--sky-white) !important;
-  font-size: 1rem;
-  padding: 0.2rem 0;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
 }
 
 .navbar-brand:hover {
@@ -46,8 +46,8 @@ body {
 .navbar-nav .nav-link {
   color: var(--sky-white) !important;
   transition: color 0.3s ease;
-  padding: 0.4rem 0.8rem !important;
-  font-size: 0.9rem;
+  padding: 0.5rem 1rem !important;
+  font-size: 1rem;
 }
 
 .navbar-nav .nav-link:hover,
@@ -57,7 +57,35 @@ body {
 
 .navbar-toggler {
   border-color: var(--steel-gray);
-  padding: 0.2rem 0.4rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Language Toggle Styles */
+.navbar-language-toggles {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-language-toggles .nav-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.navbar-language-toggles .nav-link {
+  padding: 8px 12px !important;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--sky-white) !important;
+  font-size: 0.9rem !important;
+}
+
+.navbar-language-toggles .nav-link.active,
+.navbar-language-toggles .nav-link:hover {
+  background: var(--kenyan-earth-red);
+  color: var(--sky-white) !important;
 }
 
 /* Headings */
@@ -161,7 +189,37 @@ a:hover {
 /* Hero Section */
 .header {
   background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  padding-top: 70px; /* Account for smaller fixed navbar */
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+.header-content {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
+}
+
+/* Hero sections for other pages */
+.philosophy-hero,
+.contact-hero,
+.blog-hero,
+.project-hero {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  color: var(--sky-white);
+  padding: 8rem 0 !important;
+  margin-top: 60px; /* Account for fixed navbar */
+}
+
+.philosophy-hero h2,
+.contact-hero h2,
+.blog-hero h2,
+.project-hero h2 {
+  color: var(--sky-white) !important;
+}
+
+.philosophy-hero .lead,
+.contact-hero .lead,
+.blog-hero .lead,
+.project-hero .lead {
+  color: var(--sky-white) !important;
 }
 
 /* Fix text visibility on dark backgrounds */
@@ -483,7 +541,7 @@ a:hover {
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
   .navbar .container {
-    max-width: 90% !important;
+    max-width: 100% !important;
   }
   
   .hero-tagline {
@@ -494,18 +552,30 @@ a:hover {
     font-size: 2rem;
   }
   
-  .language-switcher {
-    top: 10px;
-    right: 10px;
-  }
-  
   .navbar-brand {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   
   .navbar-nav .nav-link {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.6rem !important;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem !important;
+  }
+  
+  .navbar-language-toggles .nav-link {
+    font-size: 0.8rem !important;
+    padding: 6px 10px !important;
+  }
+  
+  .header-content {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+  
+  .philosophy-hero,
+  .contact-hero,
+  .blog-hero,
+  .project-hero {
+    padding: 6rem 0 !important;
   }
 }
 .goat-img {

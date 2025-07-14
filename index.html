@@ -19,10 +19,6 @@
     
     <!-- Custom Styles for Enhanced Design -->
     <style>
-        .header-content {
-            padding-top: 600px; /* Increased to ensure hero is below navbar */
-            padding-bottom: 600px; /* Adds space below hero section */
-        }
         .hero-tagline {
             font-size: 1.5rem;
             color: #fff;
@@ -35,7 +31,7 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.12);
         }
         
-        .language-switcher {
+        .old-language-switcher {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -147,13 +143,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Connect</a>
                 </li>
-             <li class="nav-item">
-    <a href="index.html" class="nav-link language-toggle en">EN</a>
-  </li>
-  <li class="nav-item">
-    <a href="index-de.html" class="nav-link language-toggle de">DE</a>
-  </li>
-</ul>
+            </ul>
+            <ul class="navbar-nav navbar-language-toggles">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link language-toggle en active">EN</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index-de.html" class="nav-link language-toggle de">DE</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
