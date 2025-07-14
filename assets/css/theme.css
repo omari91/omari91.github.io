@@ -186,16 +186,16 @@ a:hover {
 /* Hero Section */
 .header {
   background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  min-height: 60vh; /* Reduced from previous larger size */
+  min-height: 40vh; /* Reduced from previous larger size */
   display: flex;
   align-items: center;
   padding-top: 80px;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .header-content {
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
 }
 }
 
