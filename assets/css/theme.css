@@ -1,151 +1,129 @@
 /* Tech-Earth Fusion Color Theme */
 :root {
-  /* Primary Palette (Clean & Professional) */
-  --midnight-blue: #1C2B4A;
-  --sky-white: #F9FAFB;
-  --steel-gray: #697A90;
-  
-  /* Accent Palette (Human-Centered & Energetic) */
-  --kenyan-earth-red: #C1440E;
-  --lime-green: #A4DE02;
-  --sun-gold: #F5B700;
-  
-  /* Additional colors for better contrast */
-  --dark-gray: #333333;
-  --light-border: #E5E7EB;
-}
+/* Primary Palette (Clean & Professional) */
+[cite_start]--midnight-blue: #1C2B4A; [cite: 4]
+[cite_start]--sky-white: #F9FAFB; [cite: 5]
+[cite_start]--steel-gray: #697A90; [cite: 6]
 
+/* Accent Palette (Human-Centered & Energetic) */
+[cite_start]--kenyan-earth-red: #C1440E; [cite: 8]
+[cite_start]--lime-green: #A4DE02; [cite: 9]
+[cite_start]--sun-gold: #F5B700; [cite: 10]
+--blog-accent-purple: #695aa6; /* ADDED: New variable for blog card border and tag background */
+
+/* Additional colors for better contrast */
+[cite_start]--dark-gray: #333333; [cite: 12]
+[cite_start]--light-border: #E5E7EB; [cite: 13]
+}
 /* Global Overrides */
 body {
-  background-color: var(--sky-white);
-  color: var(--dark-gray);
+[cite_start]background-color: var(--sky-white); [cite: 17]
+[cite_start]color: var(--dark-gray); [cite: 18]
 }
-
 /* Navigation */
 .navbar {
-  background-color: var(--midnight-blue) !important;
-  border-bottom: 2px solid var(--kenyan-earth-red);
-  padding: 0.5rem 0 !important;
-  min-height: 60px;
+[cite_start]background-color: var(--midnight-blue) !important; [cite: 22]
+[cite_start]border-bottom: 2px solid var(--kenyan-earth-red); [cite: 23]
+[cite_start]padding: 0.5rem 0 !important; [cite: 24]
+[cite_start]min-height: 60px; [cite: 25]
 }
-
 .navbar .container {
-  max-width: 100% !important;
+[cite_start]max-width: 100% !important; [cite: 28]
 }
-
 .navbar-brand {
-  color: var(--sky-white) !important;
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
+[cite_start]color: var(--sky-white) !important; [cite: 31]
+[cite_start]font-size: 1.1rem; [cite: 32]
+[cite_start]padding: 0.5rem 0; [cite: 33]
 }
-
 .navbar-brand:hover {
-  color: var(--lime-green) !important;
+[cite_start]color: var(--lime-green) !important; [cite: 36]
 }
-
 .navbar-nav .nav-link {
-  color: var(--sky-white) !important;
-  transition: color 0.3s ease;
-  padding: 0.5rem 1rem !important;
-  font-size: 1rem;
+[cite_start]color: var(--sky-white) !important; [cite: 39]
+[cite_start]transition: color 0.3s ease; [cite: 40]
+[cite_start]padding: 0.5rem 1rem !important; [cite: 41]
+[cite_start]font-size: 1rem; [cite: 42]
 }
-
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--lime-green) !important;
+[cite_start]color: var(--lime-green) !important; [cite: 46, 45]
 }
-
 .navbar-toggler {
-  border-color: var(--steel-gray);
-  padding: 0.25rem 0.5rem;
+[cite_start]border-color: var(--steel-gray); [cite: 49]
+[cite_start]padding: 0.25rem 0.5rem; [cite: 50]
 }
-
 /* Language Toggle Styles */
 .navbar-language-toggles {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+[cite_start]display: flex; [cite: 54]
+[cite_start]align-items: center; [cite: 55]
+[cite_start]gap: 5px; [cite: 56]
 }
-
 .navbar-language-toggles a {
-  padding: 8px 12px !important;
-  border-radius: 20px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--sky-white) !important;
-  font-size: 0.9rem !important;
-  text-decoration: none;
-  display: inline-block;
+[cite_start]padding: 8px 12px !important; [cite: 59]
+[cite_start]border-radius: 20px; [cite: 60]
+[cite_start]font-weight: 500; [cite: 61]
+[cite_start]transition: all 0.3s ease; [cite: 62]
+[cite_start]background: rgba(255, 255, 255, 0.1); [cite: 63]
+[cite_start]color: var(--sky-white) !important; [cite: 64]
+[cite_start]font-size: 0.9rem !important; [cite: 65]
+[cite_start]text-decoration: none; [cite: 66]
+[cite_start]display: inline-block; [cite: 67]
 }
-
 .navbar-language-toggles a.active,
 .navbar-language-toggles a:hover {
-  background: var(--kenyan-earth-red);
-  color: var(--sky-white) !important;
+[cite_start]background: var(--kenyan-earth-red); [cite: 71]
+[cite_start]color: var(--sky-white) !important; [cite: 72]
 }
-
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--steel-gray);
+[cite_start]color: var(--steel-gray); [cite: 76]
 }
-
 .header-title {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 79]
 }
-
 .header-subtitle {
-  color: var(--steel-gray) !important;
-  color: var(--sky-white) !important;
+[cite_start]color: var(--steel-gray) !important; [cite: 82]
+[cite_start]color: var(--sky-white) !important; [cite: 83]
 }
-
 /* Buttons */
 .btn-primary {
-  background-color: var(--kenyan-earth-red);
-  border-color: var(--kenyan-earth-red);
-  color: var(--sky-white);
-  transition: all 0.3s ease;
+[cite_start]background-color: var(--kenyan-earth-red); [cite: 87]
+[cite_start]border-color: var(--kenyan-earth-red); [cite: 88]
+[cite_start]color: var(--sky-white); [cite: 89]
+[cite_start]transition: all 0.3s ease; [cite: 90]
 }
-
 .btn-primary:hover {
-  background-color: #A03A0C;
-  border-color: #A03A0C;
-  transform: translateY(-2px);
+[cite_start]background-color: #A03A0C; [cite: 93]
+[cite_start]border-color: #A03A0C; [cite: 94]
+[cite_start]transform: translateY(-2px); [cite: 95]
 }
-
 .btn-outline-primary {
-  color: var(--kenyan-earth-red);
-  border-color: var(--kenyan-earth-red);
+[cite_start]color: var(--kenyan-earth-red); [cite: 98]
+[cite_start]border-color: var(--kenyan-earth-red); [cite: 99]
 }
-
 .btn-outline-primary:hover {
-  background-color: var(--kenyan-earth-red);
-  border-color: var(--kenyan-earth-red);
+[cite_start]background-color: var(--kenyan-earth-red); [cite: 102]
+[cite_start]border-color: var(--kenyan-earth-red); [cite: 103]
 }
-
 .btn-light {
-  background-color: var(--sky-white);
-  border-color: var(--sky-white);
-  color: var(--midnight-blue);
+[cite_start]background-color: var(--sky-white); [cite: 106]
+[cite_start]border-color: var(--sky-white); [cite: 107]
+[cite_start]color: var(--midnight-blue); [cite: 108]
 }
-
 .btn-light:hover {
-  background-color: var(--lime-green);
-  border-color: var(--lime-green);
-  color: var(--midnight-blue);
+[cite_start]background-color: var(--lime-green); [cite: 111]
+[cite_start]border-color: var(--lime-green); [cite: 112]
+[cite_start]color: var(--midnight-blue); [cite: 113]
 }
-
 /* Links */
 a {
-  color: var(--lime-green);
-  transition: color 0.3s ease;
+[cite_start]color: var(--lime-green); [cite: 117]
+[cite_start]transition: color 0.3s ease; [cite: 118]
 }
-
 a:hover {
-  color: var(--kenyan-earth-red);
-  text-decoration: none;
+[cite_start]color: var(--kenyan-earth-red); [cite: 121]
+[cite_start]text-decoration: none; [cite: 122]
 }
-
 /* Cards and Sections */
 .service-card,
 .portfolio-card,
@@ -153,88 +131,76 @@ a:hover {
 .story-card,
 .project-detail,
 .contact-card {
-  background-color: var(--sky-white);
-  border: 1px solid var(--light-border);
-  box-shadow: 0 4px 6px rgba(28, 43, 74, 0.1);
-  transition: all 0.3s ease;
+[cite_start]background-color: var(--sky-white); [cite: 131]
+[cite_start]border: 1px solid var(--light-border); [cite: 132]
+[cite_start]box-shadow: 0 4px 6px rgba(28, 43, 74, 0.1); [cite: 133]
+[cite_start]transition: all 0.3s ease; [cite: 134]
 }
-
 .service-card:hover,
 .portfolio-card:hover,
 .philosophy-card:hover,
 .story-card:hover,
 .project-detail:hover,
 .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(28, 43, 74, 0.15);
+[cite_start]transform: translateY(-5px); [cite: 142]
+[cite_start]box-shadow: 0 8px 25px rgba(28, 43, 74, 0.15); [cite: 143]
 }
-
 /* Section backgrounds */
 .section {
-  background-color: var(--sky-white);
+[cite_start]background-color: var(--sky-white); [cite: 147]
 }
-
 .section.bg-light {
-  background-color: #F3F4F6 !important;
+[cite_start]background-color: #F3F4F6 !important; [cite: 150]
 }
-
 .section.bg-primary,
 .section-sm.bg-primary {
-  background-color: var(--midnight-blue) !important;
+[cite_start]background-color: var(--midnight-blue) !important; [cite: 154]
 }
-
 /* Hero Section */
 .header {
-  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  min-height: 40vh; /* Reduced from previous larger size */
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  padding-bottom: 0.5rem;
+[cite_start]background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%); [cite: 158]
+[cite_start]min-height: 40vh; [cite: 159]
+[cite_start]display: flex; [cite: 160]
+[cite_start]align-items: center; [cite: 161]
+[cite_start]padding-top: 80px; [cite: 162]
+[cite_start]padding-bottom: 0.5rem; [cite: 163]
 }
-
 .header-content {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
+[cite_start]padding-top: 0.5rem !important; [cite: 166]
+[cite_start]padding-bottom: 0.5rem !important; [cite: 167]
 }
-}
-
 /* Ensure all hero text is white and visible */
 .header .header-title,
 .header .header-subtitle,
 .header .lead,
 .header p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 175]
 }
-
 /* Hero sections for other pages */
 .philosophy-hero,
 .contact-hero,
 .blog-hero,
 .project-hero {
-  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  color: var(--sky-white);
-  padding: 2.5rem 0 !important;
-  min-height: 30vh;
-  display: flex;
-  align-items: center;
-  margin-top: 60px; /* Account for fixed navbar */
+[cite_start]background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%); [cite: 182]
+[cite_start]color: var(--sky-white); [cite: 183]
+[cite_start]padding: 2.5rem 0 !important; [cite: 184]
+[cite_start]min-height: 30vh; [cite: 185]
+[cite_start]display: flex; [cite: 186]
+[cite_start]align-items: center; [cite: 187]
+[cite_start]margin-top: 60px; [cite: 188]
 }
-
 .philosophy-hero h2,
 .contact-hero h2,
 .blog-hero h2,
 .project-hero h2 {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 194]
 }
-
 .philosophy-hero .lead,
 .contact-hero .lead,
 .blog-hero .lead,
 .project-hero .lead {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 200]
 }
-
 /* Fix text visibility on dark backgrounds */
 .section.bg-primary,
 .section-sm.bg-primary,
@@ -243,36 +209,31 @@ a:hover {
 .blog-hero,
 .project-hero,
 .philosophy-card {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 210]
 }
 /* Language Switcher */
 .language-switcher {
-  background: rgba(249, 250, 251, 0.95);
-  border: 1px solid var(--light-border);
+[cite_start]background: rgba(249, 250, 251, 0.95); [cite: 214]
+[cite_start]border: 1px solid var(--light-border); [cite: 215]
 }
-
 .language-switcher a {
-  color: var(--steel-gray);
+[cite_start]color: var(--steel-gray); [cite: 218]
 }
-
 .language-switcher a.active,
 .language-switcher a:hover {
-  background: var(--kenyan-earth-red);
-  color: var(--sky-white);
+[cite_start]background: var(--kenyan-earth-red); [cite: 222]
+[cite_start]color: var(--sky-white); [cite: 223]
 }
-
 /* Philosophy Cards */
 .philosophy-card {
-  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  color: var(--sky-white);
-  border-left: 4px solid var(--lime-green);
+[cite_start]background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%); [cite: 227]
+[cite_start]color: var(--sky-white); [cite: 228]
+[cite_start]border-left: 4px solid var(--lime-green); [cite: 229]
 }
-
 .principle-card {
-  background: linear-gradient(135deg, var(--kenyan-earth-red) 0%, #A03A0C 100%);
-  color: var(--sky-white);
+[cite_start]background: linear-gradient(135deg, var(--kenyan-earth-red) 0%, #A03A0C 100%); [cite: 232]
+[cite_start]color: var(--sky-white); [cite: 233]
 }
-
 .principle-card h1,
 .principle-card h2,
 .principle-card h3,
@@ -280,56 +241,46 @@ a:hover {
 .principle-card h5,
 .principle-card h6,
 .principle-card p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 242]
 }
-
 /* Project Cards */
 .portfolio-card-overlay {
-  background: linear-gradient(135deg, rgba(28, 43, 74, 0.9) 0%, rgba(193, 68, 14, 0.9) 100%);
+[cite_start]background: linear-gradient(135deg, rgba(28, 43, 74, 0.9) 0%, rgba(193, 68, 14, 0.9) 100%); [cite: 246]
 }
-
 .tech-badge {
-  background: var(--lime-green);
-  color: var(--midnight-blue);
+[cite_start]background: var(--lime-green); [cite: 249]
+[cite_start]color: var(--midnight-blue); [cite: 250]
 }
-
 /* Impact Metrics */
 .impact-metrics {
-  background: var(--sky-white);
-  border: 1px solid var(--light-border);
+[cite_start]background: var(--sky-white); [cite: 254]
+[cite_start]border: 1px solid var(--light-border); [cite: 255]
 }
-
 .metric-number {
-  color: var(--kenyan-earth-red);
+[cite_start]color: var(--kenyan-earth-red); [cite: 258]
 }
-
 /* Contact Methods */
 .contact-method {
-  background: var(--sky-white);
-  border: 1px solid var(--light-border);
+[cite_start]background: var(--sky-white); [cite: 262]
+[cite_start]border: 1px solid var(--light-border); [cite: 263]
 }
-
 .contact-method:hover {
-  background: var(--midnight-blue);
-  color: var(--sky-white);
+[cite_start]background: var(--midnight-blue); [cite: 266]
+[cite_start]color: var(--sky-white); [cite: 267]
 }
-
 /* Journey Timeline */
 .journey-item::before {
-  background: var(--kenyan-earth-red);
+[cite_start]background: var(--kenyan-earth-red); [cite: 271]
 }
-
 .journey-item::after {
-  background: var(--light-border);
+[cite_start]background: var(--light-border); [cite: 274]
 }
-
 /* Quote Sections */
 .quote-card,
 .quote-section {
-  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  color: var(--sky-white);
+[cite_start]background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%); [cite: 279]
+[cite_start]color: var(--sky-white); [cite: 280]
 }
-
 .quote-card h1,
 .quote-card h2,
 .quote-card h3,
@@ -344,14 +295,13 @@ a:hover {
 .quote-section h5,
 .quote-section h6,
 .quote-section p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 296]
 }
-
 .rotating-insight {
-  background: linear-gradient(45deg, var(--kenyan-earth-red), var(--midnight-blue));
-  color: var(--sky-white);
+[cite_start]animation: fadeIn 2s ease-in-out; [cite: 299]
+[cite_start]background: linear-gradient(45deg, var(--kenyan-earth-red), var(--midnight-blue)); [cite: 299]
+[cite_start]color: var(--sky-white); [cite: 300]
 }
-
 .rotating-insight h1,
 .rotating-insight h2,
 .rotating-insight h3,
@@ -359,42 +309,45 @@ a:hover {
 .rotating-insight h5,
 .rotating-insight h6,
 .rotating-insight p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 309]
 }
-
 /* Blog Cards */
 .blog-card {
-  background: var(--sky-white);
-  border-left: 4px solid var(--lime-green);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
+[cite_start]background: var(--sky-white); [cite: 313]
+border-left: 4px solid var(--blog-accent-purple); /* MODIFIED: Using new purple variable */
+[cite_start]word-wrap: break-word; [cite: 315]
+[cite_start]overflow-wrap: break-word; [cite: 316]
+[cite_start]hyphens: auto; [cite: 317]
+word-break: break-word; /* ADDED for safety */
+white-space: normal; /* ADDED for safety */
 }
-
 .blog-card h2,
 .blog-card h3,
 .blog-card h4 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  line-height: 1.3;
+[cite_start]word-wrap: break-word; [cite: 322]
+[cite_start]overflow-wrap: break-word; [cite: 323]
+[cite_start]hyphens: auto; [cite: 324]
+[cite_start]line-height: 1.3; [cite: 325]
+word-break: break-word; /* ADDED for safety */
+white-space: normal; /* ADDED for safety */
 }
-
 .blog-card p {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
+[cite_start]word-wrap: break-word; [cite: 328]
+[cite_start]overflow-wrap: break-word; [cite: 329]
+[cite_start]hyphens: auto; [cite: 330]
+word-break: break-word; /* ADDED for safety */
+white-space: normal; /* ADDED for safety */
 }
-
 .blog-card.featured-post {
-  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  color: var(--sky-white);
-  border-left: 4px solid var(--sun-gold);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
+[cite_start]background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%); [cite: 333]
+[cite_start]color: var(--sky-white); [cite: 334]
+[cite_start]border-left: 4px solid var(--sun-gold); [cite: 335]
+[cite_start]word-wrap: break-word; [cite: 336]
+[cite_start]overflow-wrap: break-word; [cite: 337]
+[cite_start]hyphens: auto; [cite: 338]
+word-break: break-word; /* ADDED for safety */
+white-space: normal; /* ADDED for safety */
 }
-
 .featured-post h1,
 .featured-post h2,
 .featured-post h3,
@@ -403,25 +356,26 @@ a:hover {
 .featured-post h6,
 .featured-post p,
 .featured-post .lead {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 348]
+word-wrap: break-word; /* ADDED for safety */
+overflow-wrap: break-word; /* ADDED for safety */
+hyphens: auto; /* ADDED for safety */
+word-break: break-word; /* ADDED for safety */
+white-space: normal; /* ADDED for safety */
 }
-
 .blog-tag {
-  background: var(--lime-green);
-  color: var(--midnight-blue);
+background: var(--blog-accent-purple); /* MODIFIED: Using new purple variable */
+color: var(--sky-white); /* MODIFIED: Changed text color to white */
 }
-
 .featured-post .blog-tag {
-  background: var(--sun-gold);
-  color: var(--midnight-blue);
+[cite_start]background: var(--sun-gold); [cite: 355]
+[cite_start]color: var(--midnight-blue); [cite: 356]
 }
-
 /* LinkedIn CTA */
 .linkedin-cta {
-  background: var(--kenyan-earth-red);
-  color: var(--sky-white);
+[cite_start]background: var(--kenyan-earth-red); [cite: 360]
+[cite_start]color: var(--sky-white); [cite: 361]
 }
-
 .linkedin-cta h1,
 .linkedin-cta h2,
 .linkedin-cta h3,
@@ -429,23 +383,19 @@ a:hover {
 .linkedin-cta h5,
 .linkedin-cta h6,
 .linkedin-cta p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 370]
 }
-
 .linkedin-cta a {
-  color: var(--sky-white);
+[cite_start]color: var(--sky-white); [cite: 373]
 }
-
 .linkedin-cta a:hover {
-  color: var(--lime-green);
+[cite_start]color: var(--lime-green); [cite: 376]
 }
-
 /* Collaboration Cards */
 .collaboration-card {
-  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
-  color: var(--sky-white);
+[cite_start]background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%); [cite: 380]
+[cite_start]color: var(--sky-white); [cite: 381]
 }
-
 .collaboration-card h1,
 .collaboration-card h2,
 .collaboration-card h3,
@@ -453,31 +403,26 @@ a:hover {
 .collaboration-card h5,
 .collaboration-card h6,
 .collaboration-card p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 390]
 }
-
 /* Berlin Focus */
 .berlin-focus {
-  background: var(--sky-white);
-  border-left: 4px solid var(--sun-gold);
-  border: 1px solid var(--light-border);
+[cite_start]background: var(--sky-white); [cite: 394]
+[cite_start]border-left: 4px solid var(--sun-gold); [cite: 395]
+[cite_start]border: 1px solid var(--light-border); [cite: 396]
 }
-
 /* Footer */
 .footer {
-  background-color: var(--midnight-blue) !important;
-  color: var(--sky-white) !important;
-  border-top: 3px solid var(--kenyan-earth-red);
+[cite_start]background-color: var(--midnight-blue) !important; [cite: 400]
+[cite_start]color: var(--sky-white) !important; [cite: 401]
+[cite_start]border-top: 3px solid var(--kenyan-earth-red); [cite: 402]
 }
-
 .footer a {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 405]
 }
-
 .footer a:hover {
-  color: var(--lime-green) !important;
+[cite_start]color: var(--lime-green) !important; [cite: 408]
 }
-
 .footer h1,
 .footer h2,
 .footer h3,
@@ -485,43 +430,36 @@ a:hover {
 .footer h5,
 .footer h6,
 .footer p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 417]
 }
-
 /* Form Controls */
 .form-control {
-  border-color: var(--light-border);
-  background-color: var(--sky-white);
+[cite_start]border-color: var(--light-border); [cite: 421]
+[cite_start]background-color: var(--sky-white); [cite: 422]
 }
-
 .form-control:focus {
-  border-color: var(--lime-green);
-  box-shadow: 0 0 0 0.2rem rgba(164, 222, 2, 0.25);
+[cite_start]border-color: var(--lime-green); [cite: 425]
+[cite_start]box-shadow: 0 0 0 0.2rem rgba(164, 222, 2, 0.25); [cite: 426]
 }
-
 /* Skills Grid */
 .skill-card {
-  background: var(--sky-white);
-  border: 1px solid var(--light-border);
+[cite_start]background: var(--sky-white); [cite: 430]
+[cite_start]border: 1px solid var(--light-border); [cite: 431]
 }
-
 .skill-card:hover {
-  border-color: var(--lime-green);
+[cite_start]border-color: var(--lime-green); [cite: 434]
 }
-
 /* Reflection Cards */
 .reflection-card {
-  background: var(--sky-white);
-  border-left: 4px solid var(--sun-gold);
-  border: 1px solid var(--light-border);
+[cite_start]background: var(--sky-white); [cite: 438]
+[cite_start]border-left: 4px solid var(--sun-gold); [cite: 439]
+[cite_start]border: 1px solid var(--light-border); [cite: 440]
 }
-
 /* Lesson Cards */
 .lesson-card {
-  background: linear-gradient(135deg, var(--kenyan-earth-red) 0%, #A03A0C 100%);
-  color: var(--sky-white);
+[cite_start]background: linear-gradient(135deg, var(--kenyan-earth-red) 0%, #A03A0C 100%); [cite: 444]
+[cite_start]color: var(--sky-white); [cite: 445]
 }
-
 .lesson-card h1,
 .lesson-card h2,
 .lesson-card h3,
@@ -529,143 +467,131 @@ a:hover {
 .lesson-card h5,
 .lesson-card h6,
 .lesson-card p {
-  color: var(--sky-white) !important;
+[cite_start]color: var(--sky-white) !important; [cite: 454]
 }
-
 /* Story Section */
 .story-section {
-  background: #F3F4F6;
+[cite_start]background: #F3F4F6; [cite: 458]
 }
-
 /* Hero Backgrounds */
 /* Highlights and Accents */
 .section-title {
-  color: var(--steel-gray);
+[cite_start]color: var(--steel-gray); [cite: 463]
 }
-
 .section-subtitle {
-  color: var(--kenyan-earth-red);
+[cite_start]color: var(--kenyan-earth-red); [cite: 466]
 }
-
 /* Text Colors */
 .text-muted {
-  color: var(--steel-gray) !important;
+[cite_start]color: var(--steel-gray) !important; [cite: 470]
 }
-
 .lead {
-  color: var(--dark-gray);
+[cite_start]color: var(--dark-gray); [cite: 473]
 }
-
 /* Custom Animations */
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(20px); 
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
-  }
+from {
+[cite_start]opacity: 0; [cite: 478]
+[cite_start]transform: translateY(20px); [cite: 479]
 }
-
+to {
+[cite_start]opacity: 1; [cite: 482]
+[cite_start]transform: translateY(0); [cite: 483]
+}
+}
 .rotating-insight {
-  animation: fadeIn 2s ease-in-out;
+[cite_start]animation: fadeIn 2s ease-in-out; [cite: 487]
+}
+/* Responsive Design Enhancements */
+[cite_start]@media (max-width: 768px) { [cite: 490]
+.navbar .container {
+[cite_start]max-width: 100% !important; [cite: 492]
 }
 
-/* Responsive Design Enhancements */
-@media (max-width: 768px) {
-  .navbar .container {
-    max-width: 100% !important;
-  }
-  
-  .hero-tagline {
-    font-size: 1rem;
-  }
-  
-  .display-4 {
-    font-size: 2rem;
-  }
-  
-  .navbar-brand {
-    font-size: 0.9rem;
-  }
-  
-  .navbar-nav .nav-link {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem !important;
-  }
-  
-  .navbar-language-toggles .nav-link {
-    font-size: 0.8rem !important;
-    padding: 6px 10px !important;
-  }
-  
-  .header-content {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-  
-  .header {
-    min-height: 50vh;
-  }
-  
-  .philosophy-hero,
-  .contact-hero,
-  .blog-hero,
-  .project-hero {
-    padding: 0.5rem 0 !important;
-    min-height: 20vh;
-  }
+.hero-tagline {
+[cite_start]font-size: 1rem; [cite: 495]
+}
+
+.display-4 {
+[cite_start]font-size: 2rem; [cite: 498]
+}
+
+.navbar-brand {
+[cite_start]font-size: 0.9rem; [cite: 501]
+}
+
+.navbar-nav .nav-link {
+[cite_start]font-size: 0.9rem; [cite: 504]
+[cite_start]padding: 0.4rem 0.8rem !important; [cite: 505]
+}
+
+.navbar-language-toggles .nav-link {
+[cite_start]font-size: 0.8rem !important; [cite: 508]
+[cite_start]padding: 6px 10px !important; [cite: 509]
+}
+
+.header-content {
+[cite_start]padding-top: 3rem !important; [cite: 512]
+[cite_start]padding-bottom: 3rem !important; [cite: 513]
+}
+
+.header {
+[cite_start]min-height: 50vh; [cite: 516]
+}
+
+.philosophy-hero,
+.contact-hero,
+.blog-hero,
+.project-hero {
+[cite_start]padding: 0.5rem 0 !important; [cite: 522]
+[cite_start]min-height: 20vh; [cite: 523]
+}
 }
 .goat-img {
-  max-width: 300px;
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+[cite_start]max-width: 300px; [cite: 527]
+[cite_start]width: 100%; [cite: 528]
+[cite_start]height: 50%; [cite: 529]
+[cite_start]object-fit: cover; [cite: 530]
+[cite_start]border-radius: 12px; [cite: 531]
+[cite_start]box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); [cite: 532]
 }
-
 .highlight-quote {
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1.6;
-  color: #4c4c4c;
-  background: linear-gradient(135deg, #f3f3f3, #eae0f0);
-  padding: 14px 18px;
-  border-left: 4px solid #695aa6;
-  border-radius: 10px;
-  margin-top: 12px;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease, background 0.8s ease;
+[cite_start]font-size: 1rem; [cite: 535]
+[cite_start]font-style: italic; [cite: 536]
+[cite_start]line-height: 1.6; [cite: 537]
+[cite_start]color: #4c4c4c; [cite: 538]
+[cite_start]background: linear-gradient(135deg, #f3f3f3, #eae0f0); [cite: 539]
+[cite_start]padding: 14px 18px; [cite: 540]
+[cite_start]border-left: 4px solid #695aa6; [cite: 541]
+[cite_start]border-radius: 10px; [cite: 542]
+[cite_start]margin-top: 12px; [cite: 543]
+[cite_start]max-width: 400px; [cite: 544]
+[cite_start]box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); [cite: 545]
+[cite_start]opacity: 0; [cite: 546]
+[cite_start]transform: translateY(20px); [cite: 547]
+[cite_start]transition: opacity 0.6s ease, transform 0.6s ease, background 0.8s ease; [cite: 548]
 }
-
 .fade-in-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
+[cite_start]opacity: 1; [cite: 551]
+[cite_start]transform: translateY(0); [cite: 552]
 }
-
 /* Accessibility Improvements */
 .btn:focus,
 .form-control:focus,
 .nav-link:focus {
-  outline: 2px solid var(--lime-green);
-  outline-offset: 2px;
+[cite_start]outline: 2px solid var(--lime-green); [cite: 558]
+[cite_start]outline-offset: 2px; [cite: 559]
+}
+/* Print Styles */
+[cite_start]@media print { [cite: 562]
+.language-switcher,
+.navbar,
+.footer {
+[cite_start]display: none !important; [cite: 566]
 }
 
-/* Print Styles */
-@media print {
-  .language-switcher,
-  .navbar,
-  .footer {
-    display: none !important;
-  }
-  
-  body {
-    background: white !important;
-    color: black !important;
-  }
+body {
+[cite_start]background: white !important; [cite: 569]
+[cite_start]color: black !important; [cite: 570]
+}
 }
