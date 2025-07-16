@@ -62,6 +62,9 @@
             transition: transform 0.3s ease;
             border-left: 4px solid #695aa6;
             min-height: 300px;
+            /* Flex layout for positioning tags at bottom */
+            display: flex;
+            flex-direction: column;
         }
         
         .blog-card:hover {
@@ -112,6 +115,21 @@
             color: white;
             text-decoration: none;
         }
+        
+        /* Added for tags positioning */
+        .blog-card-content {
+            flex-grow: 1;
+        }
+        
+        .blog-tags-container {
+            padding-top: 1rem;
+            margin-top: auto;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .featured-post .blog-tags-container {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
     </style>
 </head>
 <body>
@@ -158,8 +176,8 @@
 <!-- Hero Section -->
 <section class="blog-hero">
     <div class="container text-center">
-        <h2 class="display-4 mb-2"style="color: #fff;">Insights & Reflections</h2>
-        <p style="lead: color: #fff;margin-bottom: 0;">Thoughts on engineering empathy, smart laziness, and bridging worlds through innovation</p>
+        <h2 class="display-4 mb-2" style="color: #fff;">Insights & Reflections</h2>
+        <p class="lead" style="color: #fff;">Thoughts on engineering empathy, smart laziness, and bridging worlds through innovation</p>
     </div>
 </section>
 
@@ -169,11 +187,13 @@
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <div class="blog-card featured-post">
-                    <div class="blog-meta">Featured • Engineering Philosophy</div>
-                    <h2 class="mb-3">Engineering Empathy: Why the Best Systems Are Built with Heart</h2>
-                    <p class="lead">The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose.</p>
-                    <p>After years of debugging everything from 11kV transformers in Kenya to SaaS whole architectures in Berlin, I've learned that the most elegant solutions emerge when we approach technical challenges with genuine empathy for the humans who will interact with our systems.</p>
-                    <div class="mt-4">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">Featured • Engineering Philosophy</div>
+                        <h2 class="mb-3">Engineering Empathy: Why the Best Systems Are Built with Heart</h2>
+                        <p class="lead">The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose.</p>
+                        <p>After years of debugging everything from 11kV transformers in Kenya to SaaS whole architectures in Berlin, I've learned that the most elegant solutions emerge when we approach technical challenges with genuine empathy for the humans who will interact with our systems.</p>
+                    </div>
+                    <div class="blog-tags-container">
                         <span class="blog-tag">Engineering Philosophy</span>
                         <span class="blog-tag">Leadership</span>
                         <span class="blog-tag">Systems Thinking</span>
@@ -190,10 +210,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="blog-card">
-                    <div class="blog-meta">Coming Soon • Cross-Domain Innovation</div>
-                    <h3 class="mb-3">How Kenya's Grid Taught Me to Prioritize SaaS Features</h3>
-                    <p>What I learned about load balancing from Kenya's power infrastructure and how those principles now guide my approach to product prioritization and system architecture.</p>
-                    <div class="mt-3">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">Coming Soon • Cross-Domain Innovation</div>
+                        <h3 class="mb-3">How Kenya's Grid Taught Me to Prioritize SaaS Features</h3>
+                        <p>What I learned about load balancing from Kenya's power infrastructure and how those principles now guide my approach to product prioritization and system architecture.</p>
+                    </div>
+                    <div class="blog-tags-container">
                         <span class="blog-tag">Systems Thinking</span>
                         <span class="blog-tag">Product Strategy</span>
                         <span class="blog-tag">Cultural Impact</span>
@@ -203,10 +225,12 @@
             
             <div class="col-lg-6">
                 <div class="blog-card">
-                    <div class="blog-meta">Coming Soon • Life & Technology</div>
-                    <h3 class="mb-3">Parenting & Python: Debugging Life's Algorithms</h3>
-                    <p>Reflections on how raising a daughter has taught me patience, presence, and the profound simplicity that often underlies the most complex systems.</p>
-                    <div class="mt-3">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">Coming Soon • Life & Technology</div>
+                        <h3 class="mb-3">Parenting & Python: Debugging Life's Algorithms</h3>
+                        <p>Reflections on how raising a daughter has taught me patience, presence, and the profound simplicity that often underlies the most complex systems.</p>
+                    </div>
+                    <div class="blog-tags-container">
                         <span class="blog-tag">Personal Growth</span>
                         <span class="blog-tag">Engineering Empathy</span>
                         <span class="blog-tag">Life Lessons</span>
@@ -218,10 +242,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="blog-card">
-                    <div class="blog-meta">Coming Soon • Career Journey</div>
-                    <h3 class="mb-3">From 11kV Lines to SaaS Pipelines: A Systems Thinker's Journey</h3>
-                    <p>A detailed case study of how electrical engineering principles translate to software architecture, and why understanding power grids makes you a better product manager.</p>
-                    <div class="mt-3">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">Coming Soon • Career Journey</div>
+                        <h3 class="mb-3">From 11kV Lines to SaaS Pipelines: A Systems Thinker's Journey</h3>
+                        <p>A detailed case study of how electrical engineering principles translate to software architecture, and why understanding power grids makes you a better product manager.</p>
+                    </div>
+                    <div class="blog-tags-container">
                         <span class="blog-tag">Career Journey</span>
                         <span class="blog-tag">Technical Leadership</span>
                         <span class="blog-tag">Cross-Domain Learning</span>
@@ -231,10 +257,12 @@
             
             <div class="col-lg-6">
                 <div class="blog-card">
-                    <div class="blog-meta">Coming Soon • Innovation Philosophy</div>
-                    <h3 class="mb-3">Smart Laziness: The Art of Systemic Efficiency</h3>
-                    <p>Why the best engineers are strategically lazy, and how understanding systems deeply enough to make one change that eliminates ten problems is the ultimate productivity hack.</p>
-                    <div class="mt-3">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">Coming Soon • Innovation Philosophy</div>
+                        <h3 class="mb-3">Smart Laziness: The Art of Systemic Efficiency</h3>
+                        <p>Why the best engineers are strategically lazy, and how understanding systems deeply enough to make one change that eliminates ten problems is the ultimate productivity hack.</p>
+                    </div>
+                    <div class="blog-tags-container">
                         <span class="blog-tag">Productivity</span>
                         <span class="blog-tag">Systems Optimization</span>
                         <span class="blog-tag">Engineering Philosophy</span>
@@ -246,10 +274,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="blog-card">
-                    <div class="blog-meta">Coming Soon • Cultural Bridge Building</div>
-                    <h3 class="mb-3">Bringing Ubuntu to Berlin: Community Values in Tech Teams</h3>
-                    <p>How Kenyan community principles create stronger, more resilient technical teams, and why collaboration beats competition in building sustainable innovation.</p>
-                    <div class="mt-3">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">Coming Soon • Cultural Bridge Building</div>
+                        <h3 class="mb-3">Bringing Ubuntu to Berlin: Community Values in Tech Teams</h3>
+                        <p>How Kenyan community principles create stronger, more resilient technical teams, and why collaboration beats competition in building sustainable innovation.</p>
+                    </div>
+                    <div class="blog-tags-container">
                         <span class="blog-tag">Team Leadership</span>
                         <span class="blog-tag">Cultural Diversity</span>
                         <span class="blog-tag">Community Building</span>
@@ -259,10 +289,12 @@
             
             <div class="col-lg-6">
                 <div class="blog-card">
-                    <div class="blog-meta">Coming Soon • Technical Deep Dive</div>
-                    <h3 class="mb-3">Predictive Maintenance: When AI Meets Geothermal Energy</h3>
-                    <p>A technical deep dive into building machine learning systems for industrial applications, and the lessons learned from predicting equipment failures in harsh environments.</p>
-                    <div class="mt-3">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">Coming Soon • Technical Deep Dive</div>
+                        <h3 class="mb-3">Predictive Maintenance: When AI Meets Geothermal Energy</h3>
+                        <p>A technical deep dive into building machine learning systems for industrial applications, and the lessons learned from predicting equipment failures in harsh environments.</p>
+                    </div>
+                    <div class="blog-tags-container">
                         <span class="blog-tag">Machine Learning</span>
                         <span class="blog-tag">Industrial IoT</span>
                         <span class="blog-tag">Renewable Energy</span>
@@ -283,8 +315,7 @@
                     <p class="mb-4">While I'm developing this blog, I regularly share insights, reflections, and behind-the-scenes thoughts on my LinkedIn. Join me there for real-time updates on engineering empathy, smart laziness, and the intersection of technology and purpose.</p>
                     <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" class="btn btn-light btn-lg">
                         <i class="ti-linkedin mr-2" style="color: #000;"></i>
-<span style="color: #000;">Connect on LinkedIn</span>
-
+                        <span style="color: #000;">Connect on LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -305,8 +336,8 @@
                             <input type="email" class="form-control" placeholder="Enter your email" style="width: 300px;">
                         </div>
                         <button type="submit" class="btn btn-primary mb-2">Notify Me</button>
+                    </form>
                     <small class="text-muted">No spam, just meaningful insights. Unsubscribe anytime.</small>
-                      </form>
                 </div>
             </div>
         </div>
