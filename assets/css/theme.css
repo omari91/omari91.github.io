@@ -186,6 +186,10 @@ a:hover {
 /* Hero Section */
 .header {
   background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--steel-gray) 100%);
+  background-image: linear-gradient(rgba(28, 43, 74, 0.7), rgba(105, 122, 144, 0.7)), url('../imgs/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 40vh; /* Reduced from previous larger size */
   display: flex;
   align-items: center;
