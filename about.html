@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
     <title>About Me - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
     <meta name="description" content="From curiosity in Kitale to innovation in Berlin - discover the story behind the hybrid innovator who connects technical excellence with a solution-oriented vision.">
@@ -18,18 +18,7 @@
             padding-top: 80px;
         }
 
-        .old-language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .language-switcher a {
+        .navbar-language-toggles a {
             display: inline-block;
             padding: 8px 15px;
             margin: 0 2px;
@@ -40,7 +29,7 @@
             transition: all 0.3s ease;
         }
         
-        .language-switcher a.active {
+        .navbar-language-toggles a.active {
             background: #695aa6;
             color: white;
         }
@@ -80,7 +69,7 @@
         .journey-item:last-child::after {
             display: none;
         }
-        
+
         .story-card {
             background: #f8f9fa;
             padding: 2rem;
@@ -116,6 +105,38 @@
         .skill-card:hover {
             transform: translateY(-5px);
         }
+
+        .profile-image {
+            object-fit: cover;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-position: 50% 50%;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bg-primary.text-white .lead,
+        .bg-primary.text-white p {
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #695aa6;
+            color: #fff;
+            text-align: center;
+        }
+        .footer .social-links .link {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        .footer p {
+            margin-top: 10px;
+        }
+        .footer p a {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -123,7 +144,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="Logo">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -161,7 +182,7 @@
 <section class="section bg-primary text-white">
     <div class="container text-center">
         <h4 class="display-4 mb-2">The Journey of a Hybrid Innovator</h4>
-        <p class="lead" style="color: #fff;">From Kitale's curiosity to Berlin's innovation – Engineering with Purpose</p>
+        <p class="lead">From Kitale's curiosity to Berlin's innovation – Engineering with Purpose</p>
     </div>
 </section>
 
@@ -185,10 +206,9 @@
 
             <div class="col-md-6 text-center d-flex flex-column align-items-center">
                 <img src="assets/imgs/GOAT.jpg" alt="The Innovator"
-                    class="goat-img mb-3"
-                    width="300" height="340"
-                    loading="lazy"
-                    style="object-fit: cover; width: 100%; max-width: 400px; height: auto; object-position: 50% 50%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);">
+                     class="profile-image mb-3"
+                     width="300" height="340"
+                     loading="lazy">
                 <p class="highlight-quote fade-in-on-scroll">From Kitale to Europe – where cliffs become stairs, each step carved with quiet strength. 🐐</p>
             </div>
         </div>
@@ -213,7 +233,7 @@
                         <h4>The University Project That Taught Me Failure</h4>
                         <p class="text-muted mb-2">JKUAT, Kenya - 2015</p>
                         <p>During my electrical engineering studies, I led a project on power grid optimization that initially failed spectacularly. We had the technical knowledge but overlooked the human factor – how the solution would actually be implemented by people in communities.</p>
-                        <p>This failure taught me that **"failure is redirection"** – a core principle that now shapes my approach to innovation. It's not about avoiding mistakes, but about learning so quickly and thoroughly that every setback becomes a strategic advantage.</p>
+                        <p>This failure taught me that <strong>"failure is redirection"</strong> – a core principle that now shapes my approach to innovation. It's not about avoiding mistakes, but about learning so quickly and thoroughly that every setback becomes a strategic advantage.</p>
                     </div>
                     
                     <div class="journey-item">
@@ -236,7 +256,7 @@
                 <div class="story-card">
                     <h4>Finding the Balance</h4>
                     <p>One of my biggest challenges was balancing university studies, work responsibilities, and leadership roles without burning out. I tried to excel in electrical engineering studies while working part-time and leading student organizations.</p>
-                    <p>This taught me what I now call **"Intelligent Laziness"** – the art of understanding systems so deeply that you find the one change that solves ten problems. It's not about working harder, but about systemic intelligence.</p>
+                    <p>This taught me what I now call <strong>"Intelligent Laziness"</strong> – the art of understanding systems so deeply that you find the one change that solves ten problems. It's not about working harder, but about systemic intelligence.</p>
                 </div>
                 
                 <div class="story-card">
@@ -325,10 +345,10 @@
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="mb-4">Looking Ahead</h2>
-                <p class="lead mb-4" style="color: #fff;">
+                <p class="lead mb-4">
                     I want to lead projects that combine technical excellence with AI-driven solutions in automation and efficiency. My goal is to create systems that serve both technical mastery and human purpose.
                 </p>
-                <p class="mb-4" style="color: #fff;">
+                <p class="mb-4">
                     Long-term, I aim to mentor the next generation of engineers, advance STEM education in Africa, and continue to break barriers – always driven by purpose-oriented problem-solving.
                 </p>
                 <a href="contact.html" class="btn btn-light btn-lg">Shape the Future Together</a>
@@ -337,7 +357,6 @@
     </div>
 </section>
 
-<!-- Professional Testimonials -->
 <section class="testimonials-section">
     <div class="container">
         <div class="row">
@@ -350,7 +369,7 @@
             <div class="col-lg-6 mb-4">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="assets/imgs/testimonials/testimonials-1.jpg" alt="Gethsun Misesi" class="testimonial-avatar">
+                        <img src="assets/gethsun1.jpeg" alt="Gethsun Misesi" class="testimonial-avatar">
                         <div class="testimonial-info">
                             <h5>Gethsun Misesi</h5>
                             <div class="testimonial-role">Web3 Developer & Blockchain Advocate</div>
@@ -359,16 +378,66 @@
                     </div>
                     <div class="testimonial-text">
                         <div class="testimonial-quote">
-                            Clifford's expertise in strategic project management and agility has been clearly demonstrated throughout his career. As Senior Product Operations Lead, he has shown exceptional leadership by optimizing operations, boosting team productivity, and enhancing customer satisfaction.
+                            Clifford Ondieki is a talented and driven professional whose expertise in digital skills, web development, strategic project management, and agility has been clearly demonstrated throughout his career. As the Senior Product Operations Lead at Liara Health, he has shown exceptional leadership and operational acumen by optimizing product operations, significantly boosting team productivity, and enhancing customer satisfaction. His strong background in project planning, combined with his proficiency in SaaS and B2C models, enables him to effectively lead high-performing teams in the healthcare technology sector, making him an invaluable asset and a highly recommended candidate for roles requiring technical expertise, strategic insight, and effective leadership.
                         </div>
                     </div>
                 </div>
             </div>
-            
             <div class="col-lg-6 mb-4">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="assets/imgs/testimonials/testimonials-1.jpg" alt="Yukabeth Kidenda" class="testimonial-avatar">
+                        <img src="assets/Valarie.jpeg" alt="Valerie O." class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h5>Valerie O.</h5>
+                            <div class="testimonial-role">Customer Success | Change Management | Project Management</div>
+                            <div class="testimonial-date">January 6, 2022</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <div class="testimonial-quote">
+                            A sales and product aficionado...Clifford embodies leadership with his hands-on approach to execute and deliver on set objectives.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/Alisha.jpeg" alt="Alisha Eberle" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h5>Alisha Eberle</h5>
+                            <div class="testimonial-role">Marketing Manager at Pembroke</div>
+                            <div class="testimonial-date">January 5, 2022</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <div class="testimonial-quote">
+                            While working with Clifford at Elephant Healthcare, I was impressed by his can-do attitude and friendly demeanor. Clifford is a reliable sales representative, who supported his colleagues to ensure the entire team succeeded. Caring and dynamic, Clifford looked after his clients well and executed his job successfully. He would be an asset to any sales organization, and I'm sure there are many more areas of business Clifford could excel in given the opportunity.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/darren.jpeg" alt="Darren Oyoo" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h5>Darren Oyoo</h5>
+                            <div class="testimonial-role">Head of Sales at gtxn Co.</div>
+                            <div class="testimonial-date">January 5, 2022</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <div class="testimonial-quote">
+                            Clifford is a committed and result-oriented individual. Enjoyed working together and learning from each other during our interaction.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/yukabeth.jpeg" alt="Yukabeth Kidenda" class="testimonial-avatar">
                         <div class="testimonial-info">
                             <h5>Yukabeth Kidenda</h5>
                             <div class="testimonial-role">Co-Founder & CEO at Teach For Kenya</div>
@@ -377,7 +446,7 @@
                     </div>
                     <div class="testimonial-text">
                         <div class="testimonial-quote">
-                            Clifford is a very focused young professional with an eagerness to learn and a willingness to go the extra mile to ensure the delivery of high-quality outcomes. He possesses a unique growth mindset that has enabled him to take on unique challenges.
+                           Clifford is a very focused young professional with an eagerness to learn and a willingness to go the extra mile to ensure the delivery of high-quality outcomes. Clifford is well-organized and possesses a unique growth mindset that has enabled him to take on unique challenges.
                         </div>
                     </div>
                 </div>
@@ -385,16 +454,17 @@
         </div>
     </div>
 </section>
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+
+<footer class="footer">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profile" aria-label="LinkedIn Profile">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
+        <p class="mb-0">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
+            <a href="#">Clifford Ondieki - Engineered with Purpose</a>
         </p>
     </div>
 </footer>
