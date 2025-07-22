@@ -118,6 +118,67 @@
         .skill-card:hover {
             transform: translateY(-5px);
         }
+                <style>
+    
+        .testimonial-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(105,90,166,0.08);
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #695aa6;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .testimonial-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #695aa6;
+            margin-right: 1.25rem;
+            background: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(105,90,166,0.10);
+        }
+        .testimonial-info h5 {
+            margin-bottom: 0.25rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: #695aa6;
+            font-weight: 500;
+        }
+        .testimonial-date {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .testimonial-text {
+            margin-top: 0.5rem;
+        }
+        .testimonial-quote {
+            font-size: 1.08rem;
+            font-style: italic;
+            color: #444;
+            line-height: 1.6;
+        }
+        @media (max-width: 767px) {
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .testimonial-avatar {
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -345,6 +406,110 @@
                 </p>
                 <a href="contact.html" class="btn btn-light btn-lg">Gemeinsam die Zukunft gestalten</a>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Die Empfehlungen sind bereits im nächsten Abschnitt enthalten, daher ist hier kein zusätzlicher Code nötig. -->
+<section class="testimonials-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-4">
+                <h2>Berufliche Empfehlungen</h2>
+                <p class="lead">Was Kolleg:innen und Führungskräfte über die Zusammenarbeit mit mir sagen</p>
+            </div>
+        </div>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+            <ol class="carousel-indicators">
+                <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="assets/imgs/testimonials/Yukabeth.jpg" alt="Portrait von Yukabeth Kidenda" class="testimonial-avatar">
+                                    <div class="testimonial-info">
+                                        <h5>Yukabeth Kidenda</h5>
+                                        <div class="testimonial-role">Co-Founder & CEO bei Teach for Kenya</div>
+                                        <div class="testimonial-date">29. Januar 2020</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    <div class="testimonial-quote">
+                                        Clifford ist ein sehr fokussierter junger Profi mit Lernbereitschaft und dem Willen, die Extrameile zu gehen, um hochwertige Ergebnisse zu liefern. Er ist gut organisiert und besitzt eine einzigartige Wachstumsmentalität, die ihm geholfen hat, besondere Herausforderungen zu meistern.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="assets/imgs/testimonials/Valarie.jpg" alt="Portrait von Valerie O." class="testimonial-avatar">
+                                    <div class="testimonial-info">
+                                        <h5>Valerie O.</h5>
+                                        <div class="testimonial-role">Customer Success | Change Management</div>
+                                        <div class="testimonial-date">6. Januar 2022</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    <div class="testimonial-quote">
+                                        Ein Vertriebs- und Produktprofi... Clifford verkörpert Führung durch seinen praxisnahen Ansatz, um gesetzte Ziele zu erreichen.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="assets/imgs/testimonials/Alisha.jpg" alt="Portrait von Alisha Eberle" class="testimonial-avatar">
+                                    <div class="testimonial-info">
+                                        <h5>Alisha Eberle</h5>
+                                        <div class="testimonial-role">Marketing Manager bei Pembroke</div>
+                                        <div class="testimonial-date">5. Januar 2022</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    <div class="testimonial-quote">
+                                        Während unserer Zusammenarbeit bei Elephant Healthcare war ich beeindruckt von Cliffords positiver Einstellung und freundlichem Auftreten... Er wäre eine Bereicherung für jedes Vertriebsteam.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="assets/imgs/testimonials/Darren.jpg" alt="Portrait von Darren Oyoo" class="testimonial-avatar">
+                                    <div class="testimonial-info">
+                                        <h5>Darren Oyoo</h5>
+                                        <div class="testimonial-role">Head of Sales bei gtxn Co.</div>
+                                        <div class="testimonial-date">5. Januar 2022</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    <div class="testimonial-quote">
+                                        Clifford ist engagiert und ergebnisorientiert. Die Zusammenarbeit war bereichernd und lehrreich für beide Seiten.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Vorherige</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Nächste</span>
+            </a>
         </div>
     </div>
 </section>
