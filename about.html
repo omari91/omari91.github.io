@@ -179,6 +179,66 @@
             font-family: 'themify';
             content: "\e649"; /* ti-angle-right */
         }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(105,90,166,0.08);
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #695aa6;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .testimonial-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #695aa6;
+            margin-right: 1.25rem;
+            background: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(105,90,166,0.10);
+        }
+        .testimonial-info h5 {
+            margin-bottom: 0.25rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: #695aa6;
+            font-weight: 500;
+        }
+        .testimonial-date {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .testimonial-text {
+            margin-top: 0.5rem;
+        }
+        .testimonial-quote {
+            font-size: 1.08rem;
+            font-style: italic;
+            color: #444;
+            line-height: 1.6;
+        }
+        @media (max-width: 767px) {
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .testimonial-avatar {
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -399,6 +459,7 @@
     </div>
 </section>
 
+<!-- Testimonials Section -->
 <section class="testimonials-section section">
     <div class="container">
         <div class="row">
@@ -415,12 +476,12 @@
             </ol>
 
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                                <div class="carousel-item active">
                     <div class="row justify-content-center">
                         <div class="col-md-6 mb-4 mb-md-0">
                             <div class="testimonial-card">
                                 <div class="testimonial-header">
-                                    <img src="assets/Yukabeth.jpg" alt="" class="testimonial-avatar">
+                                    <img src="assets/imgs/testimonials/Yukabeth.jpg" alt="Yukabeth Kidenda portrait" class="testimonial-avatar">
                                     <div class="testimonial-info">
                                         <h5>Yukabeth Kidenda</h5>
                                         <div class="testimonial-role">Co-Founder & CEO at Teach for Kenya</div>
@@ -435,9 +496,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                             <div class="testimonial-card">
+                            <div class="testimonial-card">
                                 <div class="testimonial-header">
-                                    <img src="assets/Valarie.jpg" alt="Valerie O." class="testimonial-avatar">
+                                    <img src="assets/imgs/testimonials/Valarie.jpg" alt="Valerie O. portrait" class="testimonial-avatar">
                                     <div class="testimonial-info">
                                         <h5>Valerie O.</h5>
                                         <div class="testimonial-role">Customer Success | Change Management</div>
@@ -454,11 +515,11 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                     <div class="row justify-content-center">
+                    <div class="row justify-content-center">
                         <div class="col-md-6 mb-4 mb-md-0">
-                             <div class="testimonial-card">
+                            <div class="testimonial-card">
                                 <div class="testimonial-header">
-                                    <img src="assets/Alisha.jpg" alt="Alisha Eberle" class="testimonial-avatar">
+                                    <img src="assets/imgs/testimonials/Alisha.jpg" alt="Alisha Eberle portrait" class="testimonial-avatar">
                                     <div class="testimonial-info">
                                         <h5>Alisha Eberle</h5>
                                         <div class="testimonial-role">Marketing Manager at Pembroke</div>
@@ -475,7 +536,7 @@
                         <div class="col-md-6">
                             <div class="testimonial-card">
                                 <div class="testimonial-header">
-                                    <img src="assets/darren.jpg" alt="Darren Oyoo" class="testimonial-avatar">
+                                    <img src="assets/imgs/testimonials/Darren.jpg" alt="Darren Oyoo portrait" class="testimonial-avatar">
                                     <div class="testimonial-info">
                                         <h5>Darren Oyoo</h5>
                                         <div class="testimonial-role">Head of Sales at gtxn Co.</div>
@@ -491,7 +552,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
             <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
