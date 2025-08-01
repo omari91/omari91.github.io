@@ -15,6 +15,103 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     
+    <style>
+        .old-language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-switcher a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 2px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher a.active {
+            background: #695aa6;
+            color: white;
+        }
+        
+        .philosophy-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 7rem 0; /* Increased padding for more space */
+        }
+        
+        .philosophy-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 4px solid #695aa6;
+            transition: transform 0.3s ease;
+        }
+        
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .quote-section {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #695aa6;
+        }
+        
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .principle-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .reflection-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #695aa6;
+        }
+        
+        .rotating-insight {
+            background: linear-gradient(45deg, #695aa6, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
 
@@ -58,10 +155,10 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="philosophy-hero philosophy-hero-padding">
+<section class="philosophy-hero">
     <div class="container text-center">
-        <h2 class="display-4 mb-2">Engineering Empathy</h2>
-        <p class="lead">The philosophy that bridges technical excellence with human purpose</p>
+        <h2 class="display-4 mb-2"style="color: #fff;">Engineering Empathy</h2>
+        <p class="lead"style="color: #fff;">The philosophy that bridges technical excellence with human purpose</p>
     </div>
 </section>
 
@@ -212,22 +309,22 @@
 <section class="section bg-primary text-white">
     <div class="container text-center">
         <h2 class="mb-4">Let's Build with Purpose</h2>
-        <p class="lead mb-4">If these principles resonate with you, let's explore how we can create solutions that serve both technical excellence and human flourishing.</p>
+        <p class="lead mb-4" style="color: #fff;">If these principles resonate with you, let's explore how we can create solutions that serve both technical excellence and human flourishing.</p>
         <a href="contact.html" class="btn btn-light btn-lg">Start a Meaningful Conversation</a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
-        <p class="mb-0">
+        <p class="mb-0" style="margin-top: 10px;">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#">Clifford Ondieki - Engineered with Purpose</a>
+            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
         </p>
     </div>
 </footer>

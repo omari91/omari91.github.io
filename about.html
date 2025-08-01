@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
     <title>About Me - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
     <meta name="description" content="From curiosity in Kitale to innovation in Berlin - discover the story behind the hybrid innovator who connects technical excellence with a solution-oriented vision.">
@@ -13,8 +13,235 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        .navbar-language-toggles a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 2px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-language-toggles a.active {
+            background: #695aa6;
+            color: white;
+        }
+        
+        .journey-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .journey-item {
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #695aa6;
+            border-radius: 50%;
+        }
+        
+        .journey-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e9ecef;
+        }
+        
+        .journey-item:last-child::after {
+            display: none;
+        }
+
+        .story-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid #695aa6;
+        }
+        
+        .quote-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-image {
+            object-fit: cover;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-position: 50% 50%;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bg-primary.text-white .lead,
+        .bg-primary.text-white p {
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #695aa6;
+            color: #fff;
+            text-align: center;
+        }
+        .footer .social-links .link {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        .footer p {
+            margin-top: 10px;
+        }
+        .footer p a {
+            color: #fff;
+        }
+
+        /* --- Testimonial Carousel Styles --- */
+        .testimonials-section .carousel-item {
+            padding: 2rem 0;
+        }
+
+        .testimonials-section .testimonial-card {
+            height: 100%;
+            margin: 0; /* Remove margin from card as item has padding */
+        }
+        
+        /* Style for the navigation indicators (dots) */
+        .testimonials-section .carousel-indicators li {
+            background-color: #ccc;
+        }
+
+        .testimonials-section .carousel-indicators .active {
+            background-color: #695aa6; /* Theme purple */
+        }
+
+        /* Style for the navigation controls (arrows) */
+        .testimonials-section .carousel-control-prev,
+        .testimonials-section .carousel-control-next {
+            width: 8%; /* Widen hit area for arrows */
+        }
+
+        .testimonials-section .carousel-control-prev-icon,
+        .testimonials-section .carousel-control-next-icon {
+            background-image: none; /* Remove default Bootstrap arrow */
+            font-size: 3rem;
+            color: #695aa6; /* Theme purple */
+        }
+        
+        .testimonials-section .carousel-control-prev-icon::before {
+            font-family: 'themify';
+            content: "\e64a"; /* ti-angle-left */
+        }
+        
+        .testimonials-section .carousel-control-next-icon::before {
+            font-family: 'themify';
+            content: "\e649"; /* ti-angle-right */
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(105,90,166,0.08);
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #695aa6;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .testimonial-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #695aa6;
+            margin-right: 1.25rem;
+            background: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(105,90,166,0.10);
+        }
+        .testimonial-info h5 {
+            margin-bottom: 0.25rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: #695aa6;
+            font-weight: 500;
+        }
+        .testimonial-date {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .testimonial-text {
+            margin-top: 0.5rem;
+        }
+        .testimonial-quote {
+            font-size: 1.08rem;
+            font-style: italic;
+            color: #444;
+            line-height: 1.6;
+        }
+        @media (max-width: 767px) {
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .testimonial-avatar {
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
+        }
+    </style>
 </head>
-<body class="body-padding-top">
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">

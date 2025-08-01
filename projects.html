@@ -15,6 +15,91 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     
+    <style>
+        .old-language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-switcher a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 2px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher a.active {
+            background: #695aa6;
+            color: white;
+        }
+        
+        .project-detail {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 4px solid #695aa6;
+        }
+        
+        .project-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0; /* Increased padding for more space */
+            margin-bottom: 2rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech-badge {
+            background: #695aa6;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+        }
+        
+        .impact-metrics {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .metric-item {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .metric-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #695aa6;
+        }
+        
+        .lesson-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -58,10 +143,10 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="project-hero project-hero-padding">
+<section class="project-hero">
     <div class="container text-center">
-        <h2 class="display-4 mb-2">Engineering with Impact</h2>
-        <p class="lead">Projects that bridge technical excellence with human purpose</p>
+        <h2 class="display-4 mb-2"style="color: #fff;">Engineering with Impact</h2>
+        <p class="lead"style="color: #fff;">Projects that bridge technical excellence with human purpose</p>
     </div>
 </section>
 
@@ -295,23 +380,23 @@
 <section class="section bg-primary text-white">
     <div class="container text-center">
         <h2 class="mb-4">Ready to Build Something Impactful?</h2>
-        <p class="lead mb-4">Let's combine technical excellence with purpose-driven innovation to create solutions that
+        <p class="lead mb-4" style="color: #fff;">Let's combine technical excellence with purpose-driven innovation to create solutions that
         truly matter.</p>
         <a href="contact.html" class="btn btn-light btn-lg">Let's Energize Change Together ⚡</a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
-        <p class="mb-0">
+        <p class="mb-0" style="margin-top: 10px;">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#">Clifford Ondieki - Engineered with Purpose</a>
+            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
         </p>
     </div>
 </footer>

@@ -13,8 +13,121 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        .blog-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #695aa6;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            /* German text wrapping with minimal hyphenation */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: manual;
+            -webkit-hyphens: manual;
+            -ms-hyphens: manual;
+        }
+        
+        .blog-card h2,
+        .blog-card h3,
+        .blog-card h4 {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: manual;
+            -webkit-hyphens: manual;
+            -ms-hyphens: manual;
+            line-height: 1.3;
+        }
+
+        .blog-card p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: manual;
+            -webkit-hyphens: manual;
+            -ms-hyphens: manual;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-tag {
+            background: #695aa6;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .featured-post {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-left: none;
+        }
+        
+        .coming-soon {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #6c757d;
+        }
+        
+        .linkedin-cta {
+            background: #0077b5;
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .linkedin-cta a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Added for tags positioning */
+        .blog-card-content {
+            flex-grow: 1;
+        }
+        
+        .blog-tags-container {
+            padding-top: 1rem;
+            margin-top: auto;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .featured-post .blog-tags-container {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
 </head>
-<body class="body-padding-top">
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
@@ -54,10 +167,10 @@
     </div>
 </nav>
 
-<section class="blog-hero blog-hero-padding">
+<section class="blog-hero">
     <div class="container text-center">
-        <h2 class="display-4 mb-2">Einblicke & Reflexionen</h2>
-        <p class="lead">Gedanken zu Ingenieuremphatie, smarter Faulheit und der Verbindung von Welten durch Innovation</p>
+        <h2 class="display-4 mb-2"style="color: #fff;">Einblicke & Reflexionen</h2>
+        <p class="lead"style="color: #fff;">Gedanken zu Ingenieuremphatie, smarter Faulheit und der Verbindung von Welten durch Innovation</p>
     </div>
 </section>
 
@@ -65,7 +178,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <div class="blog-card blog-card-de featured-post">
+                <div class="blog-card featured-post">
                     <div class="blog-card-content">
                         <div class="blog-meta">Vorgestellt • Ingenieurphilosophie</div>
                         <h2 class="mb-3">Ingenieuremphatie: Warum die besten Systeme mit Herz gebaut werden</h2>
@@ -87,7 +200,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="blog-card blog-card-de">
+                <div class="blog-card">
                     <div class="blog-card-content">
                         <div class="blog-meta">Demnächst • Domänenübergreifende Innovation</div>
                         <h3 class="mb-3">Wie Kenias Stromnetz mich lehrte, SaaS-Funktionen zu priorisieren</h3>
@@ -102,7 +215,7 @@
             </div>
             
             <div class="col-lg-6">
-                <div class="blog-card blog-card-de">
+                <div class="blog-card">
                     <div class="blog-card-content">
                         <div class="blog-meta">Demnächst • Leben & Technologie</div>
                         <h3 class="mb-3">Elternschaft & Python: Das Debuggen der Algorithmen des Lebens</h3>
@@ -119,7 +232,7 @@
         
         <div class="row">
             <div class="col-lg-6">
-                <div class="blog-card blog-card-de">
+                <div class="blog-card">
                     <div class="blog-card-content">
                         <div class="blog-meta">Demnächst • Karriereweg</div>
                         <h3 class="mb-3">Von 11-kV-Leitungen zu SaaS-Pipelines: Die Reise eines Systemdenkers</h3>
@@ -134,7 +247,7 @@
             </div>
             
             <div class="col-lg-6">
-                <div class="blog-card blog-card-de">
+                <div class="blog-card">
                     <div class="blog-card-content">
                         <div class="blog-meta">Demnächst • Innovationsphilosophie</div>
                         <h3 class="mb-3">Smarte Faulheit: Die Kunst der systemischen Effizienz</h3>
@@ -151,7 +264,7 @@
         
         <div class="row">
             <div class="col-lg-6">
-                <div class="blog-card blog-card-de">
+                <div class="blog-card">
                     <div class="blog-card-content">
                         <div class="blog-meta">Demnächst • Kultureller Brückenbau</div>
                         <h3 class="mb-3">Ubuntu nach Berlin bringen: Gemeinschaftswerte in Tech-Teams</h3>
@@ -166,7 +279,7 @@
             </div>
             
             <div class="col-lg-6">
-                <div class="blog-card blog-card-de">
+                <div class="blog-card">
                     <div class="blog-card-content">
                         <div class="blog-meta">Demnächst • Technischer Deep Dive</div>
                         <h3 class="mb-3">Prädiktive Wartung: Wenn KI auf Geothermie trifft</h3>
@@ -191,8 +304,8 @@
                     <h3 class="mb-3">Folgen Sie meiner Reise auf LinkedIn</h3>
                     <p class="mb-4">Während ich diesen Blog entwickle, teile ich regelmäßig Einblicke, Reflexionen und Gedanken hinter den Kulissen auf meinem LinkedIn-Profil. Folgen Sie mir dort für Echtzeit-Updates zu Ingenieuremphatie, smarter Faulheit und der Schnittstelle von Technologie und Zweck.</p>
                     <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" class="btn btn-light btn-lg">
-                       <i class="ti-linkedin mr-2"></i>
-                       <span>Connect on LinkedIn</span>
+                       <i class="ti-linkedin mr-2" style="color: #000;"></i>
+<span style="color: #000;">Connect on LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -220,16 +333,16 @@
     </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profil">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profil">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
-        <p class="mb-0">
+        <p class="mb-0" style="margin-top: 10px;">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#">Clifford Ondieki - Mit Sinn entwickelt</a>
+            <a href="#" style="color: #fff;">Clifford Ondieki - Mit Sinn entwickelt</a>
         </p>
     </div>
 </footer>
