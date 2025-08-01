@@ -15,124 +15,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     
-    <style>
-        body {
-            padding-top: 80px;
-        }
-        
-        .old-language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .language-switcher a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 2px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .language-switcher a.active {
-            background: #695aa6;
-            color: white;
-        }
-        
-        .blog-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 7rem 0;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-left: 4px solid #695aa6;
-            min-height: 300px;
-            /* Flex layout for positioning tags at bottom */
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .blog-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-tag {
-            background: #695aa6;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
-        
-        .featured-post {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-left: none;
-        }
-        
-        .coming-soon {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
-            text-align: center;
-            padding: 3rem 2rem;
-            color: #6c757d;
-        }
-        
-        .linkedin-cta {
-            background: #0077b5;
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .linkedin-cta a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        /* Added for tags positioning */
-        .blog-card-content {
-            flex-grow: 1;
-        }
-        
-        .blog-tags-container {
-            padding-top: 1rem;
-            margin-top: auto;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .featured-post .blog-tags-container {
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-    </style>
 </head>
-<body>
+<body class="body-padding-top">
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
@@ -174,10 +58,10 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="blog-hero">
+<section class="blog-hero blog-hero-padding">
     <div class="container text-center">
-        <h2 class="display-4 mb-2" style="color: #fff;">Insights & Reflections</h2>
-        <p class="lead" style="color: #fff;">Thoughts on engineering empathy, smart laziness, and bridging worlds through innovation</p>
+        <h2 class="display-4 mb-2">Insights & Reflections</h2>
+        <p class="lead">Thoughts on engineering empathy, smart laziness, and bridging worlds through innovation</p>
     </div>
 </section>
 
@@ -314,8 +198,8 @@
                     <h3 class="mb-3">Follow My Journey on LinkedIn</h3>
                     <p class="mb-4">While I'm developing this blog, I regularly share insights, reflections, and behind-the-scenes thoughts on my LinkedIn. Join me there for real-time updates on engineering empathy, smart laziness, and the intersection of technology and purpose.</p>
                     <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" class="btn btn-light btn-lg">
-                        <i class="ti-linkedin mr-2" style="color: #000;"></i>
-                        <span style="color: #000;">Connect on LinkedIn</span>
+                        <i class="ti-linkedin mr-2"></i>
+                        <span>Connect on LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -345,16 +229,16 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+<footer class="footer">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profile">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
+        <p class="mb-0">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
+            <a href="#">Clifford Ondieki - Engineered with Purpose</a>
         </p>
     </div>
 </footer>
