@@ -749,6 +749,83 @@ a:hover {
   border-radius: 3px;
 }
 
+/* Geographic Heatmap Styles */
+.geographic-heatmap-container {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--sun-gold);
+}
+
+#heatmap-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.map-btn {
+  background: var(--sun-gold);
+  color: var(--midnight-blue);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.map-btn:hover {
+  background: #D4A500;
+  transform: translateY(-2px);
+}
+
+.map-btn.active {
+  background: var(--kenyan-earth-red);
+  color: var(--sky-white);
+}
+
+.map-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: var(--sky-white);
+  border-radius: 8px;
+  border: 1px solid var(--light-border);
+}
+
+.map-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--steel-gray);
+}
+
+.intensity-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.intensity-high { background: #ff4444; }
+.intensity-medium { background: #ffaa00; }
+.intensity-low { background: #44ff44; }
 @media (max-width: 768px) {
   .chart-wrapper {
     height: 300px;
@@ -763,6 +840,23 @@ a:hover {
   }
   
   .heatmap-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .geographic-heatmap-container {
+    padding: 1.5rem;
+  }
+  
+  #heatmap-container {
+    height: 350px;
+  }
+  
+  .map-controls {
+    gap: 0.5rem;
+  }
+  
+  .map-btn {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
   }
