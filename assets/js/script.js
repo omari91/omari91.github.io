@@ -11,7 +11,7 @@
 
 // smooth scroll
 $(document).ready(function(){
-    $(".navbar .nav-link").on('click', function(event) {
+    $(".navbar .nav-link[href^='#']").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
@@ -27,6 +27,16 @@ $(document).ready(function(){
     $('#nav-toggle').click(function(){
         $(this).toggleClass('is-active');
         $('ul.nav').toggleClass('show');
+    });
+
+    // Bootstrap navbar collapse for mobile
+    $('.navbar-toggler').click(function(){
+        $('.navbar-collapse').toggleClass('show');
+    });
+
+    // Close mobile menu when clicking on nav links
+    $('.navbar-nav .nav-link').click(function(){
+        $('.navbar-collapse').removeClass('show');
     });
 
     // fade-in-on-scroll animation

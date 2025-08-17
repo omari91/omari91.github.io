@@ -427,6 +427,146 @@
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 <script src="assets/js/script.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Heatmap data for different categories
+const heatmapData = {
+    performance: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'System Performance',
+            data: [
+                { x: 'Jan', y: 'Grid Stability', v: 85 },
+                { x: 'Feb', y: 'Grid Stability', v: 92 },
+                { x: 'Mar', y: 'Grid Stability', v: 88 },
+                { x: 'Apr', y: 'Grid Stability', v: 95 },
+                { x: 'May', y: 'Grid Stability', v: 91 },
+                { x: 'Jun', y: 'Grid Stability', v: 97 },
+                { x: 'Jan', y: 'Load Balancing', v: 78 },
+                { x: 'Feb', y: 'Load Balancing', v: 85 },
+                { x: 'Mar', y: 'Load Balancing', v: 82 },
+                { x: 'Apr', y: 'Load Balancing', v: 89 },
+                { x: 'May', y: 'Load Balancing', v: 94 },
+                { x: 'Jun', y: 'Load Balancing', v: 96 }
+            ],
+            backgroundColor: function(context) {
+                const value = context.parsed.v;
+                if (value > 90) return '#00aaff';
+                if (value > 80) return '#44ff44';
+                if (value > 70) return '#ffaa00';
+                return '#ff4444';
+            }
+        }]
+    },
+    efficiency: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'Energy Efficiency',
+            data: [
+                { x: 'Jan', y: 'Wind Power', v: 72 },
+                { x: 'Feb', y: 'Wind Power', v: 78 },
+                { x: 'Mar', y: 'Wind Power', v: 85 },
+                { x: 'Apr', y: 'Wind Power', v: 91 },
+                { x: 'May', y: 'Wind Power', v: 88 },
+                { x: 'Jun', y: 'Wind Power', v: 94 },
+                { x: 'Jan', y: 'Geothermal', v: 89 },
+                { x: 'Feb', y: 'Geothermal', v: 92 },
+                { x: 'Mar', y: 'Geothermal', v: 87 },
+                { x: 'Apr', y: 'Geothermal', v: 95 },
+                { x: 'May', y: 'Geothermal', v: 93 },
+                { x: 'Jun', y: 'Geothermal', v: 98 }
+            ],
+            backgroundColor: function(context) {
+                const value = context.parsed.v;
+                if (value > 90) return '#00aaff';
+                if (value > 80) return '#44ff44';
+                if (value > 70) return '#ffaa00';
+                return '#ff4444';
+            }
+        }]
+    },
+    maintenance: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'Predictive Maintenance',
+            data: [
+                { x: 'Jan', y: 'Failure Prediction', v: 82 },
+                { x: 'Feb', y: 'Failure Prediction', v: 87 },
+                { x: 'Mar', y: 'Failure Prediction', v: 91 },
+                { x: 'Apr', y: 'Failure Prediction', v: 95 },
+                { x: 'May', y: 'Failure Prediction', v: 93 },
+                { x: 'Jun', y: 'Failure Prediction', v: 97 },
+                { x: 'Jan', y: 'Cost Savings', v: 75 },
+                { x: 'Feb', y: 'Cost Savings', v: 81 },
+                { x: 'Mar', y: 'Cost Savings', v: 86 },
+                { x: 'Apr', y: 'Cost Savings', v: 92 },
+                { x: 'May', y: 'Cost Savings', v: 89 },
+                { x: 'Jun', y: 'Cost Savings', v: 94 }
+            ],
+            backgroundColor: function(context) {
+                const value = context.parsed.v;
+                if (value > 90) return '#00aaff';
+                if (value > 80) return '#44ff44';
+                if (value > 70) return '#ffaa00';
+                return '#ff4444';
+            }
+        }]
+    }
+};
+
+let currentChart;
+
+function showHeatmapData(category) {
+    // Update button states
+    document.querySelectorAll('.heatmap-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // Destroy existing chart
+    if (currentChart) {
+        currentChart.destroy();
+    }
+
+    // Create new chart
+    const ctx = document.getElementById('projectHeatmap').getContext('2d');
+    currentChart = new Chart(ctx, {
+        type: 'scatter',
+        data: heatmapData[category],
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return context[0].parsed.y + ' - ' + context[0].parsed.x;
+                        },
+                        label: function(context) {
+                            return 'Value: ' + context.parsed.v + '%';
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'category',
+                    title: { display: true, text: 'Time Period' }
+                },
+                y: {
+                    type: 'category',
+                    title: { display: true, text: 'Metrics' }
+                }
+            }
+        }
+    });
+}
+
+// Initialize with performance data
+document.addEventListener('DOMContentLoaded', function() {
+    showHeatmapData('performance');
+});
+</script>
+
 <!-- Leaflet JS + Heat plugin -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
