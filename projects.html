@@ -2,32 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Projects - Clifford Omari Ondieki | Engineering with Impact</title>
-    <meta name="description" content="Explore projects that bridge engineering excellence with purpose-driven innovation - from Kenya's power grids to Berlin's tech solutions.">
+    <title>About Me - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
+    <meta name="description" content="From curiosity in Kitale to innovation in Berlin - discover the story behind the hybrid innovator who connects technical excellence with a solution-oriented vision.">
     
-    <!-- Font Icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap CSS -->
     <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     
     <style>
-         .old-language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        body {
+            padding-top: 80px;
         }
-        
-        .language-switcher a {
+
+        .navbar-language-toggles a {
             display: inline-block;
             padding: 8px 15px;
             margin: 0 2px;
@@ -38,76 +29,224 @@
             transition: all 0.3s ease;
         }
         
-        .language-switcher a.active {
+        .navbar-language-toggles a.active {
             background: #695aa6;
             color: white;
         }
         
-        .project-detail {
-            background: white;
-            border-radius: 15px;
+        .journey-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .journey-item {
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #695aa6;
+            border-radius: 50%;
+        }
+        
+        .journey-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e9ecef;
+        }
+        
+        .journey-item:last-child::after {
+            display: none;
+        }
+
+        .story-card {
+            background: #f8f9fa;
             padding: 2rem;
+            border-radius: 15px;
             margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-left: 4px solid #695aa6;
         }
         
-        .project-hero {
+        .quote-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 6rem 0; /* Increased padding for more space */
-            margin-bottom: 2rem;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        
-        .tech-badge {
-            background: #695aa6;
-            color: white;
-            padding: 0.25rem 0.75rem;
+            padding: 2rem;
             border-radius: 15px;
-            font-size: 0.875rem;
+            margin: 2rem 0;
+            text-align: center;
         }
         
-        .impact-metrics {
-            background: #f8f9fa;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-card {
+            background: white;
             padding: 1.5rem;
             border-radius: 10px;
-            margin: 1.5rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
         
-        .metric-item {
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-image {
+            object-fit: cover;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-position: 50% 50%;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bg-primary.text-white .lead,
+        .bg-primary.text-white p {
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #695aa6;
+            color: #fff;
             text-align: center;
+        }
+        .footer .social-links .link {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        .footer p {
+            margin-top: 10px;
+        }
+        .footer p a {
+            color: #fff;
+        }
+
+        /* --- Testimonial Carousel Styles --- */
+        .testimonials-section .carousel-item {
+            padding: 2rem 0;
+        }
+
+        .testimonials-section .testimonial-card {
+            height: 100%;
+            margin: 0; /* Remove margin from card as item has padding */
+        }
+        
+        /* Style for the navigation indicators (dots) */
+        .testimonials-section .carousel-indicators li {
+            background-color: #ccc;
+        }
+
+        .testimonials-section .carousel-indicators .active {
+            background-color: #695aa6; /* Theme purple */
+        }
+
+        /* Style for the navigation controls (arrows) */
+        .testimonials-section .carousel-control-prev,
+        .testimonials-section .carousel-control-next {
+            width: 8%; /* Widen hit area for arrows */
+        }
+
+        .testimonials-section .carousel-control-prev-icon,
+        .testimonials-section .carousel-control-next-icon {
+            background-image: none; /* Remove default Bootstrap arrow */
+            font-size: 3rem;
+            color: #695aa6; /* Theme purple */
+        }
+        
+        .testimonials-section .carousel-control-prev-icon::before {
+            font-family: 'themify';
+            content: "\e64a"; /* ti-angle-left */
+        }
+        
+        .testimonials-section .carousel-control-next-icon::before {
+            font-family: 'themify';
+            content: "\e649"; /* ti-angle-right */
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(105,90,166,0.08);
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #695aa6;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
             margin-bottom: 1rem;
         }
-        
-        .metric-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #695aa6;
+        .testimonial-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #695aa6;
+            margin-right: 1.25rem;
+            background: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(105,90,166,0.10);
         }
-        
-        .lesson-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1rem 0;
+        .testimonial-info h5 {
+            margin-bottom: 0.25rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: #695aa6;
+            font-weight: 500;
+        }
+        .testimonial-date {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .testimonial-text {
+            margin-top: 0.5rem;
+        }
+        .testimonial-quote {
+            font-size: 1.08rem;
+            font-style: italic;
+            color: #444;
+            line-height: 1.6;
+        }
+        @media (max-width: 767px) {
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .testimonial-avatar {
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
+        <a class="navbar-brand" href="projects.html">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -118,10 +257,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
@@ -131,16 +270,17 @@
                     <a class="nav-link" href="blog.html">Insights</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Connect</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
             <div class="navbar-language-toggles ml-auto">
-                <a href="projects.html" class="nav-link language-toggle en active">EN</a>
-                <a href="projects-de.html" class="nav-link language-toggle de">DE</a>
+                <a href="about.html" class="nav-link language-toggle en active">EN</a>
+                <a href="about-de.html" class="nav-link language-toggle de">DE</a>
             </div>
         </div>
     </div>
 </nav>
+
 
 <!-- Hero Section -->
 <section class="project-hero">
@@ -320,13 +460,88 @@
 </section>
 
 <!-- EV Charger Deployment Optimization -->
+  <!-- SaaS Performance Optimization -->
+
+<section class="section bg-light">
+
+    <div class="container">
+
+        <div class="project-detail">
+
+            <div class="row">
+
+                <div class="col-lg-8">
+
+                    <h2 class="mb-3">SaaS Performance Optimization Platform</h2>
+
+                    <p class="lead">Ongoing Berlin-based project applying "Smart Laziness" principles to automate performance bottleneck detection</p>
+
+                    
+
+                    <h4>The Challenge</h4>
+
+                    <p>A fast growing SaaS Berlin-based company was struggling with application performance issues that required constant manual monitoring and intervention. Their engineering team was spending 60% of their time on reactive performance fixes rather than building new features.</p>
+
+                    
+
+                    <h4>My "Smart Laziness" Solution</h4>
+
+                    <p>Instead of adding more monitoring tools, I applied my "Smart Laziness" philosophy—understanding the system so deeply that one change eliminates ten problems. I built an intelligent performance optimization platform that automatically identifies and resolves common bottlenecks.</p>
+
+                    
+
+                    <div class="tech-stack">
+
+                        <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">TypeScript</span>
+
+                        <span class="tech-badge">Docker</span>
+
+                        <span class="tech-badge">Kubernetes</span>
+
+                        <span class="tech-badge">Prometheus</span>
+
+                        <span class="tech-badge">Machine Learning</span>
+
+                        <span class="tech-badge">Auto-scaling</span>
+
+                    </div>
+                    <h4>Impact & Results</h4>
+                    <div class="impact-metrics">
+                        <div class="row">
+                            <div class="col-md-4 metric-item">
+                                <div class="metric-number">80%</div>
+                                <div>Reduction in Manual Interventions</div>
+                            </div>
+                            <div class="col-md-4 metric-item">
+                                <div class="metric-number">3x</div>
+                                <div>Faster Response Times</div>
+                            </div>
+                            <div class="col-md-4 metric-item">
+                                <div class="metric-number">Ongoing</div>
+                                <div>Feature Expansion & Testing</div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="assets/imgs/saas.png" class="img-fluid rounded" alt="SaaS Performance Optimization">
+                    <div class="lesson-card">
+                        <h5>Philosophy in Action</h5>
+                        <p class="mb-0">The goal isn’t to monitor everything—it’s to design systems that heal themselves. This project embodies how strategic laziness, when backed by deep insight, leads to elegant, scalable engineering.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="section bg-light py-12 px-4 md:px-8 lg:px-16">
     <div class="container mx-auto">
         <div class="project-detail bg-white p-6 md:p-10 rounded-lg shadow-xl">
             <div class="flex flex-col lg:flex-row -mx-4">
                 <div class="w-full lg:w-3/4 px-4">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 leading-tight">Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization</h2>
-                    <p class="text-lg text-gray-600 mb-6">An **ongoing** data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.</p>
+                    <p class="text-lg text-gray-600 mb-6">Currently ongoing data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.</p>
 
                     <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">The Challenge</h4>
                     <p class="text-gray-700 mb-6">Public Electric Vehicle (EV) charging infrastructure in Germany is largely demand-driven, reinforcing spatial inequities by favoring central districts and leaving peripheral areas with higher congestion and reduced access. This creates a "chicken-and-egg" problem, where lack of infrastructure suppresses EV adoption in underserved areas, justifying continued underinvestment.</p>
@@ -371,29 +586,6 @@
             </div>
         </div>
     </div>
-    <!-- Tailwind CSS CDN (include this in your HTML <head> if not already present) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for rounded corners and overall aesthetic */
-        .section {
-            background-color: #f8f8f8;
-        }
-        .project-detail {
-            border-radius: 1.5rem; /* More rounded corners */
-        }
-        .tech-badge {
-            border-radius: 9999px; /* Fully rounded */
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        .metric-item {
-            border-radius: 0.75rem; /* Rounded corners for metric items */
-            border: 1px solid #e2e8f0; /* Light border */
-        }
-        .lesson-card {
-            border-radius: 1rem; /* Rounded corners for lesson card */
-            border: 1px solid #c7d2fe; /* Light border */
-        }
-    </style>
 </section>
 
 <!-- Call to Action -->
