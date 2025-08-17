@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Projekte - Clifford Omari Ondieki | Ingenieurwesen mit Wirkung</title>
-    <meta name="description" content="Entdecken Sie Projekte, die technische Exzellenz mit zielgerichteter Innovation verbinden – von Kenias Stromnetzen bis zu Berlins Tech-Lösungen.">
+    <title>About Me - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
+    <meta name="description" content="From curiosity in Kitale to innovation in Berlin - discover the story behind the hybrid innovator who connects technical excellence with a solution-oriented vision.">
     
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
@@ -14,18 +14,11 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     
     <style>
-        .old-language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        body {
+            padding-top: 80px;
         }
-        
-        .language-switcher a {
+
+        .navbar-language-toggles a {
             display: inline-block;
             padding: 8px 15px;
             margin: 0 2px;
@@ -36,66 +29,215 @@
             transition: all 0.3s ease;
         }
         
-        .language-switcher a.active {
+        .navbar-language-toggles a.active {
             background: #695aa6;
             color: white;
         }
         
-        .project-detail {
-            background: white;
-            border-radius: 15px;
+        .journey-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .journey-item {
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #695aa6;
+            border-radius: 50%;
+        }
+        
+        .journey-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e9ecef;
+        }
+        
+        .journey-item:last-child::after {
+            display: none;
+        }
+
+        .story-card {
+            background: #f8f9fa;
             padding: 2rem;
+            border-radius: 15px;
             margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-left: 4px solid #695aa6;
         }
         
-        .project-hero {
+        .quote-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 6rem 0; /* Increased padding for more space */
-            margin-bottom: 2rem;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        
-        .tech-badge {
-            background: #695aa6;
-            color: white;
-            padding: 0.25rem 0.75rem;
+            padding: 2rem;
             border-radius: 15px;
-            font-size: 0.875rem;
+            margin: 2rem 0;
+            text-align: center;
         }
         
-        .impact-metrics {
-            background: #f8f9fa;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-card {
+            background: white;
             padding: 1.5rem;
             border-radius: 10px;
-            margin: 1.5rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
         
-        .metric-item {
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-image {
+            object-fit: cover;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-position: 50% 50%;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bg-primary.text-white .lead,
+        .bg-primary.text-white p {
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #695aa6;
+            color: #fff;
             text-align: center;
+        }
+        .footer .social-links .link {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        .footer p {
+            margin-top: 10px;
+        }
+        .footer p a {
+            color: #fff;
+        }
+
+        /* --- Testimonial Carousel Styles --- */
+        .testimonials-section .carousel-item {
+            padding: 2rem 0;
+        }
+
+        .testimonials-section .testimonial-card {
+            height: 100%;
+            margin: 0; /* Remove margin from card as item has padding */
+        }
+        
+        /* Style for the navigation indicators (dots) */
+        .testimonials-section .carousel-indicators li {
+            background-color: #ccc;
+        }
+
+        .testimonials-section .carousel-indicators .active {
+            background-color: #695aa6; /* Theme purple */
+        }
+
+        /* Style for the navigation controls (arrows) */
+        .testimonials-section .carousel-control-prev,
+        .testimonials-section .carousel-control-next {
+            width: 8%; /* Widen hit area for arrows */
+        }
+
+        .testimonials-section .carousel-control-prev-icon,
+        .testimonials-section .carousel-control-next-icon {
+            background-image: none; /* Remove default Bootstrap arrow */
+            font-size: 3rem;
+            color: #695aa6; /* Theme purple */
+        }
+        
+        .testimonials-section .carousel-control-prev-icon::before {
+            font-family: 'themify';
+            content: "\e64a"; /* ti-angle-left */
+        }
+        
+        .testimonials-section .carousel-control-next-icon::before {
+            font-family: 'themify';
+            content: "\e649"; /* ti-angle-right */
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(105,90,166,0.08);
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #695aa6;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
             margin-bottom: 1rem;
         }
-        
-        .metric-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #695aa6;
+        .testimonial-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #695aa6;
+            margin-right: 1.25rem;
+            background: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(105,90,166,0.10);
         }
-        
-        .lesson-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1rem 0;
+        .testimonial-info h5 {
+            margin-bottom: 0.25rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: #695aa6;
+            font-weight: 500;
+        }
+        .testimonial-date {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .testimonial-text {
+            margin-top: 0.5rem;
+        }
+        .testimonial-quote {
+            font-size: 1.08rem;
+            font-style: italic;
+            color: #444;
+            line-height: 1.6;
+        }
+        @media (max-width: 767px) {
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .testimonial-avatar {
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -103,8 +245,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
+        <a class="navbar-brand" href="projects.html">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -115,29 +257,30 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">Über mich</a>
-                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="projects.html">Projekte</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="philosophy.html">Philosophie</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Einblicke</a>
+                    <a class="nav-link" href="philosophy.html">Philosophy</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Kontakt</a>
+                    <a class="nav-link" href="blog.html">Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
             <div class="navbar-language-toggles ml-auto">
-                <a href="projects.html" class="nav-link language-toggle en">EN</a>
-                <a href="projects-de.html" class="nav-link language-toggle de active">DE</a>
+                <a href="projects.html" class="nav-link language-toggle en active">EN</a>
+                <a href="projects-de.html" class="nav-link language-toggle de">DE</a>
             </div>
         </div>
     </div>
 </nav>
+
 
 <section class="project-hero">
     <div class="container text-center">
