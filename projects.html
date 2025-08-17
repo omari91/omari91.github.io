@@ -4,249 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>About Me - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
+    <title>Projects - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
     <meta name="description" content="From curiosity in Kitale to innovation in Berlin - discover the story behind the hybrid innovator who connects technical excellence with a solution-oriented vision.">
     
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/projects-custom.css">
     
-    <style>
-        body {
-            padding-top: 80px;
-        }
-
-        .navbar-language-toggles a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 2px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-language-toggles a.active {
-            background: #695aa6;
-            color: white;
-        }
-        
-        .journey-timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-        
-        .journey-item {
-            margin-bottom: 3rem;
-            padding-left: 3rem;
-            position: relative;
-        }
-        
-        .journey-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: #695aa6;
-            border-radius: 50%;
-        }
-        
-        .journey-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 12px;
-            width: 2px;
-            height: calc(100% + 1rem);
-            background: #e9ecef;
-        }
-        
-        .journey-item:last-child::after {
-            display: none;
-        }
-
-        .story-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 4px solid #695aa6;
-        }
-        
-        .quote-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .profile-image {
-            object-fit: cover;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            object-position: 50% 50%;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
-        
-        .bg-primary.text-white .lead,
-        .bg-primary.text-white p {
-            color: #fff;
-        }
-
-        .footer {
-            background-color: #695aa6;
-            color: #fff;
-            text-align: center;
-        }
-        .footer .social-links .link {
-            color: #fff;
-            font-size: 30px;
-            margin-right: 20px;
-        }
-        .footer p {
-            margin-top: 10px;
-        }
-        .footer p a {
-            color: #fff;
-        }
-
-        /* --- Testimonial Carousel Styles --- */
-        .testimonials-section .carousel-item {
-            padding: 2rem 0;
-        }
-
-        .testimonials-section .testimonial-card {
-            height: 100%;
-            margin: 0; /* Remove margin from card as item has padding */
-        }
-        
-        /* Style for the navigation indicators (dots) */
-        .testimonials-section .carousel-indicators li {
-            background-color: #ccc;
-        }
-
-        .testimonials-section .carousel-indicators .active {
-            background-color: #695aa6; /* Theme purple */
-        }
-
-        /* Style for the navigation controls (arrows) */
-        .testimonials-section .carousel-control-prev,
-        .testimonials-section .carousel-control-next {
-            width: 8%; /* Widen hit area for arrows */
-        }
-
-        .testimonials-section .carousel-control-prev-icon,
-        .testimonials-section .carousel-control-next-icon {
-            background-image: none; /* Remove default Bootstrap arrow */
-            font-size: 3rem;
-            color: #695aa6; /* Theme purple */
-        }
-        
-        .testimonials-section .carousel-control-prev-icon::before {
-            font-family: 'themify';
-            content: "\e64a"; /* ti-angle-left */
-        }
-        
-        .testimonials-section .carousel-control-next-icon::before {
-            font-family: 'themify';
-            content: "\e649"; /* ti-angle-right */
-        }
-
-        .testimonial-card {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 18px rgba(105,90,166,0.08);
-            padding: 2rem 1.5rem;
-            margin-bottom: 2rem;
-            border-left: 5px solid #695aa6;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .testimonial-avatar {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #695aa6;
-            margin-right: 1.25rem;
-            background: #f8f9fa;
-            box-shadow: 0 2px 8px rgba(105,90,166,0.10);
-        }
-        .testimonial-info h5 {
-            margin-bottom: 0.25rem;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-        .testimonial-role {
-            font-size: 0.95rem;
-            color: #695aa6;
-            font-weight: 500;
-        }
-        .testimonial-date {
-            font-size: 0.85rem;
-            color: #888;
-        }
-        .testimonial-text {
-            margin-top: 0.5rem;
-        }
-        .testimonial-quote {
-            font-size: 1.08rem;
-            font-style: italic;
-            color: #444;
-            line-height: 1.6;
-        }
-        @media (max-width: 767px) {
-            .testimonial-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .testimonial-avatar {
-                margin-right: 0;
-                margin-bottom: 0.75rem;
-            }
-        }
-    </style>
+    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
         <a class="navbar-brand" href="projects.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="Clifford Ondieki Profile Icon">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -281,262 +56,225 @@
     </div>
 </nav>
 
-
-<!-- Hero Section -->
-<section class="project-hero">
-    <div class="container text-center">
-        <h2 class="display-4 mb-2"style="color: #fff;">Engineering with Impact</h2>
-        <p class="lead"style="color: #fff;">Projects that bridge technical excellence with human purpose</p>
+<section class="project-hero bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="display-4 mb-2">Engineering with Impact</h2>
+        <p class="lead">Projects that bridge technical excellence with human purpose</p>
     </div>
 </section>
 
-<!-- Kinangop Wind Integration Project -->
-<section class="section" id="kinangop">
-    <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">Kinangop Wind Power Integration</h2>
-                    <p class="lead"> A dynamic voltage stability analysis incorporating Kinangop wind power into Kenya’s 59-bus national grid, with simulations modeled in DIgSILENT PowerFactory. 
-            <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank">Read the full technical report</a>.
-          </p>
-                    <h4>The Challenge</h4>
-                    <p>Kenya's power grid needed to accommodate the intermittent nature of wind power from the Kinangop Wind Farm while maintaining system stability. The challenge was ensuring that voltage fluctuations from wind generation wouldn't destabilize the entire network serving millions of Kenyans.</p>
-                    
-                    <h4>My Approach</h4>
-                    <p>I developed a comprehensive dynamic voltage stability analysis using DIgSILENT PowerFactory, modeling the entire Kenyan power system with the proposed wind integration. The key was understanding that grid stability isn't just about technical parameters—it's about ensuring reliable power reaches communities that depend on it for healthcare, education, and economic development.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">DIgSILENT PowerFactory</span>
-                        <span class="tech-badge">Power System Analysis</span>
-                        <span class="tech-badge">Renewable Energy Integration</span>
-                        <span class="tech-badge">Grid Stability Modeling</span>
-                        <span class="tech-badge">Dynamic Voltage Stability</span>
-                        <span class="tech-badge">Simulation</span>
-                          <span class="tech-badge">DFIG Modeling</span>
-                        <span class="tech-badge">Wind Power Forecasting</span>
-                        <span class="tech-badge">Load Flow Analysis</span>
+<main class="container py-5">
+    
+    <section class="project-card section mb-5" id="kinangop">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-3">Kinangop Wind Power Integration</h2>
+                <p class="lead">A dynamic voltage stability analysis incorporating Kinangop wind power into Kenya’s 59-bus national grid.
+                    <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank">Read the full technical report</a>.
+                </p>
+                <h4 class="mt-4">The Challenge</h4>
+                <p>Kenya's power grid needed to accommodate the intermittent nature of wind power while maintaining system stability. The challenge was ensuring that voltage fluctuations from wind generation wouldn't destabilize the entire network serving millions of Kenyans.</p>
+                <h4 class="mt-4">My Approach</h4>
+                <p>I developed a comprehensive dynamic voltage stability analysis using **DIgSILENT PowerFactory**, modeling the entire power system to simulate and mitigate voltage fluctuations. This wasn't just a technical task; it was about ensuring reliable power for healthcare, education, and economic development.</p>
+                
+                <div class="tech-stack my-4">
+                    <span class="tech-badge">DIgSILENT PowerFactory</span>
+                    <span class="tech-badge">Power System Analysis</span>
+                    <span class="tech-badge">Renewable Energy Integration</span>
+                    <span class="tech-badge">Grid Stability Modeling</span>
+                </div>
+                
+                <div class="impact-metrics row mt-4">
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">25%</div>
+                        <p>Improved Grid Stability</p>
                     </div>
-                    
-                    <h4>Impact & Results</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">25%</div>
-                                <div>Improved Grid Stability</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">60MW</div>
-                                <div>Clean Energy Integrated</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">100k+</div>
-                                <div>Households Benefited</div>
-                            </div>
-                        </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">60MW</div>
+                        <p>Clean Energy Integrated</p>
+                    </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">100k+</div>
+                        <p>Households Benefited</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/wind farm.jpg" class="img-fluid rounded" alt="Kinangop Wind Integration">
-                    
-                    <div class="lesson-card">
-                        <h5>Key Lesson</h5>
-                        <p class="mb-0">This project taught me that resilience isn't just for power lines—it's for people's access to vital services. The systemic thinking I developed here now informs how I approach SaaS architecture and load balancing.</p>
-                    </div>
+            </div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <img src="assets/imgs/wind farm.jpg" class="img-fluid rounded" alt="Kinangop Wind Integration">
+                <div class="lesson-card mt-4">
+                    <h5 class="mb-2">Key Lesson</h5>
+                    <p class="mb-0">This project taught me that resilience isn't just for power lines—it's for people's access to vital services. The systemic thinking I developed here now informs how I approach SaaS architecture and load balancing.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Predictive Maintenance AI Project -->
-<section class="section bg-light" id="predictive-ai">
-    <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">Predictive Maintenance AI for Geothermal Plants</h2>
-                    <p class="lead">Machine learning system for predicting equipment failures in geothermal power generation.
-                     <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank">View full documentation</a>.
-                    </p>
+    <hr>
 
-                    <h4>The Challenge</h4>
-                    <p>Geothermal power plants in Kenya's Rift Valley were experiencing unexpected equipment failures, leading to costly downtime and reduced clean energy generation. Traditional maintenance schedules were inefficient and reactive rather than preventive.</p>
-                    
-                    <h4>My Solution</h4>
-                    <p>I developed a predictive maintenance system using machine learning algorithms to analyze sensor data across key equipment. The system learned to identify patterns that preceded failures, enabling proactive maintenance scheduling.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">TensorFlow</span>
-                        <span class="tech-badge">Time Series Analysis</span>
-                        <span class="tech-badge">IoT Sensors</span>
-                        <span class="tech-badge">Data Visualization</span>
+    <section class="project-card section mb-5" id="predictive-ai">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-3">Predictive Maintenance AI for Geothermal Plants</h2>
+                <p class="lead">A **machine learning** system for predicting equipment failures in geothermal power generation, reducing operational costs and increasing plant uptime.
+                    <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank">View full documentation</a>.
+                </p>
+                <h4 class="mt-4">The Challenge</h4>
+                <p>Geothermal power plants in Kenya's Rift Valley were experiencing unexpected equipment failures, leading to costly downtime and reduced clean energy generation. Traditional maintenance schedules were inefficient and reactive.</p>
+                <h4 class="mt-4">My Solution</h4>
+                <p>I developed a predictive maintenance system using machine learning algorithms to analyze sensor data across key equipment. The system learned to identify patterns that preceded failures, enabling proactive maintenance scheduling.</p>
+                
+                <div class="tech-stack my-4">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">Time Series Analysis</span>
+                    <span class="tech-badge">Data Visualization</span>
+                </div>
+                
+                <div class="impact-metrics row mt-4">
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">40%</div>
+                        <p>Reduction in Downtime</p>
                     </div>
-                    
-                    <h4>Impact & Results</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">40%</div>
-                                <div>Reduction in Downtime</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">$2M</div>
-                                <div>Annual Cost Savings</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">95%</div>
-                                <div>Prediction Accuracy</div>
-                            </div>
-                        </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">$2M</div>
+                        <p>Annual Cost Savings</p>
+                    </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">95%</div>
+                        <p>Prediction Accuracy</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/geothermal-drilling-activities.jpg" class="img-fluid rounded" alt="Predictive Maintenance AI">
-                    
-                    <div class="lesson-card">
-                        <h5>Key Insight</h5>
-                        <p class="mb-0">This project revealed how data-driven decisions create human-centric solutions. The principles of optimization and efficiency I learned here now inform my approach to SaaS uptime and product operational excellence.</p>
-                    </div>
+            </div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <img src="assets/imgs/geothermal-drilling-activities.jpg" class="img-fluid rounded" alt="Predictive Maintenance AI">
+                <div class="lesson-card mt-4">
+                    <h5 class="mb-2">Key Insight</h5>
+                    <p class="mb-0">This project revealed how data-driven decisions create human-centric solutions. The principles of optimization and efficiency I learned here now inform my approach to SaaS uptime and product operational excellence.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Health Tech Load Balancing Project -->
-<section class="section" id="health-tech">
-    <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">Health Tech Load Balancing System</h2>
-                    <p class="lead">Applying power grid principles to optimize healthcare service distribution across rural Kenya</p>
-                    
-                    <h4>The Challenge</h4>
-                    <p>Rural health facilities in Kenya were experiencing uneven patient loads, with some overwhelmed while others remained underutilized. This led to longer wait times, reduced quality of care, and inefficient resource allocation.</p>
-                    
-                    <h4>My Innovation</h4>
-                    <p>Drawing from my power grid experience, I developed a load balancing algorithm that treats patient flow like electrical current. The system dynamically redistributes patients to optimize resource utilization while minimizing travel distance and wait times.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">Node.js</span>
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">MongoDB</span>
-                        <span class="tech-badge">Load Balancing Algorithms</span>
-                        <span class="tech-badge">Geospatial Analysis</span>
-                        <span class="tech-badge">Real-time Analytics</span>
-                    </div>
-                    
-                    <h4>Impact & Results</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">50%</div>
-                                <div>Reduced Wait Times</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">30%</div>
-                                <div>Improved Resource Utilization</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">15k+</div>
-                                <div>Patients Served Monthly</div>
-                            </div>
-                        </div>
-                    </div>
+    <hr>
+
+    <section class="project-card section mb-5" id="health-tech">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-3">Health Tech Load Balancing System</h2>
+                <p class="lead">Applying power grid principles to optimize healthcare service distribution across rural Kenya.</p>
+                <h4 class="mt-4">The Challenge</h4>
+                <p>Rural health facilities in Kenya were experiencing uneven patient loads, with some overwhelmed while others remained underutilized. This led to longer wait times, reduced quality of care, and inefficient resource allocation.</p>
+                <h4 class="mt-4">My Innovation</h4>
+                <p>Drawing from my power grid experience, I developed a load balancing algorithm that treats patient flow like electrical current. The system dynamically redistributes patients to optimize resource utilization while minimizing travel distance and wait times.</p>
+                
+                <div class="tech-stack my-4">
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">Load Balancing Algorithms</span>
+                    <span class="tech-badge">Geospatial Analysis</span>
+                    <span class="tech-badge">Real-time Analytics</span>
                 </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/change.png" class="img-fluid rounded" alt="Health Tech Load Balancing">
-                    
-                    <div class="lesson-card">
-                        <h5>Cross-Domain Innovation</h5>
-                        <p class="mb-0">This project proved that engineering empathy scales across domains. Power grid principles applied to healthcare access demonstrate how systemic thinking can solve seemingly unrelated problems.</p>
+                
+                <div class="impact-metrics row mt-4">
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">50%</div>
+                        <p>Reduced Wait Times</p>
+                    </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">30%</div>
+                        <p>Improved Resource Utilization</p>
+                    </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">15k+</div>
+                        <p>Patients Served Monthly</p>
                     </div>
                 </div>
             </div>
-    </div>
-</section>
-
-<!-- EV Charger Deployment Optimization -->
-
-<section class="section bg-light py-12 px-4 md:px-8 lg:px-16">
-    <div class="container mx-auto">
-        <div class="project-detail bg-white p-6 md:p-10 rounded-lg shadow-xl">
-            <div class="flex flex-col lg:flex-row -mx-4">
-                <div class="w-full lg:w-3/4 px-4">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 leading-tight">Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization</h2>
-                    <p class="text-lg text-gray-600 mb-6"> Ongoing Berlin-based project applying "Smart Laziness" principles to data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.</p>
-
-                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">The Challenge</h4>
-                    <p class="text-gray-700 mb-6">Public Electric Vehicle (EV) charging infrastructure in Germany is largely demand-driven, reinforcing spatial inequities by favoring central districts and leaving peripheral areas with higher congestion and reduced access. This creates a "chicken-and-egg" problem, where lack of infrastructure suppresses EV adoption in underserved areas, justifying continued underinvestment.</p>
-
-                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">Our Data-Driven Solution</h4>
-                    <p class="text-gray-700 mb-6">We implemented a multi-objective NSGA-II model in Python to balance coverage and spatial equity, minimizing the district-level Gini coefficient of BEVs per charger. This approach yields different Pareto-optimal deployment strategies for urban planners, directly addressing infrastructure placement under complex geospatial and socio-economic constraints.</p>
-
-                    <div class="tech-stack flex flex-wrap gap-3 mb-8">
-                        <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                        <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">NSGA-II</span>
-                        <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Geospatial Optimization</span>
-                        <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Multi-Objective Optimization</span>
-                        <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Gini Coefficient</span>
-                        <span class="tech-badge bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Queuing Simulation</span>
-                        <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Urban Planning</span>
-                    </div>
-
-                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">Impact & Results</h4>
-                    <div class="impact-metrics grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="metric-item bg-gray-50 p-6 rounded-lg text-center shadow-sm">
-                            <div class="metric-number text-4xl font-bold text-indigo-600 mb-2">13%</div>
-                            <div class="text-gray-700 font-medium">Reduction in Citywide Gini Coefficient</div>
-                        </div>
-                        <div class="metric-item bg-gray-50 p-6 rounded-lg text-center shadow-sm">
-                            <div class="metric-number text-4xl font-bold text-indigo-600 mb-2">6x</div>
-                            <div class="text-gray-700 font-medium">More Chargers to Underserved Areas</div>
-                        </div>
-                        <div class="metric-item bg-gray-50 p-6 rounded-lg text-center shadow-sm">
-                            <div class="metric-number text-4xl font-bold text-indigo-600 mb-2">21%</div>
-                            <div class="text-gray-700 font-medium">Boost in Local Access (Treptow-Köpenick)</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/4 px-4 mt-8 lg:mt-0">
-                   <img src="assets/imgs/berlin.png" class="img-fluid rounded" alt="Berlin EV Charger Distribution">
-
-                    <div class="lesson-card bg-indigo-50 p-6 rounded-lg shadow-sm">
-                        <h5 class="text-xl font-semibold text-indigo-800 mb-3">Philosophy in Action</h5>
-                        <p class="text-indigo-700 mb-0">The objective is not just to deploy more chargers, but to deploy them strategically to foster equitable access and sustainable urban mobility. Our framework empowers municipalities to navigate the efficiency-equity trade-off with data-driven insights.</p>
-                    </div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <img src="assets/imgs/change.png" class="img-fluid rounded" alt="Health Tech Load Balancing">
+                <div class="lesson-card mt-4">
+                    <h5 class="mb-2">Cross-Domain Innovation</h5>
+                    <p class="mb-0">This project proved that engineering empathy scales across domains. Power grid principles applied to healthcare access demonstrate how systemic thinking can solve seemingly unrelated problems.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Call to Action -->
-<section class="section bg-primary text-white">
-    <div class="container text-center">
+    <hr>
+
+    <section class="project-card section mb-5" id="ev-charger">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-3">Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization</h2>
+                <p class="lead">An ongoing data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.</p>
+                <h4 class="mt-4">The Challenge</h4>
+                <p>Public Electric Vehicle (EV) charging infrastructure is largely demand-driven, reinforcing spatial inequities. This creates a "chicken-and-egg" problem, where a lack of infrastructure suppresses EV adoption in underserved areas, justifying continued underinvestment.</p>
+                <h4 class="mt-4">Our Data-Driven Solution</h4>
+                <p>We implemented a multi-objective **NSGA-II model** in Python to balance coverage and spatial equity, minimizing the Gini coefficient of EVs per charger. This approach provides different Pareto-optimal deployment strategies for urban planners, directly addressing infrastructure placement under complex geospatial and socio-economic constraints.</p>
+                
+                <div class="tech-stack my-4">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">NSGA-II</span>
+                    <span class="tech-badge">Geospatial Optimization</span>
+                    <span class="tech-badge">Multi-Objective Optimization</span>
+                </div>
+                
+                <div class="impact-metrics row mt-4">
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">13%</div>
+                        <p>Reduction in Citywide Gini Coefficient</p>
+                    </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">6x</div>
+                        <p>More Chargers to Underserved Areas</p>
+                    </div>
+                    <div class="col-md-4 metric-item">
+                        <div class="metric-number">21%</div>
+                        <p>Boost in Local Access (Treptow-Köpenick)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <img src="assets/imgs/berlin.png" class="img-fluid rounded" alt="Berlin EV Charger Distribution">
+                <div class="lesson-card mt-4">
+                    <h5 class="mb-2">Philosophy in Action</h5>
+                    <p class="mb-0">The objective is not just to deploy more chargers, but to deploy them strategically to foster equitable access and sustainable urban mobility. Our framework empowers municipalities to navigate the efficiency-equity trade-off with data-driven insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<section class="section bg-primary text-white text-center">
+    <div class="container">
         <h2 class="mb-4">Ready to Build Something Impactful?</h2>
-        <p class="lead mb-4" style="color: #fff;">Let's combine technical excellence with purpose-driven innovation to create solutions that
-        truly matter.</p>
+        <p class="lead mb-4">Let's combine technical excellence with purpose-driven innovation to create solutions that truly matter.</p>
         <a href="contact.html" class="btn btn-light btn-lg">Let's Energize Change Together ⚡</a>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+<footer class="footer bg-primary text-white text-center py-4">
     <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+        <div class="social-links mb-2">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profile">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Clifford Ondieki - Engineered with Purpose</a>
+        <p class="mb-0">
+            Copyright <span id="year"></span> &copy;
+            <a href="#">Clifford Ondieki - Engineered with Purpose</a>
         </p>
     </div>
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
