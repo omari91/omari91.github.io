@@ -313,58 +313,81 @@
     </div>
 </section>
 
-<section class="section bg-light">
-    <div class="container">
-        <div class="project-detail">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">SaaS Performance-Optimierungsplattform</h2>
-                    <p class="lead">Laufendes Berliner Projekt zur Anwendung von "Smart Laziness"-Prinzipien zur Automatisierung der Erkennung von Performance-Engpässen</p>
-                    
-                    <h4>Die Herausforderung</h4>
-                    <p>Ein schnell wachsendes SaaS-Unternehmen mit Sitz in Berlin hatte mit Anwendungsproblemen zu kämpfen, die eine ständige manuelle Überwachung und Intervention erforderten. Das Ingenieurteam verbrachte 60% seiner Zeit mit reaktiven Performance-Korrekturen statt mit der Entwicklung neuer Funktionen.</p>
-                    
-                    <h4>Meine "Smart Laziness"-Lösung</h4>
-                    <p>Anstatt weitere Überwachungstools hinzuzufügen, wandte ich meine "Smart Laziness"-Philosophie an – das System so tiefgehend zu verstehen, dass eine Änderung zehn Probleme beseitigt. Ich baute eine intelligente Performance-Optimierungsplattform, die gängige Engpässe automatisch identifiziert und behebt.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">TypeScript</span>
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">Kubernetes</span>
-                        <span class="tech-badge">Prometheus</span>
-                        <span class="tech-badge">Maschinelles Lernen</span>
-                        <span class="tech-badge">Auto-Skalierung</span>
+<!-- EV Charger Deployment Optimization -->
+<section class="section bg-light py-12 px-4 md:px-8 lg:px-16">
+    <div class="container mx-auto">
+        <div class="project-detail bg-white p-6 md:p-10 rounded-lg shadow-xl">
+            <div class="flex flex-col lg:flex-row -mx-4">
+                <div class="w-full lg:w-3/4 px-4">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 leading-tight">Ermöglichung eines gerechten Einsatzes von EV-Ladegeräten in Berlin mit multikriterieller geospatialer Optimierung</h2>
+                    <p class="text-lg text-gray-600 mb-6">Eine **laufende** datengesteuerte geospatiale Optimierungspipeline zur Ausbalancierung von Abdeckung und räumlicher Gerechtigkeit in der Berliner EV-Ladeinfrastruktur.</p>
+
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">Die Herausforderung</h4>
+                    <p class="text-gray-700 mb-6">Der Ausbau der öffentlichen Ladeinfrastruktur für Elektrofahrzeuge (EV) in Deutschland ist weitgehend nachfrageorientiert. Dies verstärkt räumliche Ungleichheiten, da zentrale Bezirke bevorzugt werden und Randgebiete eine höhere Überlastung und geringeren Zugang aufweisen. Dies führt zu einem klassischen "Henne-Ei-Problem", bei dem der Mangel an Infrastruktur die Akzeptanz von Elektrofahrzeugen in unterversorgten Gebieten hemmt, was wiederum die anhaltende mangelnde Investition rechtfertigt.</p>
+
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">Unsere datengesteuerte Lösung</h4>
+                    <p class="text-gray-700 mb-6">Wir haben ein multikriterielles NSGA-II-Modell in Python implementiert, um Abdeckung und räumliche Gerechtigkeit auszugleichen und den Gini-Koeffizienten der BEVs pro Ladegerät auf Bezirksebene zu minimieren. Dieser Ansatz liefert verschiedene Pareto-optimale Bereitstellungsstrategien für Stadtplaner, die die Infrastrukturplatzierung unter komplexen geospatialen und sozioökonomischen Einschränkungen direkt adressieren.</p>
+
+                    <div class="tech-stack flex flex-wrap gap-3 mb-8">
+                        <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                        <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">NSGA-II</span>
+                        <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Geospatiale Optimierung</span>
+                        <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Multikriterielle Optimierung</span>
+                        <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Gini-Koeffizient</span>
+                        <span class="tech-badge bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Warteschlangensimulation</span>
+                        <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Stadtplanung</span>
                     </div>
-                    
-                    <h4>Auswirkungen & Ergebnisse</h4>
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">80%</div>
-                                <div>Reduzierung manueller Eingriffe</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">3x</div>
-                                <div>Schnellere Reaktionszeiten</div>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">Laufend</div>
-                                <div>Funktionserweiterung & Tests</div>
-                            </div>
+
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">Auswirkungen & Ergebnisse</h4>
+                    <div class="impact-metrics grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="metric-item bg-gray-50 p-6 rounded-lg text-center shadow-sm">
+                            <div class="metric-number text-4xl font-bold text-indigo-600 mb-2">13%</div>
+                            <div class="text-gray-700 font-medium">Reduzierung des stadtweiten Gini-Koeffizienten</div>
+                        </div>
+                        <div class="metric-item bg-gray-50 p-6 rounded-lg text-center shadow-sm">
+                            <div class="metric-number text-4xl font-bold text-indigo-600 mb-2">6x</div>
+                            <div class="text-gray-700 font-medium">Mehr Ladegeräte für unterversorgte Gebiete</div>
+                        </div>
+                        <div class="metric-item bg-gray-50 p-6 rounded-lg text-center shadow-sm">
+                            <div class="metric-number text-4xl font-bold text-indigo-600 mb-2">21%</div>
+                            <div class="text-gray-700 font-medium">Steigerung des lokalen Zugangs (Treptow-Köpenick)</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <img src="assets/imgs/saas.png" class="img-fluid rounded" alt="SaaS Performance Optimization">
-                    
-                    <div class="lesson-card">
-                        <h5>Philosophie in Aktion</h5>
-                        <p class="mb-0">Das Ziel ist nicht, alles zu überwachen, sondern Systeme zu entwerfen, die sich selbst heilen. Dieses Projekt verkörpert, wie strategische Faulheit, gestützt durch tiefe Einblicke, zu eleganter, skalierbarer Ingenieurkunst führt.</p>
+                <div class="w-full lg:w-1/4 px-4 mt-8 lg:mt-0">
+                    <img src="https://placehold.co/400x300/e0e0e0/ffffff?text=Berlin+EV+Map" class="img-fluid rounded-lg shadow-md mb-8" alt="Berlin EV Charger Distribution">
+
+                    <div class="lesson-card bg-indigo-50 p-6 rounded-lg shadow-sm">
+                        <h5 class="text-xl font-semibold text-indigo-800 mb-3">Philosophie in Aktion</h5>
+                        <p class="text-indigo-700 mb-0">Ziel ist es nicht nur, mehr Ladegeräte einzusetzen, sondern sie strategisch zu platzieren, um einen gerechten Zugang und eine nachhaltige urbane Mobilität zu fördern. Unser Framework ermöglicht es den Kommunen, den Effizienz-Gerechtigkeits-Kompromiss mit datengesteuerten Erkenntnissen zu navigieren.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Tailwind CSS CDN (include this in your HTML <head> if not already present) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for rounded corners and overall aesthetic */
+        .section {
+            background-color: #f8f8f8;
+        }
+        .project-detail {
+            border-radius: 1.5rem; /* More rounded corners */
+        }
+        .tech-badge {
+            border-radius: 9999px; /* Fully rounded */
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        .metric-item {
+            border-radius: 0.75rem; /* Rounded corners for metric items */
+            border: 1px solid #e2e8f0; /* Light border */
+        }
+        .lesson-card {
+            border-radius: 1rem; /* Rounded corners for lesson card */
+            border: 1px solid #c7d2fe; /* Light border */
+        }
+    </style>
 </section>
 
 <section class="section bg-primary text-white">
