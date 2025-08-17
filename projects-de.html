@@ -2,244 +2,16 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
     <title>Project - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
     <meta name="description" content="From curiosity in Kitale to innovation in Berlin - discover the story behind the hybrid innovator who connects technical excellence with a solution-oriented vision.">
     
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
-    
-    <style>
-        body {
-            padding-top: 80px;
-        }
-
-        .navbar-language-toggles a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 2px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-language-toggles a.active {
-            background: #695aa6;
-            color: white;
-        }
-        
-        .journey-timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-        
-        .journey-item {
-            margin-bottom: 3rem;
-            padding-left: 3rem;
-            position: relative;
-        }
-        
-        .journey-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: #695aa6;
-            border-radius: 50%;
-        }
-        
-        .journey-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 12px;
-            width: 2px;
-            height: calc(100% + 1rem);
-            background: #e9ecef;
-        }
-        
-        .journey-item:last-child::after {
-            display: none;
-        }
-
-        .story-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 4px solid #695aa6;
-        }
-        
-        .quote-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .profile-image {
-            object-fit: cover;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            object-position: 50% 50%;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
-        
-        .bg-primary.text-white .lead,
-        .bg-primary.text-white p {
-            color: #fff;
-        }
-
-        .footer {
-            background-color: #695aa6;
-            color: #fff;
-            text-align: center;
-        }
-        .footer .social-links .link {
-            color: #fff;
-            font-size: 30px;
-            margin-right: 20px;
-        }
-        .footer p {
-            margin-top: 10px;
-        }
-        .footer p a {
-            color: #fff;
-        }
-
-        /* --- Testimonial Carousel Styles --- */
-        .testimonials-section .carousel-item {
-            padding: 2rem 0;
-        }
-
-        .testimonials-section .testimonial-card {
-            height: 100%;
-            margin: 0; /* Remove margin from card as item has padding */
-        }
-        
-        /* Style for the navigation indicators (dots) */
-        .testimonials-section .carousel-indicators li {
-            background-color: #ccc;
-        }
-
-        .testimonials-section .carousel-indicators .active {
-            background-color: #695aa6; /* Theme purple */
-        }
-
-        /* Style for the navigation controls (arrows) */
-        .testimonials-section .carousel-control-prev,
-        .testimonials-section .carousel-control-next {
-            width: 8%; /* Widen hit area for arrows */
-        }
-
-        .testimonials-section .carousel-control-prev-icon,
-        .testimonials-section .carousel-control-next-icon {
-            background-image: none; /* Remove default Bootstrap arrow */
-            font-size: 3rem;
-            color: #695aa6; /* Theme purple */
-        }
-        
-        .testimonials-section .carousel-control-prev-icon::before {
-            font-family: 'themify';
-            content: "\e64a"; /* ti-angle-left */
-        }
-        
-        .testimonials-section .carousel-control-next-icon::before {
-            font-family: 'themify';
-            content: "\e649"; /* ti-angle-right */
-        }
-
-        .testimonial-card {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 18px rgba(105,90,166,0.08);
-            padding: 2rem 1.5rem;
-            margin-bottom: 2rem;
-            border-left: 5px solid #695aa6;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .testimonial-avatar {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #695aa6;
-            margin-right: 1.25rem;
-            background: #f8f9fa;
-            box-shadow: 0 2px 8px rgba(105,90,166,0.10);
-        }
-        .testimonial-info h5 {
-            margin-bottom: 0.25rem;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-        .testimonial-role {
-            font-size: 0.95rem;
-            color: #695aa6;
-            font-weight: 500;
-        }
-        .testimonial-date {
-            font-size: 0.85rem;
-            color: #888;
-        }
-        .testimonial-text {
-            margin-top: 0.5rem;
-        }
-        .testimonial-quote {
-            font-size: 1.08rem;
-            font-style: italic;
-            color: #444;
-            line-height: 1.6;
-        }
-        @media (max-width: 767px) {
-            .testimonial-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .testimonial-avatar {
-                margin-right: 0;
-                margin-bottom: 0.75rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/custom.css"> <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -281,42 +53,37 @@
     </div>
 </nav>
 
-  <!-- Hero Section -->
 <section class="project-hero">
-    <div class="container text-center">
-        <h2 class="display-4 mb-2"style="color: #fff;">Ingenieurwesen mit Wirkung</h2>
-        <p class="lead"style="color: #fff;">Projekte, die technische Exzellenz mit menschlichem Zweck verbinden</p>
+    <div class="container text-center text-white">
+        <h2 class="display-4 mb-2">Ingenieurwesen mit Wirkung</h2>
+        <p class="lead">Projekte, die technische Exzellenz mit menschlichem Zweck verbinden</p>
     </div>
 </section>
 
-<!-- Kinangop Wind Integration Project -->
 <section class="section" id="kinangop">
     <div class="container">
         <div class="project-detail">
             <div class="row">
                 <div class="col-lg-8">
                     <h2 class="mb-3">Kinangop Windkraftintegration</h2>
-                    <p class="lead"> Eine dynamische Spannungsstabilitätsanalyse zur Integration der Kinangop Windkraft in Kenias 59-Bus-Nationalnetz, mit Simulationen, die in DIgSILENT PowerFactory modelliert wurden.
-            <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank">Lesen Sie den vollständigen technischen Bericht</a>.
-          </p>
+                    <p class="lead">Eine dynamische Spannungsstabilitätsanalyse zur Integration der Kinangop Windkraft in Kenias 59-Bus-Nationalnetz, mit Simulationen, die in DIgSILENT PowerFactory modelliert wurden.
+                        <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank">Lesen Sie den vollständigen technischen Bericht</a>.
+                    </p>
                     <h4>Die Herausforderung</h4>
                     <p>Kenias Stromnetz musste die intermittierende Natur der Windkraft vom Kinangop Windpark aufnehmen und gleichzeitig die Systemstabilität aufrechterhalten. Die Herausforderung bestand darin, sicherzustellen, dass Spannungsschwankungen durch die Windenergieerzeugung das gesamte Netz, das Millionen von Kenianern versorgt, nicht destabilisieren würden.</p>
-
                     <h4>Mein Ansatz</h4>
                     <p>Ich entwickelte eine umfassende dynamische Spannungsstabilitätsanalyse mit DIgSILENT PowerFactory, wobei das gesamte kenianische Stromsystem mit der vorgeschlagenen Windintegration modelliert wurde. Der Schlüssel lag darin, zu verstehen, dass die Netzstabilität nicht nur technische Parameter betrifft, sondern auch darum geht, die zuverlässige Stromversorgung von Gemeinden sicherzustellen, die für Gesundheitsversorgung, Bildung und wirtschaftliche Entwicklung davon abhängen.</p>
-
                     <div class="tech-stack">
-                        <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">DIgSILENT PowerFactory</span>
-                        <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Leistungsnetzanalyse</span>
-                        <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Integration erneuerbarer Energien</span>
-                        <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Modellierung der Netzstabilität</span>
-                        <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Dynamische Spannungsstabilität</span>
-                        <span class="tech-badge bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Simulation</span>
-                        <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">DFIG Modellierung</span>
-                        <span class="tech-badge bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Windkraftprognose</span>
-                        <span class="tech-badge bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Lastflussanalyse</span>
+                        <span class="tech-badge bg-blue-100 text-blue-800">DIgSILENT PowerFactory</span>
+                        <span class="tech-badge bg-green-100 text-green-800">Leistungsnetzanalyse</span>
+                        <span class="tech-badge bg-purple-100 text-purple-800">Integration erneuerbarer Energien</span>
+                        <span class="tech-badge bg-yellow-100 text-yellow-800">Modellierung der Netzstabilität</span>
+                        <span class="tech-badge bg-red-100 text-red-800">Dynamische Spannungsstabilität</span>
+                        <span class="tech-badge bg-indigo-100 text-indigo-800">Simulation</span>
+                        <span class="tech-badge bg-pink-100 text-pink-800">DFIG Modellierung</span>
+                        <span class="tech-badge bg-gray-100 text-gray-800">Windkraftprognose</span>
+                        <span class="tech-badge bg-teal-100 text-teal-800">Lastflussanalyse</span>
                     </div>
-
                     <h4>Auswirkungen & Ergebnisse</h4>
                     <div class="impact-metrics">
                         <div class="row">
@@ -337,7 +104,6 @@
                 </div>
                 <div class="w-full lg:w-1/4 px-4 mt-8 lg:mt-0">
                     <img src="assets/imgs/wind farm.jpg" class="img-fluid rounded" alt="Kinangop Wind Integration">
-
                     <div class="lesson-card">
                         <h5>Wichtige Lektion</h5>
                         <p class="mb-0">Dieses Projekt lehrte mich, dass Resilienz nicht nur für Stromleitungen gilt, sondern auch für den Zugang der Menschen zu wichtigen Diensten. Das systemische Denken, das ich hier entwickelt habe, prägt nun meinen Ansatz bei SaaS-Architekturen und Lastverteilung.</p>
@@ -348,7 +114,6 @@
     </div>
 </section>
 
-<!-- Predictive Maintenance AI Project -->
 <section class="section bg-light" id="predictive-ai">
     <div class="container">
         <div class="project-detail">
@@ -356,23 +121,19 @@
                 <div class="col-lg-8">
                     <h2 class="mb-3">Prädiktive Wartungs-KI für Geothermiekraftwerke</h2>
                     <p class="lead">Maschinelles Lernsystem zur Vorhersage von Geräteausfällen bei der geothermischen Stromerzeugung.
-                      <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank">Vollständige Dokumentation anzeigen</a>.
+                        <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank">Vollständige Dokumentation anzeigen</a>.
                     </p>
-
                     <h4>Die Herausforderung</h4>
                     <p>Geothermiekraftwerke in Kenias Rift Valley erlebten unerwartete Geräteausfälle, die zu kostspieligen Ausfallzeiten und einer reduzierten Erzeugung sauberer Energie führten. Traditionelle Wartungspläne waren ineffizient und reaktiv statt präventiv.</p>
-
                     <h4>Meine Lösung</h4>
                     <p>Ich entwickelte ein prädiktives Wartungssystem unter Verwendung von Algorithmen des maschinellen Lernens zur Analyse von Sensordaten wichtiger Geräte. Das System lernte, Muster zu identifizieren, die Ausfällen vorausgingen, und ermöglichte so eine proaktive Wartungsplanung.</p>
-
                     <div class="tech-stack">
-                        <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                        <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">TensorFlow</span>
-                        <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Zeitreihenanalyse</span>
-                        <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">IoT-Sensoren</span>
-                        <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Datenvisualisierung</span>
+                        <span class="tech-badge bg-blue-100 text-blue-800">Python</span>
+                        <span class="tech-badge bg-green-100 text-green-800">TensorFlow</span>
+                        <span class="tech-badge bg-purple-100 text-purple-800">Zeitreihenanalyse</span>
+                        <span class="tech-badge bg-yellow-100 text-yellow-800">IoT-Sensoren</span>
+                        <span class="tech-badge bg-red-100 text-red-800">Datenvisualisierung</span>
                     </div>
-
                     <h4>Auswirkungen & Ergebnisse</h4>
                     <div class="impact-metrics">
                         <div class="row">
@@ -393,7 +154,6 @@
                 </div>
                 <div class="w-full lg:w-1/4 px-4 mt-8 lg:mt-0">
                     <img src="assets/imgs/geothermal-drilling-activities.jpg" class="img-fluid rounded" alt="Predictive Maintenance AI">
-
                     <div class="lesson-card">
                         <h5>Wichtige Erkenntnis</h5>
                         <p class="mb-0">Dieses Projekt zeigte, wie datengesteuerte Entscheidungen menschenzentrierte Lösungen schaffen. Die hier gelernten Prinzipien der Optimierung und Effizienz prägen nun meinen Ansatz bei der SaaS-Verfügbarkeit und der operativen Exzellenz von Produkten.</p>
@@ -404,7 +164,6 @@
     </div>
 </section>
 
-<!-- Health Tech Load Balancing Project -->
 <section class="section" id="health-tech">
     <div class="container">
         <div class="project-detail">
@@ -412,22 +171,18 @@
                 <div class="col-lg-8">
                     <h2 class="mb-3">Lastverteilungssystem für Gesundheitstechnologie</h2>
                     <p class="lead">Anwendung von Stromnetzprinzipien zur Optimierung der Gesundheitsdienstleistungsverteilung im ländlichen Kenia</p>
-
                     <h4>Die Herausforderung</h4>
                     <p>Ländliche Gesundheitseinrichtungen in Kenia erlebten ungleichmäßige Patientenlasten, wobei einige überfordert waren, während andere unterausgelastet blieben. Dies führte zu längeren Wartezeiten, reduzierter Versorgungsqualität und ineffizienter Ressourcenallokation.</p>
-
                     <h4>Meine Innovation</h4>
                     <p>Basierend auf meiner Erfahrung mit Stromnetzen entwickelte ich einen Lastverteilungsalgorithmus, der den Patientenfluss wie elektrischen Strom behandelt. Das System verteilt Patienten dynamisch um, um die Ressourcennutzung zu optimieren und gleichzeitig Reisezeit und Wartezeiten zu minimieren.</p>
-
                     <div class="tech-stack">
-                        <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
-                        <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">React</span>
-                        <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
-                        <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Lastverteilungsalgorithmen</span>
-                        <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Geospatiale Analyse</span>
-                        <span class="tech-badge bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Echtzeit-Analyse</span>
+                        <span class="tech-badge bg-blue-100 text-blue-800">Node.js</span>
+                        <span class="tech-badge bg-green-100 text-green-800">React</span>
+                        <span class="tech-badge bg-purple-100 text-purple-800">MongoDB</span>
+                        <span class="tech-badge bg-yellow-100 text-yellow-800">Lastverteilungsalgorithmen</span>
+                        <span class="tech-badge bg-red-100 text-red-800">Geospatiale Analyse</span>
+                        <span class="tech-badge bg-indigo-100 text-indigo-800">Echtzeit-Analyse</span>
                     </div>
-
                     <h4>Auswirkungen & Ergebnisse</h4>
                     <div class="impact-metrics">
                         <div class="row">
@@ -448,7 +203,6 @@
                 </div>
                 <div class="w-full lg:w-1/4 px-4 mt-8 lg:mt-0">
                     <img src="assets/imgs/change.png" class="img-fluid rounded" alt="Health Tech Load Balancing">
-
                     <div class="lesson-card">
                         <h5>Domänenübergreifende Innovation</h5>
                         <p class="mb-0">Dieses Projekt bewies, dass Ingenieurempathie domänenübergreifend skaliert. Auf den Zugang zur Gesundheitsversorgung angewandte Stromnetzprinzipien zeigen, wie systemisches Denken scheinbar unabhängige Probleme lösen kann.</p>
@@ -459,31 +213,26 @@
     </div>
 </section>
 
-<!-- EV Charger Deployment Optimization -->
-<section class="section bg-light py-12 px-4 md:px-8 lg:px-16">
-    <div class="container mx-auto">
+<section class="section bg-light" id="ev-charger">
+    <div class="container">
         <div class="project-detail">
-            <div class="flex flex-col lg:flex-row -mx-4">
-                <div class="w-full lg:w-3/4 px-4">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 leading-tight">Ermöglichung eines gerechten Einsatzes von EV-Ladegeräten in Berlin mit multikriterieller geospatialer Optimierung</h2>
-                    <p class="text-lg text-gray-600 mb-6">Eine laufende datengesteuerte geospatiale Optimierungspipeline zur Ausbalancierung von Abdeckung und räumlicher Gerechtigkeit in der Berliner EV-Ladeinfrastruktur.</p>
-
-                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">Die Herausforderung</h4>
-                    <p class="text-gray-700 mb-6">Der Ausbau der öffentlichen Ladeinfrastruktur für Elektrofahrzeuge (EV) in Deutschland ist weitgehend nachfrageorientiert. Dies verstärkt räumliche Ungleichheiten, da zentrale Bezirke bevorzugt werden und Randgebiete eine höhere Überlastung und geringeren Zugang aufweisen. Dies führt zu einem klassischen "Henne-Ei-Problem", bei dem der Mangel an Infrastruktur die Akzeptanz von Elektrofahrzeugen in unterversorgten Gebieten hemmt, was wiederum die anhaltende mangelnde Investition rechtfertigt.</p>
-
-                    <h4 class="text-2xl font-semibold text-gray-700 mb-3 mt-8">Unsere datengesteuerte Lösung</h4>
-                    <p class="text-gray-700 mb-6">Wir haben ein multikriterielles NSGA-II-Modell in Python implementiert, um Abdeckung und räumliche Gerechtigkeit auszugleichen und den Gini-Koeffizienten der BEVs pro Ladegerät auf Bezirksebene zu minimieren. Dieser Ansatz liefert verschiedene Pareto-optimale Bereitstellungsstrategien für Stadtplaner, die die Infrastrukturplatzierung unter komplexen geospatialen und sozioökonomischen Einschränkungen direkt adressieren.</p>
-
-                    <div class="tech-stack flex flex-wrap gap-3 mb-8">
-                        <span class="tech-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                        <span class="tech-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">NSGA-II</span>
-                        <span class="tech-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Geospatiale Optimierung</span>
-                        <span class="tech-badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Multikriterielle Optimierung</span>
-                        <span class="tech-badge bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Gini-Koeffizient</span>
-                        <span class="tech-badge bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Warteschlangensimulation</span>
-                        <span class="tech-badge bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Stadtplanung</span>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="mb-3">Ermöglichung eines gerechten Einsatzes von EV-Ladegeräten in Berlin mit multikriterieller geospatialer Optimierung</h2>
+                    <p class="lead">Eine laufende datengesteuerte geospatiale Optimierungspipeline zur Ausbalancierung von Abdeckung und räumlicher Gerechtigkeit in der Berliner EV-Ladeinfrastruktur.</p>
+                    <h4>Die Herausforderung</h4>
+                    <p>Der Ausbau der öffentlichen Ladeinfrastruktur für Elektrofahrzeuge (EV) in Deutschland ist weitgehend nachfrageorientiert. Dies verstärkt räumliche Ungleichheiten, da zentrale Bezirke bevorzugt werden und Randgebiete eine höhere Überlastung und geringeren Zugang aufweisen. Dies führt zu einem klassischen "Henne-Ei-Problem", bei dem der Mangel an Infrastruktur die Akzeptanz von Elektrofahrzeugen in unterversorgten Gebieten hemmt, was wiederum die anhaltende mangelnde Investition rechtfertigt.</p>
+                    <h4>Unsere datengesteuerte Lösung</h4>
+                    <p>Wir haben ein multikriterielles NSGA-II-Modell in Python implementiert, um Abdeckung und räumliche Gerechtigkeit auszugleichen und den Gini-Koeffizienten der BEVs pro Ladegerät auf Bezirksebene zu minimieren. Dieser Ansatz liefert verschiedene Pareto-optimale Bereitstellungsstrategien für Stadtplaner, die die Infrastrukturplatzierung unter komplexen geospatialen und sozioökonomischen Einschränkungen direkt adressieren.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge bg-blue-100 text-blue-800">Python</span>
+                        <span class="tech-badge bg-green-100 text-green-800">NSGA-II</span>
+                        <span class="tech-badge bg-purple-100 text-purple-800">Geospatiale Optimierung</span>
+                        <span class="tech-badge bg-yellow-100 text-yellow-800">Multikriterielle Optimierung</span>
+                        <span class="tech-badge bg-red-100 text-red-800">Gini-Koeffizient</span>
+                        <span class="tech-badge bg-indigo-100 text-indigo-800">Warteschlangensimulation</span>
+                        <span class="tech-badge bg-pink-100 text-pink-800">Stadtplanung</span>
                     </div>
-
                     <h4>Auswirkungen & Ergebnisse</h4>
                     <div class="impact-metrics">
                         <div class="row">
@@ -504,7 +253,6 @@
                 </div>
                 <div class="w-full lg:w-1/4 px-4 mt-8 lg:mt-0">
                     <img src="https://placehold.co/400x300/e0e0e0/ffffff?text=Berlin+EV+Map" class="img-fluid rounded" alt="Berlin EV Charger Distribution">
-
                     <div class="lesson-card">
                         <h5>Philosophie in Aktion</h5>
                         <p class="mb-0">Ziel ist es nicht nur, mehr Ladegeräte einzusetzen, sondern sie strategisch zu platzieren, um einen gerechten Zugang und eine nachhaltige urbane Mobilität zu fördern. Unser Framework ermöglicht es den Kommunen, den Effizienz-Gerechtigkeits-Kompromiss mit datengesteuerten Erkenntnissen zu navigieren.</p>
@@ -513,31 +261,29 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.tailwindcss.com"></script>
 </section>
 
-<!-- Call to Action -->
-<section class="section bg-primary text-white">
-    <div class="container text-center">
+<section class="section bg-primary text-white text-center">
+    <div class="container">
         <h2 class="mb-4">Bereit, etwas Wirkungsvolles zu schaffen?</h2>
-        <p class="lead mb-4" style="color: #fff;">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich wichtig sind.</p>
+        <p class="lead mb-4">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich wichtig sind.</p>
         <a href="contact.html" class="btn btn-light btn-lg">Lasst uns gemeinsam Veränderungen vorantreiben ⚡</a>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+<footer class="footer bg-primary text-white text-center">
     <div class="container">
         <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profile">
                 <i class="ti-linkedin"></i>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
+        <p class="mb-0">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Clifford Ondieki - Mit Sinn und Zweck entwickelt</a>
+            <a href="#">Clifford Ondieki - Mit Sinn und Zweck entwickelt</a>
         </p>
     </div>
 </footer>
+
 </body>
 </html>
