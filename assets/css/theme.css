@@ -887,7 +887,102 @@ a:hover {
   .map-controls {
     gap: 0.5rem;
   }
-  
+
+  /* General Layout & Colors */
+body {
+    padding-top: 80px;
+    background-color: #f8f9fa; /* Light gray background for a clean look */
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.bg-primary {
+    background-color: #695aa6 !important; /* Your brand purple */
+}
+
+.text-white .lead,
+.text-white p,
+.text-white h2 {
+    color: #fff !important;
+}
+
+/* Hero Section */
+.project-hero {
+    padding: 5rem 0;
+}
+
+/* Project Cards */
+.project-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 3rem; /* Adds clear spacing between project cards */
+}
+
+.project-card img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tech Stack & Badges */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem; /* Add some space above tech badges */
+    margin-bottom: 1.5rem; /* Add some space below tech badges */
+}
+
+.tech-badge {
+    background: #f1f1f1;
+    color: #333;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Impact Metrics */
+.impact-metrics .metric-number {
+    font-size: 2.8rem; /* Slightly larger for more prominence */
+    font-weight: 700; /* Definitely bold */
+    color: #695aa6;
+    line-height: 1.1; /* Adjust line height for better spacing */
+}
+
+.impact-metrics p {
+    font-size: 0.95rem; /* Slightly larger for readability */
+    color: #555;
+    margin-bottom: 0;
+    font-weight: 500; /* Make the description text slightly bolder */
+}
+
+.metric-item {
+    text-align: center;
+    margin-bottom: 1.5rem; /* More space between metric items if they wrap */
+    padding: 0.5rem; /* Add some padding for visual separation */
+}
+
+/* Lesson Card */
+.lesson-card {
+    background-color: #fafafa;
+    border-left: 4px solid #695aa6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.lesson-card h5 {
+    color: #695aa6;
+    margin-bottom: 0.75rem; /* Space below lesson card heading */
+}
+
   .map-btn {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
