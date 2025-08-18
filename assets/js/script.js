@@ -23,20 +23,36 @@ $(document).ready(function(){
         } 
     });
 
-    // navbar toggle
-    $('#nav-toggle').click(function(){
-        $(this).toggleClass('is-active');
-        $('ul.nav').toggleClass('show');
-    });
-
     // Bootstrap navbar collapse for mobile
-    $('.navbar-toggler').click(function(){
-        $('.navbar-collapse').toggleClass('show');
+    $('.navbar-toggler').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this).attr('data-target');
+        $(target).toggleClass('show');
+        $(this).toggleClass('collapsed');
+        $(this).attr('aria-expanded', function(i, attr) {
+            return attr === 'true' ? 'false' : 'true';
+        });
     });
 
     // Close mobile menu when clicking on nav links
-    $('.navbar-nav .nav-link').click(function(){
+    $('.navbar-nav .nav-link').on('click', function(){
         $('.navbar-collapse').removeClass('show');
+        $('.navbar-toggler').addClass('collapsed');
+        $('.navbar-toggler').attr('aria-expanded', 'false');
+    });
+    
+    // Close mobile menu when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.navbar').length) {
+            $('.navbar-collapse').removeClass('show');
+            $('.navbar-toggler').addClass('collapsed');
+            $('.navbar-toggler').attr('aria-expanded', 'false');
+        }
+    });
+    
+    // Prevent navbar collapse from closing when clicking inside
+    $('.navbar-collapse').on('click', function(e) {
+        e.stopPropagation();
     });
 
     // fade-in-on-scroll animation
