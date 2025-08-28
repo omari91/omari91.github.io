@@ -66,6 +66,88 @@
         .footer p { margin-top: 10px; }
         .footer a { color: #fff; }
         .footer .social-links .link { font-size: 30px; margin-right: 20px; }
+
+        /*
+         * === PORTFOLIO CARD HOVER EFFECTS ===
+         * The styles below create the zoom and fade effect for the "Featured Work" section.
+        */
+
+        /* The main container for each portfolio item. */
+        .portfolio-card {
+            position: relative;
+            overflow: hidden; /* Hides the parts of the image that zoom outside the card's boundaries. */
+            display: block;
+            border-radius: 0.75rem; /* Using a slightly larger radius to match modern designs. */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            color: #333; /* Default text color */
+            text-decoration: none;
+        }
+
+        .portfolio-card:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+        /* The image within the card. */
+        .portfolio-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the card area without distortion. */
+            display: block;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth zoom transition. */
+        }
+
+        /* The overlay that appears on top of the image on hover. */
+        .portfolio-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.4));
+            opacity: 0; /* Hidden by default. */
+            transition: opacity 0.4s ease-in-out; /* Smooth fade-in transition. */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        /* The text content (caption) inside the overlay. */
+        .portfolio-card-caption {
+            color: white;
+            text-align: center;
+            opacity: 0; /* Hidden by default. */
+            transform: translateY(20px); /* Starts slightly lower. */
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+            transition-delay: 0.1s; /* Appears slightly after the overlay. */
+        }
+
+        .portfolio-card-caption h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-card-caption p {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* --- HOVER STATES --- */
+        .portfolio-card:hover .portfolio-card-img {
+            transform: scale(1.1); /* Zoom the image in. */
+        }
+
+        .portfolio-card:hover .portfolio-card-overlay {
+            opacity: 1; /* Make the overlay visible. */
+        }
+
+        .portfolio-card:hover .portfolio-card-caption {
+            opacity: 1; /* Make the text visible. */
+            transform: translateY(0); /* Slide the text up into position. */
+        }
+
     </style>
     
     <!-- Structured Data for SEO -->
@@ -82,7 +164,7 @@
       "jobTitle": "Technical Program Manager",
       "worksFor": {
         "@type": "Organization",
-        "name":. "Berlin Tech"
+        "name": "Berlin Tech"
       },
       "alumniOf": {
         "@type": "CollegeOrUniversity",
@@ -106,7 +188,7 @@
             <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="Clifford Ondieki's logo">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -204,7 +286,7 @@
         <p class="section-subtitle">Featured Work</p>
         <h6 class="section-title mb-6">Engineering with Impact</h6>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <a href="projects.html#kinangop" class="portfolio-card">
                     <img src="assets/imgs/wind farm.jpg" class="portfolio-card-img" alt="Kinangop Wind Integration project" loading="lazy" decoding="async" width="370" height="270">
                     <span class="portfolio-card-overlay">
@@ -215,7 +297,7 @@
                     </span>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <a href="projects.html#predictive-ai" class="portfolio-card">
                     <img class="portfolio-card-img" src="assets/imgs/collaboration.png" alt="Predictive Maintenance AI project" loading="lazy" decoding="async" width="370" height="270">
                     <span class="portfolio-card-overlay">
@@ -226,7 +308,7 @@
                     </span>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <a href="projects.html#health-tech" class="portfolio-card">
                     <img class="portfolio-card-img" src="assets/imgs/change.png" alt="Health Tech Load Balancing project" loading="lazy" decoding="async" width="370" height="270">
                     <span class="portfolio-card-overlay">
@@ -305,6 +387,15 @@
         link.classList.remove('active');
       }
     });
+
+    // Simple fix for navbar toggler
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#navbarNav');
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+        });
+    }
   });
 </script>
 
