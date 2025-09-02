@@ -207,8 +207,21 @@ class AttentionHeatmap {
     }
 
     setupControls() {
+        // Create hidden admin toggle
+        const adminToggle = document.createElement('button');
+        adminToggle.id = 'admin-heatmap-toggle';
+        adminToggle.innerHTML = '📊';
+        adminToggle.title = 'Admin: Show Heatmap Controls';
+        document.body.appendChild(adminToggle);
+        
+        adminToggle.addEventListener('click', () => {
+            const controls = document.getElementById('heatmap-controls');
+            controls.style.display = controls.style.display === 'none' ? 'block' : 'none';
+        });
+        
         const controls = document.createElement('div');
         controls.id = 'heatmap-controls';
+        controls.style.display = 'none'; // Hidden by default
         controls.style.cssText = `
             position: fixed;
             top: 100px;
