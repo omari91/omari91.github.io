@@ -21,8 +21,9 @@ class AttentionHeatmap {
     init() {
         this.setupEventListeners();
         this.createHeatmapOverlay();
-        this.startTracking();
         this.setupControls();
+        this.startTracking();
+        this.integrateClarityTracking();
     }
 
     setupEventListeners() {
@@ -431,6 +432,48 @@ class AttentionHeatmap {
         if (this.scrollData.length === 0) return 0;
         const maxScroll = Math.max(...this.scrollData.map(d => d.scrollPercent));
         return Math.round(maxScroll);
+    }
+
+    integrateClarityTracking() {
+        // Enhanced tracking for Microsoft Clarity integration
+        if (typeof clarity !== 'undefined') {
+            // Custom events for Clarity
+            this.setupClarityEvents();
+        }
+    }
+
+    setupClarityEvents() {
+        // Track section engagement for Clarity
+        const sections = document.querySelectorAll('section, .section, .story-section');
+        sections.forEach(section => {
+            const sectionName = this.getSectionName(section);
+            
+            // Track when sections come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && typeof clarity !== 'undefined') {
+                        clarity('event', 'section_view', { section: sectionName });
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(section);
+        });
+
+        // Track high-engagement clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('a[href*="contact"], .btn-primary, .portfolio-card')) {
+                const elementType = e.target.className.includes('btn-primary') ? 'cta_button' : 
+                                  e.target.className.includes('portfolio-card') ? 'project_card' : 'contact_link';
+                
+                if (typeof clarity !== 'undefined') {
+                    clarity('event', 'high_engagement_click', { 
+                        element: elementType,
+                        text: e.target.textContent?.substring(0, 50)
+                    });
+                }
+            }
+        });
     }
 }
 
