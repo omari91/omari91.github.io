@@ -1068,6 +1068,154 @@ a:hover {
   }
 }
 
+/* Skills, Tools & Platforms Section */
+.skills-grid {
+  margin: 2rem 0;
+}
+
+.skill-category {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--lime-green);
+  height: 100%;
+}
+
+.skill-category h5 {
+  color: var(--steel-gray);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.skill-category ul {
+  text-align: left;
+}
+
+.skill-category li {
+  padding: 0.5rem 0;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.skill-category li i {
+  color: var(--lime-green);
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.tools-column {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--kenyan-earth-red);
+}
+
+.tools-column h5 {
+  color: var(--steel-gray);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tools-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,1) 10%, 
+    rgba(255,255,255,1) 90%, 
+    rgba(255,255,255,0) 100%);
+  padding: 1rem 0;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+  align-items: center;
+}
+
+.tool-logo-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem;
+  min-width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.tool-logo-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.tool-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(105, 90, 166, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tool-logo:hover {
+  box-shadow: 0 6px 20px rgba(105, 90, 166, 0.3);
+  transform: scale(1.05);
+}
+
+.tool-name {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--steel-gray);
+  text-align: center;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.tools-marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-category {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tools-column {
+    padding: 1.5rem;
+  }
+  
+  .tool-logo-wrapper {
+    margin: 0 1rem;
+    min-width: 80px;
+  }
+  
+  .tool-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .tool-name {
+    font-size: 0.75rem;
+  }
+  
+  .marquee-content {
+    animation-duration: 25s;
+  }
+}
 /* Heatmap Visualization Styles */
 .heatmap-section {
   background: var(--sky-white);
