@@ -1498,3 +1498,203 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* Gated Projects Styling */
+.gated-project {
+  position: relative;
+}
+
+.gated-card {
+  border-left: 4px solid #f5b700; /* Sun-gold for premium projects */
+  background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.gated-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #f5b700 transparent transparent;
+  z-index: 2;
+}
+
+.gated-card::after {
+  content: '★';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 3;
+}
+
+.gated-overlay {
+  position: relative;
+}
+
+.gated-content {
+  position: relative;
+  z-index: 1;
+}
+
+.project-teaser {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  border-left: 3px solid #f5b700;
+}
+
+.project-teaser h4 {
+  color: #695aa6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.project-teaser ul {
+  margin-bottom: 0;
+}
+
+.project-teaser li {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.gated-cta {
+  background: linear-gradient(135deg, #695aa6 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.gated-message {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.gated-message i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #f5b700;
+}
+
+.gated-message strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.gated-message small {
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.gated-cta .btn {
+  background: white;
+  color: #695aa6;
+  border: none;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.gated-cta .btn:hover {
+  background: #f5b700;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 183, 0, 0.3);
+}
+
+.gated-preview {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(105, 90, 166, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gated-preview:hover .preview-overlay {
+  opacity: 1;
+}
+
+.preview-content {
+  text-align: center;
+  color: white;
+}
+
+.preview-content i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #f5b700;
+}
+
+.preview-content p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.preview-content small {
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Hover effects for gated cards */
+.gated-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(105, 90, 166, 0.15);
+}
+
+.gated-card:hover .gated-cta {
+  background: linear-gradient(135deg, #5a4a8a 0%, #695aa6 100%);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .gated-card::before {
+    border-width: 0 40px 40px 0;
+  }
+  
+  .gated-card::after {
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+  }
+  
+  .project-teaser {
+    padding: 1rem;
+  }
+  
+  .gated-cta {
+    padding: 1.5rem;
+  }
+  
+  .gated-message {
+    font-size: 1rem;
+  }
+  
+  .gated-message strong {
+    font-size: 1.1rem;
+  }
+}
