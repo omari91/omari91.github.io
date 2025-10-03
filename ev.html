@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: From Crisp Geospatial Planning to Robust EV Strategy in Berlin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- 
+        Chosen Palette: A professional and clean palette inspired by "Subtle & Professional" and "Brilliant Blues".
+        - Background: #F8F9FA (Off-white)
+        - Main Text: #212529 (Dark Gray)
+        - Primary Accent (Blue): #3B82F6
+        - Secondary Accent (Green for positive outcomes): #10B981
+        - Tertiary Accent (Red for challenges): #EF4444
+        - Neutral Gray: #6B7280
+    -->
+    <!-- 
+        Application Structure Plan: Now follows the correct academic progression: 
+        Paper 1 (Crisp/Deterministic Berlin Model) -> Identifies the core trade-off.
+        Paper 2 (Fuzzy/Robust Berlin Model) -> Solves the uncertainty problem of Paper 1.
+        Chapter I focuses on the initial model (Paper 1), its objectives, and its brittleness. Chapter II introduces the Fuzzy Robust framework (Paper 2) as the solution and presents the superior, resilient results.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #212529;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 450px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .stat-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border-left: 5px solid #3B82F6;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #9CA3AF;
+        }
+        .chapter-heading {
+            border-top: 5px solid #3B82F6;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: #3B82F6;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-800">From Equity to Resilience: Berlin's EV Strategy</h1>
+            <p class="text-sm md:text-base text-gray-600 mt-1">A Two-Paper Progression: Deterministic Planning $\rightarrow$ Fuzzy Robustness</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Section 0: Narrative Summary/Hero -->
+        <section id="narrative" class="py-16 md:py-24 bg-blue-50 border-b border-blue-200">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <!-- Title and Hook -->
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 leading-tight">
+                    Future-Proofing Berlin's EV Infrastructure
+                </h2>
+                <p class="text-xl text-gray-700 mb-10">
+                    The path to resilient urban planning requires iterative refinement. We started by mapping the **Equity-Utility trade-off** in Berlin (Paper 1), but quickly realized the solution was **fragile**. Our second phase (Paper 2) introduces a **Fuzzy Optimization Framework** to build resilience against real-world uncertainty.
+                </p>
+
+                <!-- Key Metric Stat -->
+                <div class="inline-block bg-white p-6 md:p-8 rounded-2xl shadow-xl border-4 border-green-500 transform hover:scale-[1.02] transition duration-300">
+                    <p class="text-xl font-semibold text-gray-600 mb-2">Resilience Improvement</p>
+                    <p class="text-6xl md:text-8xl font-black text-green-600 leading-none">
+                        +20%
+                    </p>
+                    <p class="text-lg mt-2 text-gray-700">Higher **Guaranteed** Satisfaction over the Fragile Plan</p>
+                </div>
+                
+                <p class="text-lg text-gray-600 mt-10 max-w-2xl mx-auto">
+                    The Fuzzy approach explicitly models fluctuating EV adoption rates and flexible budgets to guarantee high utility and equity performance across *all* possible futures.
+                </p>
+                <a href="#chapter1" class="mt-6 inline-block text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-150">
+                    Start the Journey: Chapter I (The Crisp Foundation) ↓
+                </a>
+            </div>
+        </section>
+
+        <!-- Wrapper for centered content -->
+        <div class="container mx-auto px-6 py-12">
+            
+            <!-- CHAPTER I: THE FOUNDATIONAL MODEL (Paper 1) -->
+            <h2 class="chapter-heading" id="chapter1">Chapter I: The Foundational Model (Paper 1)</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">This chapter is based on the initial work: **Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization**. It established the core challenge: balancing maximum charging coverage (Utility) with fair distribution (Equity).</p>
+
+
+            <!-- Section 1: The Core Trade-Off -->
+            <section id="challenge" class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-4">1. Defining Utility and Equity in Berlin</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Paper 1 modeled Berlin's EV charging problem using crisp (deterministic) values for demand and budget. The key contribution was defining the two critical, conflicting policy objectives for the city's 12 districts.</p>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold text-center mb-6">The Objectives of the Crisp Model (Paper 1)</h4>
+                    <div class="flex flex-col md:flex-row items-center justify-around space-y-8 md:space-y-0 md:space-x-4">
+                        <!-- Objective 1 -->
+                        <div class="text-center">
+                            <h5 class="font-semibold mb-2">Objective 1: Maximize Utility</h5>
+                            <div class="p-4 border-2 border-dashed border-blue-400 rounded-lg bg-blue-50">
+                                <div class="text-lg font-bold text-blue-800">City-wide Coverage</div>
+                                <div class="text-sm text-gray-600">(Maximize total EV coverage for the city)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-arrow transform md:rotate-90 md:rotate-0">↔</div>
+
+                        <!-- Objective 2 -->
+                        <div class="text-center">
+                            <h5 class="font-semibold mb-2">Objective 2: Maximize Equity</h5>
+                            <div class="p-4 border-2 border-dashed border-red-400 rounded-lg bg-red-50">
+                                <div class="text-lg font-bold text-red-800">Fair Distribution</div>
+                                <div class="text-sm text-gray-600">(Minimize Gini Index gap between districts)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-6">This trade-off yielded the **Crisp Pareto Front**, but its plans were only optimal if demand predictions were 100% accurate.</p>
+                </div>
+            </section>
+
+            <!-- Section 2: The Limitation: Brittleness -->
+            <section id="brittleness" class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-4">2. The Crucial Flaw: The Fragile Solution</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">The deterministic model in Paper 1 failed to account for two critical real-world factors: the uncertainty in future EV adoption rates and the flexibility in planning budgets. This created **brittle plans** that could suffer massive performance drops if assumptions proved wrong.</p>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold text-center mb-8">Why the Deterministic Plan is Brittle (The Motivation for Paper 2)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
+                        <div class="p-4 bg-red-100 border border-red-200 rounded-lg">
+                            <strong>1. Uncertain Demand</strong>
+                            <p class="text-sm mt-1">EV adoption is a wide range, not a single number.</p>
+                        </div>
+                        <div class="flow-arrow hidden md:block">→</div>
+                        <div class="p-4 bg-yellow-100 border border-yellow-200 rounded-lg md:col-span-1">
+                            <strong>2. Flexible Budget</strong>
+                            <p class="text-sm mt-1">Budgets often have an acceptable range of investment.</p>
+                        </div>
+                        <div class="flow-arrow hidden md:block">→</div>
+                        <div class="p-4 bg-gray-200 border border-gray-300 rounded-lg md:col-span-1">
+                            <strong>3. Outcome Risk</strong>
+                            <p class="text-sm mt-1">A plan optimized for the 'best guess' fails spectacularly in 'worst-case' scenarios.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Transition Block -->
+            <div id="transition" class="bg-blue-600 text-white p-8 md:p-12 rounded-xl shadow-2xl my-20 text-center">
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">Addressing Brittleness: The Move to Robustness (Paper 2)</h3>
+                <p class="text-xl font-light">
+                    The weakness of the initial plan necessitated a new, higher-level framework. Paper 2 introduces the **Fuzzy Multi-Objective Optimization** approach—explicitly modeling the uncertainty of demand and budget—to guarantee a **resilient and reliable** EV network, regardless of future volatility.
+                </p>
+                <a href="#chapter2" class="mt-4 inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">
+                    Continue to Chapter II (The Robust Solution) ↓
+                </a>
+            </div>
+            
+            <!-- CHAPTER II: THE BERLIN APPLICATION (Paper 2) -->
+            <h2 class="chapter-heading" id="chapter2">Chapter II: The Robust Solution (Paper 2)</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">This chapter details the methodology and superior results of applying the **Fuzzy Robust Optimization Framework**. The focus shifts from simply optimizing for a *single best case* to optimizing for the *highest guaranteed minimum performance*.</p>
+
+            <!-- Section 3: The Framework (Paper 2 Contribution) -->
+            <section id="solution" class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-4">3. The Fuzzy Robust Optimization Framework</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Paper 2 solved the brittleness problem by replacing single values with **Triangular Fuzzy Numbers (TFNs)** for uncertain parameters. This allowed the optimization algorithm (E-NSGAII) to find a set of solutions—the **Fuzzy Pareto Front**—that are robust across the full range of possible futures.</p>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold text-center mb-8">Steps of the Robust-Fuzzy Solution Procedure</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center text-center">
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>1. Model Fuzzification</strong><p class="text-sm">Demand & budget are modeled as ranges (TFNs)</p></div>
+                        <div class="flow-arrow">→</div>
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>2. Robust Defuzzification</strong><p class="text-sm">Use Chance-Constrained Programming for objective satisfaction</p></div>
+                        <div class="flow-arrow">→</div>
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>3. Multi-Objective Solver</strong><p class="text-sm">Apply the E-NSGAII Algorithm to find the Robust Pareto Front</p></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Section 4: Key Findings -->
+            <section id="findings" class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">4. The Impact: Quantifying Resilience</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <div class="stat-card">
+                        <h4 class="text-2xl font-bold mb-4">Finding A: Superior Resilience Under Pressure</h4>
+                        <p class="text-gray-600 mb-6">This chart quantifies the value of the robust approach. Compared to the **deterministic solution (Paper 1)**, the **Fuzzy Robust plan (Paper 2)** ensures **15-20% higher minimum satisfaction levels** for both Utility and Equity in the absolute worst-case scenarios.</p>
+                        <div class="chart-container h-[400px] md:h-[450px]">
+                            <canvas id="resilienceChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h4 class="text-2xl font-bold mb-4">Finding B: Navigating the Robustness Trade-Off</h4>
+                         <p class="text-gray-600 mb-6">The **Fuzzy Pareto Front** (below) allows planners to visualize four dimensions: expected Utility (Y-axis), expected Equity (X-axis), **Robustness** (color/transparency), and **Risk/Uncertainty Span** (bubble size). The best solutions are high on both axes, brightly colored, and small.</p>
+                        <div class="chart-container h-[400px] md:h-[450px]">
+                            <canvas id="robustnessChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: The Most Robust Plan -->
+            <section id="plan" class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-4">5. The Optimal Outcome: Berlin's Robust Deployment Plan</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">The model recommends the "Most Robust Solution," which allocates approximately **108 new chargers**. This plan maximizes resilience by proactively utilizing the flexible budget to hedge against the maximum potential future EV demand. This is the **actionable policy recommendation** derived from the entire study.</p>
+
+                <div class="stat-card">
+                    <h4 class="text-xl font-semibold mb-4 text-center">Allocation of ~108 New Chargers in the Most Robust Plan by District</h4>
+                    <div class="chart-container h-[500px] md:h-[600px]">
+                        <canvas id="allocationChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Path Forward -->
+            <section id="future">
+                <h3 class="text-3xl font-bold text-center mb-4">6. The Path Forward: From Policy to Pavement</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">While the framework delivers a powerful policy-level strategy, continued research is vital to transition to a fully deployable engineering solution. Future work involves integrating deeper technical and behavioral data.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2 text-blue-600">Grid Integration</h4>
+                        <p class="text-gray-600">Couple the model with power flow simulations to ensure technical feasibility and avoid localized grid congestion.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2 text-blue-600">Finer-Grained Equity</h4>
+                        <p class="text-gray-600">Incorporate socio-economic data (income, housing type) to address crucial inequalities within existing districts.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-lg mb-2 text-blue-600">Behavioral Modeling</h4>
+                        <p class="text-gray-600">Integrate dynamic user behaviors like adaptive routing and price sensitivity for more realistic demand forecasting.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (typeof label !== 'string' || label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine += ' ' + word;
+                }
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const mandatoryTooltip = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Chart 1: Resilience Comparison
+            const resilienceCtx = document.getElementById('resilienceChart').getContext('2d');
+            const resilienceData = {
+                labels: ['Utility (Coverage) Sat.', 'Equity (1-Gini) Sat.'],
+                datasets: [{
+                    label: 'Deterministic Model (Min. Sat.)',
+                    data: [0.72, 0.61],
+                    backgroundColor: '#EF4444',
+                    borderColor: '#DC2626',
+                    borderWidth: 1
+                }, {
+                    label: 'Fuzzy Robust Model (Min. Sat.)',
+                    data: [0.78, 0.75],
+                    backgroundColor: '#10B981',
+                    borderColor: '#059669',
+                    borderWidth: 1
+                }]
+            };
+            new Chart(resilienceCtx, {
+                type: 'bar',
+                data: resilienceData,
+                options: {
+                    ...mandatoryTooltip,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 1.0,
+                            title: { display: true, text: 'Min. Satisfaction in Pessimistic Scenario' }
+                        }
+                    },
+                    plugins: { ...mandatoryTooltip.plugins, title: { display: true, text: 'Minimum Performance: Fuzzy vs. Deterministic' } }
+                }
+            });
+
+            // Chart 2: Robustness-Contour Pareto Front
+            const robustnessCtx = document.getElementById('robustnessChart').getContext('2d');
+            const robustnessSolutions = [
+                { E_utility: 0.92, E_equity: 0.85, R_i: 0.95 }, { E_utility: 0.90, E_equity: 0.90, R_i: 0.98 },
+                { E_utility: 0.85, E_equity: 0.93, R_i: 0.96 }, { E_utility: 0.94, E_equity: 0.82, R_i: 0.88 },
+                { E_utility: 0.88, E_equity: 0.88, R_i: 0.92 }, { E_utility: 0.82, E_equity: 0.95, R_i: 0.91 },
+                { E_utility: 0.91, E_equity: 0.89, R_i: 0.97 }, { E_utility: 0.93, E_equity: 0.86, R_i: 0.94 }
+            ];
+            const bubbleData = robustnessSolutions.map(s => ({
+                x: s.E_equity,
+                y: s.E_utility,
+                r: (1 - s.R_i) * 25 + 5, // Radius: inverse of robustness (uncertainty span)
+                backgroundColor: `rgba(59, 130, 246, ${s.R_i})`, // Color: proportional to robustness
+            }));
+
+            new Chart(robustnessCtx, {
+                type: 'bubble',
+                data: {
+                    datasets: [{
+                        label: 'Fuzzy Solution',
+                        data: bubbleData,
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const data = context.raw;
+                                    const robustness = 1 - ((data.r - 5) / 25);
+                                    return `U: ${data.y.toFixed(2)}, E: ${data.x.toFixed(2)}, Robustness: ${(robustness * 100).toFixed(1)}%`;
+                                }
+                            }
+                        }
+                    }]
+                },
+                options: {
+                    ...mandatoryTooltip,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { title: { display: true, text: 'Expected Equity Satisfaction' } },
+                        y: { title: { display: true, text: 'Expected Utility Satisfaction' } }
+                    },
+                    plugins: { 
+                        ...mandatoryTooltip.plugins, 
+                        title: { display: true, text: 'Performance vs. Robustness Trade-off (Fuzzy Pareto Front)' },
+                        legend: { display: false }
+                    }
+                }
+            });
+
+            // Chart 3: Allocation Plan
+            const allocationCtx = document.getElementById('allocationChart').getContext('2d');
+            const allocationData = {
+                // District names need wrapping
+                labels: [
+                    'Mitte', 'Pankow', ['Charlottenburg-', 'Wilmersdorf'], ['Friedrichshain-','Kreuzberg'], 
+                    ['Tempelhof-','Schöneberg'], 'Neukölln', 'Lichtenberg', ['Steglitz-', 'Zehlendorf'],
+                    'Reinickendorf', ['Treptow-','Köpenick'], ['Marzahn-','Hellersdorf'], 'Spandau'
+                ].reverse(),
+                datasets: [{
+                    label: 'New Chargers Allocated',
+                    data: [15, 14, 12, 11, 10, 9, 8, 7, 6, 6, 5, 5].reverse(),
+                    backgroundColor: '#3B82F6',
+                    borderColor: '#2563EB',
+                    borderWidth: 1
+                }]
+            };
+            new Chart(allocationCtx, {
+                type: 'bar',
+                data: allocationData,
+                options: {
+                    ...mandatoryTooltip,
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { beginAtZero: true, title: { display: true, text: 'Number of New Chargers' } }
+                    },
+                    plugins: { ...mandatoryTooltip.plugins, legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
