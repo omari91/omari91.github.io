@@ -9,26 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- 
-        Chosen Palette: A professional and clean palette inspired by "Subtle & Professional" and "Brilliant Blues".
-        - Background: #F8F9FA (Off-white)
-        - Main Text: #212529 (Dark Gray)
-        - Primary Accent (Blue): #3B82F6
-        - Secondary Accent (Green for positive outcomes): #10B981
-        - Tertiary Accent (Red for challenges): #EF4444
-        - Neutral Gray: #6B7280
-    -->
-    <!-- 
-        Application Structure Plan: Now follows the correct academic progression: 
-        Paper 1 (Crisp/Deterministic Berlin Model) -> Identifies the core trade-off.
-        Paper 2 (Fuzzy/Robust Berlin Model) -> Solves the uncertainty problem of Paper 1.
-        Chapter I focuses on the initial model (Paper 1), its objectives, and its brittleness. Chapter II introduces the Fuzzy Robust framework (Paper 2) as the solution and presents the superior, resilient results.
-    -->
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8F9FA;
-            color: #212529;
+            background-color: #F8F9FA; /* Off-white */
+            color: #212529; /* Dark Gray */
+            padding-top: 64px; /* Added padding to prevent fixed navbar from obscuring content */
         }
         .chart-container {
             position: relative;
@@ -48,7 +35,7 @@
             border-radius: 0.75rem;
             padding: 1.5rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            border-left: 5px solid #3B82F6;
+            border-left: 5px solid #3B82F6; /* Primary Accent Blue */
         }
         .flow-arrow {
             font-size: 2rem;
@@ -66,25 +53,76 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+        /* Custom class for the active nav link for visual clarity */
+        .nav-active {
+            font-weight: 700;
+            color: #1D4ED8 !important; /* Tailwind blue-700 */
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header Section -->
-    <header class="bg-white shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-6 py-4">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-800">From Equity to Resilience: Berlin's EV Strategy</h1>
-            <p class="text-sm md:text-base text-gray-600 mt-1">A Two-Paper Progression: Deterministic Planning $\rightarrow$ Fuzzy Robustness</p>
-        </div>
-    </header>
+    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between items-center h-full">
+                <a class="flex items-center space-x-2 text-gray-800 font-bold hover:text-blue-600 transition" href="projects.html">
+                    <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="rounded-full" alt="Clifford Ondieki Profile Icon">
+                    <span>Clifford Ondieki <small class="font-normal text-sm text-gray-600">| Hybrid Innovator</small></span>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-6">
+                    <ul class="flex space-x-4">
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 nav-active transition" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="philosophy.html">Philosophy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="blog.html">Insights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex space-x-2 border-l border-gray-200 pl-4">
+                        <a href="ev.html" class="font-bold text-sm text-blue-600">EN</a>
+                        <a href="ev-de.html" class="text-sm text-gray-400 hover:text-gray-600">DE</a>
+                    </div>
+                </div>
 
-    <!-- Main Content -->
+                <button class="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none" id="mobile-menu-button">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="lg:hidden hidden absolute top-16 w-full bg-white shadow-lg border-t border-gray-100 py-2" id="mobile-menu">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 nav-active">About</a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Projects</a>
+            <a href="philosophy.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Philosophy</a>
+            <a href="blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Insights</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Contact</a>
+            <div class="pt-2 border-t border-gray-100 flex justify-center space-x-4 mt-2">
+                <a href="projects.html" class="font-bold text-blue-600">EN</a>
+                <a href="projects-de.html" class="text-gray-400 hover:text-gray-600">DE</a>
+            </div>
+        </div>
+    </nav>
     <main>
         
-        <!-- Section 0: Narrative Summary/Hero -->
         <section id="narrative" class="py-16 md:py-24 bg-blue-50 border-b border-blue-200">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <!-- Title and Hook -->
                 <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 leading-tight">
                     Future-Proofing Berlin's EV Infrastructure
                 </h2>
@@ -92,7 +130,6 @@
                     The path to resilient urban planning requires iterative refinement. We started by mapping the **Equity-Utility trade-off** in Berlin (Paper 1), but quickly realized the solution was **fragile**. Our second phase (Paper 2) introduces a **Fuzzy Optimization Framework** to build resilience against real-world uncertainty.
                 </p>
 
-                <!-- Key Metric Stat -->
                 <div class="inline-block bg-white p-6 md:p-8 rounded-2xl shadow-xl border-4 border-green-500 transform hover:scale-[1.02] transition duration-300">
                     <p class="text-xl font-semibold text-gray-600 mb-2">Resilience Improvement</p>
                     <p class="text-6xl md:text-8xl font-black text-green-600 leading-none">
@@ -110,15 +147,12 @@
             </div>
         </section>
 
-        <!-- Wrapper for centered content -->
         <div class="container mx-auto px-6 py-12">
             
-            <!-- CHAPTER I: THE FOUNDATIONAL MODEL (Paper 1) -->
             <h2 class="chapter-heading" id="chapter1">Chapter I: The Foundational Model (Paper 1)</h2>
             <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">This chapter is based on the initial work: **Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization**. It established the core challenge: balancing maximum charging coverage (Utility) with fair distribution (Equity).</p>
 
 
-            <!-- Section 1: The Core Trade-Off -->
             <section id="challenge" class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-4">1. Defining Utility and Equity in Berlin</h3>
                 <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Paper 1 modeled Berlin's EV charging problem using crisp (deterministic) values for demand and budget. The key contribution was defining the two critical, conflicting policy objectives for the city's 12 districts.</p>
@@ -126,7 +160,6 @@
                 <div class="bg-white p-8 rounded-lg shadow-lg">
                     <h4 class="text-xl font-semibold text-center mb-6">The Objectives of the Crisp Model (Paper 1)</h4>
                     <div class="flex flex-col md:flex-row items-center justify-around space-y-8 md:space-y-0 md:space-x-4">
-                        <!-- Objective 1 -->
                         <div class="text-center">
                             <h5 class="font-semibold mb-2">Objective 1: Maximize Utility</h5>
                             <div class="p-4 border-2 border-dashed border-blue-400 rounded-lg bg-blue-50">
@@ -137,7 +170,6 @@
                         
                         <div class="flow-arrow transform md:rotate-90 md:rotate-0">↔</div>
 
-                        <!-- Objective 2 -->
                         <div class="text-center">
                             <h5 class="font-semibold mb-2">Objective 2: Maximize Equity</h5>
                             <div class="p-4 border-2 border-dashed border-red-400 rounded-lg bg-red-50">
@@ -150,7 +182,6 @@
                 </div>
             </section>
 
-            <!-- Section 2: The Limitation: Brittleness -->
             <section id="brittleness" class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-4">2. The Crucial Flaw: The Fragile Solution</h3>
                 <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">The deterministic model in Paper 1 failed to account for two critical real-world factors: the uncertainty in future EV adoption rates and the flexibility in planning budgets. This created **brittle plans** that could suffer massive performance drops if assumptions proved wrong.</p>
@@ -176,7 +207,6 @@
                 </div>
             </section>
             
-            <!-- Transition Block -->
             <div id="transition" class="bg-blue-600 text-white p-8 md:p-12 rounded-xl shadow-2xl my-20 text-center">
                 <h3 class="text-3xl md:text-4xl font-extrabold mb-4">Addressing Brittleness: The Move to Robustness (Paper 2)</h3>
                 <p class="text-xl font-light">
@@ -187,11 +217,9 @@
                 </a>
             </div>
             
-            <!-- CHAPTER II: THE BERLIN APPLICATION (Paper 2) -->
             <h2 class="chapter-heading" id="chapter2">Chapter II: The Robust Solution (Paper 2)</h2>
             <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">This chapter details the methodology and superior results of applying the **Fuzzy Robust Optimization Framework**. The focus shifts from simply optimizing for a *single best case* to optimizing for the *highest guaranteed minimum performance*.</p>
 
-            <!-- Section 3: The Framework (Paper 2 Contribution) -->
             <section id="solution" class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-4">3. The Fuzzy Robust Optimization Framework</h3>
                 <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Paper 2 solved the brittleness problem by replacing single values with **Triangular Fuzzy Numbers (TFNs)** for uncertain parameters. This allowed the optimization algorithm (E-NSGAII) to find a set of solutions—the **Fuzzy Pareto Front**—that are robust across the full range of possible futures.</p>
@@ -209,7 +237,6 @@
             </section>
 
 
-            <!-- Section 4: Key Findings -->
             <section id="findings" class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-12">4. The Impact: Quantifying Resilience</h3>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -232,7 +259,6 @@
                 </div>
             </section>
 
-            <!-- Section 5: The Most Robust Plan -->
             <section id="plan" class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-4">5. The Optimal Outcome: Berlin's Robust Deployment Plan</h3>
                 <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">The model recommends the "Most Robust Solution," which allocates approximately **108 new chargers**. This plan maximizes resilience by proactively utilizing the flexible budget to hedge against the maximum potential future EV demand. This is the **actionable policy recommendation** derived from the entire study.</p>
@@ -245,7 +271,6 @@
                 </div>
             </section>
 
-            <!-- Section 6: Path Forward -->
             <section id="future">
                 <h3 class="text-3xl font-bold text-center mb-4">6. The Path Forward: From Policy to Pavement</h3>
                 <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">While the framework delivers a powerful policy-level strategy, continued research is vital to transition to a fully deployable engineering solution. Future work involves integrating deeper technical and behavioral data.</p>
@@ -268,24 +293,6 @@
     </main>
 
     <script>
-        const wrapLabel = (label) => {
-            const maxLength = 16;
-            if (typeof label !== 'string' || label.length <= maxLength) return label;
-            const words = label.split(' ');
-            const lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + ' ' + word).length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = word;
-                } else {
-                    currentLine += ' ' + word;
-                }
-            });
-            lines.push(currentLine.trim());
-            return lines;
-        };
-
         const mandatoryTooltip = {
             plugins: {
                 tooltip: {
@@ -293,6 +300,7 @@
                         title: function(tooltipItems) {
                             const item = tooltipItems[0];
                             let label = item.chart.data.labels[item.dataIndex];
+                            // Handle array-based (wrapped) labels
                             if (Array.isArray(label)) {
                               return label.join(' ');
                             }
@@ -303,7 +311,18 @@
             }
         };
 
+        // --- Start of Chart.js Functions ---
         document.addEventListener('DOMContentLoaded', () => {
+            // JavaScript for Mobile Menu Toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
             // Chart 1: Resilience Comparison
             const resilienceCtx = document.getElementById('resilienceChart').getContext('2d');
             const resilienceData = {
@@ -364,7 +383,8 @@
                             callbacks: {
                                 label: function(context) {
                                     const data = context.raw;
-                                    const robustness = 1 - ((data.r - 5) / 25);
+                                    // Recalculate robustness for tooltip display
+                                    const robustness = 1 - ((data.r - 5) / 25); 
                                     return `U: ${data.y.toFixed(2)}, E: ${data.x.toFixed(2)}, Robustness: ${(robustness * 100).toFixed(1)}%`;
                                 }
                             }
@@ -389,7 +409,7 @@
             // Chart 3: Allocation Plan
             const allocationCtx = document.getElementById('allocationChart').getContext('2d');
             const allocationData = {
-                // District names need wrapping
+                // District names broken into arrays for multi-line labels
                 labels: [
                     'Mitte', 'Pankow', ['Charlottenburg-', 'Wilmersdorf'], ['Friedrichshain-','Kreuzberg'], 
                     ['Tempelhof-','Schöneberg'], 'Neukölln', 'Lichtenberg', ['Steglitz-', 'Zehlendorf'],
@@ -418,5 +438,36 @@
             });
         });
     </script>
+    
+    <section class="py-12 bg-blue-600 text-white text-center">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-extrabold mb-4">Ready to Build Something Impactful?</h2>
+        <p class="text-xl mb-6 font-light" style="color: #e5e7eb;">Let's combine technical excellence with purpose-driven innovation to create solutions that truly matter.</p>
+        <a href="contact.html" class="inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">Let's Energize Change Together ⚡</a>
+    </div>
+</section>
+
+<footer class="bg-blue-800 text-white text-center py-6">
+    <div class="container mx-auto px-6">
+        <div class="mb-2">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-2xl hover:text-blue-300 transition duration-150" title="LinkedIn Profile">
+                🔗
+            </a>
+        </div>
+        <p class="mb-2 text-sm">
+            Copyright <span id="year"></span> &copy;
+            Bridging technology with purpose — energizing change one system at a time.
+        </p>
+        <p class="text-sm mt-2">
+            <a href="privacy-policy.html" class="hover:text-blue-300 transition duration-150">Privacy Policy</a> | 
+            <a href="contact.html" class="hover:text-blue-300 transition duration-150">Contact</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
