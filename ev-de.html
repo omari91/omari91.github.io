@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografik: Von der Geodaten-Planung zur Resilienz-Strategie in Berlin</title>
+    <title>Infografik: Von der deterministischen Geo-Planung zur robusten E-Fahrzeug-Strategie in Berlin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- 
-        Palettenwahl und Struktur (Beibehalten)
-    -->
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8F9FA;
-            color: #212529;
+            background-color: #F8F9FA; /* Hellgrau */
+            color: #212529; /* Dunkelgrau */
+            padding-top: 64px; /* Platz für die feste Navigationsleiste */
         }
         .chart-container {
             position: relative;
@@ -36,7 +35,7 @@
             border-radius: 0.75rem;
             padding: 1.5rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            border-left: 5px solid #3B82F6;
+            border-left: 5px solid #3B82F6; /* Primär-Akzent Blau */
         }
         .flow-arrow {
             font-size: 2rem;
@@ -54,101 +53,145 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+        /* Benutzerdefinierte Klasse für den aktiven Navigationslink */
+        .nav-active {
+            font-weight: 700;
+            color: #1D4ED8 !important; /* Tailwind blue-700 */
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header Section -->
-    <header class="bg-white shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-6 py-4">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Von Gleichheit zu Resilienz: Berlins EV-Strategie</h1>
-            <p class="text-sm md:text-base text-gray-600 mt-1">Eine Zwei-Studien-Entwicklung: Deterministische Planung $\rightarrow$ Fuzzy-Robustheit</p>
-        </div>
-    </header>
+    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between items-center h-full">
+                <a class="flex items-center space-x-2 text-gray-800 font-bold hover:text-blue-600 transition" href="projects.html">
+                    <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="rounded-full" alt="Clifford Ondieki Profil-Icon">
+                    <span>Clifford Ondieki <small class="font-normal text-sm text-gray-600">| Hybrid Innovator</small></span>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-6">
+                    <ul class="flex space-x-4">
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="index.html">Startseite</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 nav-active transition" href="about.html">Über mich</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="projects.html">Projekte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="philosophy.html">Philosophie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="blog.html">Einblicke</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-gray-600 hover:text-blue-600 transition" href="contact.html">Kontakt</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex space-x-2 border-l border-gray-200 pl-4">
+                        <a href="projects.html" class="text-sm text-gray-400 hover:text-gray-600">EN</a>
+                        <a href="projects-de.html" class="font-bold text-sm text-blue-600">DE</a>
+                    </div>
+                </div>
 
-    <!-- Main Content -->
+                <button class="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none" id="mobile-menu-button">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="lg:hidden hidden absolute top-16 w-full bg-white shadow-lg border-t border-gray-100 py-2" id="mobile-menu">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Startseite</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 nav-active">Über mich</a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Projekte</a>
+            <a href="philosophy.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Philosophie</a>
+            <a href="blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Einblicke</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Kontakt</a>
+            <div class="pt-2 border-t border-gray-100 flex justify-center space-x-4 mt-2">
+                <a href="projects.html" class="text-gray-400 hover:text-gray-600">EN</a>
+                <a href="projects-de.html" class="font-bold text-blue-600">DE</a>
+            </div>
+        </div>
+    </nav>
     <main>
         
-        <!-- Section 0: Narrative Summary/Hero -->
         <section id="narrative" class="py-16 md:py-24 bg-blue-50 border-b border-blue-200">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <!-- Title and Hook -->
                 <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 leading-tight">
-                    Die E-Ladeinfrastruktur Berlins zukunftssicher machen
+                    Zukunftssichere E-Fahrzeug-Infrastruktur für Berlin
                 </h2>
                 <p class="text-xl text-gray-700 mb-10">
-                    Der Weg zu einer widerstandsfähigen Stadtplanung erfordert iterative Verfeinerung. Wir begannen mit der Abbildung des **Gleichheits-Nutzen-Zielkonflikts** in Berlin (Studie 1), mussten jedoch feststellen, dass die Lösung **zerbrechlich** war. Unsere zweite Phase (Studie 2) führte einen **Fuzzy-Optimierungsansatz** ein, um Resilienz gegenüber realen Unsicherheiten zu schaffen.
+                    Der Weg zu widerstandsfähiger Stadtplanung erfordert iterative Verfeinerung. Wir begannen mit der Kartierung des **Gerechtigkeits-Nutzen-Kompromisses** in Berlin (Paper 1), erkannten jedoch schnell, dass die Lösung **fragil** war. Unsere zweite Phase (Paper 2) führt einen **Fuzzy-Optimierungsrahmen** ein, um Robustheit gegen reale Unsicherheiten aufzubauen.
                 </p>
 
-                <!-- Key Metric Stat -->
                 <div class="inline-block bg-white p-6 md:p-8 rounded-2xl shadow-xl border-4 border-green-500 transform hover:scale-[1.02] transition duration-300">
-                    <p class="text-xl font-semibold text-gray-600 mb-2">Steigerung der Resilienz</p>
+                    <p class="text-xl font-semibold text-gray-600 mb-2">Verbesserung der Robustheit</p>
                     <p class="text-6xl md:text-8xl font-black text-green-600 leading-none">
                         +20%
                     </p>
-                    <p class="text-lg mt-2 text-gray-700">Höhere **Garantierte** Zufriedenheit gegenüber dem zerbrechlichen Plan</p>
+                    <p class="text-lg mt-2 text-gray-700">Höhere **garantierte** Zufriedenheit im Vergleich zum fragilen Plan</p>
                 </div>
                 
                 <p class="text-lg text-gray-600 mt-10 max-w-2xl mx-auto">
-                    Der Fuzzy-Ansatz modelliert explizit schwankende EV-Adoptionsraten und flexible Budgets, um eine hohe Nutzen- und Gleichheitsleistung über *alle* möglichen Zukunftsszenarien hinweg zu garantieren.
+                    Der Fuzzy-Ansatz modelliert explizit schwankende EV-Adoptionsraten und flexible Budgets, um eine hohe Nutzen- und Gerechtigkeitsleistung in *allen* möglichen Zukünften zu garantieren.
                 </p>
                 <a href="#chapter1" class="mt-6 inline-block text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-150">
-                    Starten Sie die Reise: Kapitel I (Das Deterministische Fundament) ↓
+                    Beginn der Reise: Kapitel I (Die deterministische Grundlage) ↓
                 </a>
             </div>
         </section>
 
-        <!-- Wrapper for centered content -->
         <div class="container mx-auto px-6 py-12">
             
-            <!-- CHAPTER I: THE FOUNDATIONAL MODEL (Paper 1) -->
-            <h2 class="chapter-heading" id="chapter1">Kapitel I: Das Deterministische Fundament (Studie 1)</h2>
-            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Dieses Kapitel basiert auf der ersten Arbeit: **Ermöglichung der gerechten Verteilung von E-Ladesäulen in Berlin mittels Multi-Objektiver Geospatial-Optimierung**. Es definierte die Kernherausforderung: das Gleichgewicht zwischen maximaler Ladeabdeckung (Nutzen) und fairer Verteilung (Gleichheit).</p>
+            <h2 class="chapter-heading" id="chapter1">Kapitel I: Das Grundlagenmodell (Paper 1)</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Dieses Kapitel basiert auf der Initialarbeit: **Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization**. Es definierte die Kernherausforderung: das Gleichgewicht zwischen maximaler Ladeabdeckung (Nutzen) und fairer Verteilung (Gerechtigkeit).</p>
 
 
-            <!-- Section 1: The Core Trade-Off -->
             <section id="challenge" class="mb-20">
-                <h3 class="text-3xl font-bold text-center mb-4">1. Definition von Nutzen und Gleichheit in Berlin</h3>
-                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Studie 1 modellierte Berlins EV-Ladeinfrastrukturproblem unter Verwendung klar definierter (deterministischer) Werte für Nachfrage und Budget. Der Hauptbeitrag war die Definition der zwei entscheidenden, im Konflikt stehenden politischen Ziele für die 12 Bezirke der Stadt.</p>
+                <h3 class="text-3xl font-bold text-center mb-4">1. Definition von Nutzen und Gerechtigkeit in Berlin</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Paper 1 modellierte Berlins EV-Ladeproblem unter Verwendung von **bestimmten (deterministischen)** Werten für Nachfrage und Budget. Der Schlüsselbeitrag war die Definition der zwei kritischen, widersprüchlichen politischen Ziele für die 12 Bezirke der Stadt.</p>
                 
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-semibold text-center mb-6">Die Ziele des Deterministischen Modells (Studie 1)</h4>
+                    <h4 class="text-xl font-semibold text-center mb-6">Die Ziele des deterministischen Modells (Paper 1)</h4>
                     <div class="flex flex-col md:flex-row items-center justify-around space-y-8 md:space-y-0 md:space-x-4">
-                        <!-- Objective 1 -->
                         <div class="text-center">
-                            <h5 class="font-semibold mb-2">Ziel 1: Maximiere den Nutzen</h5>
+                            <h5 class="font-semibold mb-2">Ziel 1: Maximierung des Nutzens</h5>
                             <div class="p-4 border-2 border-dashed border-blue-400 rounded-lg bg-blue-50">
                                 <div class="text-lg font-bold text-blue-800">Stadtweite Abdeckung</div>
-                                <div class="text-sm text-gray-600">(Maximiere die gesamte EV-Abdeckung für die Stadt)</div>
+                                <div class="text-sm text-gray-600">(Maximierung der gesamten EV-Abdeckung für die Stadt)</div>
                             </div>
                         </div>
                         
                         <div class="flow-arrow transform md:rotate-90 md:rotate-0">↔</div>
 
-                        <!-- Objective 2 -->
                         <div class="text-center">
-                            <h5 class="font-semibold mb-2">Ziel 2: Maximiere die Gleichheit</h5>
+                            <h5 class="font-semibold mb-2">Ziel 2: Maximierung der Gerechtigkeit</h5>
                             <div class="p-4 border-2 border-dashed border-red-400 rounded-lg bg-red-50">
                                 <div class="text-lg font-bold text-red-800">Faire Verteilung</div>
-                                <div class="text-sm text-gray-600">(Minimiere die Gini-Index-Lücke zwischen den Bezirken)</div>
+                                <div class="text-sm text-gray-600">(Minimierung des Gini-Index-Unterschieds zwischen den Bezirken)</div>
                             </div>
                         </div>
                     </div>
-                    <p class="text-center text-sm text-gray-500 mt-6">Dieser Zielkonflikt lieferte die **Knackige Pareto-Front**, aber ihre Pläne waren nur optimal, wenn die Nachfrageprognosen 100% genau waren.</p>
+                    <p class="text-center text-sm text-gray-500 mt-6">Dieser Kompromiss lieferte die **klare Pareto-Front**, deren Pläne jedoch nur optimal waren, wenn die Nachfrageprognosen zu 100% genau waren.</p>
                 </div>
             </section>
 
-            <!-- Section 2: The Limitation: Brittleness -->
             <section id="brittleness" class="mb-20">
-                <h3 class="text-3xl font-bold text-center mb-4">2. Der entscheidende Mangel: Die zerbrechliche Lösung</h3>
-                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Das deterministische Modell in Studie 1 berücksichtigte zwei kritische reale Faktoren nicht: die Ungewissheit der zukünftigen EV-Adoptionsraten und die Flexibilität der Planungsbudgets. Dies führte zu **zerbrechlichen Plänen**, deren Leistung massiv einbrechen konnte, wenn die Annahmen falsch waren.</p>
+                <h3 class="text-3xl font-bold text-center mb-4">2. Der entscheidende Fehler: Die fragile Lösung</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Das deterministische Modell aus Paper 1 berücksichtigte zwei kritische reale Faktoren nicht: die Unsicherheit zukünftiger EV-Adoptionsraten und die Flexibilität der Planungsbudgets. Dies führte zu **brüchigen Plänen**, die massive Leistungseinbußen erleiden konnten, falls die Annahmen falsch waren.</p>
 
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-semibold text-center mb-8">Warum der Deterministische Plan zerbrechlich ist (Die Motivation für Studie 2)</h4>
+                    <h4 class="text-xl font-semibold text-center mb-8">Warum der deterministische Plan brüchig ist (Die Motivation für Paper 2)</h4>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
                         <div class="p-4 bg-red-100 border border-red-200 rounded-lg">
                             <strong>1. Unsichere Nachfrage</strong>
-                            <p class="text-sm mt-1">Die EV-Adoption ist ein weiter Bereich, keine einzelne Zahl.</p>
+                            <p class="text-sm mt-1">EV-Adoption ist ein breiter Bereich, keine einzelne Zahl.</p>
                         </div>
                         <div class="flow-arrow hidden md:block">→</div>
                         <div class="p-4 bg-yellow-100 border border-yellow-200 rounded-lg md:col-span-1">
@@ -158,61 +201,57 @@
                         <div class="flow-arrow hidden md:block">→</div>
                         <div class="p-4 bg-gray-200 border border-gray-300 rounded-lg md:col-span-1">
                             <strong>3. Ergebnisrisiko</strong>
-                            <p class="text-sm mt-1">Ein auf die 'beste Schätzung' optimierter Plan versagt im 'schlimmsten Fall' spektakulär.</p>
+                            <p class="text-sm mt-1">Ein Plan, der auf die 'beste Schätzung' optimiert ist, scheitert im 'Worst-Case'-Szenario spektakulär.</p>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Transition Block -->
             <div id="transition" class="bg-blue-600 text-white p-8 md:p-12 rounded-xl shadow-2xl my-20 text-center">
-                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">Umgang mit Zerbrechlichkeit: Der Schritt zur Robustheit (Studie 2)</h3>
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">Umgang mit Brüchigkeit: Der Übergang zur Robustheit (Paper 2)</h3>
                 <p class="text-xl font-light">
-                    Die Schwäche des ursprünglichen Plans erforderte einen neuen, übergeordneten Rahmen. Studie 2 führt den Ansatz der **Fuzzy-Multi-Objektiven Optimierung** ein – der die Ungewissheit von Nachfrage und Budget explizit modelliert –, um ein **resilientes und zuverlässiges** EV-Netzwerk zu garantieren, unabhängig von zukünftigen Schwankungen.
+                    Die Schwäche des ursprünglichen Plans erforderte einen neuen, übergeordneten Rahmen. Paper 2 führt den **Fuzzy-Multi-Ziel-Optimierungsansatz** ein—der die Unsicherheit von Nachfrage und Budget explizit modelliert—um ein **widerstandsfähiges und zuverlässiges** EV-Netzwerk zu gewährleisten, unabhängig von zukünftiger Volatilität.
                 </p>
                 <a href="#chapter2" class="mt-4 inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">
-                    Weiter zu Kapitel II (Die Robuste Lösung) ↓
+                    Weiter zu Kapitel II (Die robuste Lösung) ↓
                 </a>
             </div>
             
-            <!-- CHAPTER II: THE BERLIN APPLICATION (Paper 2) -->
-            <h2 class="chapter-heading" id="chapter2">Kapitel II: Die Robuste Lösung (Studie 2)</h2>
-            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Dieses Kapitel beschreibt die Methodik und die überlegenen Ergebnisse der Anwendung des **Fuzzy-Robusten Optimierungsrahmens**. Der Fokus verschiebt sich von der Optimierung für *einen besten Fall* zur Optimierung für die *höchste garantierte Mindestleistung*.</p>
+            <h2 class="chapter-heading" id="chapter2">Kapitel II: Die robuste Lösung (Paper 2)</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Dieses Kapitel beschreibt die Methodik und die überlegenen Ergebnisse der Anwendung des **Fuzzy-Robust-Optimierungsrahmens**. Der Fokus verschiebt sich von der Optimierung auf *einen besten Fall* zur Optimierung auf die *höchste garantierte Mindestleistung*.</p>
 
-            <!-- Section 3: The Framework (Paper 2 Contribution) -->
             <section id="solution" class="mb-20">
-                <h3 class="text-3xl font-bold text-center mb-4">3. Der Fuzzy-Robuste Optimierungsrahmen</h3>
-                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Studie 2 löste das Zerbrechlichkeitsproblem, indem sie Einzelwerte durch **Dreieckige Fuzzy-Zahlen (TFNs)** für unsichere Parameter ersetzte. Dies ermöglichte es dem Optimierungsalgorithmus (E-NSGAII), eine Reihe von Lösungen – die **Fuzzy-Pareto-Front** – zu finden, die über den gesamten Bereich möglicher Zukünfte hinweg robust sind.</p>
+                <h3 class="text-3xl font-bold text-center mb-4">3. Der Fuzzy-Robust-Optimierungsrahmen</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Paper 2 löste das Brüchigkeitsproblem, indem Einzelwerte durch **Dreieckige Fuzzy-Zahlen (TFNs)** für unsichere Parameter ersetzt wurden. Dies ermöglichte es dem Optimierungsalgorithmus (E-NSGAII), eine Reihe von Lösungen—die **Fuzzy-Pareto-Front**—zu finden, die über das gesamte Spektrum möglicher Zukünfte robust sind.</p>
 
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-semibold text-center mb-8">Schritte des Fuzzy-Robusten Lösungsverfahrens</h4>
+                    <h4 class="text-xl font-semibold text-center mb-8">Schritte des Robust-Fuzzy-Lösungsverfahrens</h4>
                     <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center text-center">
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>1. Modell-Fuzzyfizierung</strong><p class="text-sm">Nachfrage & Budget werden als Bereiche (TFNs) modelliert</p></div>
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>1. Modell-Fuzzifizierung</strong><p class="text-sm">Nachfrage & Budget werden als Bereiche (TFNs) modelliert</p></div>
                         <div class="flow-arrow">→</div>
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>2. Robuste Entfuzzyfizierung</strong><p class="text-sm">Verwendung von Chance-Constrained Programming zur Definition der Zielerfüllung</p></div>
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>2. Robuste Defuzzifizierung</strong><p class="text-sm">Verwendung von Chance-Constrained Programming zur Zielerfüllung</p></div>
                         <div class="flow-arrow">→</div>
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>3. Multi-Objektiver Solver</strong><p class="text-sm">Anwendung des E-NSGAII-Algorithmus zur Ermittlung der Robusten Pareto-Front</p></div>
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg"><strong>3. Multi-Ziel-Löser</strong><p class="text-sm">Anwendung des E-NSGAII-Algorithmus zur Suche der robusten Pareto-Front</p></div>
                     </div>
                 </div>
             </section>
 
 
-            <!-- Section 4: Key Findings -->
             <section id="findings" class="mb-20">
-                <h3 class="text-3xl font-bold text-center mb-12">4. Die Auswirkung: Quantifizierung der Resilienz</h3>
+                <h3 class="text-3xl font-bold text-center mb-12">4. Die Auswirkung: Quantifizierung der Robustheit</h3>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     
                     <div class="stat-card">
-                        <h4 class="text-2xl font-bold mb-4">Befund A: Überlegene Resilienz unter Druck</h4>
-                        <p class="text-gray-600 mb-6">Diese Grafik quantifiziert den Wert des robusten Ansatzes. Im Vergleich zur **deterministischen Lösung (Studie 1)** gewährleistet der **Fuzzy-Robuste Plan (Studie 2)** eine **15-20% höhere Mindestzufriedenheit** für Nutzen und Gleichheit in den absolut pessimistischsten Szenarien.</p>
+                        <h4 class="text-2xl font-bold mb-4">Ergebnis A: Überlegene Robustheit unter Druck</h4>
+                        <p class="text-gray-600 mb-6">Diese Grafik quantifiziert den Wert des robusten Ansatzes. Im Vergleich zur **deterministischen Lösung (Paper 1)** gewährleistet der **Fuzzy-Robust-Plan (Paper 2)** **15-20% höhere Mindestzufriedenheitsniveaus** für Nutzen und Gerechtigkeit in den absolut schlechtesten Szenarien.</p>
                         <div class="chart-container h-[400px] md:h-[450px]">
                             <canvas id="resilienceChart"></canvas>
                         </div>
                     </div>
                     
                     <div class="stat-card">
-                        <h4 class="text-2xl font-bold mb-4">Befund B: Navigation im Robustheits-Zielkonflikt</h4>
-                         <p class="text-gray-600 mb-6">Die **Fuzzy-Pareto-Front** (unten) ermöglicht Planern, eine Lösung auf Basis ihrer Risikobereitschaft auszuwählen. Sie visualisiert vier Dimensionen: erwarteter Nutzen (Y-Achse), erwartete Gleichheit (X-Achse), **Robustheit** (Farbe/Transparenz) und **Risiko/Ungewissheitsspanne** (Blasengröße).</p>
+                        <h4 class="text-2xl font-bold mb-4">Ergebnis B: Navigation des Robustheits-Kompromisses</h4>
+                         <p class="text-gray-600 mb-6">Die **Fuzzy-Pareto-Front** (unten) ermöglicht es Planern, vier Dimensionen zu visualisieren: erwarteter Nutzen (Y-Achse), erwartete Gerechtigkeit (X-Achse), **Robustheit** (Farbe/Transparenz) und **Risiko-/Unsicherheitsspanne** (Blasengröße). Die besten Lösungen sind hoch auf beiden Achsen, hell gefärbt und klein.</p>
                         <div class="chart-container h-[400px] md:h-[450px]">
                             <canvas id="robustnessChart"></canvas>
                         </div>
@@ -220,35 +259,33 @@
                 </div>
             </section>
 
-            <!-- Section 5: The Most Robust Plan -->
             <section id="plan" class="mb-20">
-                <h3 class="text-3xl font-bold text-center mb-4">5. Das optimale Ergebnis: Berlins Robuster Verteilungsplan</h3>
-                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Das Modell empfiehlt die "Robusteste Lösung", die ca. **108 neue Ladesäulen** zuweist. Dieser Plan maximiert die Resilienz, indem er das flexible Budget proaktiv nutzt, um sich gegen die maximal mögliche zukünftige EV-Nachfrage abzusichern. Dies ist die **umsetzbare politische Empfehlung** der gesamten Studie.</p>
+                <h3 class="text-3xl font-bold text-center mb-4">5. Das optimale Ergebnis: Berlins robuster Entfaltungsplan</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Das Modell empfiehlt die "Robusteste Lösung", die etwa **108 neue Ladepunkte** zuweist. Dieser Plan maximiert die Robustheit, indem er das flexible Budget proaktiv nutzt, um sich gegen die maximal mögliche zukünftige EV-Nachfrage abzusichern. Dies ist die **umsetzbare politische Empfehlung**, die aus der gesamten Studie abgeleitet wurde.</p>
 
                 <div class="stat-card">
-                    <h4 class="text-xl font-semibold mb-4 text-center">Zuweisung von ca. 108 neuen Ladesäulen im Robustesten Plan nach Bezirk</h4>
+                    <h4 class="text-xl font-semibold mb-4 text-center">Zuweisung von ca. 108 neuen Ladepunkten im robustesten Plan nach Bezirk</h4>
                     <div class="chart-container h-[500px] md:h-[600px]">
                         <canvas id="allocationChart"></canvas>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 6: Path Forward -->
             <section id="future">
-                <h3 class="text-3xl font-bold text-center mb-4">6. Der Weg nach vorn: Von der Politik zur Umsetzung</h3>
-                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Während der Rahmen eine leistungsstarke Strategie auf politischer Ebene liefert, ist weitere Forschung für den Übergang zu einer vollständig umsetzbaren technischen Lösung unerlässlich. Zukünftige Arbeiten beinhalten die Integration tieferer technischer und verhaltensbezogener Daten.</p>
+                <h3 class="text-3xl font-bold text-center mb-4">6. Der Weg nach vorn: Von der Politik zum Pflaster</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">Während der Rahmen eine leistungsstarke Strategie auf politischer Ebene liefert, ist weitere Forschung entscheidend für den Übergang zu einer vollständig umsetzbaren technischen Lösung. Zukünftige Arbeiten beinhalten die Integration tieferer technischer und verhaltensbezogener Daten.</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h4 class="font-bold text-lg mb-2 text-blue-600">Netzintegration</h4>
                         <p class="text-gray-600">Kopplung des Modells mit Leistungsflusssimulationen, um die technische Machbarkeit zu gewährleisten und lokale Netzüberlastung zu vermeiden.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="font-bold text-lg mb-2 text-blue-600">Feinkörnigere Gleichheit</h4>
-                        <p class="text-gray-600">Einbeziehung sozioökonomischer Daten (Einkommen, Wohnungstyp) zur Behebung wichtiger Ungleichheiten innerhalb bestehender Bezirke.</p>
+                        <h4 class="font-bold text-lg mb-2 text-blue-600">Feinere Gerechtigkeit</h4>
+                        <p class="text-gray-600">Einbeziehung sozioökonomischer Daten (Einkommen, Wohnform), um entscheidende Ungleichheiten innerhalb bestehender Bezirke zu adressieren.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h4 class="font-bold text-lg mb-2 text-blue-600">Verhaltensmodellierung</h4>
-                        <p class="text-gray-600">Integration dynamischer Benutzerverhaltensweisen wie adaptive Routenführung und Preissensibilität über Agenten-basierte Frameworks.</p>
+                        <p class="text-gray-600">Integration dynamischer Benutzerverhalten wie adaptive Routenführung und Preissensitivität für realistischere Nachfrageprognosen.</p>
                     </div>
                 </div>
             </section>
@@ -256,24 +293,7 @@
     </main>
 
     <script>
-        const wrapLabel = (label) => {
-            const maxLength = 16;
-            if (typeof label !== 'string' || label.length <= maxLength) return label;
-            const words = label.split(' ');
-            const lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + ' ' + word).length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = word;
-                } else {
-                    currentLine += ' ' + word;
-                }
-            });
-            lines.push(currentLine.trim());
-            return lines;
-        };
-
+        // Chart.js Konfigurationen (unverändert)
         const mandatoryTooltip = {
             plugins: {
                 tooltip: {
@@ -281,6 +301,7 @@
                         title: function(tooltipItems) {
                             const item = tooltipItems[0];
                             let label = item.chart.data.labels[item.dataIndex];
+                            // Behandlung von Array-basierten (umbrochenen) Labels
                             if (Array.isArray(label)) {
                               return label.join(' ');
                             }
@@ -292,19 +313,29 @@
         };
 
         document.addEventListener('DOMContentLoaded', () => {
+            // JavaScript für Mobile Menu Toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
             // Chart 1: Resilience Comparison
             const resilienceCtx = document.getElementById('resilienceChart').getContext('2d');
             const resilienceData = {
-                // Labels must be in German
-                labels: ['Nutzen (Abdeckung) Zufriedenheit', 'Gleichheit (1-Gini) Zufriedenheit'],
+                // Labels ins Deutsche übersetzt
+                labels: ['Nutzen (Abdeckung) Zuf.', 'Gerechtigkeit (1-Gini) Zuf.'],
                 datasets: [{
-                    label: 'Deterministisches Modell (Min. Zufriedenheit)',
+                    label: 'Deterministisches Modell (Min. Zuf.)',
                     data: [0.72, 0.61],
                     backgroundColor: '#EF4444',
                     borderColor: '#DC2626',
                     borderWidth: 1
                 }, {
-                    label: 'Fuzzy-Robustes Modell (Min. Zufriedenheit)',
+                    label: 'Fuzzy Robustes Modell (Min. Zuf.)',
                     data: [0.78, 0.75],
                     backgroundColor: '#10B981',
                     borderColor: '#059669',
@@ -321,11 +352,10 @@
                         y: {
                             beginAtZero: true,
                             max: 1.0,
-                            // German title
-                            title: { display: true, text: 'Min. Zufriedenheit im pessimistischen Szenario' }
+                            title: { display: true, text: 'Min. Zufriedenheit im pessimistischen Szenario' } // Titel übersetzt
                         }
                     },
-                    plugins: { ...mandatoryTooltip.plugins, title: { display: true, text: 'Mindestleistung: Fuzzy vs. Deterministisch' } }
+                    plugins: { ...mandatoryTooltip.plugins, title: { display: true, text: 'Mindestleistung: Fuzzy vs. Deterministisch' } } // Titel übersetzt
                 }
             });
 
@@ -340,23 +370,22 @@
             const bubbleData = robustnessSolutions.map(s => ({
                 x: s.E_equity,
                 y: s.E_utility,
-                r: (1 - s.R_i) * 25 + 5, // Radius: inverse of robustness (uncertainty span)
-                backgroundColor: `rgba(59, 130, 246, ${s.R_i})`, // Color: proportional to robustness
+                r: (1 - s.R_i) * 25 + 5,
+                backgroundColor: `rgba(59, 130, 246, ${s.R_i})`,
             }));
 
             new Chart(robustnessCtx, {
                 type: 'bubble',
                 data: {
                     datasets: [{
-                        label: 'Fuzzy-Lösung',
+                        label: 'Fuzzy Lösung',
                         data: bubbleData,
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
                                     const data = context.raw;
-                                    const robustness = 1 - ((data.r - 5) / 25);
-                                    // German tooltip text
-                                    return `Nutzen: ${data.y.toFixed(2)}, Gleichheit: ${data.x.toFixed(2)}, Robustheit: ${(robustness * 100).toFixed(1)}%`;
+                                    const robustness = 1 - ((data.r - 5) / 25); 
+                                    return `Nutzen: ${data.y.toFixed(2)}, Gerechtigkeit: ${data.x.toFixed(2)}, Robustheit: ${(robustness * 100).toFixed(1)}%`; // Tooltip-Text übersetzt
                                 }
                             }
                         }
@@ -366,14 +395,12 @@
                     ...mandatoryTooltip,
                     maintainAspectRatio: false,
                     scales: {
-                        // German axis titles
-                        x: { title: { display: true, text: 'Erwartete Gleichheits-Zufriedenheit' } },
-                        y: { title: { display: true, text: 'Erwartete Nutzen-Zufriedenheit' } }
+                        x: { title: { display: true, text: 'Erwartete Gerechtigkeits-Zufriedenheit' } }, // Titel übersetzt
+                        y: { title: { display: true, text: 'Erwartete Nutzen-Zufriedenheit' } } // Titel übersetzt
                     },
                     plugins: { 
                         ...mandatoryTooltip.plugins, 
-                        // German chart title
-                        title: { display: true, text: 'Leistung vs. Robustheits-Zielkonflikt (Fuzzy-Pareto-Front)' },
+                        title: { display: true, text: 'Leistungs- vs. Robustheits-Kompromiss (Fuzzy-Pareto-Front)' }, // Titel übersetzt
                         legend: { display: false }
                     }
                 }
@@ -382,15 +409,13 @@
             // Chart 3: Allocation Plan
             const allocationCtx = document.getElementById('allocationChart').getContext('2d');
             const allocationData = {
-                // German District names (some wrapped)
                 labels: [
                     'Mitte', 'Pankow', ['Charlottenburg-', 'Wilmersdorf'], ['Friedrichshain-','Kreuzberg'], 
                     ['Tempelhof-','Schöneberg'], 'Neukölln', 'Lichtenberg', ['Steglitz-', 'Zehlendorf'],
                     'Reinickendorf', ['Treptow-','Köpenick'], ['Marzahn-','Hellersdorf'], 'Spandau'
                 ].reverse(),
                 datasets: [{
-                    // German label
-                    label: 'Zugewiesene neue Ladesäulen',
+                    label: 'Zugewiesene neue Ladepunkte', // Label übersetzt
                     data: [15, 14, 12, 11, 10, 9, 8, 7, 6, 6, 5, 5].reverse(),
                     backgroundColor: '#3B82F6',
                     borderColor: '#2563EB',
@@ -405,16 +430,43 @@
                     indexAxis: 'y',
                     maintainAspectRatio: false,
                     scales: {
-                        x: { 
-                            beginAtZero: true, 
-                            // German title
-                            title: { display: true, text: 'Anzahl neuer Ladesäulen' } 
-                        }
+                        x: { beginAtZero: true, title: { display: true, text: 'Anzahl neuer Ladepunkte' } } // Titel übersetzt
                     },
                     plugins: { ...mandatoryTooltip.plugins, legend: { display: false } }
                 }
             });
         });
     </script>
+    
+    <section class="py-12 bg-blue-600 text-white text-center">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-extrabold mb-4">Bereit für wirkungsvolle Projekte?</h2>
+        <p class="text-xl mb-6 font-light" style="color: #e5e7eb;">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich zählen.</p>
+        <a href="contact.html" class="inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">Lassen Sie uns gemeinsam den Wandel vorantreiben ⚡</a>
+    </div>
+</section>
+
+<footer class="bg-blue-800 text-white text-center py-6">
+    <div class="container mx-auto px-6">
+        <div class="mb-2">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-2xl hover:text-blue-300 transition duration-150" title="LinkedIn Profil">
+                🔗
+            </a>
+        </div>
+        <p class="mb-2 text-sm">
+            Copyright <span id="year"></span> &copy;
+            Technologie mit Sinn verbinden — den Wandel System für System vorantreiben.
+        </p>
+        <p class="text-sm mt-2">
+            <a href="privacy-policy.html" class="hover:text-blue-300 transition duration-150">Datenschutzerklärung</a> | 
+            <a href="contact.html" class="hover:text-blue-300 transition duration-150">Kontakt</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
