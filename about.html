@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>About Me - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
+    <title>About Me - Clifford Omari Ondieki | The Alchemical Architect</title>
     
     <!-- Microsoft Clarity Tracking Code (Kept for continuity) -->
     <script type="text/javascript">
@@ -27,13 +27,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
         :root {
-            --primary-color: #695aa6; /* Original Theme Purple */
-            --accent-color: #4f46e5; /* Tailwind Indigo-600 for contrast */
+            /* 1. Deep Indigo / Midnight Blue - Insight, depth, intuition (Primary Authority) */
+            --primary-indigo: #303F9F; 
+            /* 2. Graphite Grey / Charcoal - Structure, professionalism (Neutral Text/Dark BG) */
+            --neutral-charcoal: #374151; 
+            /* 3. Crimson / Deep Burgundy - Life force, passion (Accent for Key Moments) */
+            --accent-fire: #880E4F;
+            /* 5. Soft Gold - Illumination, earned wisdom (Accent for Icons/Highlights) */
+            --highlight-gold: #F59E0B;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            color: #1f2937; /* Dark Gray */
+            color: var(--neutral-charcoal); /* Graphite Grey */
             padding-top: 5rem; /* Space for fixed navbar */
         }
         
@@ -57,11 +63,11 @@
             top: 0.25rem;
             width: 1rem;
             height: 1rem;
-            background: var(--accent-color);
+            background: var(--primary-indigo); /* Deep Indigo */
             border: 3px solid white;
             border-radius: 50%;
             z-index: 10;
-            box-shadow: 0 0 0 3px #e5e7eb; /* Light gray ring */
+            box-shadow: 0 0 0 3px #e5e7eb; /* Light gray ring (White/Ivory principle) */
         }
         
         .journey-item::after {
@@ -80,7 +86,7 @@
 
         /* Language Toggles */
         .language-toggle.active {
-            background-color: var(--accent-color) !important;
+            background-color: var(--primary-indigo) !important; /* Deep Indigo */
             color: white !important;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -88,7 +94,8 @@
         .profile-image-container {
             position: relative;
             padding: 1rem;
-            background: linear-gradient(135deg, #4f46e5 0%, #695aa6 100%);
+            /* Gradient: Deep Indigo to Darker Indigo */
+            background: linear-gradient(135deg, var(--primary-indigo) 0%, #1A237E 100%); 
             border-radius: 1.5rem;
         }
 
@@ -102,10 +109,7 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        /* Ensure the custom height/width from HTML attributes are respected, 
-           while maintaining object-fit and max-width for responsiveness */
         .profile-image[width][height] {
-             /* Overrides fixed CSS height if present, but retains max-width and object-fit */
              height: auto; 
         }
 
@@ -126,13 +130,14 @@
         <div class="flex justify-between items-center h-16">
             <!-- Logo and Brand -->
             <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index.html">
-                <span class="w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full text-white font-extrabold">CO</span>
-                <span>Clifford Ondieki <span class="text-sm font-normal text-indigo-600 ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+                <!-- Changed logo background to Deep Indigo -->
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
             </a>
             
             <!-- Mobile Menu Button (Hamburger) -->
             <div class="md:hidden">
-                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
                     <!-- Icon for open/close -->
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -142,13 +147,15 @@
 
             <!-- Desktop Menu and Language Toggles -->
             <div class="hidden md:flex md:items-center md:space-x-6">
-                <a href="index.html" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
-                <a href="about.html" class="text-indigo-600 bg-indigo-50/70 px-3 py-2 rounded-md text-sm font-bold transition duration-150">About</a>
-                <a href="projects.html" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projects</a>
-                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
+                <!-- Active link changed to Deep Indigo background accent -->
+                <a href="about.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">About</a>
+                <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projects</a>
+                <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
                 
                 <div class="flex space-x-1 ml-4 border-l pl-4">
-                    <a href="about.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-indigo-600 bg-indigo-600 text-white transition">EN</a>
+                    <!-- Active toggle color change handled by CSS style block -->
+                    <a href="about.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">EN</a>
                     <a href="about-de.html" class="language-toggle de text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">DE</a>
                 </div>
             </div>
@@ -158,12 +165,12 @@
     <!-- Mobile menu, hidden by default -->
     <div class="md:hidden hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="about.html" class="text-indigo-600 bg-indigo-50 block px-3 py-2 rounded-md text-base font-bold">About</a>
-            <a href="projects.html" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-            <a href="contact.html" class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="about.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">About</a>
+            <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             <div class="flex space-x-2 pt-2">
-                <a href="about.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-indigo-600 text-white">EN</a>
+                <a href="about.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
                 <a href="about-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
             </div>
         </div>
@@ -171,7 +178,8 @@
 </nav>
 
 <!-- Hero Section: High Impact Brand Statement -->
-<header class="bg-indigo-600 py-20 lg:py-24 text-white">
+<!-- Changed header background to Deep Indigo -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
             The Journey of a Hybrid Innovator.
@@ -189,32 +197,30 @@
             
             <!-- Text Block -->
             <div class="order-2 lg:order-1">
-                <div class="bg-white p-6 sm:p-8 border-l-4 border-indigo-600 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="border-left: 4px solid var(--primary-indigo);">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">Who I Am: The System Builder</h2>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    <p class="text-lg leading-relaxed mb-4">
                         I'm Clifford Ondieki, a technical specialist who believes true innovation springs from a deep understanding of systems and connections – whether in power grids or human teams.
                     </p>
-                    <p class="text-base text-gray-600 mb-4">
+                    <p class="text-base mb-4">
                         My path from the vibrant communities in Kitale, Kenya, to the dynamic landscape of Berlin has been a continuous journey of solution development. Every challenge was a reorientation towards growth, every setback a lesson in resilience that now shapes my approach to technical architecture and team leadership.
                     </p>
-                    <p class="text-base font-medium text-gray-600">
+                    <p class="text-base font-medium">
                         For me, building systems is not just about efficiency – it's about building bridges between people, purpose, and possibilities to create lasting impact.
                     </p>
                 </div>
             </div>
 
-            <!-- Image Block (UPDATED) -->
+            <!-- Image Block -->
             <div class="order-1 lg:order-2 flex justify-center">
                 <div class="profile-image-container flex flex-col items-center">
-                    <!-- Image and attributes updated per user request. -->
                     <img src="assets/imgs/GOAT.jpg" 
                          alt="The Innovator" 
                          class="profile-image mb-3" 
                          width="300" height="340" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/300x340/764ba2/ffffff?text=The+Innovator+Portrait';"
+                         onerror="this.onerror=null;this.src='https://placehold.co/300x340/303F9F/ffffff?text=The+Architect';"
                          loading="lazy"> 
                     
-                    <!-- Added the highlight quote below the image -->
                     <p class="text-sm font-medium text-white text-center highlight-quote fade-in-on-scroll mt-2">
                         From Kitale to Europe – where cliffs become stairs, each step carved with quiet strength. 🐐
                     </p>
@@ -231,25 +237,25 @@
         
         <div class="journey-timeline">
             
-            <!-- Item 1: Radio -->
+            <!-- Item 1: Radio (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
-                <h4 class="text-xl font-semibold text-indigo-700">The Radio That Changed Everything</h4>
+                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">The Radio That Changed Everything</h4>
                 <p class="text-sm text-gray-500 mb-2">Kitale, Kenya - Age 12</p>
-                <p class="text-gray-700">It started with a broken radio. This moment of disassembling and understanding how each component contributes to the overall system – that was my first experience with "Engineering Empathy." This principle now guides everything from SaaS architectures to team leadership.</p>
+                <p class="text-[--neutral-charcoal]">It started with a broken radio. This moment of disassembling and understanding how each component contributes to the overall system – that was my first experience with "Engineering Empathy." This principle now guides everything from SaaS architectures to team leadership.</p>
             </div>
             
-            <!-- Item 2: Failure -->
+            <!-- Item 2: Failure (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
-                <h4 class="text-xl font-semibold text-indigo-700">The University Project That Taught Me Redirection</h4>
+                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">The University Project That Taught Me Redirection</h4>
                 <p class="text-sm text-gray-500 mb-2">JKUAT, Kenya - 2015</p>
-                <p class="text-gray-700">My power grid optimization project initially failed spectacularly because we overlooked the human factor of implementation. This taught me that "failure is redirection" – it's not about avoiding mistakes, but about learning so quickly that every setback becomes a strategic advantage.</p>
+                <p class="text-[--neutral-charcoal]">My power grid optimization project initially failed spectacularly because we overlooked the human factor of implementation. This taught me that "failure is redirection" – it's not about avoiding mistakes, but about learning so quickly that every setback becomes a strategic advantage.</p>
             </div>
             
-            <!-- Item 3: Berlin Move -->
+            <!-- Item 3: Berlin Move (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
-                <h4 class="text-xl font-semibold text-indigo-700">The Decision to Connect Worlds</h4>
+                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">The Decision to Connect Worlds</h4>
                 <p class="text-sm text-gray-500 mb-2">Nairobi to Berlin - 2025</p>
-                <p class="text-gray-700">The move to Berlin was a conscious decision to be a bridge between the community-oriented problem-solving from Kenya and the innovation-driven tech ecosystem of Europe. My added value lies in this unique, global perspective on solution development.</p>
+                <p class="text-[--neutral-charcoal]">The move to Berlin was a conscious decision to be a bridge between the community-oriented problem-solving from Kenya and the innovation-driven tech ecosystem of Europe. My added value lies in this unique, global perspective on solution development.</p>
             </div>
         </div>
     </div>
@@ -261,14 +267,16 @@
         <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Overcoming & Development</h2>
         
         <div class="space-y-8">
-            <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg border-t-4 border-indigo-500">
+            <!-- Border color changed to Deep Burgundy -->
+            <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg" style="border-top: 4px solid var(--accent-fire);">
                 <h4 class="text-2xl font-semibold text-gray-800 mb-3">Finding the Balance: The Art of Systemic Intelligence</h4>
-                <p class="text-gray-700 mb-4">One of my biggest challenges was balancing studies, work, and leadership without burning out. This led me to develop "Intelligent Laziness" – the art of understanding systems so deeply that you find the single, strategic change that solves ten problems. It's about systemic intelligence over brute force work.</p>
+                <p class="text-[--neutral-charcoal] mb-4">One of my biggest challenges was balancing studies, work, and leadership without burning out. This led me to develop "Intelligent Laziness" – the art of understanding systems so deeply that you find the single, strategic change that solves ten problems. It's about systemic intelligence over brute force work.</p>
             </div>
             
-            <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg border-t-4 border-indigo-500">
+            <!-- Border color changed to Deep Burgundy -->
+            <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg" style="border-top: 4px solid var(--accent-fire);">
                 <h4 class="text-2xl font-semibold text-gray-800 mb-3">Cultural Navigation: The Competitive Advantage</h4>
-                <p class="text-gray-700 mb-4">Settling in Berlin brought the challenge of communicating my Kenyan approach to problem-solving in a new cultural context. This experience deepened my understanding that cultural diversity is not just desirable—it is a competitive advantage. My heritage emphasizes community and cooperation, principles that create stronger, more sustainable teams.</p>
+                <p class="text-[--neutral-charcoal] mb-4">Settling in Berlin brought the challenge of communicating my Kenyan approach to problem-solving in a new cultural context. This experience deepened my understanding that cultural diversity is not just desirable—it is a competitive advantage. My heritage emphasizes community and cooperation, principles that create stronger, more sustainable teams.</p>
             </div>
         </div>
     </div>
@@ -279,8 +287,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">My Guiding Stars & Core Philosophy</h2>
         
-        <!-- Grandfather's Quote Card -->
-        <div class="max-w-3xl mx-auto p-8 sm:p-10 bg-indigo-700 text-white rounded-2xl shadow-xl mb-12">
+        <!-- Grandfather's Quote Card - Background changed to Graphite Grey -->
+        <div class="max-w-3xl mx-auto p-8 sm:p-10 text-white rounded-2xl shadow-xl mb-12" style="background-color: var(--neutral-charcoal);">
             <blockquote class="text-center">
                 <p class="text-2xl italic mb-4 font-light leading-relaxed">
                     "Understanding is more important than memorization"
@@ -290,19 +298,21 @@
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="p-6 bg-white rounded-xl shadow-md border-b-4 border-indigo-400">
+            <div class="p-6 bg-white rounded-xl shadow-md" style="border-bottom: 4px solid var(--primary-indigo);">
                 <div class="flex items-center space-x-3 mb-2">
-                    <span class="text-indigo-600"><script>document.write(lucide.createIcons()['cpu'].toSvg());</script></span>
+                    <!-- Icon color changed to Soft Gold -->
+                    <span style="color: var(--highlight-gold);"><script>document.write(lucide.createIcons()['cpu'].toSvg());</script></span>
                     <h5 class="text-xl font-semibold text-gray-800">Technical Mentors</h5>
                 </div>
-                <p class="text-gray-600">Engineers who showed me that the most elegant solutions are often the simplest, and true mastery lies in understanding the 'why' behind every decision.</p>
+                <p class="text-[--neutral-charcoal]">Engineers who showed me that the most elegant solutions are often the simplest, and true mastery lies in understanding the 'why' behind every decision.</p>
             </div>
-            <div class="p-6 bg-white rounded-xl shadow-md border-b-4 border-indigo-400">
+            <div class="p-6 bg-white rounded-xl shadow-md" style="border-bottom: 4px solid var(--primary-indigo);">
                 <div class="flex items-center space-x-3 mb-2">
-                    <span class="text-indigo-600"><script>document.write(lucide.createIcons()['users'].toSvg());</script></span>
+                    <!-- Icon color changed to Soft Gold -->
+                    <span style="color: var(--highlight-gold);"><script>document.write(lucide.createIcons()['users'].toSvg());</script></span>
                     <h5 class="text-xl font-semibold text-gray-800">Community Leaders</h5>
                 </div>
-                <p class="text-gray-600">Organizers in Kenya who showed me that sustainable change happens when you empower others to solve their own problems – not when you solve them for them.</p>
+                <p class="text-[--neutral-charcoal]">Organizers in Kenya who showed me that sustainable change happens when you empower others to solve their own problems – not when you solve them for them.</p>
             </div>
         </div>
     </div>
@@ -318,34 +328,35 @@
         
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transition duration-300">
+            <!-- Skill cards border changed to Deep Indigo -->
+            <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
                 <h5 class="text-xl font-semibold text-gray-800 mb-1">Systems Architecture</h5>
-                <p class="text-gray-600 text-sm">From 11kV power lines to scalable SaaS pipelines – mastering complex system design.</p>
+                <p class="text-[--neutral-charcoal] text-sm">From 11kV power lines to scalable SaaS pipelines – mastering complex system design.</p>
             </div>
             
-            <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transition duration-300">
+            <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
                 <h5 class="text-xl font-semibold text-gray-800 mb-1">Intercultural Leadership</h5>
-                <p class="text-gray-600 text-sm">Leading diverse teams by bridging different cultural approaches to problem-solving (Kenya/Europe).</p>
+                <p class="text-[--neutral-charcoal] text-sm">Leading diverse teams by bridging different cultural approaches to problem-solving (Kenya/Europe).</p>
             </div>
             
-            <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transition duration-300">
+            <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
                 <h5 class="text-xl font-semibold text-gray-800 mb-1">Product Strategy</h5>
-                <p class="text-gray-600 text-sm">Aligning technical capability with deep user needs through empathetic understanding.</p>
+                <p class="text-[--neutral-charcoal] text-sm">Aligning technical capability with deep user needs through empathetic understanding.</p>
             </div>
             
-            <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transition duration-300">
+            <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
                 <h5 class="text-xl font-semibold text-gray-800 mb-1">Predictive Analytics</h5>
-                <p class="text-gray-600 text-sm">Using data not just to understand the past, but to predict and prevent future systemic problems.</p>
+                <p class="text-[--neutral-charcoal] text-sm">Using data not just to understand the past, but to predict and prevent future systemic problems.</p>
             </div>
             
-            <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transition duration-300">
+            <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
                 <h5 class="text-xl font-semibold text-gray-800 mb-1">Change Management</h5>
-                <p class="text-gray-600 text-sm">Focusing on the human aspects of technical transformations to ensure adoption and success.</p>
+                <p class="text-[--neutral-charcoal] text-sm">Focusing on the human aspects of technical transformations to ensure adoption and success.</p>
             </div>
             
-            <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transition duration-300">
+            <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
                 <h5 class="text-xl font-semibold text-gray-800 mb-1">Stakeholder Communication</h5>
-                <p class="text-gray-600 text-sm">Translating complex technical concepts into clear, actionable, business-focused insights.</p>
+                <p class="text-[--neutral-charcoal] text-sm">Translating complex technical concepts into clear, actionable, business-focused insights.</p>
             </div>
         </div>
     </div>
@@ -359,62 +370,62 @@
         
         <div class="grid md:grid-cols-2 gap-8">
             
-            <!-- Testimonial 1 -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl border-l-4 border-indigo-600 flex flex-col h-full">
+            <!-- Testimonial 1 - Border changed to Deep Indigo, text changed to Deep Indigo -->
+            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="https://placehold.co/72x72/c7d2fe/4338ca?text=Y" alt="Yukabeth Kidenda portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="https://placehold.co/72x72/303F9F/FFFFFF?text=Y" alt="Yukabeth Kidenda portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Yukabeth Kidenda</h5>
-                        <div class="text-sm font-medium text-indigo-600">Co-Founder & CEO at Teach for Kenya</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Co-Founder & CEO at Teach for Kenya</div>
                         <div class="text-xs text-gray-500">January 29, 2020</div>
                     </div>
                 </div>
-                <p class="text-gray-700 italic flex-grow">
+                <p class="text-[--neutral-charcoal] italic flex-grow">
                     "Clifford is a very focused young professional with an eagerness to learn and a willingness to go the extra mile to ensure the delivery of high-quality outcomes. Clifford is well-organized and possesses a unique growth mindset that has enabled him to take on unique challenges."
                 </p>
             </div>
             
-            <!-- Testimonial 2 -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl border-l-4 border-indigo-600 flex flex-col h-full">
+            <!-- Testimonial 2 - Border changed to Deep Indigo, text changed to Deep Indigo -->
+            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="https://placehold.co/72x72/c7d2fe/4338ca?text=V" alt="Valerie O. portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="https://placehold.co/72x72/303F9F/FFFFFF?text=V" alt="Valerie O. portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Valerie O.</h5>
-                        <div class="text-sm font-medium text-indigo-600">Customer Success | Change Management</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Customer Success | Change Management</div>
                         <div class="text-xs text-gray-500">January 6, 2022</div>
                     </div>
                 </div>
-                <p class="text-gray-700 italic flex-grow">
+                <p class="text-[--neutral-charcoal] italic flex-grow">
                     "A sales and product aficionado...Clifford embodies leadership with his hands-on approach to execute and deliver on set objectives. He ensures set targets are achieved in a timely manner. I strongly recommend him."
                 </p>
             </div>
 
-            <!-- Testimonial 3 -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl border-l-4 border-indigo-600 flex flex-col h-full">
+            <!-- Testimonial 3 - Border changed to Deep Indigo, text changed to Deep Indigo -->
+            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="https://placehold.co/72x72/c7d2fe/4338ca?text=A" alt="Alisha Eberle portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="https://placehold.co/72x72/303F9F/FFFFFF?text=A" alt="Alisha Eberle portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Alisha Eberle</h5>
-                        <div class="text-sm font-medium text-indigo-600">Marketing Manager at Pembroke</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Marketing Manager at Pembroke</div>
                         <div class="text-xs text-gray-500">January 5, 2022</div>
                     </div>
                 </div>
-                <p class="text-gray-700 italic flex-grow">
+                <p class="text-[--neutral-charcoal] italic flex-grow">
                     "While working with Clifford at Elephant Healthcare, I was impressed by his can-do attitude and friendly demeanor... He would be an asset to any sales organization due to his professional approach and ability to connect with people."
                 </p>
             </div>
             
-            <!-- Testimonial 4 -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl border-l-4 border-indigo-600 flex flex-col h-full">
+            <!-- Testimonial 4 - Border changed to Deep Indigo, text changed to Deep Indigo -->
+            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="https://placehold.co/72x72/c7d2fe/4338ca?text=D" alt="Darren Oyoo portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="https://placehold.co/72x72/303F9F/FFFFFF?text=D" alt="Darren Oyoo portrait" class="w-16 h-16 rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Darren Oyoo</h5>
-                        <div class="text-sm font-medium text-indigo-600">Head of Sales at gtxn Co.</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Head of Sales at gtxn Co.</div>
                         <div class="text-xs text-gray-500">January 5, 2022</div>
                     </div>
                 </div>
-                <p class="text-gray-700 italic flex-grow">
+                <p class="text-[--neutral-charcoal] italic flex-grow">
                     "Clifford is a committed and result-oriented individual. He demonstrates high levels of professionalism and a clear vision. Enjoyed working together and learning from each other during our interaction."
                 </p>
             </div>
@@ -425,7 +436,8 @@
 
 
 <!-- Looking Ahead / Call to Action -->
-<section class="py-20 bg-indigo-700 text-white">
+<!-- Background changed to Deep Indigo -->
+<section class="py-20 text-white" style="background-color: var(--primary-indigo);">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-4xl font-bold mb-4">Looking Ahead: Purpose-Driven Systems</h2>
         <p class="text-xl font-light mb-6">
@@ -434,7 +446,7 @@
         <p class="mb-8 opacity-90">
             Long-term, I will continue to mentor the next generation of engineers, advance STEM education in Africa, and break barriers – always driven by purpose-oriented problem-solving.
         </p>
-        <a href="contact.html" class="inline-flex items-center px-8 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-indigo-700 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+        <a href="contact.html" class="inline-flex items-center px-8 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105" style="color: var(--primary-indigo);">
             Shape the Future Together
             <script>document.write(lucide.createIcons()['arrow-right'].toSvg({ class: 'w-5 h-5 ml-2' }));</script>
         </a>
@@ -445,7 +457,7 @@
 <footer class="bg-gray-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="flex justify-center space-x-6 mb-6">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-indigo-400 transition duration-300" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profile" aria-label="LinkedIn Profile">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect width="4" height="12" x="2" y="9"></rect>
@@ -479,9 +491,8 @@
     });
 
     // Fallback/Placeholder image logic (since GOAT.jpg and other assets aren't present)
-    // Ensures a clean look even without the actual images
     document.addEventListener('DOMContentLoaded', () => {
-        const imagePlaceholder = 'https://placehold.co/72x72/c7d2fe/4338ca?text=User';
+        const imagePlaceholder = 'https://placehold.co/72x72/303F9F/FFFFFF?text=User';
         document.querySelectorAll('.testimonial-avatar').forEach(img => {
             if (img.src.includes('testimonials/') || img.src.includes('GOAT.jpg') || img.src.includes('Omarselfie.svg')) {
                  // Replace with a clean placeholder if it fails to load
