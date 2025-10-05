@@ -1,35 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographic: From Crisp Geospatial Planning to Robust EV Strategy in Berlin</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Clifford Omari Ondieki">
+    <title>EV Infrastructure Strategy - Clifford Ondieki | From Crisp Geospatial Planning to Robust EV Strategy in Berlin</title>
+
+    <!-- Microsoft Clarity Tracking Code -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t41xxbb71x");
+    </script>
+
+    <meta name="description" content="Future-Proofing Berlin's EV Infrastructure: A Two-Paper Progression from Deterministic Planning to Fuzzy Robustness">
+
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- 
-        Chosen Palette: A professional and clean palette inspired by "Subtle & Professional" and "Brilliant Blues".
-        - Background: #F8F9FA (Off-white)
-        - Main Text: #212529 (Dark Gray)
-        - Primary Accent (Blue): #3B82F6
-        - Secondary Accent (Green for positive outcomes): #10B981
-        - Tertiary Accent (Red for challenges): #EF4444
-        - Neutral Gray: #6B7280
-    -->
-    <!-- 
-        Application Structure Plan: Now follows the correct academic progression: 
-        Paper 1 (Crisp/Deterministic Berlin Model) -> Identifies the core trade-off.
-        Paper 2 (Fuzzy/Robust Berlin Model) -> Solves the uncertainty problem of Paper 1.
-        Chapter I focuses on the initial model (Paper 1), its objectives, and its brittleness. Chapter II introduces the Fuzzy Robust framework (Paper 2) as the solution and presents the superior, resilient results.
-    -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background-color: #F8F9FA;
             color: #212529;
+            padding-top: 80px;
         }
+
+        .navbar-language-toggles a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 2px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-language-toggles a.active {
+            background: #695aa6;
+            color: white;
+        }
+
         .chart-container {
             position: relative;
             width: 100%;
@@ -66,24 +86,68 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+
+        .footer {
+            background-color: #695aa6;
+            color: #fff;
+            text-align: center;
+        }
+        .footer .social-links .link {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        .footer p {
+            margin-top: 10px;
+        }
+        .footer p a {
+            color: #fff;
+        }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header Section -->
-    <header class="bg-white shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-6 py-4">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-800">From Equity to Resilience: Berlin's EV Strategy</h1>
-            <p class="text-sm md:text-base text-gray-600 mt-1">A Two-Paper Progression: Deterministic Planning $\rightarrow$ Fuzzy Robustness</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="Clifford Ondieki's logo">
+            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="philosophy.html">Philosophy</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Connect</a></li>
+            </ul>
+            <div class="navbar-language-toggles ml-auto" aria-label="Language selection">
+                <a href="ev.html" class="nav-link language-toggle en active">EN</a>
+                <a href="ev-de.html" class="nav-link language-toggle de">DE</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <header class="bg-white shadow-md" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="container">
+            <h1 class="text-center" style="font-size: 2rem; font-weight: bold; color: #212529; margin-bottom: 0.5rem;">From Equity to Resilience: Berlin's EV Strategy</h1>
+            <p class="text-center" style="color: #6c757d; margin-bottom: 0;">A Two-Paper Progression: Deterministic Planning → Fuzzy Robustness</p>
         </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        
+
         <!-- Section 0: Narrative Summary/Hero -->
-        <section id="narrative" class="py-16 md:py-24 bg-blue-50 border-b border-blue-200">
-            <div class="max-w-4xl mx-auto px-6 text-center">
+        <section id="narrative" class="py-5 bg-light border-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-center">
                 <!-- Title and Hook -->
                 <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 leading-tight">
                     Future-Proofing Berlin's EV Infrastructure
@@ -418,5 +482,27 @@
             });
         });
     </script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links text-center m-auto ml-sm-auto">
+                <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" target="_blank" rel="noopener noreferrer" aria-label="Clifford Ondieki's LinkedIn Profile">
+                    <i class="ti-linkedin" aria-hidden="true"></i>
+                </a>
+            </div>
+            <p class="mb-0">
+                Copyright <script>document.write(new Date().getFullYear())</script> &copy;
+                <a href="#">Bridging technology with purpose — energizing change one system at a time.</a>
+            </p>
+            <p class="mt-2">
+                <a href="privacy-policy.html" style="color: #fff; font-size: 0.9rem;">Privacy Policy</a> |
+                <a href="contact.html" style="color: #fff; font-size: 0.9rem;">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
