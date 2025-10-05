@@ -64,7 +64,8 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Brand/Logo - Deep Indigo -->
                 <a href="#projects" class="flex items-center space-x-2 theme-text-indigo font-bold text-lg">
-                    <img src="https://placehold.co/30x30/283593/ffffff?text=C" alt="Clifford Ondieki Profile Icon" class="rounded-full h-8 w-8 object-cover" />
+                    <img src="/assets/imgs/profile-icon.png" alt="Clifford Ondieki Profile Icon" class="rounded-full h-8 w-8 object-cover" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/30x30/283593/ffffff?text=C';" />
                     <span>Clifford Ondieki <small class="text-sm font-normal text-gray-500 hidden sm:inline">| Hybrid Innovator</small></span>
                 </a>
 
@@ -194,7 +195,7 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // --- Data Definition (Moved from React) ---
+        // --- Data Definition (Updated with local asset paths) ---
         const projects = [
             {
                 id: 'ev-charger',
@@ -208,11 +209,12 @@
                     { number: '6x', description: 'More Chargers to Underserved Areas' },
                     { number: '21%', description: 'Boost in Local Access' },
                 ],
-                image: '/home/project/assets/imgs/berlin.png',
+                // Updated Image Path
+                image: '/assets/imgs/berlin-ev-map.jpg',
                 imageAlt: 'Berlin EV Charger Distribution',
                 lessonTitle: 'Philosophy in Action',
                 lesson: "The objective is not just to deploy more chargers, but to deploy them strategically to foster equitable access and sustainable urban mobility. My framework empowers municipalities to navigate the efficiency-equity trade-off with data-driven insights.",
-                link: 'ev.html',
+                link: '#',
                 linkLabel: 'Explore My Work',
                 isGated: false
             },
@@ -228,7 +230,8 @@
                     { number: '6', description: 'Investment Theses' },
                     { number: '3x', description: 'Analysis Depth' },
                 ],
-                image: 'https://placehold.co/400x300/283593/ffffff?text=Advisory+Chart',
+                // Updated Image Path
+                image: '/assets/imgs/advisory-chart.jpg',
                 imageAlt: 'Climate Tech Advisory',
                 lessonTitle: 'Full-Stack Advantage',
                 lesson: "Most advisors excel in one domain. I bridge investment analysis with operational execution, providing the complete picture that investors need and startups require to succeed.",
@@ -248,7 +251,8 @@
                     { number: '30%', description: 'Improved Resource Utilization' },
                     { number: '15k+', description: 'Patients Served Monthly' },
                 ],
-                image: 'https://placehold.co/400x300/283593/ffffff?text=Health+Network',
+                // Updated Image Path
+                image: '/assets/imgs/health-network.jpg',
                 imageAlt: 'Health Tech Load Balancing',
                 lessonTitle: 'Cross-Domain Innovation',
                 lesson: "This project proved that engineering empathy scales across domains. Power grid principles applied to healthcare access demonstrate how systemic thinking can solve seemingly unrelated problems.",
@@ -268,7 +272,8 @@
                     { number: '$2M', description: 'Annual Cost Savings' },
                     { number: '95%', description: 'Prediction Accuracy' },
                 ],
-                image: 'https://placehold.co/400x300/283593/ffffff?text=Geothermal+Plant',
+                // Updated Image Path
+                image: '/assets/imgs/geothermal-plant.jpg',
                 imageAlt: 'Predictive Maintenance AI',
                 lessonTitle: 'Key Insight',
                 lesson: "This project revealed how data-driven decisions create human-centric solutions. The principles of optimization and efficiency I learned here now inform my approach to SaaS uptime and product operational excellence.",
@@ -288,7 +293,8 @@
                     { number: '60MW', description: 'Clean Energy Integrated' },
                     { number: '100k+', description: 'Households Benefited' },
                 ],
-                image: 'https://placehold.co/400x300/283593/ffffff?text=Wind+Farm',
+                // Updated Image Path
+                image: '/assets/imgs/wind-farm.jpg',
                 imageAlt: 'Kinangop Wind Integration',
                 lessonTitle: 'Key Lesson',
                 lesson: "This project taught me that resilience isn't just for power lines—it's for people's access to vital services. The systemic thinking I developed here now informs how I approach SaaS architecture and load balancing.",
@@ -310,7 +316,8 @@
                     'Integrated with existing SCADA systems',
                 ],
                 stack: ['Python', 'TensorFlow', 'LSTM Networks', 'SCADA Integration', 'Real-time Analytics'],
-                image: 'https://placehold.co/400x300/283593/ffffff?text=AI+Optimization',
+                // Updated Image Path
+                image: '/assets/imgs/ai-optimization.jpg',
                 imageAlt: 'Advanced Grid Optimization Preview',
                 ctaMessage: 'Full case study available on request',
                 ctaSubtext: 'Includes technical architecture, implementation details, and performance analysis',
@@ -328,7 +335,8 @@
                     'Real-time dashboard with predictive alerts',
                 ],
                 stack: ['Node.js', 'InfluxDB', 'MQTT', 'Docker', 'Grafana'],
-                image: 'https://placehold.co/400x300/283593/ffffff?text=IoT+Dashboard',
+                // Updated Image Path
+                image: '/assets/imgs/iot-dashboard.jpg',
                 imageAlt: 'Industrial IoT Platform Preview',
                 ctaMessage: 'Detailed implementation guide available on request',
                 ctaSubtext: 'Includes system architecture, sensor integration, and ROI analysis',
