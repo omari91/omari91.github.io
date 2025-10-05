@@ -101,6 +101,21 @@
             border-radius: 1rem;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
+        
+        /* Ensure the custom height/width from HTML attributes are respected, 
+           while maintaining object-fit and max-width for responsiveness */
+        .profile-image[width][height] {
+             /* Overrides fixed CSS height if present, but retains max-width and object-fit */
+             height: auto; 
+        }
+
+        /* Styling for the new quote */
+        .highlight-quote {
+            font-style: italic;
+            font-size: 0.875rem; /* text-sm */
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -188,14 +203,21 @@
                 </div>
             </div>
 
-            <!-- Image Block -->
+            <!-- Image Block (UPDATED) -->
             <div class="order-1 lg:order-2 flex justify-center">
-                <div class="profile-image-container">
-                    <img src="https://placehold.co/400x380/764ba2/ffffff?text=Professional+Portrait" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x380/764ba2/ffffff?text=Professional+Portrait';"
-                         alt="Clifford Ondieki Professional Portrait"
-                         class="profile-image"
-                         loading="lazy">
+                <div class="profile-image-container flex flex-col items-center">
+                    <!-- Image and attributes updated per user request. -->
+                    <img src="assets/imgs/GOAT.jpg" 
+                         alt="The Innovator" 
+                         class="profile-image mb-3" 
+                         width="300" height="340" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/300x340/764ba2/ffffff?text=The+Innovator+Portrait';"
+                         loading="lazy"> 
+                    
+                    <!-- Added the highlight quote below the image -->
+                    <p class="text-sm font-medium text-white text-center highlight-quote fade-in-on-scroll mt-2">
+                        From Kitale to Europe – where cliffs become stairs, each step carved with quiet strength. 🐐
+                    </p>
                 </div>
             </div>
         </div>
