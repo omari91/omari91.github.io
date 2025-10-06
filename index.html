@@ -52,6 +52,22 @@
         }
         
         /* Animated scrolling for tools */
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -233,118 +249,229 @@
             <!-- Tools & Platforms -->
             <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-800">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Tools & Platforms</h3>
-                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
-                    <!-- Development Tools -->
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-orange-600 font-bold text-lg">TF</span>
+                <div class="overflow-hidden">
+                    <div class="flex animate-scroll space-x-8">
+                        <!-- First set of tools -->
+                        <div class="flex space-x-8 min-w-max">
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">TensorFlow</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17 7H7a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">MongoDB</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">PowerFactory</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Slack</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Notion</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Odoo</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">WordPress</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Illustrator</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Photoshop</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Canva</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Postman</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">HubSpot</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Metabase</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">G-Suite</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">GitHub</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Office</span>
+                            </div>
                         </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">TensorFlow</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-green-600 font-bold text-lg">DB</span>
+                        
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="flex space-x-8 min-w-max">
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">TensorFlow</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17 7H7a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">MongoDB</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">PowerFactory</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Slack</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Notion</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Odoo</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">WordPress</span>
+                            </div>
+                            
+                            <div class="flex flex-col items-center group min-w-[100px]">
+                                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                                    <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600 text-center font-medium">Illustrator</span>
+                            </div>
                         </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">MongoDB</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-blue-600 font-bold text-lg">PF</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">PowerFactory</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-purple-600 font-bold text-lg">SL</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Slack</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-gray-600 font-bold text-lg">NT</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Notion</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-red-600 font-bold text-lg">OD</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Odoo</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-blue-600 font-bold text-lg">WP</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">WordPress</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-orange-600 font-bold text-lg">AI</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Illustrator</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-blue-600 font-bold text-lg">PS</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Photoshop</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-purple-600 font-bold text-lg">CV</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Canva</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-orange-600 font-bold text-lg">PM</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Postman</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-orange-600 font-bold text-lg">HS</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">HubSpot</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-blue-600 font-bold text-lg">MB</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Metabase</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-red-600 font-bold text-lg">GS</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">G-Suite</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-gray-600 font-bold text-lg">GH</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">GitHub</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
-                            <span class="text-blue-600 font-bold text-lg">MS</span>
-                        </div>
-                        <span class="text-sm text-gray-600 text-center font-medium">Office</span>
                     </div>
                 </div>
             </div>
