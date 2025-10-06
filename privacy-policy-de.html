@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Datenschutzerklärung - Clifford Ondieki | Datenschutz & Nutzerprivatsphäre</title>
+    <title>Datenschutzerklärung - Clifford Ondieki | Datenschutz &amp; Nutzerprivatsphäre</title>
     
     <meta name="description" content="Datenschutzerklärung und Datenschutzinformationen für Clifford Ondiekis Portfolio-Website. Erfahren Sie, wie wir Ihre Privatsphäre schützen und Nutzerdaten handhaben.">
     
@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     
     <style>
+        /* Optimierungen für besseres Aussehen und mobile Reaktionsfähigkeit */
         body {
-            padding-top: 80px;
+            padding-top: 80px; 
+            font-family: 'Inter', sans-serif;
         }
         
         .privacy-hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 4rem 0;
+            padding: 4rem 1rem;
         }
         
         .privacy-section {
@@ -30,19 +32,21 @@
             border-radius: 15px;
             padding: 2.5rem;
             margin: 2rem 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 4px solid #695aa6;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15); /* Stärkerer Schatten */
+            border-left: 5px solid #695aa6; /* Dickere Akzentlinie */
         }
         
         .privacy-section h3 {
             color: #695aa6;
             margin-bottom: 1.5rem;
+            font-weight: 700;
         }
         
         .privacy-section h4 {
             color: #333;
             margin-top: 2rem;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
         
         .data-type {
@@ -56,31 +60,59 @@
         .contact-info {
             background: linear-gradient(135deg, #695aa6 0%, #764ba2 100%);
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
             text-align: center;
             margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
+        .contact-info a {
+            font-weight: bold;
+            text-decoration: underline;
+            color: white; /* Sicherstellen, dass Links weiß bleiben */
+        }
+
         .last-updated {
             background: #e9ecef;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 8px;
             text-align: center;
             margin: 2rem 0;
             font-style: italic;
+            border: 1px solid #dee2e6;
+        }
+
+        /* Responsive Anpassungen für Mobilgeräte */
+        @media (max-width: 768px) {
+            .privacy-hero {
+                padding: 3rem 1rem;
+            }
+            .privacy-section {
+                padding: 1.5rem;
+            }
+            .contact-info {
+                padding: 1.5rem;
+            }
+            .navbar-language-toggles {
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- Navbar (Beibehalten, mit data-target Attributen für Bootstrap) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="">
             <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
         </a>
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+        <!-- Hinzufügen der fehlenden data-toggle und data-target Attribute -->
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -104,6 +136,7 @@
                     <a class="nav-link" href="contact-de.html">Kontakt</a>
                 </li>
             </ul>
+            <!-- Sprachumschaltung -->
             <div class="navbar-language-toggles ml-auto">
                 <a href="privacy-policy.html" class="nav-link language-toggle en">EN</a>
                 <a href="privacy-policy-de.html" class="nav-link language-toggle de active">DE</a>
@@ -231,8 +264,8 @@
                     <h3>Internationale Datenübertragungen</h3>
                     <p>Ihre Daten können in Länder außerhalb Ihres Wohnsitzes übertragen und verarbeitet werden, einschließlich:</p>
                     <ul>
-                        <li><strong>Vereinigte Staaten:</strong> Microsoft Clarity Server</li>
-                        <li><strong>Deutschland:</strong> Website-Hosting (Berlin-basiert)</li>
+                        <li><strong>Vereinigte Staaten:</strong> Microsoft Clarity Server (als Datenverarbeiter im Auftrag)</li>
+                        <li><strong>Deutschland:</strong> Website-Hosting (Mein Standort)</li>
                     </ul>
                     <p>Alle Übertragungen werden mit angemessenen Schutzmaßnahmen durchgeführt, um Ihre Datenschutzrechte zu schützen.</p>
                 </div>
@@ -250,7 +283,7 @@
                 <div class="contact-info">
                     <h3>Kontaktinformationen</h3>
                     <p>Wenn Sie Fragen zu dieser Datenschutzerklärung haben oder Ihre Datenschutzrechte ausüben möchten, kontaktieren Sie mich bitte:</p>
-                    <p><strong>E-Mail:</strong> <a href="mailto:engomari6@gmail.com" style="color: white;">engomari6@gmail.com</a></p>
+                    <p><strong>E-Mail:</strong> <a href="mailto:engomari6@gmail.com" style="color: white; text-decoration: underline;">engomari6@gmail.com</a></p>
                     <p><strong>Telefon:</strong> +49 1575 5653967 (Deutschland) | +254 110 548 473 (Kenia)</p>
                     <p><strong>Standort:</strong> Berlin, Deutschland</p>
                     <p><strong>Antwortzeit:</strong> Ich werde auf datenschutzbezogene Anfragen innerhalb von 72 Stunden antworten</p>
@@ -266,34 +299,56 @@
     </div>
 </section>
 
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+<!-- Footer (Beibehalten mit zusätzlichen Links) -->
+<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center; padding: 20px 0;">
     <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profil">
+        <div class="social-links text-center m-auto ml-sm-auto mb-3">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin: 0 10px;" title="LinkedIn Profil">
                 <i class="ti-linkedin"></i>
+            </a>
+            <!-- Hinzugefügter GitHub Link -->
+            <a href="https://github.com/your-github-profile" class="link" style="color: #fff; font-size: 30px; margin: 0 10px;" title="GitHub Profil">
+                <i class="ti-github"></i>
             </a>
         </div>
         <p class="mb-0" style="margin-top: 10px;">
             Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.</a>
+            <a href="#" style="color: #fff; text-decoration: none;">Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.</a>
         </p>
         <p class="mt-2">
-            <a href="privacy-policy-de.html" style="color: #fff; font-size: 0.9rem;">Datenschutzerklärung</a> | 
-            <a href="contact-de.html" style="color: #fff; font-size: 0.9rem;">Kontakt</a>
+            <a href="privacy-policy-de.html" style="color: #fff; font-size: 0.9rem; margin-right: 10px;">Datenschutzerklärung</a> | 
+            <a href="contact-de.html" style="color: #fff; font-size: 0.9rem; margin-left: 10px;">Kontakt</a>
         </p>
     </div>
 </footer>
 
+<!-- Scripts -->
 <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
 <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 <script src="assets/js/script.js"></script>
 
+<!-- Wichtig: Bootstrap 4 JS-Abhängigkeiten für die Navbar -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 <script>
-    // Set current date for last updated
+    // Setzt das aktuelle Datum für die Felder "Zuletzt aktualisiert" und "Gültigkeitsdatum"
     const now = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('last-updated-date').textContent = now.toLocaleDateString('de-DE', options);
-    document.getElementById('effective-date').textContent = now.toLocaleDateString('de-DE', options);
+    const dateString = now.toLocaleDateString('de-DE', options);
+
+    const lastUpdatedElement = document.getElementById('last-updated-date');
+    const effectiveDateElement = document.getElementById('effective-date');
+
+    if (lastUpdatedElement) {
+        lastUpdatedElement.textContent = dateString;
+    }
+
+    if (effectiveDateElement) {
+        effectiveDateElement.textContent = dateString;
+    }
 </script>
 
 </body>
