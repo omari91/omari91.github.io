@@ -1,485 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Clifford Omari Ondieki">
-    <title>EV Infrastructure Strategy - Clifford Ondieki | From Crisp Geospatial Planning to Robust EV Strategy in Berlin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Clifford Omari Ondieki">
+    <title>EV Infrastructure Strategy - Clifford Ondieki | From Crisp Geospatial Planning to Robust EV Strategy in Berlin</title>
 
-    <!-- Microsoft Clarity Tracking Code -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "t41xxbb71x");
-    </script>
+    <!-- Microsoft Clarity Tracking Code -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t41xxbb71x");
+    </script>
 
-    <meta name="description" content="Future-Proofing Berlin's EV Infrastructure: A Two-Paper Progression from Deterministic Planning to Fuzzy Robustness">
+    <meta name="description" content="Future-Proofing Berlin's EV Infrastructure: A Two-Paper Progression from Deterministic Planning to Fuzzy Robustness">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <!-- Make Lucide globally available -->
-    <script type="module">
-        import * as lucide from 'https://unpkg.com/lucide@latest';
-        window.lucide = lucide;
-    </script>
-    
-    <!-- Custom Configuration -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        
-        :root {
-            --primary-indigo: #303F9F; 
-            --neutral-charcoal: #374151; 
-            --accent-fire: #880E4F;
-            --highlight-gold: #F59E0B;
-        }
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Make Lucide globally available -->
+    <script type="module">
+        import * as lucide from 'https://unpkg.com/lucide@latest';
+        window.lucide = lucide;
+    </script>
+    
+    <!-- Custom Configuration -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-indigo: #303F9F; 
+            --neutral-charcoal: #374151; 
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
+        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--neutral-charcoal);
-            padding-top: 5rem;
-        }
-        
-        .language-toggle.active {
-            background-color: var(--primary-indigo) !important;
-            color: white !important;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
+        }
+        
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 400px;
-        }
-        
-        .flow-arrow {
-            font-size: 2rem;
-            color: #9CA3AF;
-        }
-    </style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+        
+        .flow-arrow {
+            font-size: 2rem;
+            color: #9CA3AF;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 antialiased">
 
 <!-- Navigation -->
 <nav class="fixed top-0 z-50 w-full bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index.html">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
-                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
-            </a>
-            
-            <div class="md:hidden">
-                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
-            <div class="hidden md:flex md:items-center md:space-x-6">
-                <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
-                <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
-                <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projects</a>
-                <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
-                
-                <div class="flex space-x-1 ml-4 border-l pl-4">
-                    <a href="ev.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">EN</a>
-                    <a href="ev-de.html" class="language-toggle de text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">DE</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-            <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            <div class="flex space-x-2 pt-2">
-                <a href="ev.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
-                <a href="ev-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
-            </div>
-        </div>
-    </div>
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
+                <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projects</a>
+                <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="ev.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">EN</a>
+                    <a href="ev-de.html" class="language-toggle de text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">DE</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="ev.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
+                <a href="ev-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
+            </div>
+        </div>
+    </div>
 </nav>
 
 <!-- Hero Section -->
 <header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
-            From Equity to Resilience: Berlin's EV Strategy
-        </h1>
-        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
-            A Two-Paper Progression: Deterministic Planning → Fuzzy Robustness
-        </p>
-    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            From Equity to Resilience: Berlin's EV Strategy
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            A Two-Paper Progression: Deterministic Planning → Fuzzy Robustness
+        </p>
+    </div>
 </header>
 
 <!-- Main Content -->
 <main class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Narrative Summary -->
-        <section class="mb-16">
-            <div class="bg-blue-50 p-8 rounded-xl border-l-4 border-blue-500 text-center">
-                <h2 class="text-3xl font-bold text-blue-800 mb-6">Future-Proofing Berlin's EV Infrastructure</h2>
-                <p class="text-lg text-gray-700 mb-8">
-                    The path to resilient urban planning requires iterative refinement. We started by mapping the <strong>Equity-Utility trade-off</strong> in Berlin (Paper 1), but quickly realized the solution was <strong>fragile</strong>. Our second phase (Paper 2) introduces a <strong>Fuzzy Optimization Framework</strong> to build resilience against real-world uncertainty.
-                </p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Narrative Summary -->
+        <section class="mb-16">
+            <div class="bg-blue-50 p-8 rounded-xl border-l-4 border-blue-500 text-center">
+                <h2 class="text-3xl font-bold text-blue-800 mb-6">Future-Proofing Berlin's EV Infrastructure</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    The path to resilient urban planning requires iterative refinement. We started by mapping the <strong>Equity-Utility trade-off</strong> in Berlin (Paper 1), but quickly realized the solution was <strong>fragile</strong>. Our second phase (Paper 2) introduces a <strong>Fuzzy Optimization Framework</strong> to build resilience against real-world uncertainty.
+                </p>
 
-                <div class="inline-block bg-white p-8 rounded-2xl shadow-xl border-4 border-green-500">
-                    <p class="text-xl font-semibold text-gray-600 mb-2">Resilience Improvement</p>
-                    <p class="text-6xl font-black text-green-600">+20%</p>
-                    <p class="text-lg mt-2 text-gray-700">Higher <strong>Guaranteed</strong> Satisfaction over the Fragile Plan</p>
-                </div>
-                
-                <p class="text-lg text-gray-600 mt-8 max-w-2xl mx-auto">
-                    The Fuzzy approach explicitly models fluctuating EV adoption rates and flexible budgets to guarantee high utility and equity performance across <em>all</em> possible futures.
-                </p>
-            </div>
-        </section>
+                <div class="inline-block bg-white p-8 rounded-2xl shadow-xl border-4 border-green-500">
+                    <p class="text-xl font-semibold text-gray-600 mb-2">Resilience Improvement</p>
+                    <p class="text-6xl font-black text-green-600">+20%</p>
+                    <p class="text-lg mt-2 text-gray-700">Higher <strong>Guaranteed</strong> Satisfaction over the Fragile Plan</p>
+                </div>
+                
+                <p class="text-lg text-gray-600 mt-8 max-w-2xl mx-auto">
+                    The Fuzzy approach explicitly models fluctuating EV adoption rates and flexible budgets to guarantee high utility and equity performance across <em>all</em> possible futures.
+                </p>
+            </div>
+        </section>
 
-        <!-- Chapter I: The Foundational Model -->
-        <section class="mb-16">
-            <div class="border-t-4 border-blue-500 pt-8">
-                <h2 class="text-3xl font-bold text-blue-600 mb-6 uppercase tracking-wide">Chapter I: The Foundational Model (Paper 1)</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">This chapter is based on the initial work: <strong>Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization</strong>. It established the core challenge: balancing maximum charging coverage (Utility) with fair distribution (Equity).</p>
+        <!-- Chapter I: The Foundational Model -->
+        <section class="mb-16">
+            <div class="border-t-4 border-blue-500 pt-8">
+                <h2 class="text-3xl font-bold text-blue-600 mb-6 uppercase tracking-wide">Chapter I: The Foundational Model (Paper 1)</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">This chapter is based on the initial work: <strong>Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization</strong>. It established the core challenge: balancing maximum charging coverage (Utility) with fair distribution (Equity).</p>
 
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-center mb-6">Defining Utility and Equity in Berlin</h3>
-                    <div class="grid md:grid-cols-3 gap-6 items-center text-center">
-                        <div class="p-6 border-2 border-dashed border-blue-400 rounded-lg bg-blue-50">
-                            <h4 class="font-semibold mb-2">Objective 1: Maximize Utility</h4>
-                            <div class="text-lg font-bold text-blue-800">City-wide Coverage</div>
-                            <div class="text-sm text-gray-600">(Maximize total EV coverage for the city)</div>
-                        </div>
-                        
-                        <div class="flow-arrow">↔</div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-center mb-6">Defining Utility and Equity in Berlin</h3>
+                    <div class="grid md:grid-cols-3 gap-6 items-center text-center">
+                        <div class="p-6 border-2 border-dashed border-blue-400 rounded-lg bg-blue-50">
+                            <h4 class="font-semibold mb-2">Objective 1: Maximize Utility</h4>
+                            <div class="text-lg font-bold text-blue-800">City-wide Coverage</div>
+                            <div class="text-sm text-gray-600">(Maximize total EV coverage for the city)</div>
+                        </div>
+                        
+                        <div class="flow-arrow">↔</div>
 
-                        <div class="p-6 border-2 border-dashed border-red-400 rounded-lg bg-red-50">
-                            <h4 class="font-semibold mb-2">Objective 2: Maximize Equity</h4>
-                            <div class="text-lg font-bold text-red-800">Fair Distribution</div>
-                            <div class="text-sm text-gray-600">(Minimize Gini Index gap between districts)</div>
-                        </div>
-                    </div>
-                    <p class="text-center text-sm text-gray-500 mt-6">This trade-off yielded the <strong>Crisp Pareto Front</strong>, but its plans were only optimal if demand predictions were 100% accurate.</p>
-                </div>
-            </div>
-        </section>
+                        <div class="p-6 border-2 border-dashed border-red-400 rounded-lg bg-red-50">
+                            <h4 class="font-semibold mb-2">Objective 2: Maximize Equity</h4>
+                            <div class="text-lg font-bold text-red-800">Fair Distribution</div>
+                            <div class="text-sm text-gray-600">(Minimize Gini Index gap between districts)</div>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-6">This trade-off yielded the <strong>Crisp Pareto Front</strong>, but its plans were only optimal if demand predictions were 100% accurate.</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- The Crucial Flaw -->
-        <section class="mb-16">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500">
-                <h3 class="text-2xl font-bold text-center mb-6">The Crucial Flaw: The Fragile Solution</h3>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The deterministic model in Paper 1 failed to account for two critical real-world factors: the uncertainty in future EV adoption rates and the flexibility in planning budgets. This created <strong>brittle plans</strong> that could suffer massive performance drops if assumptions proved wrong.</p>
+        <!-- The Crucial Flaw -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500">
+                <h3 class="text-2xl font-bold text-center mb-6">The Crucial Flaw: The Fragile Solution</h3>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The deterministic model in Paper 1 failed to account for two critical real-world factors: the uncertainty in future EV adoption rates and the flexibility in planning budgets. This created <strong>brittle plans</strong> that could suffer massive performance drops if assumptions proved wrong.</p>
 
-                <div class="grid md:grid-cols-3 gap-6 items-center text-center">
-                    <div class="p-4 bg-red-100 border border-red-200 rounded-lg">
-                        <strong>1. Uncertain Demand</strong>
-                        <p class="text-sm mt-1">EV adoption is a wide range, not a single number.</p>
-                    </div>
-                    <div class="flow-arrow hidden md:block">→</div>
-                    <div class="p-4 bg-yellow-100 border border-yellow-200 rounded-lg">
-                        <strong>2. Flexible Budget</strong>
-                        <p class="text-sm mt-1">Budgets often have an acceptable range of investment.</p>
-                    </div>
-                    <div class="flow-arrow hidden md:block">→</div>
-                    <div class="p-4 bg-gray-200 border border-gray-300 rounded-lg">
-                        <strong>3. Outcome Risk</strong>
-                        <p class="text-sm mt-1">A plan optimized for the 'best guess' fails spectacularly in 'worst-case' scenarios.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <div class="grid md:grid-cols-3 gap-6 items-center text-center">
+                    <div class="p-4 bg-red-100 border border-red-200 rounded-lg">
+                        <strong>1. Uncertain Demand</strong>
+                        <p class="text-sm mt-1">EV adoption is a wide range, not a single number.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="p-4 bg-yellow-100 border border-yellow-200 rounded-lg">
+                        <strong>2. Flexible Budget</strong>
+                        <p class="text-sm mt-1">Budgets often have an acceptable range of investment.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="p-4 bg-gray-200 border border-gray-300 rounded-lg">
+                        <strong>3. Outcome Risk</strong>
+                        <p class="text-sm mt-1">A plan optimized for the 'best guess' fails spectacularly in 'worst-case' scenarios.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Transition to Robustness -->
-        <section class="mb-16">
-            <div class="bg-blue-600 text-white p-8 rounded-xl shadow-2xl text-center">
-                <h3 class="text-3xl font-bold mb-4">Addressing Brittleness: The Move to Robustness (Paper 2)</h3>
-                <p class="text-xl font-light opacity-90 mb-6">
-                    The weakness of the initial plan necessitated a new, higher-level framework. Paper 2 introduces the <strong>Fuzzy Multi-Objective Optimization</strong> approach—explicitly modeling the uncertainty of demand and budget—to guarantee a <strong>resilient and reliable</strong> EV network, regardless of future volatility.
-                </p>
-                <a href="#chapter2" class="inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">
-                    Continue to Chapter II (The Robust Solution) ↓
-                </a>
-            </div>
-        </section>
+        <!-- Transition to Robustness -->
+        <section class="mb-16">
+            <div class="bg-blue-600 text-white p-8 rounded-xl shadow-2xl text-center">
+                <h3 class="text-3xl font-bold mb-4">Addressing Brittleness: The Move to Robustness (Paper 2)</h3>
+                <p class="text-xl font-light opacity-90 mb-6">
+                    The weakness of the initial plan necessitated a new, higher-level framework. Paper 2 introduces the <strong>Fuzzy Multi-Objective Optimization</strong> approach—explicitly modeling the uncertainty of demand and budget—to guarantee a <strong>resilient and reliable</strong> EV network, regardless of future volatility.
+                </p>
+                <a href="#chapter2" class="inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">
+                    Continue to Chapter II (The Robust Solution) ↓
+                </a>
+            </div>
+        </section>
 
-        <!-- Chapter II: The Robust Solution -->
-        <section class="mb-16" id="chapter2">
-            <div class="border-t-4 border-blue-500 pt-8">
-                <h2 class="text-3xl font-bold text-blue-600 mb-6 uppercase tracking-wide">Chapter II: The Robust Solution (Paper 2)</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">This chapter details the methodology and superior results of applying the <strong>Fuzzy Robust Optimization Framework</strong>. The focus shifts from simply optimizing for a <em>single best case</em> to optimizing for the <em>highest guaranteed minimum performance</em>.</p>
+        <!-- Chapter II: The Robust Solution -->
+        <section class="mb-16" id="chapter2">
+            <div class="border-t-4 border-blue-500 pt-8">
+                <h2 class="text-3xl font-bold text-blue-600 mb-6 uppercase tracking-wide">Chapter II: The Robust Solution (Paper 2)</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">This chapter details the methodology and superior results of applying the <strong>Fuzzy Robust Optimization Framework</strong>. The focus shifts from simply optimizing for a <em>single best case</em> to optimizing for the <em>highest guaranteed minimum performance</em>.</p>
 
-                <!-- Framework Steps -->
-                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                    <h4 class="text-xl font-semibold text-center mb-8">Steps of the Robust-Fuzzy Solution Procedure</h4>
-                    <div class="grid md:grid-cols-5 gap-4 items-center text-center">
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <strong>1. Model Fuzzification</strong>
-                            <p class="text-sm">Demand & budget are modeled as ranges (TFNs)</p>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <strong>2. Robust Defuzzification</strong>
-                            <p class="text-sm">Use Chance-Constrained Programming for objective satisfaction</p>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <strong>3. Multi-Objective Solver</strong>
-                            <p class="text-sm">Apply the E-NSGAII Algorithm to find the Robust Pareto Front</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Framework Steps -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h4 class="text-xl font-semibold text-center mb-8">Steps of the Robust-Fuzzy Solution Procedure</h4>
+                    <div class="grid md:grid-cols-5 gap-4 items-center text-center">
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <strong>1. Model Fuzzification</strong>
+                            <p class="text-sm">Demand & budget are modeled as ranges (TFNs)</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <strong>2. Robust Defuzzification</strong>
+                            <p class="text-sm">Use Chance-Constrained Programming for objective satisfaction</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <strong>3. Multi-Objective Solver</strong>
+                            <p class="text-sm">Apply the E-NSGAII Algorithm to find the Robust Pareto Front</p>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Key Findings -->
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">
-                        <h4 class="text-2xl font-bold mb-4">Finding A: Superior Resilience Under Pressure</h4>
-                        <p class="text-gray-600 mb-6">This chart quantifies the value of the robust approach. Compared to the <strong>deterministic solution (Paper 1)</strong>, the <strong>Fuzzy Robust plan (Paper 2)</strong> ensures <strong>15-20% higher minimum satisfaction levels</strong> for both Utility and Equity in the absolute worst-case scenarios.</p>
-                        <div class="chart-container">
-                            <canvas id="resilienceChart"></canvas>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-500">
-                        <h4 class="text-2xl font-bold mb-4">Finding B: Navigating the Robustness Trade-Off</h4>
-                        <p class="text-gray-600 mb-6">The <strong>Fuzzy Pareto Front</strong> (below) allows planners to visualize four dimensions: expected Utility (Y-axis), expected Equity (X-axis), <strong>Robustness</strong> (color/transparency), and <strong>Risk/Uncertainty Span</strong> (bubble size).</p>
-                        <div class="chart-container">
-                            <canvas id="robustnessChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <!-- Key Findings -->
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">
+                        <h4 class="text-2xl font-bold mb-4">Finding A: Superior Resilience Under Pressure</h4>
+                        <p class="text-gray-600 mb-6">This chart quantifies the value of the robust approach. Compared to the <strong>deterministic solution (Paper 1)</strong>, the <strong>Fuzzy Robust plan (Paper 2)</strong> ensures <strong>15-20% higher minimum satisfaction levels</strong> for both Utility and Equity in the absolute worst-case scenarios.</p>
+                        <div class="chart-container">
+                            <canvas id="resilienceChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-500">
+                        <h4 class="text-2xl font-bold mb-4">Finding B: Navigating the Robustness Trade-Off</h4>
+                        <p class="text-gray-600 mb-6">The <strong>Fuzzy Pareto Front</strong> (below) allows planners to visualize four dimensions: expected Utility (Y-axis), expected Equity (X-axis), <strong>Robustness</strong> (color/transparency), and <strong>Risk/Uncertainty Span</strong> (bubble size).</p>
+                        <div class="chart-container">
+                            <canvas id="robustnessChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Optimal Outcome -->
-        <section class="mb-16">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                <h3 class="text-2xl font-bold text-center mb-6">The Optimal Outcome: Berlin's Robust Deployment Plan</h3>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The model recommends the "Most Robust Solution," which allocates approximately <strong>108 new chargers</strong>. This plan maximizes resilience by proactively utilizing the flexible budget to hedge against the maximum potential future EV demand.</p>
+        <!-- Optimal Outcome (Climax of Chapter II) -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <h3 class="text-2xl font-bold text-center mb-6">The Optimal Outcome: Berlin's Robust Deployment Plan</h3>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The model recommends the "Most Robust Solution," which allocates approximately <strong>108 new chargers</strong>. This plan maximizes resilience by proactively utilizing the flexible budget to hedge against the maximum potential future EV demand.</p>
 
-                <div class="chart-container">
-                    <canvas id="allocationChart"></canvas>
-                </div>
-            </div>
-        </section>
+                <div class="chart-container">
+                    <canvas id="allocationChart"></canvas>
+                </div>
+            </div>
+        </section>
 
-        <!-- Path Forward -->
-        <section class="mb-16">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                <h3 class="text-2xl font-bold text-center mb-6">The Path Forward: From Policy to Pavement</h3>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">While the framework delivers a powerful policy-level strategy, continued research is vital to transition to a fully deployable engineering solution.</p>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h4 class="font-bold text-lg mb-2 text-blue-600">Grid Integration</h4>
-                        <p class="text-gray-600 text-sm">Couple the model with power flow simulations to ensure technical feasibility and avoid localized grid congestion.</p>
-                    </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h4 class="font-bold text-lg mb-2 text-blue-600">Finer-Grained Equity</h4>
-                        <p class="text-gray-600 text-sm">Incorporate socio-economic data (income, housing type) to address crucial inequalities within existing districts.</p>
-                    </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h4 class="font-bold text-lg mb-2 text-blue-600">Behavioral Modeling</h4>
-                        <p class="text-gray-600 text-sm">Integrate dynamic user behaviors like adaptive routing and price sensitivity for more realistic demand forecasting.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        <!-- Chapter III: The Next Frontier (New Content) -->
+        <section class="mb-16" id="chapter3">
+            <div class="border-t-4 border-[--accent-fire] pt-8">
+                <h2 class="text-3xl font-bold text-[--accent-fire] mb-6 uppercase tracking-wide">Chapter III: The Next Frontier</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-4xl mx-auto">Moving beyond the policy-level strategic plan, Chapter III focuses on the immediate next steps required to transition this robust framework into an actionable, street-level engineering solution for Berlin's power and transportation grids.</p>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    
+                    <!-- Integration Challenge -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-400">
+                        <h4 class="text-xl font-bold mb-4 flex items-center text-indigo-700">
+                            <span class="mr-3" data-lucide="zap"></span> Grid Integration & Resilience
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            The current model is geographically optimal but power-agnostic. Future work must couple the charger locations with <strong>power flow simulations</strong> to identify potential distribution grid bottlenecks, especially in areas with high density of new chargers.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                            <li>Minimize voltage sags and maximize feeder capacity utilization.</li>
+                            <li>Develop V2G (Vehicle-to-Grid) strategies informed by robust locations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Equity Refinement -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500">
+                        <h4 class="text-xl font-bold mb-4 flex items-center text-yellow-700">
+                            <span class="mr-3" data-lucide="users"></span> Finer-Grained Equity & Justice
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            While the Gini Index provided district-level fairness, true urban equity requires granularity. We must incorporate <strong>socio-economic indicators</strong> (income, car ownership, housing type) at the census-block level to ensure we address charging deserts for renters and low-income residents.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                            <li>Identify areas dependent on street parking (no home charging).</li>
+                            <li>Optimize placement for maximum <strong>social accessibility</strong>.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Behavioral Dynamics -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500">
+                        <h4 class="text-xl font-bold mb-4 flex items-center text-green-700">
+                            <span class="mr-3" data-lucide="route"></span> Dynamic Behavioral Modeling
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            Current demand is static. We must integrate dynamic user behaviors, such as <strong>adaptive routing</strong> (drivers choosing a non-closest but available charger) and <strong>price elasticity</strong> to refine demand predictions under operational conditions.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                            <li>Simulate queueing effects and waiting times.</li>
+                            <li>Inform dynamic pricing policies for load balancing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
 
 <!-- Call to Action -->
 <section class="py-16 text-white" style="background-color: var(--primary-indigo);">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Interested in Urban Innovation?</h2>
-        <p class="text-lg font-light mb-6">Let's discuss how data-driven approaches can solve complex urban challenges.</p>
-        <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-            Let's Connect
-        </a>
-    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Interested in Urban Innovation?</h2>
+        <p class="text-lg font-light mb-6">Let's discuss how data-driven approaches can solve complex urban challenges.</p>
+        <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Let's Connect
+        </a>
+      </div>
 </section>
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="flex justify-center space-x-6 mb-6">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profile" aria-label="LinkedIn Profile">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect width="4" height="12" x="2" y="9"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-            </a>
-        </div>
-        
-        <p class="text-gray-400 text-sm mb-4">
-            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Bridging technology with purpose — energizing change one system at a time.
-        </p>
-        <p class="text-xs space-x-4">
-            <a href="privacy-policy.html" class="text-gray-500 hover:text-white transition">Privacy Policy</a>
-            <span class="text-gray-600">|</span>
-            <a href="contact.html" class="text-gray-500 hover:text-white transition">Contact</a>
-        </p>
-    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Bridging technology with purpose — energizing change one system at a time.
+        </p>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy.html" class="text-gray-500 hover:text-white transition">Privacy Policy</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact.html" class="text-gray-500 hover:text-white transition">Contact</a>
+        </p>
+    </div>
 </footer>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const iconOpen = document.getElementById('menu-icon-open');
-        const iconClose = document.getElementById('menu-icon-close');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
 
-        mobileMenuButton.addEventListener('click', function() {
-            const isHidden = mobileMenu.classList.toggle('hidden');
-            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
-            iconOpen.classList.toggle('hidden', !isHidden);
-            iconClose.classList.toggle('hidden', isHidden);
-        });
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
 
-        // Dynamic Copyright Year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Dynamic Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Chart.js Charts
-        const mandatoryTooltip = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                              return label.join(' ');
-                            }
-                            return label;
-                        }
-                    }
-                }
-            }
-        };
+        // Chart.js Charts
+        const mandatoryTooltip = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
 
-        // Chart 1: Resilience Comparison
-        const resilienceCtx = document.getElementById('resilienceChart').getContext('2d');
-        const resilienceData = {
-            labels: ['Utility (Coverage) Sat.', 'Equity (1-Gini) Sat.'],
-            datasets: [{
-                label: 'Deterministic Model (Min. Sat.)',
-                data: [0.72, 0.61],
-                backgroundColor: '#EF4444',
-                borderColor: '#DC2626',
-                borderWidth: 1
-            }, {
-                label: 'Fuzzy Robust Model (Min. Sat.)',
-                data: [0.78, 0.75],
-                backgroundColor: '#10B981',
-                borderColor: '#059669',
-                borderWidth: 1
-            }]
-        };
-        new Chart(resilienceCtx, {
-            type: 'bar',
-            data: resilienceData,
-            options: {
-                ...mandatoryTooltip,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 1.0,
-                        title: { display: true, text: 'Min. Satisfaction in Pessimistic Scenario' }
-                    }
-                },
-                plugins: { ...mandatoryTooltip.plugins, title: { display: true, text: 'Minimum Performance: Fuzzy vs. Deterministic' } }
-            }
-        });
+        // Chart 1: Resilience Comparison
+        const resilienceCtx = document.getElementById('resilienceChart').getContext('2d');
+        const resilienceData = {
+            labels: ['Utility (Coverage) Sat.', 'Equity (1-Gini) Sat.'],
+            datasets: [{
+                label: 'Deterministic Model (Min. Sat.)',
+                data: [0.72, 0.61],
+                backgroundColor: '#EF4444',
+                borderColor: '#DC2626',
+                borderWidth: 1
+            }, {
+                label: 'Fuzzy Robust Model (Min. Sat.)',
+                data: [0.78, 0.75],
+                backgroundColor: '#10B981',
+                borderColor: '#059669',
+                borderWidth: 1
+            }]
+        };
+        new Chart(resilienceCtx, {
+            type: 'bar',
+            data: resilienceData,
+            options: {
+                ...mandatoryTooltip,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 1.0,
+                        title: { display: true, text: 'Min. Satisfaction in Pessimistic Scenario' }
+                    }
+                },
+                plugins: { ...mandatoryTooltip.plugins, title: { display: true, text: 'Minimum Performance: Fuzzy vs. Deterministic' } }
+            }
+        });
 
-        // Chart 2: Robustness-Contour Pareto Front
-        const robustnessCtx = document.getElementById('robustnessChart').getContext('2d');
-        const robustnessSolutions = [
-            { E_utility: 0.92, E_equity: 0.85, R_i: 0.95 }, { E_utility: 0.90, E_equity: 0.90, R_i: 0.98 },
-            { E_utility: 0.85, E_equity: 0.93, R_i: 0.96 }, { E_utility: 0.94, E_equity: 0.82, R_i: 0.88 },
-            { E_utility: 0.88, E_equity: 0.88, R_i: 0.92 }, { E_utility: 0.82, E_equity: 0.95, R_i: 0.91 },
-            { E_utility: 0.91, E_equity: 0.89, R_i: 0.97 }, { E_utility: 0.93, E_equity: 0.86, R_i: 0.94 }
-        ];
-        const bubbleData = robustnessSolutions.map(s => ({
-            x: s.E_equity,
-            y: s.E_utility,
-            r: (1 - s.R_i) * 25 + 5,
-            backgroundColor: `rgba(59, 130, 246, ${s.R_i})`,
-        }));
+        // Chart 2: Robustness-Contour Pareto Front
+        const robustnessCtx = document.getElementById('robustnessChart').getContext('2d');
+        const robustnessSolutions = [
+            { E_utility: 0.92, E_equity: 0.85, R_i: 0.95 }, { E_utility: 0.90, E_equity: 0.90, R_i: 0.98 },
+            { E_utility: 0.85, E_equity: 0.93, R_i: 0.96 }, { E_utility: 0.94, E_equity: 0.82, R_i: 0.88 },
+            { E_utility: 0.88, E_equity: 0.88, R_i: 0.92 }, { E_utility: 0.82, E_equity: 0.95, R_i: 0.91 },
+            { E_utility: 0.91, E_equity: 0.89, R_i: 0.97 }, { E_utility: 0.93, E_equity: 0.86, R_i: 0.94 }
+        ];
+        const bubbleData = robustnessSolutions.map(s => ({
+            x: s.E_equity,
+            y: s.E_utility,
+            r: (1 - s.R_i) * 25 + 5,
+            backgroundColor: `rgba(59, 130, 246, ${s.R_i})`,
+        }));
 
-        new Chart(robustnessCtx, {
-            type: 'bubble',
-            data: {
-                datasets: [{
-                    label: 'Fuzzy Solution',
-                    data: bubbleData,
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                const data = context.raw;
-                                const robustness = 1 - ((data.r - 5) / 25);
-                                return `U: ${data.y.toFixed(2)}, E: ${data.x.toFixed(2)}, Robustness: ${(robustness * 100).toFixed(1)}%`;
-                            }
-                        }
-                    }
-                }]
-            },
-            options: {
-                ...mandatoryTooltip,
-                maintainAspectRatio: false,
-                scales: {
-                    x: { title: { display: true, text: 'Expected Equity Satisfaction' } },
-                    y: { title: { display: true, text: 'Expected Utility Satisfaction' } }
-                },
-                plugins: { 
-                    ...mandatoryTooltip.plugins, 
-                    title: { display: true, text: 'Performance vs. Robustness Trade-off (Fuzzy Pareto Front)' },
-                    legend: { display: false }
-                }
-            }
-        });
+        new Chart(robustnessCtx, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Fuzzy Solution',
+                    data: bubbleData,
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const data = context.raw;
+                                const robustness = 1 - ((data.r - 5) / 25);
+                                return `U: ${data.y.toFixed(2)}, E: ${data.x.toFixed(2)}, Robustness: ${(robustness * 100).toFixed(1)}%`;
+                            }
+                        }
+                    }
+                }]
+            },
+            options: {
+                ...mandatoryTooltip,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { title: { display: true, text: 'Expected Equity Satisfaction' } },
+                    y: { title: { display: true, text: 'Expected Utility Satisfaction' } }
+                },
+                plugins: { 
+                    ...mandatoryTooltip.plugins, 
+                    title: { display: true, text: 'Performance vs. Robustness Trade-off (Fuzzy Pareto Front)' },
+                    legend: { display: false }
+                }
+            }
+        });
 
-        // Chart 3: Allocation Plan
-        const allocationCtx = document.getElementById('allocationChart').getContext('2d');
-        const allocationData = {
-            labels: [
-                'Mitte', 'Pankow', ['Charlottenburg-', 'Wilmersdorf'], ['Friedrichshain-','Kreuzberg'], 
-                ['Tempelhof-','Schöneberg'], 'Neukölln', 'Lichtenberg', ['Steglitz-', 'Zehlendorf'],
-                'Reinickendorf', ['Treptow-','Köpenick'], ['Marzahn-','Hellersdorf'], 'Spandau'
-            ].reverse(),
-            datasets: [{
-                label: 'New Chargers Allocated',
-                data: [15, 14, 12, 11, 10, 9, 8, 7, 6, 6, 5, 5].reverse(),
-                backgroundColor: '#3B82F6',
-                borderColor: '#2563EB',
-                borderWidth: 1
-            }]
-        };
-        new Chart(allocationCtx, {
-            type: 'bar',
-            data: allocationData,
-            options: {
-                ...mandatoryTooltip,
-                indexAxis: 'y',
-                maintainAspectRatio: false,
-                scales: {
-                    x: { beginAtZero: true, title: { display: true, text: 'Number of New Chargers' } }
-                },
-                plugins: { ...mandatoryTooltip.plugins, legend: { display: false } }
-            }
-        });
-    });
+        // Chart 3: Allocation Plan
+        const allocationCtx = document.getElementById('allocationChart').getContext('2d');
+        const allocationData = {
+            labels: [
+                'Mitte', 'Pankow', ['Charlottenburg-', 'Wilmersdorf'], ['Friedrichshain-','Kreuzberg'], 
+                ['Tempelhof-','Schöneberg'], 'Neukölln', 'Lichtenberg', ['Steglitz-', 'Zehlendorf'],
+                'Reinickendorf', ['Treptow-','Köpenick'], ['Marzahn-','Hellersdorf'], 'Spandau'
+            ].reverse(),
+            datasets: [{
+                label: 'New Chargers Allocated',
+                data: [15, 14, 12, 11, 10, 9, 8, 7, 6, 6, 5, 5].reverse(),
+                backgroundColor: '#3B82F6',
+                borderColor: '#2563EB',
+                borderWidth: 1
+            }]
+        };
+        new Chart(allocationCtx, {
+            type: 'bar',
+            data: allocationData,
+            options: {
+                ...mandatoryTooltip,
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: { beginAtZero: true, title: { display: true, text: 'Number of New Chargers' } }
+                },
+                plugins: { ...mandatoryTooltip.plugins, legend: { display: false } }
+            }
+        });
+        
+        // Ensure Lucide icons are rendered for static content, including the new Chapter III
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    });
 </script>
 </body>
 </html>
