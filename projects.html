@@ -1,493 +1,590 @@
-import React, { useState } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Clifford Omari Ondieki">
+    <title>Projects - Clifford Omari Ondieki | Engineering with Impact</title>
+    
+    <!-- Microsoft Clarity Tracking Code -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t41xxbb71x");
+    </script>
+    
+    <meta name="description" content="Projects that bridge technical excellence with human purpose - from Kenya's power grids to Berlin's innovation ecosystem.">
 
-// --- Data Definition ---
-const projects = [
-    {
-        id: 'ev-charger',
-        title: 'Equitable EV Charger Deployment in Berlin',
-        lead: "An ongoing data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.",
-        challenge: "Public Electric Vehicle (EV) charging infrastructure is largely demand-driven, reinforcing spatial inequities. This creates a 'chicken-and-egg' problem, where a lack of infrastructure suppresses EV adoption in underserved areas, justifying continued underinvestment.",
-        solution: "We implemented a multi-objective NSGA-II model in Python to balance coverage and spatial equity, minimizing the Gini coefficient of EVs per charger. This approach provides different Pareto-optimal deployment strategies for urban planners, directly addressing infrastructure placement under complex geospatial and socio-economic constraints.",
-        stack: ['Python', 'NSGA-II', 'Geospatial Optimization', 'Multi-Objective Optimization', 'Gini Coefficient Analysis', 'Urban Planning'],
-        metrics: [
-            { number: '13%', description: 'Reduction in Citywide Gini Coefficient' },
-            { number: '6x', description: 'More Chargers to Underserved Areas' },
-            { number: '21%', description: 'Boost in Local Access' },
-        ],
-        image: 'https://placehold.co/400x300/283593/ffffff?text=Berlin+Map',
-        imageAlt: 'Berlin EV Charger Distribution',
-        lessonTitle: 'Philosophy in Action',
-        lesson: "The objective is not just to deploy more chargers, but to deploy them strategically to foster equitable access and sustainable urban mobility. My framework empowers municipalities to navigate the efficiency-equity trade-off with data-driven insights.",
-        link: '#',
-        linkLabel: 'Explore My Work',
-        isGated: false
-    },
-    {
-        id: 'climate-tech-advisory',
-        title: 'Climate Tech Investment Consultancy',
-        lead: "Bridging venture capital analysis with infrastructure deployment expertise to de-risk climate tech investments.",
-        challenge: "Climate tech faces a critical gap: investors lack deployment expertise while infrastructure experts lack capital market access. This disconnect slows climate progress and wastes promising technologies.",
-        solution: "Through my Energy Innovation Capital externship, I'm learning to integrated frameworks that evaluates startups through multiple lenses: investment potential, operational viability, and deployment strategy.",
-        stack: ['Venture Capital Analysis', 'Operational Due Diligence', 'Deployment Strategy', 'Market Research', 'Spatial Equity', 'Risk Assessment'],
-        metrics: [
-            { number: '5+', description: 'Startups Analyzed' },
-            { number: '6', description: 'Investment Theses' },
-            { number: '3x', description: 'Analysis Depth' },
-        ],
-        image: 'https://placehold.co/400x300/283593/ffffff?text=Advisory+Chart',
-        imageAlt: 'Climate Tech Advisory',
-        lessonTitle: 'Full-Stack Advantage',
-        lesson: "Most advisors excel in one domain. I bridge investment analysis with operational execution, providing the complete picture that investors need and startups require to succeed.",
-        link: '#',
-        linkLabel: 'View Case Study',
-        isGated: false
-    },
-    {
-        id: 'health-tech',
-        title: 'Health Tech Load Balancing System',
-        lead: "Applying power grid principles to optimize healthcare service distribution across rural Kenya.",
-        challenge: "Rural health facilities in Kenya were experiencing uneven patient loads, with some overwhelmed while others remained underutilized. This led to longer wait times, reduced quality of care, and inefficient resource allocation.",
-        solution: "Drawing from my power grid experience, I developed a load balancing algorithm that treats patient flow like electrical current. The system dynamically redistributes patients to optimize resource utilization while minimizing travel distance and wait times.",
-        stack: ['Node.js', 'React', 'MongoDB', 'Load Balancing Algorithms', 'Geospatial Analysis', 'Real-time Analytics'],
-        metrics: [
-            { number: '50%', description: 'Reduced Wait Times' },
-            { number: '30%', description: 'Improved Resource Utilization' },
-            { number: '15k+', description: 'Patients Served Monthly' },
-        ],
-        image: 'https://placehold.co/400x300/283593/ffffff?text=Health+Network',
-        imageAlt: 'Health Tech Load Balancing',
-        lessonTitle: 'Cross-Domain Innovation',
-        lesson: "This project proved that engineering empathy scales across domains. Power grid principles applied to healthcare access demonstrate how systemic thinking can solve seemingly unrelated problems.",
-        link: '#',
-        linkLabel: 'Learn More',
-        isGated: false
-    },
-    {
-        id: 'predictive-ai',
-        title: 'Predictive Maintenance AI for Geothermal Plants',
-        lead: 'A machine learning system for predicting equipment failures in geothermal power generation, reducing operational costs and increasing plant uptime.',
-        challenge: "Geothermal power plants in Kenya's Rift Valley were experiencing unexpected equipment failures, leading to costly downtime and reduced clean energy generation. Traditional maintenance schedules were inefficient and reactive.",
-        solution: "I developed a predictive maintenance system using machine learning algorithms to analyze sensor data across key equipment. The system learned to identify patterns that preceded failures, enabling proactive maintenance scheduling.",
-        stack: ['Python', 'TensorFlow', 'Time Series Analysis', 'Data Visualization'],
-        metrics: [
-            { number: '40%', description: 'Reduction in Downtime' },
-            { number: '$2M', description: 'Annual Cost Savings' },
-            { number: '95%', description: 'Prediction Accuracy' },
-        ],
-        image: 'https://placehold.co/400x300/283593/ffffff?text=Geothermal+Plant',
-        imageAlt: 'Predictive Maintenance AI',
-        lessonTitle: 'Key Insight',
-        lesson: "This project revealed how data-driven decisions create human-centric solutions. The principles of optimization and efficiency I learned here now inform my approach to SaaS uptime and product operational excellence.",
-        link: 'https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ',
-        linkLabel: 'View full documentation',
-        isGated: false
-    },
-    {
-        id: 'kinangop',
-        title: 'Kinangop Wind Power Integration',
-        lead: 'A dynamic voltage stability analysis incorporating Kinangop wind power into Kenya\'s 59-bus national grid.',
-        challenge: "Kenya's power grid needed to accommodate the intermittent nature of wind power while maintaining system stability. The challenge was ensuring that voltage fluctuations from wind generation wouldn't destabilize the entire network serving millions of Kenyans.",
-        solution: "I developed a comprehensive dynamic voltage stability analysis using DIgSILENT PowerFactory, modeling the entire power system to simulate and mitigate voltage fluctuations. This wasn't just a technical task; it was about ensuring reliable power for healthcare, education, and economic development.",
-        stack: ['DIgSILENT PowerFactory', 'Power System Analysis', 'Renewable Energy Integration', 'Grid Stability Modeling'],
-        metrics: [
-            { number: '25%', description: 'Improved Grid Stability' },
-            { number: '60MW', description: 'Clean Energy Integrated' },
-            { number: '100k+', description: 'Households Benefited' },
-        ],
-        image: 'https://placehold.co/400x300/283593/ffffff?text=Wind+Farm',
-        imageAlt: 'Kinangop Wind Integration',
-        lessonTitle: 'Key Lesson',
-        lesson: "This project taught me that resilience isn't just for power lines—it's for people's access to vital services. The systemic thinking I developed here now informs how I approach SaaS architecture and load balancing.",
-        link: 'https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view',
-        linkLabel: 'Read the full technical report',
-        isGated: false
-    }
-];
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Make Lucide globally available -->
+    <script type="module">
+        import * as lucide from 'https://unpkg.com/lucide@latest';
+        window.lucide = lucide;
+    </script>
+    
+    <!-- Custom Configuration -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-indigo: #303F9F; 
+            --neutral-charcoal: #374151; 
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
+        }
 
-const gatedProjects = [
-    {
-        id: 'gated-grid-optimization',
-        title: 'Advanced Grid Optimization with AI-Driven Load Forecasting',
-        lead: "A comprehensive smart grid solution implementing machine learning algorithms for predictive load management across Kenya's national power infrastructure.",
-        highlights: [
-            'Reduced grid instability incidents by **32%**',
-            'Improved load forecasting accuracy to **94.7%**',
-            'Deployed across **15 major substations**',
-            'Integrated with existing SCADA systems',
-        ],
-        stack: ['Python', 'TensorFlow', 'LSTM Networks', 'SCADA Integration', 'Real-time Analytics'],
-        image: 'https://placehold.co/400x300/283593/ffffff?text=AI+Optimization',
-        imageAlt: 'Advanced Grid Optimization Preview',
-        ctaMessage: 'Full case study available on request',
-        ctaSubtext: 'Includes technical architecture, implementation details, and performance analysis',
-        ctaLink: '#contact',
-        ctaLabel: 'Request Full Case Study'
-    },
-    {
-        id: 'gated-iot-platform',
-        title: 'Industrial IoT Platform for Manufacturing Excellence',
-        lead: 'Enterprise-grade IoT solution for real-time monitoring and optimization of manufacturing processes across multiple facilities.',
-        highlights: [
-            'Increased overall equipment effectiveness by **28%**',
-            'Reduced unplanned downtime by **45%**',
-            'Connected **500+ sensors** across 3 facilities',
-            'Real-time dashboard with predictive alerts',
-        ],
-        stack: ['Node.js', 'InfluxDB', 'MQTT', 'Docker', 'Grafana'],
-        image: 'https://placehold.co/400x300/283593/ffffff?text=IoT+Dashboard',
-        imageAlt: 'Industrial IoT Platform Preview',
-        ctaMessage: 'Detailed implementation guide available on request',
-        ctaSubtext: 'Includes system architecture, sensor integration, and ROI analysis',
-        ctaLink: '#contact',
-        ctaLabel: 'Request Implementation Details'
-    }
-];
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
+        }
+        
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
 
-// --- Utility Icons (SVG equivalent of Lucide) ---
-const MenuIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <line x1="4" x2="20" y1="12" y2="12"></line>
-        <line x1="4" x2="20" y1="6" y2="6"></line>
-        <line x1="4" x2="20" y1="18" y2="18"></line>
-    </svg>
-);
-
-const XIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <path d="M18 6 6 18"></path>
-        <path d="m6 6 12 12"></path>
-    </svg>
-);
-
-const LockIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-    </svg>
-);
-
-const EyeIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-    </svg>
-);
-
-const LinkedinIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z"></path>
-        <rect width="4" height="12" x="2" y="9"></rect>
-        <circle cx="4" cy="4" r="2"></circle>
-    </svg>
-);
-
-
-// --- Components ---
-
-const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navItems = [
-        { name: 'Home', href: '#home' },
-        { name: 'About', href: '#about' },
-        { name: 'Projects', href: '#projects', current: true },
-        { name: 'Contact', href: '#contact' },
-    ];
-
-    return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
-                    {/* Brand/Logo - Deep Indigo */}
-                    <a href="#projects" className="flex items-center space-x-2 text-indigo-800 font-bold text-lg">
-                        <img src="https://placehold.co/30x30/283593/ffffff?text=C" alt="Clifford Ondieki Profile Icon" className="rounded-full h-8 w-8 object-cover" />
-                        <span>Clifford Ondieki <small className="text-sm font-normal text-gray-500 hidden sm:inline">| Hybrid Innovator</small></span>
-                    </a>
-
-                    {/* Desktop Menu */}
-                    <div className="hidden lg:flex lg:items-center lg:space-x-4">
-                        <ul className="flex space-x-4">
-                            {navItems.map(item => (
-                                <li key={item.name}>
-                                    <a
-                                        href={item.href}
-                                        // Current item uses Deep Indigo with low opacity background
-                                        className={`px-3 py-2 text-sm font-medium rounded-md transition duration-150 ease-in-out ${item.current ? 'bg-indigo-900/10 text-indigo-900 font-semibold' : 'text-gray-600 hover:bg-gray-50 hover:text-indigo-800'}`}
-                                    >
-                                        {item.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                        {/* Language Toggles - Deep Indigo */}
-                        <div className="flex space-x-2 ml-4">
-                            <a href="#" className="px-3 py-1 text-sm font-semibold rounded-full bg-indigo-800 text-white">EN</a>
-                            <a href="#" className="px-3 py-1 text-sm font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
-                        </div>
-                    </div>
-
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="lg:hidden p-2 text-gray-500 hover:text-indigo-800 focus:outline-none"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-expanded={isMenuOpen}
-                        aria-controls="mobile-menu"
-                    >
-                        {isMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
-                    </button>
-                </div>
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
 
-            {/* Mobile Menu Panel */}
-            <div
-                id="mobile-menu"
-                className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-            >
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    {navItems.map(item => (
-                        <a
-                            key={item.name}
-                            href={item.href}
-                            className={`block px-3 py-2 rounded-md text-base font-medium ${item.current ? 'bg-indigo-900/10 text-indigo-900' : 'text-gray-700 hover:bg-indigo-50'}`}
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            {item.name}
-                        </a>
-                    ))}
-                    <div className="pt-4 border-t border-gray-200 flex justify-center space-x-4">
-                        <a href="#" className="px-3 py-1 text-base font-semibold rounded-full bg-indigo-800 text-white">EN</a>
-                        <a href="#" className="px-3 py-1 text-base font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    );
-};
-
-const ProjectCard = ({ project, isReversed }) => (
-    <div className="bg-white p-6 md:p-10 rounded-xl shadow-2xl hover:shadow-indigo-300/50 transition duration-300 ease-in-out border border-gray-100">
-        <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-8`}>
-            {/* Content Column */}
-            <div className="flex-1">
-                <h2 className="text-3xl font-extrabold text-gray-900 mb-3">{project.title}</h2>
-                <p className="text-xl font-medium text-indigo-700 mb-6">{project.lead}</p>
-
-                {/* Challenge - Crimson/Deep Burgundy */}
-                <div className="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-3 rounded-md">
-                    <h4 className="text-lg font-semibold text-rose-900 mb-1">The Challenge</h4>
-                    <p className="text-gray-600 text-sm">{project.challenge}</p>
-                </div>
-
-                {/* Solution - Emerald Green */}
-                <div className="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-3 rounded-md">
-                    <h4 className="text-lg font-semibold text-teal-900 mb-1">{project.lessonTitle === 'My Approach' ? 'My Approach' : 'Our Data-Driven Solution'}</h4>
-                    <p className="text-gray-600 text-sm">{project.solution}</p>
-                </div>
-
-                {/* Tech Stack - Deep Indigo */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                    {project.stack.map(tech => (
-                        <span key={tech} className="px-3 py-1 text-xs font-medium bg-indigo-900/10 text-indigo-800 rounded-full shadow-sm">
-                            {tech}
-                        </span>
-                    ))}
-                </div>
-
-                {/* Impact Metrics - Deep Indigo */}
-                <div className="grid grid-cols-3 gap-4 border-t pt-4 mt-4">
-                    {project.metrics.map(metric => (
-                        <div key={metric.number} className="text-center p-2">
-                            <div className="text-3xl sm:text-4xl font-extrabold text-indigo-800">{metric.number}</div>
-                            <p className="text-xs text-gray-500 font-medium mt-1">{metric.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Image and Lesson Card Column */}
-            <div className="lg:w-1/3 flex flex-col items-center">
-                <img
-                    src={project.image}
-                    alt={project.imageAlt}
-                    className="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover"
-                    onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x300/283593/ffffff?text=Image+Unavailable'; }}
-                />
-                <div className="bg-gray-50 p-5 mt-6 w-full rounded-xl shadow-inner border border-gray-200">
-                    <h5 className="text-xl font-bold text-gray-800 mb-2">{project.lessonTitle}</h5>
-                    <p className="text-sm text-gray-600 mb-4">{project.lesson}</p>
-                    {/* Deep Indigo CTA */}
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
-                        {project.linkLabel}
-                    </a>
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
+                <a href="projects.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Projects</a>
+                <a href="philosophy.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Philosophy</a>
+                <a href="blog.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Insights</a>
+                <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="projects.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">EN</a>
+                    <a href="projects-de.html" class="language-toggle de text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">DE</a>
                 </div>
             </div>
         </div>
     </div>
-);
-
-const GatedProjectCard = ({ project, isReversed }) => (
-    // Border uses Soft Gold (Amber)
-    <div className="bg-white p-6 md:p-10 rounded-xl shadow-2xl border-4 border-amber-400 relative overflow-hidden group">
-        {/* Overlay Effect for Gated Content */}
-        <div className="absolute inset-0 bg-gray-900/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl p-8 z-10">
-            <div className="text-center text-white">
-                <LockIcon className="w-10 h-10 mx-auto mb-4 text-amber-400" /> {/* Lock Icon Soft Gold */}
-                <p className="text-xl font-bold">{project.ctaMessage}</p>
-                <small className="block text-gray-300 mb-6">{project.ctaSubtext}</small>
-                {/* CTA uses Soft Gold with Graphite text */}
-                <a href={project.ctaLink} className="bg-amber-400 text-gray-900 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-amber-300 transition">
-                    {project.ctaLabel}
-                </a>
+    
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="projects.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Projects</a>
+            <a href="philosophy.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Philosophy</a>
+            <a href="blog.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Insights</a>
+            <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="projects.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
+                <a href="projects-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
             </div>
         </div>
+    </div>
+</nav>
 
-        <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-8 opacity-50 group-hover:opacity-20 transition-opacity duration-500`}>
-            {/* Content Column (Blurred/Dimmed) */}
-            <div className="flex-1">
-                <h2 className="text-3xl font-extrabold text-gray-700 mb-3">{project.title}</h2>
-                <p className="text-xl font-medium text-gray-500 mb-6">{project.lead}</p>
+<!-- Hero Section -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            Engineering with Impact
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            Projects that bridge technical excellence with human purpose
+        </p>
+    </div>
+</header>
 
-                <div className="bg-gray-100 p-4 rounded-lg mb-6">
-                    <h4 className="text-lg font-semibold text-gray-600 mb-2">Project Highlights (Teaser)</h4>
-                    <ul className="list-disc list-inside text-gray-600 space-y-1">
-                        {project.highlights.map((h, index) => (
-                            <li key={index} dangerouslySetInnerHTML={{ __html: h.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                        ))}
-                    </ul>
-                </div>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {project.stack.map(tech => (
-                        <span key={tech} className="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">
-                            {tech}
-                        </span>
-                    ))}
-                </div>
+<!-- Main Content -->
+<main class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Current Innovation Header -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">Current Innovation & Future Vision</h2>
+                <p class="text-lg text-gray-600">Bridging technical excellence with human-centered impact</p>
             </div>
+        </section>
 
-            {/* Image Column */}
-            <div className="lg:w-1/3 flex flex-col items-center">
-                <div className="relative w-full">
-                    <img
-                        src={project.image}
-                        alt={project.imageAlt}
-                        className="w-full h-auto rounded-lg shadow-lg object-cover"
-                        onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x300/283593/ffffff?text=Gated+Preview'; }}
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
-                        <div className="text-center text-white">
-                            <EyeIcon className="w-8 h-8 mx-auto mb-1" />
-                            <p className="font-semibold">Preview Available</p>
-                            <small>Hover for details</small>
+        <!-- EV Charger Project -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <div class="grid lg:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Equitable EV Charger Deployment in Berlin</h2>
+                        <p class="text-lg text-indigo-700 mb-6">An ongoing data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.</p>
+                        
+                        <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                            <h4 class="text-lg font-semibold text-rose-900 mb-2">The Challenge</h4>
+                            <p class="text-gray-600 text-sm">Public Electric Vehicle (EV) charging infrastructure is largely demand-driven, reinforcing spatial inequities. This creates a 'chicken-and-egg' problem, where a lack of infrastructure suppresses EV adoption in underserved areas, justifying continued underinvestment.</p>
+                        </div>
+                        
+                        <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                            <h4 class="text-lg font-semibold text-teal-900 mb-2">Our Data-Driven Solution</h4>
+                            <p class="text-gray-600 text-sm">We implemented a multi-objective NSGA-II model in Python to balance coverage and spatial equity, minimizing the Gini coefficient of EVs per charger. This approach provides different Pareto-optimal deployment strategies for urban planners, directly addressing infrastructure placement under complex geospatial and socio-economic constraints.</p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">NSGA-II</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Geospatial Optimization</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Multi-Objective Optimization</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Gini Coefficient Analysis</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Urban Planning</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">13%</div>
+                                <p class="text-xs text-gray-500 font-medium">Reduction in Citywide Gini Coefficient</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">6x</div>
+                                <p class="text-xs text-gray-500 font-medium">More Chargers to Underserved Areas</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">21%</div>
+                                <p class="text-xs text-gray-500 font-medium">Boost in Local Access</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/400x300/283593/ffffff?text=Berlin+Map" alt="Berlin EV Charger Distribution" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                        <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                            <h5 class="text-lg font-bold text-gray-800 mb-2">Philosophy in Action</h5>
+                            <p class="text-sm text-gray-600 mb-4">The objective is not just to deploy more chargers, but to deploy them strategically to foster equitable access and sustainable urban mobility. My framework empowers municipalities to navigate the efficiency-equity trade-off with data-driven insights.</p>
+                            <a href="ev.html" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                Explore My Work
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-);
+        </section>
 
-const App = () => {
-    return (
-        // Background uses White/Ivory (gray-50)
-        <div className="min-h-screen bg-gray-50 font-sans">
-            <Navbar />
-
-            {/* Hero Section - Deep Indigo */}
-            <section className="pt-24 pb-16 bg-indigo-900 text-white text-center shadow-inner">
-                <div className="container mx-auto px-4">
-                    <h1 className="text-4xl sm:text-5xl font-extrabold mb-3">Engineering with Impact</h1>
-                    <p className="text-xl font-light opacity-90">Projects that bridge technical excellence with human purpose</p>
-                </div>
-            </section>
-
-            {/* Projects Section - Main Content */}
-            <main id="projects" className="container mx-auto px-4 py-12 lg:py-20">
-
-                {/* Open Projects Header - Deep Indigo */}
-                <div className="mb-12">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-900">Current Innovation & Future Vision</h2>
-                    <p className="text-center text-lg text-gray-500 mt-2">Bridging technical excellence with human-centered impact</p>
-                </div>
-
-                {/* Open Projects List */}
-                <div className="space-y-16">
-                    {projects.map((project, index) => (
-                        <React.Fragment key={project.id}>
-                            <ProjectCard
-                                project={project}
-                                isReversed={index % 2 !== 0} // Alternate layout direction
-                            />
-                            {index < projects.length - 1 && (
-                                <div className="border-b border-indigo-200 opacity-50 my-10" />
-                            )}
-                        </React.Fragment>
-                    ))}
-                </div>
-
-                {/* Gated Projects Header - Deep Indigo */}
-                <div className="mt-20 mb-12">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-900">Premium Case Studies</h2>
-                    <p className="text-center text-lg text-gray-500 mt-2">Advanced projects and sensitive implementations - full details available on request</p>
-                </div>
-
-                {/* Gated Projects List */}
-                <div className="space-y-16">
-                    {gatedProjects.map((project, index) => (
-                        <GatedProjectCard
-                            key={project.id}
-                            project={project}
-                            isReversed={index % 2 !== 0} // Alternate layout direction
-                        />
-                    ))}
-                </div>
-            </main>
-
-            {/* Call to Action - Deep Indigo */}
-            <section id="contact" className="py-16 bg-indigo-900 text-white text-center">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Ready to Build Something Impactful?</h2>
-                    <p className="text-lg font-light mb-6">Let's combine technical excellence with purpose-driven innovation to create solutions that truly matter.</p>
-                    {/* CTA Button uses White background with Deep Indigo text */}
-                    <a href="#contact" className="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-                        Let's Energize Change Together ⚡
-                    </a>
-                </div>
-            </section>
-
-            {/* Footer - Graphite Grey */}
-            <footer className="bg-gray-900 text-white text-center py-6">
-                <div className="container mx-auto px-4">
-                    <div className="mb-3">
-                        <a
-                            href="https://www.linkedin.com/in/clifford-ondieki-559b9771/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-white transition duration-200"
-                            title="LinkedIn Profile"
-                        >
-                            <LinkedinIcon className="w-6 h-6 inline-block" />
-                        </a>
+        <!-- Other Projects -->
+        <section class="mb-16">
+            <div class="space-y-12">
+                
+                <!-- Climate Tech Advisory -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div class="lg:order-2">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Climate Tech Investment Consultancy</h2>
+                            <p class="text-lg text-indigo-700 mb-6">Bridging venture capital analysis with infrastructure deployment expertise to de-risk climate tech investments.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">The Challenge</h4>
+                                <p class="text-gray-600 text-sm">Climate tech faces a critical gap: investors lack deployment expertise while infrastructure experts lack capital market access. This disconnect slows climate progress and wastes promising technologies.</p>
+                            </div>
+                            
+                            <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-teal-900 mb-2">My Approach</h4>
+                                <p class="text-gray-600 text-sm">Through my Energy Innovation Capital externship, I'm learning to integrated frameworks that evaluates startups through multiple lenses: investment potential, operational viability, and deployment strategy.</p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Venture Capital Analysis</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Operational Due Diligence</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Deployment Strategy</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Market Research</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Spatial Equity</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Risk Assessment</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">5+</div>
+                                    <p class="text-xs text-gray-500 font-medium">Startups Analyzed</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">6</div>
+                                    <p class="text-xs text-gray-500 font-medium">Investment Theses</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">3x</div>
+                                    <p class="text-xs text-gray-500 font-medium">Analysis Depth</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:order-1 flex flex-col items-center">
+                            <img src="https://placehold.co/400x300/283593/ffffff?text=Advisory+Chart" alt="Climate Tech Advisory" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Full-Stack Advantage</h5>
+                                <p class="text-sm text-gray-600 mb-4">Most advisors excel in one domain. I bridge investment analysis with operational execution, providing the complete picture that investors need and startups require to succeed.</p>
+                                <a href="#contact" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                    View Case Study
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <p className="text-sm mb-1">
-                        Copyright &copy; {new Date().getFullYear()}
-                        {/* Soft Gold Accent Link */}
-                        <a href="#" className="text-amber-400 hover:text-amber-300 ml-1">Bridging technology with purpose — energizing change one system at a time.</a>
-                    </p>
-                    <p className="text-xs mt-2 space-x-3">
-                        <a href="#privacy" className="text-gray-400 hover:text-white">Privacy Policy</a>
-                        <span className="text-gray-600">|</span>
-                        <a href="#contact" className="text-gray-400 hover:text-white">Contact</a>
-                        <span className="text-gray-600">|</span>
-                        {/* Consistent Tailwind styling for footer links */}
-                        <a href="philosophy.html" className="text-gray-400 hover:text-white">Philosophy</a>
-                        <span className="text-gray-600">|</span>
-                        <a href="insights.html" className="text-gray-400 hover:text-white">Insights</a>
-                    </p>
                 </div>
-            </footer>
-        </div>
-    );
-};
 
-export default App;
+                <!-- Health Tech Load Balancing -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Health Tech Load Balancing System</h2>
+                            <p class="text-lg text-indigo-700 mb-6">Applying power grid principles to optimize healthcare service distribution across rural Kenya.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">The Challenge</h4>
+                                <p class="text-gray-600 text-sm">Rural health facilities in Kenya were experiencing uneven patient loads, with some overwhelmed while others remained underutilized. This led to longer wait times, reduced quality of care, and inefficient resource allocation.</p>
+                            </div>
+                            
+                            <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-teal-900 mb-2">Our Data-Driven Solution</h4>
+                                <p class="text-gray-600 text-sm">Drawing from my power grid experience, I developed a load balancing algorithm that treats patient flow like electrical current. The system dynamically redistributes patients to optimize resource utilization while minimizing travel distance and wait times.</p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Node.js</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">React</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">MongoDB</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Load Balancing Algorithms</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Geospatial Analysis</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Real-time Analytics</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">50%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Reduced Wait Times</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">30%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Improved Resource Utilization</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">15k+</div>
+                                    <p class="text-xs text-gray-500 font-medium">Patients Served Monthly</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="https://placehold.co/400x300/283593/ffffff?text=Health+Network" alt="Health Tech Load Balancing" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Cross-Domain Innovation</h5>
+                                <p class="text-sm text-gray-600 mb-4">This project proved that engineering empathy scales across domains. Power grid principles applied to healthcare access demonstrate how systemic thinking can solve seemingly unrelated problems.</p>
+                                <a href="#contact" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Predictive Maintenance AI -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div class="lg:order-2">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Predictive Maintenance AI for Geothermal Plants</h2>
+                            <p class="text-lg text-indigo-700 mb-6">A machine learning system for predicting equipment failures in geothermal power generation, reducing operational costs and increasing plant uptime.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">The Challenge</h4>
+                                <p class="text-gray-600 text-sm">Geothermal power plants in Kenya's Rift Valley were experiencing unexpected equipment failures, leading to costly downtime and reduced clean energy generation. Traditional maintenance schedules were inefficient and reactive.</p>
+                            </div>
+                            
+                            <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-teal-900 mb-2">Our Data-Driven Solution</h4>
+                                <p class="text-gray-600 text-sm">I developed a predictive maintenance system using machine learning algorithms to analyze sensor data across key equipment. The system learned to identify patterns that preceded failures, enabling proactive maintenance scheduling.</p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Python</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">TensorFlow</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Time Series Analysis</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Data Visualization</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">40%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Reduction in Downtime</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">$2M</div>
+                                    <p class="text-xs text-gray-500 font-medium">Annual Cost Savings</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">95%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Prediction Accuracy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:order-1 flex flex-col items-center">
+                            <img src="https://placehold.co/400x300/283593/ffffff?text=Geothermal+Plant" alt="Predictive Maintenance AI" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Key Insight</h5>
+                                <p class="text-sm text-gray-600 mb-4">This project revealed how data-driven decisions create human-centric solutions. The principles of optimization and efficiency I learned here now inform my approach to SaaS uptime and product operational excellence.</p>
+                                <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                    View full documentation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kinangop Wind Integration -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Kinangop Wind Power Integration</h2>
+                            <p class="text-lg text-indigo-700 mb-6">A dynamic voltage stability analysis incorporating Kinangop wind power into Kenya's 59-bus national grid.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">The Challenge</h4>
+                                <p class="text-gray-600 text-sm">Kenya's power grid needed to accommodate the intermittent nature of wind power while maintaining system stability. The challenge was ensuring that voltage fluctuations from wind generation wouldn't destabilize the entire network serving millions of Kenyans.</p>
+                            </div>
+                            
+                            <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-teal-900 mb-2">Our Data-Driven Solution</h4>
+                                <p class="text-gray-600 text-sm">I developed a comprehensive dynamic voltage stability analysis using DIgSILENT PowerFactory, modeling the entire power system to simulate and mitigate voltage fluctuations. This wasn't just a technical task; it was about ensuring reliable power for healthcare, education, and economic development.</p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">DIgSILENT PowerFactory</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Power System Analysis</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Renewable Energy Integration</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Grid Stability Modeling</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">25%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Improved Grid Stability</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">60MW</div>
+                                    <p class="text-xs text-gray-500 font-medium">Clean Energy Integrated</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-800">100k+</div>
+                                    <p class="text-xs text-gray-500 font-medium">Households Benefited</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="https://placehold.co/400x300/283593/ffffff?text=Wind+Farm" alt="Kinangop Wind Integration" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Key Lesson</h5>
+                                <p class="text-sm text-gray-600 mb-4">This project taught me that resilience isn't just for power lines—it's for people's access to vital services. The systemic thinking I developed here now informs how I approach SaaS architecture and load balancing.</p>
+                                <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                    Read the full technical report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Case Studies -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">Premium Case Studies</h2>
+                <p class="text-lg text-gray-600">Advanced projects and sensitive implementations - full details available on request</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Gated Project 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-4 border-amber-400 relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gray-900/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl p-8 z-10">
+                        <div class="text-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4 text-amber-400">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <p class="text-xl font-bold">Full case study available on request</p>
+                            <small class="block text-gray-300 mb-6">Includes technical architecture, implementation details, and performance analysis</small>
+                            <a href="contact.html" class="bg-amber-400 text-gray-900 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-amber-300 transition">
+                                Request Full Case Study
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="opacity-50 group-hover:opacity-20 transition-opacity duration-500">
+                        <div class="grid lg:grid-cols-2 gap-8 items-start">
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-700 mb-4">Advanced Grid Optimization with AI-Driven Load Forecasting</h2>
+                                <p class="text-lg text-gray-500 mb-6">A comprehensive smart grid solution implementing machine learning algorithms for predictive load management across Kenya's national power infrastructure.</p>
+                                
+                                <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                                    <h4 class="text-lg font-semibold text-gray-600 mb-2">Project Highlights (Teaser)</h4>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                                        <li>Reduced grid instability incidents by <strong>32%</strong></li>
+                                        <li>Improved load forecasting accuracy to <strong>94.7%</strong></li>
+                                        <li>Deployed across <strong>15 major substations</strong></li>
+                                        <li>Integrated with existing SCADA systems</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Python</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">TensorFlow</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">LSTM Networks</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">SCADA Integration</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Real-time Analytics</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-full">
+                                    <img src="https://placehold.co/400x300/283593/ffffff?text=AI+Optimization" alt="Advanced Grid Optimization Preview" class="w-full h-auto rounded-lg shadow-lg object-cover" />
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
+                                        <div class="text-center text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-1">
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                            <p class="font-semibold">Preview Available</p>
+                                            <small>Hover for details</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gated Project 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-4 border-amber-400 relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gray-900/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl p-8 z-10">
+                        <div class="text-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4 text-amber-400">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <p class="text-xl font-bold">Detailed implementation guide available on request</p>
+                            <small class="block text-gray-300 mb-6">Includes system architecture, sensor integration, and ROI analysis</small>
+                            <a href="contact.html" class="bg-amber-400 text-gray-900 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-amber-300 transition">
+                                Request Implementation Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="opacity-50 group-hover:opacity-20 transition-opacity duration-500">
+                        <div class="grid lg:grid-cols-2 gap-8 items-start">
+                            <div class="lg:order-2">
+                                <h2 class="text-2xl font-bold text-gray-700 mb-4">Industrial IoT Platform for Manufacturing Excellence</h2>
+                                <p class="text-lg text-gray-500 mb-6">Enterprise-grade IoT solution for real-time monitoring and optimization of manufacturing processes across multiple facilities.</p>
+                                
+                                <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                                    <h4 class="text-lg font-semibold text-gray-600 mb-2">Project Highlights (Teaser)</h4>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                                        <li>Increased overall equipment effectiveness by <strong>28%</strong></li>
+                                        <li>Reduced unplanned downtime by <strong>45%</strong></li>
+                                        <li>Connected <strong>500+ sensors</strong> across 3 facilities</li>
+                                        <li>Real-time dashboard with predictive alerts</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Node.js</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">InfluxDB</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">MQTT</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Docker</span>
+                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Grafana</span>
+                                </div>
+                            </div>
+                            <div class="lg:order-1 flex flex-col items-center">
+                                <div class="relative w-full">
+                                    <img src="https://placehold.co/400x300/283593/ffffff?text=IoT+Dashboard" alt="Industrial IoT Platform Preview" class="w-full h-auto rounded-lg shadow-lg object-cover" />
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
+                                        <div class="text-center text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-1">
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                            <p class="font-semibold">Preview Available</p>
+                                            <small>Hover for details</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Call to Action -->
+<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Ready to Build Something Impactful?</h2>
+        <p class="text-lg font-light mb-6">Let's combine technical excellence with purpose-driven innovation to create solutions that truly matter.</p>
+        <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Let's Energize Change Together ⚡
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Bridging technology with purpose — energizing change one system at a time.
+        </p>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy.html" class="text-gray-500 hover:text-white transition">Privacy Policy</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact.html" class="text-gray-500 hover:text-white transition">Contact</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
+
+        // Dynamic Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+</script>
+</body>
+</html>
