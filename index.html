@@ -50,6 +50,24 @@
             color: white !important;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        
+        /* Animated scrolling for tools */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
+        }
+        
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -161,94 +179,179 @@
             </div>
         </section>
 
-        <section class="section bg-light" id="skills-tools">
-    <div class="container text-center">
-        <h6 class="section-title mb-4">Skills, Tools & Platforms</h6>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <p class="section-subtitle">A blend of technical and professional proficiencies.</p>
-                <div class="skills-grid">
-                    <div class="row">
-                        <!-- Technical Skills -->
-                        <div class="col-lg-6">
-                            <div class="skill-category">
-                                <h5>Technical Skills</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="ti-check"></i> Python, JavaScript, C++</li>
-                                    <li><i class="ti-check"></i> Node.js, React, MongoDB</li>
-                                    <li><i class="ti-check"></i> DIgSILENT PowerFactory, Power System Analysis</li>
-                                    <li><i class="ti-check"></i> TensorFlow, Time Series Analysis, Data Visualization</li>
-                                    <li><i class="ti-check"></i> Load Balancing Algorithms, Real-time Analytics</li>
-                                    <li><i class="ti-check"></i> AWS, Azure, GCP, Docker, Kubernetes</li>
-                                </ul>
-                            </div>
+        <!-- Skills, Tools & Platforms -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Skills, Tools & Platforms</h2>
+                <p class="text-lg text-gray-600">A blend of technical and professional proficiencies</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Technical Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-800">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Technical Skills</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Python, JavaScript, C++</span>
                         </div>
-                        <!-- Program & Professional Skills -->
-                        <div class="col-lg-6">
-                            <div class="skill-category">
-                                <h5>Program & Professional Skills</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="ti-check"></i> Agile/Scrum Methodologies</li>
-                                    <li><i class="ti-check"></i> Project & Product Lifecycle</li>
-                                    <li><i class="ti-check"></i> Stakeholder Management</li>
-                                    <li><i class="ti-check"></i> Systems Thinking, Cross-Domain Innovation</li>
-                                    <li><i class="ti-check"></i> Urban Planning, Renewable Energy Integration</li>
-                                </ul>
-                            </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Node.js, React, MongoDB</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">DIgSILENT PowerFactory, Power System Analysis</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">TensorFlow, Time Series Analysis, Data Visualization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Load Balancing Algorithms, Real-time Analytics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">AWS, Azure, GCP, Docker, Kubernetes</span>
                         </div>
                     </div>
-                    <!-- Tools & Platforms - now a central rotating element -->
-                    <div class="row mt-5">
-                        <div class="col-lg-12">
-                            <div class="tools-column">
-                                <h5>Tools & Platforms</h5>
-                                <div class="tools-marquee">
-                                    <div class="marquee-content">
-                                        <!-- Duplicating content for seamless loop -->
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/tensorflow.svg" alt="TensorFlow logo" class="tool-logo"><span class="tool-name">TensorFlow</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/mongodb.svg" alt="MongoDB logo" class="tool-logo"><span class="tool-name">MongoDB</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/PowerFactory.svg" alt="DIgSILENT PowerFactory logo" class="tool-logo"><span class="tool-name">PowerFactory</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/slack.svg" alt="Slack logo" class="tool-logo"><span class="tool-name">Slack</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/notion.svg" alt="Notion logo" class="tool-logo"><span class="tool-name">Notion</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/Odoo.svg" alt="Odoo logo" class="tool-logo"><span class="tool-name">Odoo</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/wordpress.svg" alt="WordPress logo" class="tool-logo"><span class="tool-name">WordPress</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/illustrator.svg" alt="Adobe Illustrator logo" class="tool-logo"><span class="tool-name">Illustrator</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/photoshop.svg" alt="Adobe Photoshop logo" class="tool-logo"><span class="tool-name">Photoshop</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/canva.svg" alt="Canva logo" class="tool-logo"><span class="tool-name">Canva</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/postman.svg" alt="Postman logo" class="tool-logo"><span class="tool-name">Postman</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/hubspot.svg" alt="HubSpot logo" class="tool-logo"><span class="tool-name">HubSpot</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/metabase.svg" alt="Metabase logo" class="tool-logo"><span class="tool-name">Metabase</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/google.svg" alt="G-Suite logo" class="tool-logo"><span class="tool-name">G-Suite</span></div>
-                                      <div class="tool-logo-wrapper"><img src="assets/imgs/github.svg" alt="Github logo" class="tool-logo"><span class="tool-name">Github</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/microsoft-office-2013-logo.svg" alt="Microsoft Office logo" class="tool-logo"><span class="tool-name">Office</span></div>
-
-                                        <!-- Duplicated content for seamless loop -->
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/tensorflow.svg" alt="TensorFlow logo" class="tool-logo"><span class="tool-name">TensorFlow</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/mongodb.svg" alt="MongoDB logo" class="tool-logo"><span class="tool-name">MongoDB</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/PowerFactory.svg" alt="DIgSILENT PowerFactory logo" class="tool-logo"><span class="tool-name">PowerFactory</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/slack.svg" alt="Slack logo" class="tool-logo"><span class="tool-name">Slack</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/notion.svg" alt="Notion logo" class="tool-logo"><span class="tool-name">Notion</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/Odoo.svg" alt="Odoo logo" class="tool-logo"><span class="tool-name">Odoo</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/wordpress.svg" alt="WordPress logo" class="tool-logo"><span class="tool-name">WordPress</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/illustrator.svg" alt="Adobe Illustrator logo" class="tool-logo"><span class="tool-name">Illustrator</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/photoshop.svg" alt="Adobe Photoshop logo" class="tool-logo"><span class="tool-name">Photoshop</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/canva.svg" alt="Canva logo" class="tool-logo"><span class="tool-name">Canva</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/postman.svg" alt="Postman logo" class="tool-logo"><span class="tool-name">Postman</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/hubspot.svg" alt="HubSpot logo" class="tool-logo"><span class="tool-name">HubSpot</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/metabase.svg" alt="Metabase logo" class="tool-logo"><span class="tool-name">Metabase</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/google.svg" alt="G-Suite logo" class="tool-logo"><span class="tool-name">G-Suite</span></div>
-                                      <div class="tool-logo-wrapper"><img src="assets/imgs/github.svg" alt="Github logo" class="tool-logo"><span class="tool-name">Github</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/microsoft-office-2013-logo.svg" alt="Microsoft Office logo" class="tool-logo"><span class="tool-name">Office</span></div>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                
+                <!-- Program & Professional Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-800">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Program & Professional Skills</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Agile/Scrum Methodologies</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Project & Product Lifecycle</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Stakeholder Management</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Systems Thinking, Cross-Domain Innovation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span class="text-gray-700">Urban Planning, Renewable Energy Integration</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            
+            <!-- Tools & Platforms -->
+            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-800">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Tools & Platforms</h3>
+                <div class="overflow-hidden">
+                    <div class="flex animate-scroll space-x-8 items-center">
+                        <!-- First set of tools -->
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-indigo-600 font-bold text-sm">TF</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">TensorFlow</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-green-600 font-bold text-sm">DB</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">MongoDB</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-blue-600 font-bold text-sm">PF</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">PowerFactory</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-purple-600 font-bold text-sm">SL</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Slack</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-gray-600 font-bold text-sm">NT</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Notion</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-red-600 font-bold text-sm">OD</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Odoo</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-blue-600 font-bold text-sm">WP</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">WordPress</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-orange-600 font-bold text-sm">AI</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Illustrator</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-blue-600 font-bold text-sm">PS</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Photoshop</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-purple-600 font-bold text-sm">CV</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Canva</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-orange-600 font-bold text-sm">PM</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Postman</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-orange-600 font-bold text-sm">HS</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">HubSpot</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-blue-600 font-bold text-sm">MB</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Metabase</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-red-600 font-bold text-sm">GS</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">G-Suite</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-gray-600 font-bold text-sm">GH</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">GitHub</span>
+                        </div>
+                        <div class="flex flex-col items-center min-w-[80px]">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                                <span class="text-blue-600 font-bold text-sm">MS</span>
+                            </div>
+                            <span class="text-xs text-gray-600 text-center">Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Featured Projects Preview -->
         <section class="mb-16">
