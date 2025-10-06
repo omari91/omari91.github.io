@@ -52,22 +52,6 @@
         }
         
         /* Animated scrolling for tools */
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-        
-        .animate-scroll {
-            animation: scroll 20s linear infinite;
-        }
-        
-        .animate-scroll:hover {
-            animation-play-state: paused;
-        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -249,105 +233,118 @@
             <!-- Tools & Platforms -->
             <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-800">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Tools & Platforms</h3>
-                <div class="overflow-hidden">
-                    <div class="flex animate-scroll space-x-8 items-center">
-                        <!-- First set of tools -->
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-indigo-600 font-bold text-sm">TF</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">TensorFlow</span>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
+                    <!-- Development Tools -->
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-orange-600 font-bold text-lg">TF</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-green-600 font-bold text-sm">DB</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">MongoDB</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">TensorFlow</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-green-600 font-bold text-lg">DB</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-blue-600 font-bold text-sm">PF</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">PowerFactory</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">MongoDB</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-blue-600 font-bold text-lg">PF</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-purple-600 font-bold text-sm">SL</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Slack</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">PowerFactory</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-purple-600 font-bold text-lg">SL</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-gray-600 font-bold text-sm">NT</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Notion</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Slack</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-gray-600 font-bold text-lg">NT</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-red-600 font-bold text-sm">OD</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Odoo</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Notion</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-red-600 font-bold text-lg">OD</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-blue-600 font-bold text-sm">WP</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">WordPress</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Odoo</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-blue-600 font-bold text-lg">WP</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-orange-600 font-bold text-sm">AI</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Illustrator</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">WordPress</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-orange-600 font-bold text-lg">AI</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-blue-600 font-bold text-sm">PS</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Photoshop</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Illustrator</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-blue-600 font-bold text-lg">PS</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-purple-600 font-bold text-sm">CV</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Canva</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Photoshop</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-purple-600 font-bold text-lg">CV</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-orange-600 font-bold text-sm">PM</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Postman</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Canva</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-orange-600 font-bold text-lg">PM</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-orange-600 font-bold text-sm">HS</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">HubSpot</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Postman</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-orange-600 font-bold text-lg">HS</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-blue-600 font-bold text-sm">MB</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Metabase</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">HubSpot</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-blue-600 font-bold text-lg">MB</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-red-600 font-bold text-sm">GS</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">G-Suite</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">Metabase</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-red-600 font-bold text-lg">GS</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-gray-600 font-bold text-sm">GH</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">GitHub</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">G-Suite</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-gray-600 font-bold text-lg">GH</span>
                         </div>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                                <span class="text-blue-600 font-bold text-sm">MS</span>
-                            </div>
-                            <span class="text-xs text-gray-600 text-center">Office</span>
+                        <span class="text-sm text-gray-600 text-center font-medium">GitHub</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300">
+                            <span class="text-blue-600 font-bold text-lg">MS</span>
                         </div>
+                        <span class="text-sm text-gray-600 text-center font-medium">Office</span>
                     </div>
                 </div>
             </div>
