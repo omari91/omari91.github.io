@@ -273,23 +273,54 @@
             </div>
         </section>
 
-        <!-- Path Forward -->
-        <section class="mb-16">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                <h3 class="text-2xl font-bold text-center mb-6">Der Weg nach vorn: Von der Politik zur Umsetzung</h3>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Während der Rahmen eine leistungsstarke Strategie auf politischer Ebene liefert, ist weitere Forschung für den Übergang zu einer vollständig umsetzbaren technischen Lösung unerlässlich.</p>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h4 class="font-bold text-lg mb-2 text-blue-600">Netzintegration</h4>
-                        <p class="text-gray-600 text-sm">Kopplung des Modells mit Leistungsflusssimulationen, um die technische Machbarkeit zu gewährleisten und lokale Netzüberlastung zu vermeiden.</p>
+        <!-- Kapitel III: Die Nächste Grenze -->
+        <section class="mb-16" id="chapter3">
+            <div class="border-t-4 border-rose-800 pt-8">
+                <h2 class="text-3xl font-bold text-rose-800 mb-6 uppercase tracking-wide">Kapitel III: Die Nächste Grenze</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-4xl mx-auto">Über den strategischen Plan auf politischer Ebene hinaus konzentriert sich Kapitel III auf die unmittelbaren nächsten Schritte, die erforderlich sind, um dieses robuste Framework in eine umsetzbare technische Lösung auf Straßenebene für Berlins Strom- und Verkehrsnetze zu überführen.</p>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+
+                    <!-- Integration Challenge -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-400">
+                        <h4 class="text-xl font-bold mb-4 flex items-center text-indigo-700">
+                            <span class="mr-3" data-lucide="zap"></span> Netzintegration & Resilienz
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            Das aktuelle Modell ist geografisch optimal, aber stromnetzagnostisch. Zukünftige Arbeiten müssen die Ladesäulenstandorte mit <strong>Leistungsflusssimulationen</strong> koppeln, um potenzielle Engpässe im Verteilnetz zu identifizieren, insbesondere in Gebieten mit hoher Dichte neuer Ladesäulen.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                            <li>Minimierung von Spannungseinbrüchen und Maximierung der Auslastung der Speisekapazität.</li>
+                            <li>Entwicklung von V2G-Strategien (Vehicle-to-Grid), basierend auf robusten Standorten.</li>
+                        </ul>
                     </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h4 class="font-bold text-lg mb-2 text-blue-600">Feinkörnigere Gleichheit</h4>
-                        <p class="text-gray-600 text-sm">Einbeziehung sozioökonomischer Daten (Einkommen, Wohnungstyp) zur Behebung wichtiger Ungleichheiten innerhalb bestehender Bezirke.</p>
+
+                    <!-- Equity Refinement -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500">
+                        <h4 class="text-xl font-bold mb-4 flex items-center text-yellow-700">
+                            <span class="mr-3" data-lucide="users"></span> Feinkörnigere Gleichheit & Gerechtigkeit
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            Während der Gini-Index Gerechtigkeit auf Bezirksebene bot, erfordert echte urbane Gleichheit Granularität. Wir müssen <strong>sozioökonomische Indikatoren</strong> (Einkommen, Autobesitz, Wohnungstyp) auf Zensusblock-Ebene einbeziehen, um Ladewüsten für Mieter und Geringverdiener zu adressieren.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                            <li>Identifizierung von Gebieten, die auf Straßenparkplätze angewiesen sind (keine häusliche Lademöglichkeit).</li>
+                            <li>Optimierung der Platzierung für maximale <strong>soziale Zugänglichkeit</strong>.</li>
+                        </ul>
                     </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h4 class="font-bold text-lg mb-2 text-blue-600">Verhaltensmodellierung</h4>
-                        <p class="text-gray-600 text-sm">Integration dynamischer Benutzerverhaltensweisen wie adaptive Routenführung und Preissensibilität für realistischere Nachfrageprognosen.</p>
+
+                    <!-- Behavioral Dynamics -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500">
+                        <h4 class="text-xl font-bold mb-4 flex items-center text-green-700">
+                            <span class="mr-3" data-lucide="route"></span> Dynamische Verhaltensmodellierung
+                        </h4>
+                        <p class="text-gray-600 mb-4">
+                            Die aktuelle Nachfrage ist statisch. Wir müssen dynamische Nutzerverhaltensweisen integrieren, wie <strong>adaptive Routenführung</strong> (Fahrer wählen eine nicht-nächstgelegene, aber verfügbare Ladesäule) und <strong>Preiselastizität</strong>, um Nachfrageprognosen unter Betriebsbedingungen zu verfeinern.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                            <li>Simulation von Warteschlangeneffekten und Wartezeiten.</li>
+                            <li>Information dynamischer Preispolitik zur Lastverteilung.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -479,6 +510,11 @@
                 plugins: { ...mandatoryTooltip.plugins, legend: { display: false } }
             }
         });
+
+        // Ensure Lucide icons are rendered for static content, including Chapter III
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
     });
 </script>
 </body>
