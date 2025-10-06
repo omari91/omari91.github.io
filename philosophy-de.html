@@ -1,340 +1,360 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Clifford Omari Ondieki">
     <title>Philosophie - Clifford Omari Ondieki | Engineering Empathy & Smart Laziness</title>
-    <meta name="description" content="Entdecken Sie die Kernphilosophien, die Innovationen antreiben: Engineering Empathy, Smart Laziness und die Prinzipien, die technische Exzellenz mit menschlicher Zielsetzung verbinden.">
+
+    <!-- Microsoft Clarity Tracking Code -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t41xxbb71x");
+    </script>
+
+    <meta name="description" content="Entdecken Sie die Kernphilosophien, die Innovation antreiben: Engineering Empathy, Smart Laziness und die Prinzipien, die technische Exzellenz mit menschlichem Sinn verbinden.">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Konfiguriere Tailwind mit Inter-Schriftart und benutzerdefinierten Farben -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-indigo': '#695aa6', // Hauptakzentfarbe
-                        'secondary-purple': '#764ba2',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
+    <!-- Lucide Icons CDN -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Make Lucide globally available -->
+    <script type="module">
+        import * as lucide from 'https://unpkg.com/lucide@latest';
+        window.lucide = lucide;
     </script>
+
+    <!-- Custom Configuration -->
     <style>
-        /* Füge die Inter-Schriftart hinzu */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-        /* Benutzerdefinierte Stile, die nicht einfach in Tailwind-Klassen abgebildet werden können */
-        .language-toggle {
-            transition: all 0.3s ease;
-        }
-        .language-toggle.active {
-            background: theme('colors.primary-indigo');
-            color: white !important;
+        :root {
+            --primary-indigo: #303F9F;
+            --neutral-charcoal: #374151;
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
         }
 
-        /* Ermöglicht die Verwendung von Font Awesome für Icons, ähnlich wie ti-icons */
-        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
+        }
+
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
-<body class="bg-white font-sans text-gray-800">
+<body class="bg-gray-50 antialiased">
 
-    <!-- Navigationsleiste -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Markenname/Logo -->
-                <a class="flex items-center text-xl font-bold text-primary-indigo" href="index-de.html">
-                    <span class="mr-2 h-7 w-7 rounded-full bg-gray-200 flex items-center justify-center text-sm font-semibold">CO</span>
-                    Clifford Ondieki <span class="ml-2 text-sm font-normal text-gray-500 hidden md:inline">| Hybrid Innovator</span>
-                </a>
-                
-                <!-- Hauptnavigation & Sprachumschalter (Desktop) -->
-                <div class="hidden md:flex md:space-x-4 items-center">
-                    <a href="index-de.html" class="text-gray-600 hover:text-primary-indigo px-3 py-2 rounded-md text-sm font-medium">Startseite</a>
-                    <a href="about-de.html" class="text-gray-600 hover:text-primary-indigo px-3 py-2 rounded-md text-sm font-medium">Über mich</a>
-                    <a href="projects-de.html" class="text-gray-600 hover:text-primary-indigo px-3 py-2 rounded-md text-sm font-medium">Projekte</a>
-                    <a href="philosophy-de.html" class="text-white bg-primary-indigo px-3 py-2 rounded-md text-sm font-medium language-toggle active" aria-current="page">Philosophie</a>
-                    <a href="blog-de.html" class="text-gray-600 hover:text-primary-indigo px-3 py-2 rounded-md text-sm font-medium">Einblicke</a>
-                    <a href="contact-de.html" class="text-gray-600 hover:text-primary-indigo px-3 py-2 rounded-md text-sm font-medium">Verbinden</a>
-                    
-                    <!-- Sprachumschalter -->
-                    <div class="ml-4 flex space-x-2 p-1 bg-gray-100 rounded-full">
-                        <a href="philosophy.html" class="language-toggle text-sm px-3 py-1 rounded-full text-gray-600 hover:text-white hover:bg-primary-indigo">EN</a>
-                        <a href="philosophy-de.html" class="language-toggle active text-sm px-3 py-1 rounded-full">DE</a>
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index-de.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Startseite</a>
+                <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Über mich</a>
+                <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projekte</a>
+                <a href="philosophy-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Philosophie</a>
+                <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Kontakt</a>
+
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="philosophy.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
+                    <a href="philosophy-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
+            <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+            <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projekte</a>
+            <a href="philosophy-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Philosophie</a>
+            <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="philosophy.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
+                <a href="philosophy-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            Engineering Empathy
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            Die Philosophie, die technische Exzellenz mit menschlichem Sinn verbindet
+        </p>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Core Philosophy -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Meine Kernphilosophie: Engineering Empathy</h2>
+                    <p class="text-lg text-gray-700 mb-4">Die robustesten Systeme – ob technisch oder menschlich – werden mit tiefem Verständnis und Engagement für gemeinsame Ziele aufgebaut.</p>
+                    <p class="text-gray-600 mb-4">Diese Philosophie entspringt der Überzeugung, dass wahre Innovation mehr als technisches Fachwissen erfordert. Sie verlangt die Fähigkeit, den menschlichen Kontext hinter jedem Problem zu verstehen, die kulturellen Nuancen zu erfassen, die bestimmen, wie Lösungen aufgenommen werden, und die Empathie, Systeme zu bauen, die echten menschlichen Bedürfnissen dienen.</p>
+                    <p class="text-gray-600">Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit – Prinzipien, die meinen Ansatz für den Aufbau hochleistungsfähiger, empathischer Teams zutiefst prägen. In jedem Projekt frage ich nicht nur „Wie können wir das bauen?", sondern „Wie wird dies den Menschen dienen, die es am meisten brauchen?"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Laziness -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">"Smart Laziness" & Systemische Effizienz</h2>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center mb-6">
+                        <p class="text-xl italic text-indigo-800 font-medium">"Wahre Effizienz bedeutet nicht, härter zu arbeiten – es bedeutet, Systeme so tief zu verstehen, dass man die eine Änderung identifizieren kann, die zehn Probleme beseitigt."</p>
+                    </div>
+                    <p class="text-gray-600 mb-6">Dieses Prinzip, gelernt beim Debuggen von Transformatoren in Kenia, leitet heute meinen Ansatz für alles – von Code-Architektur bis hin zu Teamdynamiken. Es geht nicht darum, Arbeit zu vermeiden; es geht darum, mit systemischer Intelligenz zu arbeiten.</p>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Wie Smart Laziness funktioniert:</h4>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-rose-800 pl-4">
+                            <h5 class="font-semibold text-gray-800">Tiefes Systemverständnis</h5>
+                            <p class="text-gray-600">Bevor ich optimiere, investiere ich Zeit, um wirklich zu verstehen, wie alle Komponenten interagieren</p>
+                        </div>
+                        <div class="border-l-4 border-rose-800 pl-4">
+                            <h5 class="font-semibold text-gray-800">Fokus auf Grundursachen</h5>
+                            <p class="text-gray-600">Anstatt Symptome zu beheben, identifiziere ich die zugrunde liegenden Muster, die mehrere Probleme erzeugen</p>
+                        </div>
+                        <div class="border-l-4 border-rose-800 pl-4">
+                            <h5 class="font-semibold text-gray-800">Hebelpunkte</h5>
+                            <p class="text-gray-600">Ich suche nach minimalen Änderungen, die maximale positive Auswirkungen auf das gesamte System haben</p>
+                        </div>
+                        <div class="border-l-4 border-rose-800 pl-4">
+                            <h5 class="font-semibold text-gray-800">Automatisierungs-Philosophie</h5>
+                            <p class="text-gray-600">Wenn ich etwas mehr als zweimal tun muss, baue ich ein System, das es automatisch erledigt</p>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Mobiles Menü (Hamburger-Icon) -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary-indigo focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
-                        <span class="sr-only">Navigationsmenü umschalten</span>
-                        <i class="fas fa-bars h-6 w-6"></i>
-                    </button>
-                </div>
             </div>
-        </div>
-        
-        <!-- Mobiles Menüinhalt -->
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index-de.html" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
-                <a href="about-de.html" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
-                <a href="projects-de.html" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Projekte</a>
-                <a href="philosophy-de.html" class="text-white bg-primary-indigo block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Philosophie</a>
-                <a href="blog-de.html" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Einblicke</a>
-                <a href="contact-de.html" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Verbinden</a>
-                <!-- Mobile Sprachumschalter -->
-                <div class="flex space-x-2 p-2 mt-2 border-t border-gray-100">
-                    <a href="philosophy.html" class="language-toggle text-sm px-3 py-1 rounded-full text-gray-600 bg-white border border-gray-300">EN</a>
-                    <a href="philosophy-de.html" class="language-toggle active text-sm px-3 py-1 rounded-full text-white bg-primary-indigo">DE</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Hero Sektion: Ingenieurs-Empathie -->
-    <section class="bg-gradient-to-br from-indigo-600 to-secondary-purple text-white py-20 md:py-32">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">Ingenieurs-Empathie</h2>
-            <p class="text-xl sm:text-2xl font-light opacity-90">Die Philosophie, die technische Exzellenz mit menschlicher Zielsetzung verbindet</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Kernphilosophie Abschnitt -->
-    <section class="py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-xl border-l-4 border-primary-indigo transition duration-300 hover:shadow-2xl">
-                <h2 class="text-3xl font-bold mb-4 text-gray-900">Meine Kernphilosophie: Ingenieurs-Empathie</h2>
-                <p class="text-lg lead mb-4 text-gray-700">Die robustesten Systeme – ob technisch oder menschlich – werden mit tiefem Verständnis und einem Engagement für ein gemeinsames Ziel aufgebaut.</p>
-                <p class="mb-4">Diese Philosophie entspringt der Überzeugung, dass wahre Innovation mehr als nur technisches Fachwissen erfordert. Sie verlangt die Fähigkeit, den menschlichen Kontext hinter jedem Problem zu verstehen, die kulturellen Nuancen, die die Aufnahme von Lösungen prägen, und die Empathie, Systeme zu bauen, die echten menschlichen Bedürfnissen dienen.</p>
-                <p>Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit – Prinzipien, die meinen Ansatz beim Aufbau leistungsstarker, empathischer Teams zutiefst beeinflussen. Bei jedem Projekt frage ich nicht nur „Wie können wir das bauen?“, sondern „Wie wird dies den Menschen dienen, die es am dringendsten brauchen?“</p>
+        <!-- Guiding Principles -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Leitprinzipien</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Smarte Faulheit Abschnitt -->
-    <section class="bg-gray-50 py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-xl border-l-4 border-primary-indigo transition duration-300 hover:shadow-2xl">
-                <h2 class="text-3xl font-bold mb-6 text-gray-900">„Smarte Faulheit“ & Systemische Effizienz</h2>
-                
-                <!-- Zitat Box -->
-                <div class="bg-indigo-50 p-6 rounded-lg mb-6 text-center italic text-xl text-primary-indigo border-l-4 border-indigo-400">
-                    „Wahre Effizienz bedeutet nicht, härter zu arbeiten – sie bedeutet, Systeme so tief zu verstehen, dass man die eine Änderung identifizieren kann, die zehn Probleme beseitigt.“
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
+                    <h4 class="text-xl font-semibold mb-3">Scheitern ist Neuausrichtung</h4>
+                    <p class="opacity-90">Jeder Rückschlag enthält wertvolle Informationen über bessere Wege nach vorn. Ich habe gelernt, schnell zu scheitern, schneller zu lernen und jeden Fehler als strategische Information für zukünftigen Erfolg zu nutzen.</p>
                 </div>
 
-                <p class="mb-6">Dieses Prinzip, das ich beim Debuggen von Transformatoren in Kenia gelernt habe, leitet mich heute bei allem, von der Code-Architektur bis zur Teamdynamik. Es geht nicht darum, Arbeit zu vermeiden; es geht darum, mit systemischer Intelligenz zu arbeiten.</p>
-                
-                <h4 class="text-xl font-semibold mb-3 text-gray-900">Wie smarte Faulheit funktioniert:</h4>
-                <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                    <li><strong class="text-gray-900">Tiefes Systemverständnis:</strong> Bevor ich optimiere, investiere ich Zeit, um wirklich zu verstehen, wie alle Komponenten interagieren.</li>
-                    <li><strong class="text-gray-900">Fokus auf die Grundursache:</strong> Anstatt Symptome zu beheben, identifiziere ich die zugrunde liegenden Muster, die mehrere Probleme verursachen.</li>
-                    <li><strong class="text-gray-900">Hebelpunkte:</strong> Ich suche nach minimalen Änderungen, die maximale positive Auswirkungen auf das gesamte System haben.</li>
-                    <li><strong class="text-gray-900">Automatisierungsphilosophie:</strong> Wenn ich etwas mehr als zweimal tun muss, baue ich ein System, das es automatisch erledigt.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
+                    <h4 class="text-xl font-semibold mb-3">Gemeinschaft statt Wettbewerb</h4>
+                    <p class="opacity-90">Meine kenianischen Wurzeln lehrten mich, dass nachhaltige Lösungen aus Zusammenarbeit, nicht aus Wettbewerb entstehen. Die besten Innovationen entstehen, wenn vielfältige Perspektiven sich für einen gemeinsamen Zweck vereinen.</p>
+                </div>
 
-    <!-- Leitprinzipien Abschnitt -->
-    <section class="py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-10 text-gray-900">Leitprinzipien</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Prinzip 1: Scheitern ist Neuausrichtung -->
-                <div class="principle-card bg-gradient-to-tr from-primary-indigo to-secondary-purple text-white p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
-                    <i class="fas fa-redo-alt text-3xl mb-3 opacity-80"></i>
-                    <h4 class="text-xl font-semibold mb-2">Scheitern ist Neuausrichtung</h4>
-                    <p class="text-sm opacity-90">Jeder Rückschlag enthält wertvolle Informationen über bessere Wege nach vorne. Ich habe gelernt, schnell zu scheitern, schneller zu lernen und jedes Scheitern als strategische Intelligenz für zukünftigen Erfolg zu nutzen.</p>
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
+                    <h4 class="text-xl font-semibold mb-3">Stille ist Kraft</h4>
+                    <p class="opacity-90">In einer Welt ständiger Bewegung entsteht wahre Klarheit aus Stille. Ich praktiziere tägliche Reflexion und Achtsamkeit, um Perspektive zu bewahren und Entscheidungen aus einem Ort ruhiger Weisheit zu treffen.</p>
                 </div>
-                
-                <!-- Prinzip 2: Gemeinschaft über Wettbewerb -->
-                <div class="principle-card bg-gradient-to-tr from-primary-indigo to-secondary-purple text-white p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
-                    <i class="fas fa-handshake text-3xl mb-3 opacity-80"></i>
-                    <h4 class="text-xl font-semibold mb-2">Gemeinschaft über Wettbewerb</h4>
-                    <p class="text-sm opacity-90">Meine kenianischen Wurzeln lehrten mich, dass nachhaltige Lösungen aus Zusammenarbeit, nicht aus Wettbewerb, entstehen. Die besten Innovationen entstehen, wenn vielfältige Perspektiven auf ein gemeinsames Ziel hin zusammenkommen.</p>
-                </div>
-                
-                <!-- Prinzip 3: Stille ist Kraft -->
-                <div class="principle-card bg-gradient-to-tr from-primary-indigo to-secondary-purple text-white p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
-                    <i class="fas fa-moon text-3xl mb-3 opacity-80"></i>
-                    <h4 class="text-xl font-semibold mb-2">Stille ist Kraft</h4>
-                    <p class="text-sm opacity-90">In einer Welt der ständigen Bewegung entsteht wahre Klarheit aus der Stille. Ich praktiziere tägliche Reflexion und Achtsamkeit, um die Perspektive zu bewahren und Entscheidungen aus einem Ort ruhiger Weisheit zu treffen.</p>
-                </div>
-                
-                <!-- Prinzip 4: Systemisches Denken -->
-                <div class="principle-card bg-gradient-to-tr from-primary-indigo to-secondary-purple text-white p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
-                    <i class="fas fa-project-diagram text-3xl mb-3 opacity-80"></i>
-                    <h4 class="text-xl font-semibold mb-2">Systemisches Denken</h4>
-                    <p class="text-sm opacity-90">Ob beim Debuggen von Stromnetzen oder der Optimierung von Teamdynamiken, ich gehe Herausforderungen an, indem ich die Zusammenhänge und Rückkopplungsschleifen verstehe, die emergente Verhaltensweisen erzeugen.</p>
+
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
+                    <h4 class="text-xl font-semibold mb-3">Systemdenken</h4>
+                    <p class="opacity-90">Ob ich Stromnetze debugge oder Teamdynamiken optimiere, ich gehe Herausforderungen an, indem ich die Verbindungen und Rückkopplungsschleifen verstehe, die emergente Verhaltensweisen erzeugen.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Tägliche Reflexionen Abschnitt -->
-    <section class="bg-gray-50 py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-10 text-gray-900">Tägliche Reflexionen</h2>
-            
-            <!-- Reflexionskarte 1: Über Selbstführung -->
-            <div class="bg-white p-6 rounded-xl shadow-lg mb-6 border-l-4 border-primary-indigo">
-                <h4 class="text-xl font-semibold mb-2 text-primary-indigo">Über Selbstführung</h4>
-                <p class="italic text-lg text-gray-700 mb-3">„Wo verhandle ich noch mit meinem alten Ich?“</p>
-                <p class="text-gray-600">Diese Frage leitet meine tägliche Praxis der Selbstführung. Wachstum erfordert eine ehrliche Einschätzung, wo ich an Mustern festhalte, die meiner Entwicklung oder meiner Fähigkeit, anderen effektiv zu dienen, nicht mehr dienlich sind.</p>
-            </div>
-            
-            <!-- Reflexionskarte 2: Über technische Meisterschaft -->
-            <div class="bg-white p-6 rounded-xl shadow-lg mb-6 border-l-4 border-primary-indigo">
-                <h4 class="text-xl font-semibold mb-2 text-primary-indigo">Über technische Meisterschaft</h4>
-                <p class="italic text-lg text-gray-700 mb-3">„Beim Debuggen von Transformatoren lernte ich systemisches Denken; meine Tochter großzuziehen lehrte mich Geduld und die tiefgreifende Einfachheit der Präsenz.“</p>
-                <p class="text-gray-600">Die wichtigsten Lektionen kommen oft aus unerwarteten Quellen. Technische Fähigkeiten und Lebensweisheit befruchten sich gegenseitig und schaffen so umfassendere Lösungen.</p>
-            </div>
-            
-            <!-- Reflexionskarte 3: Über Innovation -->
-            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-indigo">
-                <h4 class="text-xl font-semibold mb-2 text-primary-indigo">Über Innovation</h4>
-                <p class="italic text-lg text-gray-700 mb-3">„Agil ist nicht nur für Software – es ist auch für Stromnetze. Es geht darum, sich anzupassen, zu lernen und Klarheit über Chaos zu finden.“</p>
-                <p class="text-gray-600">Die Prinzipien, die die Softwareentwicklung effektiv machen – Iteration, Feedback-Schleifen, kontinuierliche Verbesserung – gelten für jedes komplexe System, einschließlich persönliches Wachstum und organisatorische Veränderungen.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Daily Reflections -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Tägliche Reflexionen</h2>
 
-    <!-- Rotierende Einsicht Abschnitt -->
-    <section class="py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-10 text-gray-900">Gelebte Philosophie</h2>
-            <div class="rotating-insight bg-gradient-to-r from-primary-indigo to-secondary-purple text-white p-8 rounded-xl shadow-xl text-center transition duration-500 ease-in-out" id="rotatingInsight">
-                <!-- Inhalt wird durch JS eingefügt -->
-            </div>
-        </div>
-    </section>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-400">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Über Selbstführung</h4>
+                        <p class="text-gray-600 italic mb-3">"Wo verhandle ich noch mit meinem alten Ich?"</p>
+                        <p class="text-gray-600">Diese Frage leitet meine tägliche Praxis der Selbstführung. Wachstum erfordert eine ehrliche Bewertung, wo ich an Mustern festhalte, die meiner Entwicklung oder meiner Fähigkeit, anderen effektiv zu dienen, nicht mehr dienlich sind.</p>
+                    </div>
 
-    <!-- Philosophie in der Praxis Abschnitt -->
-    <section class="bg-gray-50 py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-xl border-l-4 border-primary-indigo">
-                <h2 class="text-3xl font-bold mb-4 text-gray-900">Philosophie in der Praxis</h2>
-                <p class="text-lg lead mb-6 text-gray-700">Dies sind nicht nur abstrakte Konzepte – es sind die praktischen Rahmenwerke, die ich täglich in der technischen Führung und Innovation nutze.</p>
-                
-                <h4 class="text-xl font-semibold mb-2 text-primary-indigo">In der technischen Architektur:</h4>
-                <p class="mb-4">Ich entwerfe Systeme mit Empathie für die Entwickler, die sie warten werden, die Benutzer, die von ihnen abhängig sein werden, und die Geschäftsinteressenten, die sie verstehen müssen.</p>
-                
-                <h4 class="text-xl font-semibold mb-2 text-primary-indigo">In der Teamführung:</h4>
-                <p class="mb-4">Ich schaffe psychologische Sicherheit, wo Scheitern als wertvolle Daten behandelt wird, wo unterschiedliche Perspektiven aktiv gesucht werden und wo individuelles Wachstum dem kollektiven Erfolg dient.</p>
-                
-                <h4 class="text-xl font-semibold mb-2 text-primary-indigo">In der Problemlösung:</h4>
-                <p class="mb-4">Ich investiere Zeit, um den menschlichen Kontext hinter technischen Herausforderungen zu verstehen und sicherzustellen, dass Lösungen nicht nur das unmittelbare Problem, sondern auch die zugrunde liegenden Bedürfnisse ansprechen.</p>
-                
-                <h4 class="text-xl font-semibold mb-2 text-primary-indigo">In der Innovation:</h4>
-                <p>Ich überbrücke verschiedene Wissensbereiche – bringe Stromnetzprinzipien in Gesundheitssysteme ein, wende kenianische Gemeinschaftswerte in Berliner Tech-Teams an – denn die besten Innovationen entstehen an der Schnittstelle verschiedener Welten.</p>
-            </div>
-        </div>
-    </section>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-400">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Über technische Meisterschaft</h4>
+                        <p class="text-gray-600 italic mb-3">"Transformatoren zu debuggen lehrte mich systemisches Denken; eine Tochter großzuziehen lehrte mich Geduld und die tiefgreifende Einfachheit der Präsenz."</p>
+                        <p class="text-gray-600">Die wichtigsten Lektionen kommen oft aus unerwarteten Quellen. Technische Fähigkeiten und Lebensweisheit informieren einander auf Weisen, die vollständigere Lösungen schaffen.</p>
+                    </div>
 
-    <!-- CTA-Abschnitt: Zielgerichtet bauen -->
-    <section class="bg-primary-indigo text-white py-16 md:py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Lassen Sie uns zielgerichtet bauen</h2>
-            <p class="text-xl font-light mb-8">Wenn diese Prinzipien bei Ihnen Anklang finden, lassen Sie uns erkunden, wie wir Lösungen schaffen können, die sowohl technische Exzellenz als auch menschliches Gedeihen fördern.</p>
-            <a href="contact-de.html" class="inline-block bg-white text-primary-indigo font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
-                Ein bedeutungsvolles Gespräch beginnen
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-400">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Über Innovation</h4>
+                        <p class="text-gray-600 italic mb-3">"Agile ist nicht nur für Software – es ist auch für Stromnetze. Es geht darum, sich anzupassen, zu lernen und Klarheit über Chaos zu finden."</p>
+                        <p class="text-gray-600">Die Prinzipien, die Softwareentwicklung effektiv machen – Iteration, Feedbackschleifen, kontinuierliche Verbesserung – gelten für jedes komplexe System, einschließlich persönliches Wachstum und organisatorischer Wandel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Living Philosophy -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Gelebte Philosophie</h2>
+                <div id="rotatingInsight" class="bg-gradient-to-br from-rose-800 to-indigo-900 p-8 rounded-xl text-white text-center">
+                    <h4 class="text-xl font-semibold mb-3">Reflexion des Tages</h4>
+                    <p class="opacity-90">"Verstehen ist wichtiger als Auswendiglernen" – Die Weisheit meines Großvaters, die weiterhin prägt, wie ich Lernen, Problemlösung und Innovation angehe.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy in Practice -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Philosophie in der Praxis</h2>
+                    <p class="text-lg text-gray-700 mb-6">Dies sind nicht nur abstrakte Konzepte – sie sind die praktischen Frameworks, die ich täglich in technischer Führung und Innovation verwende.</p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">In der technischen Architektur:</h4>
+                            <p class="text-gray-600">Ich entwerfe Systeme mit Empathie für die Entwickler, die sie warten werden, die Benutzer, die auf sie angewiesen sein werden, und die Business-Stakeholder, die sie verstehen müssen.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">In der Teamführung:</h4>
+                            <p class="text-gray-600">Ich schaffe psychologische Sicherheit, wo Scheitern als wertvolle Daten behandelt wird, wo vielfältige Perspektiven aktiv gesucht werden und wo individuelles Wachstum kollektivem Erfolg dient.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Bei der Problemlösung:</h4>
+                            <p class="text-gray-600">Ich investiere Zeit, um den menschlichen Kontext hinter technischen Herausforderungen zu verstehen und sicherzustellen, dass Lösungen nicht nur das unmittelbare Problem, sondern die zugrunde liegenden Bedürfnisse adressieren.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Bei der Innovation:</h4>
+                            <p class="text-gray-600">Ich überbrücke verschiedene Wissensbereiche – bringe Stromnetz-Prinzipien in Gesundheitssysteme, wende kenianische Gemeinschaftswerte auf Berliner Tech-Teams an – weil die besten Innovationen an der Schnittstelle verschiedener Welten entstehen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Call to Action -->
+<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Lasst uns mit Sinn bauen</h2>
+        <p class="text-lg font-light mb-6">Wenn diese Prinzipien bei Ihnen Anklang finden, lassen Sie uns erkunden, wie wir Lösungen schaffen können, die sowohl technischer Exzellenz als auch menschlichem Gedeihen dienen.</p>
+        <a href="contact-de.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Ein bedeutungsvolles Gespräch beginnen
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profil" aria-label="LinkedIn Profil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
             </a>
         </div>
-    </section>
 
-    <!-- Fußzeile -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-white transition duration-300" title="LinkedIn Profil">
-                    <i class="fab fa-linkedin-in text-2xl"></i>
-                </a>
-                <!-- Weitere Social-Media-Links könnten hier hinzugefügt werden -->
-            </div>
-            <p class="mb-2 text-sm">
-                Copyright <span id="current-year"></span> &copy; Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.
-            </p>
-            <p class="text-xs space-x-4">
-                <a href="privacy-policy-de.html" class="text-gray-400 hover:text-white">Datenschutzerklärung</a>
-                <span>|</span>
-                <a href="contact-de.html" class="text-gray-400 hover:text-white">Kontakt</a>
-            </p>
-        </div>
-    </footer>
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Technologie mit Sinn verbinden — Wandel vorantreiben, ein System nach dem anderen.
+        </p>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy-de.html" class="text-gray-500 hover:text-white transition">Datenschutz</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact-de.html" class="text-gray-500 hover:text-white transition">Kontakt</a>
+        </p>
+    </div>
+</footer>
 
-    <!-- JavaScript für die Funktionalität -->
-    <script>
-        // Setze das aktuelle Jahr in der Fußzeile
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
+
+        // Dynamic Copyright Year
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Rotierende Einsichten Funktionalität
+        // Rotating insights functionality
         const insights = [
             {
-                title: "Die heutige Reflexion",
-                text: "„Verständnis ist wichtiger als Auswendiglernen“ – Die Weisheit meines Großvaters, die weiterhin prägt, wie ich an Lernen, Problemlösung und Innovation herangehe."
+                title: "Reflexion des Tages",
+                text: "Verstehen ist wichtiger als Auswendiglernen – Die Weisheit meines Großvaters, die weiterhin prägt, wie ich Lernen, Problemlösung und Innovation angehe."
             },
             {
                 title: "Über Systeme",
-                text: "Jedes komplexe System hat einfache Prinzipien im Kern. Die Kunst besteht darin, diese Prinzipien zu finden und um sie herum zu entwerfen, anstatt gegen sie anzukämpfen."
+                text: "Jedes komplexe System hat einfache Prinzipien in seinem Kern. Die Kunst besteht darin, diese Prinzipien zu finden und um sie herum zu gestalten, anstatt gegen sie zu kämpfen."
             },
             {
                 title: "Über Wachstum",
-                text: "Wo verhandle ich noch mit meinem alten Ich? Diese tägliche Frage hält mich ehrlich in Bezug auf die Muster, die ich loslassen muss, um auf meinem höchsten Niveau zu dienen."
+                text: "Wo verhandle ich noch mit meinem alten Ich? Diese tägliche Frage hält mich ehrlich über die Muster, die ich loslassen muss, um auf meinem höchsten Niveau zu dienen."
             },
             {
                 title: "Über Innovation",
-                text: "Die besten Lösungen entstehen oft durch die Überbrückung verschiedener Welten – das Denken des Stromnetzes in die Softwarearchitektur zu bringen oder kenianische Gemeinschaftswerte in Berliner Tech-Teams."
+                text: "Die besten Lösungen entstehen oft durch das Überbrücken verschiedener Welten – Stromnetz-Denken in Software-Architektur bringen oder kenianische Gemeinschaftswerte in Berliner Tech-Teams."
             },
             {
                 title: "Über Führung",
-                text: "Wahre Führung bedeutet nicht, alle Antworten zu haben – sie bedeutet, die Bedingungen zu schaffen, unter denen die besten Antworten aus der kollektiven Weisheit des Teams entstehen können."
+                text: "Wahre Führung bedeutet nicht, alle Antworten zu haben – es bedeutet, die Bedingungen zu schaffen, unter denen die besten Antworten aus der kollektiven Weisheit des Teams entstehen können."
             }
         ];
 
-        let currentInsightIndex = 0;
+        let currentInsight = 0;
 
         function rotateInsight() {
             const insightElement = document.getElementById('rotatingInsight');
-            
-            // Führe Fade-Out durch (optional, für bessere UX)
-            insightElement.style.opacity = 0;
+            currentInsight = (currentInsight + 1) % insights.length;
 
-            setTimeout(() => {
-                currentInsightIndex = (currentInsightIndex + 1) % insights.length;
-                const currentInsight = insights[currentInsightIndex];
-                
-                // Aktualisiere Inhalt
-                insightElement.innerHTML = `
-                    <h4 class="text-xl font-semibold mb-3">${currentInsight.title}</h4>
-                    <p class="mb-0">${currentInsight.text}</p>
-                `;
-                
-                // Führe Fade-In durch
-                insightElement.style.opacity = 1;
-
-            }, 500); // Warte, bis der Fade-Out abgeschlossen ist
+            insightElement.innerHTML = `
+                <h4 class="text-xl font-semibold mb-3">${insights[currentInsight].title}</h4>
+                <p class="opacity-90">${insights[currentInsight].text}</p>
+            `;
         }
-        
-        // Initialer Aufruf, um den ersten Einblick zu laden
-        window.onload = function() {
-            rotateInsight(); // Lade den ersten Einblick sofort
-            // Rotiere Einblicke alle 10 Sekunden
-            setInterval(rotateInsight, 10000); 
-        };
-        
-        // Mobile Menü Umschaltung
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
 
-    </script>
-
+        // Rotate insights every 10 seconds
+        setInterval(rotateInsight, 10000);
+    });
+</script>
 </body>
 </html>
