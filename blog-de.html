@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
     <title>Einblicke - Clifford Omari Ondieki | Ingenieurweisheit & Innovationsgedanken</title>
     
@@ -16,356 +16,255 @@
     </script>
     
     <meta name="description" content="Entdecken Sie Einblicke in Ingenieuremphatie, smarte Faulheit und die Verbindung von technischer Exzellenz mit menschlichem Sinn. Gedanken eines Hybridinnovators.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
     
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/heatmap-styles.css">
-    
+    <!-- Custom Configuration -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-indigo: #303F9F; 
+            --neutral-charcoal: #374151; 
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
+        }
+
         body {
-            padding-top: 80px;
-        }
-
-        .blog-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
         }
         
-        .blog-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-left: 4px solid #695aa6;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            /* German text wrapping with minimal hyphenation */
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: manual;
-            -webkit-hyphens: manual;
-            -ms-hyphens: manual;
-        }
-        
-        .blog-card h2,
-        .blog-card h3,
-        .blog-card h4 {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: manual;
-            -webkit-hyphens: manual;
-            -ms-hyphens: manual;
-            line-height: 1.3;
-        }
-
-        .blog-card p {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: manual;
-            -webkit-hyphens: manual;
-            -ms-hyphens: manual;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .blog-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-tag {
-            background: #695aa6;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
-        
-        .featured-post {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-left: none;
-        }
-        
-        .coming-soon {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
-            text-align: center;
-            padding: 3rem 2rem;
-            color: #6c757d;
-        }
-        
-        .linkedin-cta {
-            background: #0077b5;
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .linkedin-cta a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        /* Added for tags positioning */
-        .blog-card-content {
-            flex-grow: 1;
-        }
-        
-        .blog-tags-container {
-            padding-top: 1rem;
-            margin-top: auto;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .featured-post .blog-tags-container {
-            border-top: 1px solid rgba(255,255,255,0.1);
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 antialiased">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid-Innovator</small></span>
-        </a>
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index-de.html">Startseite</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-de.html">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects-de.html">Projekte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="philosophy-de.html">Philosophie</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="blog-de.html">Einblicke</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact-de.html">Vernetzen</a>
-                </li>
-            </ul>
-            <div class="navbar-language-toggles ml-auto">
-                <a href="blog.html" class="nav-link language-toggle en">EN</a>
-                <a href="blog-de.html" class="nav-link language-toggle de active">DE</a>
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index-de.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Startseite</a>
+                <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Über mich</a>
+                <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projekte</a>
+                <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Philosophie</a>
+                <a href="blog-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Einblicke</a>
+                <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Kontakt</a>
+                
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="blog.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
+                    <a href="blog-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
+            <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+            <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projekte</a>
+            <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Philosophie</a>
+            <a href="blog-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Einblicke</a>
+            <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="blog.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
+                <a href="blog-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
             </div>
         </div>
     </div>
 </nav>
 
-<section class="blog-hero">
-    <div class="container text-center">
-        <h2 class="display-4 mb-2"style="color: #fff;">Einblicke & Reflexionen</h2>
-        <p class="lead"style="color: #fff;">Gedanken zu Ingenieuremphatie, smarter Faulheit und der Verbindung von Welten durch Innovation</p>
+<!-- Hero Section -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            Einblicke & Reflexionen
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            Gedanken zu Ingenieuremphatie, smarter Faulheit und der Verbindung von Welten durch Innovation
+        </p>
     </div>
-</section>
+</header>
 
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="blog-card featured-post">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Vorgestellt • Ingenieurphilosophie</div>
-                        <h2 class="mb-3">Ingenieuremphatie: Warum die besten Systeme mit Herz gebaut werden</h2>
-                        <p class="lead">Die robustesten Systeme – ob technisch oder menschlich – werden mit tiefem Verständnis und einem Engagement für gemeinsame Ziele gebaut.</p>
-                        <p>Nach Jahren des Debuggings von 11-kV-Transformatoren in Kenia bis zu SaaS-Architekturen in Berlin habe ich gelernt, dass die elegantesten Lösungen entstehen, wenn wir technische Herausforderungen mit aufrichtiger Empathie für die Menschen angehen, die mit unseren Systemen interagieren werden.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Ingenieurphilosophie</span>
-                        <span class="blog-tag">Führung</span>
-                        <span class="blog-tag">Systemdenken</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Demnächst • Domänenübergreifende Innovation</div>
-                        <h3 class="mb-3">Wie Kenias Stromnetz mich lehrte, SaaS-Funktionen zu priorisieren</h3>
-                        <p>Was ich über Lastverteilung von Kenias Strominfrastruktur gelernt habe und wie diese Prinzipien jetzt meinen Ansatz zur Produktpriorisierung und Systemarchitektur leiten.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Systemdenken</span>
-                        <span class="blog-tag">Produktstrategie</span>
-                        <span class="blog-tag">Kultureller Einfluss</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Demnächst • Leben & Technologie</div>
-                        <h3 class="mb-3">Elternschaft & Python: Das Debuggen der Algorithmen des Lebens</h3>
-                        <p>Reflexionen darüber, wie das Aufziehen einer Tochter mich Geduld, Präsenz und die tiefgreifende Einfachheit gelehrt hat, die oft den komplexesten Systemen zugrunde liegt.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Persönliches Wachstum</span>
-                        <span class="blog-tag">Ingenieuremphatie</span>
-                        <span class="blog-tag">Lebenslektionen</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Main Content -->
+<main class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Demnächst • Karriereweg</div>
-                        <h3 class="mb-3">Von 11-kV-Leitungen zu SaaS-Pipelines: Die Reise eines Systemdenkers</h3>
-                        <p>Eine detaillierte Fallstudie, wie sich elektrotechnische Prinzipien auf Softwarearchitekturen übertragen lassen und warum das Verständnis von Stromnetzen Sie zu einem besseren Produktmanager macht.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Karriereweg</span>
-                        <span class="blog-tag">Technische Führung</span>
-                        <span class="blog-tag">Domänenübergreifendes Lernen</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Demnächst • Innovationsphilosophie</div>
-                        <h3 class="mb-3">Smarte Faulheit: Die Kunst der systemischen Effizienz</h3>
-                        <p>Warum die besten Ingenieure strategisch faul sind und wie das tiefe Verständnis von Systemen, um eine Änderung vorzunehmen, die zehn Probleme beseitigt, der ultimative Produktivitätshack ist.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Produktivität</span>
-                        <span class="blog-tag">Systemoptimierung</span>
-                        <span class="blog-tag">Ingenieurphilosophie</span>
+        <!-- Featured Post -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white shadow-xl">
+                    <div class="text-sm opacity-80 mb-2">Vorgestellt • Ingenieurphilosophie</div>
+                    <h2 class="text-3xl font-bold mb-4">Ingenieuremphatie: Warum die besten Systeme mit Herz gebaut werden</h2>
+                    <p class="text-lg mb-4 opacity-90">Die robustesten Systeme – ob technisch oder menschlich – werden mit tiefem Verständnis und einem Engagement für gemeinsame Ziele gebaut.</p>
+                    <p class="opacity-80">Nach Jahren des Debuggings von 11-kV-Transformatoren in Kenia bis zu SaaS-Architekturen in Berlin habe ich gelernt, dass die elegantesten Lösungen entstehen, wenn wir technische Herausforderungen mit aufrichtiger Empathie für die Menschen angehen, die mit unseren Systemen interagieren werden.</p>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="px-3 py-1 text-xs font-medium bg-white/20 text-white rounded-full">Ingenieurphilosophie</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white/20 text-white rounded-full">Führung</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white/20 text-white rounded-full">Systemdenken</span>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Demnächst • Kultureller Brückenbau</div>
-                        <h3 class="mb-3">Ubuntu nach Berlin bringen: Gemeinschaftswerte in Tech-Teams</h3>
-                        <p>Wie kenianische Gemeinschaftsprinzipien stärkere, widerstandsfähigere Tech-Teams schaffen und warum Zusammenarbeit den Wettbewerb beim Aufbau nachhaltiger Innovation übertrifft.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Teamführung</span>
-                        <span class="blog-tag">Kulturelle Vielfalt</span>
-                        <span class="blog-tag">Gemeinschaftsaufbau</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Demnächst • Technischer Deep Dive</div>
-                        <h3 class="mb-3">Prädiktive Wartung: Wenn KI auf Geothermie trifft</h3>
-                        <p>Ein technischer Deep Dive in den Aufbau von Machine-Learning-Systemen für industrielle Anwendungen und die Lehren aus der Vorhersage von Geräteausfällen in rauen Umgebungen.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Machine Learning</span>
-                        <span class="blog-tag">Industrielles IoT</span>
-                        <span class="blog-tag">Erneuerbare Energien</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="linkedin-cta">
-                    <h3 class="mb-3">Folgen Sie meiner Reise auf LinkedIn</h3>
-                    <p class="mb-4">Während ich diesen Blog entwickle, teile ich regelmäßig Einblicke, Reflexionen und Gedanken hinter den Kulissen auf meinem LinkedIn-Profil. Folgen Sie mir dort für Echtzeit-Updates zu Ingenieuremphatie, smarter Faulheit und der Schnittstelle von Technologie und Zweck.</p>
-                    <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" class="btn btn-light btn-lg">
-                       <i class="ti-linkedin mr-2" style="color: #000;"></i>
-<span style="color: #000;">Connect on LinkedIn</span>
+        <!-- Blog Posts Grid -->
+        <section class="mb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="text-sm text-gray-500 mb-2">Demnächst • Domänenübergreifende Innovation</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Wie Kenias Stromnetz mich lehrte, SaaS-Funktionen zu priorisieren</h3>
+                    <p class="text-gray-600 mb-6">Was ich über Lastverteilung von Kenias Strominfrastruktur gelernt habe und wie diese Prinzipien jetzt meinen Ansatz zur Produktpriorisierung und Systemarchitektur leiten.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Systemdenken</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Produktstrategie</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Kultureller Einfluss</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="text-sm text-gray-500 mb-2">Demnächst • Leben & Technologie</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Elternschaft & Python: Das Debuggen der Algorithmen des Lebens</h3>
+                    <p class="text-gray-600 mb-6">Reflexionen darüber, wie das Aufziehen einer Tochter mich Geduld, Präsenz und die tiefgreifende Einfachheit gelehrt hat, die oft den komplexesten Systemen zugrunde liegt.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Persönliches Wachstum</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Ingenieuremphatie</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Lebenslektionen</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="text-sm text-gray-500 mb-2">Demnächst • Karriereweg</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Von 11-kV-Leitungen zu SaaS-Pipelines: Die Reise eines Systemdenkers</h3>
+                    <p class="text-gray-600 mb-6">Eine detaillierte Fallstudie, wie sich elektrotechnische Prinzipien auf Softwarearchitekturen übertragen lassen und warum das Verständnis von Stromnetzen Sie zu einem besseren Produktmanager macht.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Karriereweg</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Technische Führung</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Domänenübergreifendes Lernen</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="text-sm text-gray-500 mb-2">Demnächst • Innovationsphilosophie</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Smarte Faulheit: Die Kunst der systemischen Effizienz</h3>
+                    <p class="text-gray-600 mb-6">Warum die besten Ingenieure strategisch faul sind und wie das tiefe Verständnis von Systemen, um eine Änderung vorzunehmen, die zehn Probleme beseitigt, der ultimative Produktivitätshack ist.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Produktivität</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Systemoptimierung</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Ingenieurphilosophie</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LinkedIn CTA -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-blue-600 p-8 rounded-xl text-white text-center">
+                    <h3 class="text-2xl font-bold mb-4">Folgen Sie meiner Reise auf LinkedIn</h3>
+                    <p class="text-lg mb-6 opacity-90">Während ich diesen Blog entwickle, teile ich regelmäßig Einblicke, Reflexionen und Gedanken hinter den Kulissen auf meinem LinkedIn-Profil. Folgen Sie mir dort für Echtzeit-Updates zu Ingenieuremphatie, smarter Faulheit und der Schnittstelle von Technologie und Zweck.</p>
+                    <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" class="inline-block py-3 px-6 rounded-full bg-white text-blue-600 font-bold hover:bg-gray-100 transition duration-300">
+                        Connect on LinkedIn
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="blog-card text-center">
-                    <h3 class="mb-3">Bleiben Sie auf dem Laufenden</h3>
-                    <p class="mb-4">Erfahren Sie als Erster, wenn neue Einblicke veröffentlicht werden. Ich werde Gedanken zu Ingenieuremphatie, domänenübergreifender Innovation und dem Aufbau von Systemen teilen, die sowohl technische Exzellenz als auch menschlichen Sinn dienen.</p>
-                    <form class="form-inline justify-content-center">
-                        <div class="form-group mb-2 mr-3">
-                            <input type="email" class="form-control" placeholder="Geben Sie Ihre E-Mail-Adresse ein" style="width: 300px;">
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-2">Benachrichtigen Sie mich</button>
-                        <small class="text-muted">Kein Spam, nur sinnvolle Einblicke. Abbestellen jederzeit möglich.</small>
-                    </form> 
+        <!-- Newsletter Signup -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Bleiben Sie auf dem Laufenden</h3>
+                    <p class="text-gray-600 mb-6">Erfahren Sie als Erster, wenn neue Einblicke veröffentlicht werden. Ich werde Gedanken zu Ingenieuremphatie, domänenübergreifender Innovation und dem Aufbau von Systemen teilen, die sowohl technische Exzellenz als auch menschlichen Sinn dienen.</p>
+                    <form class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <input type="email" placeholder="Geben Sie Ihre E-Mail-Adresse ein" class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 w-full sm:w-80">
+                        <button type="submit" class="py-3 px-6 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-300 w-full sm:w-auto">
+                            Benachrichtigen Sie mich
+                        </button>
+                    </form>
+                    <p class="text-sm text-gray-500 mt-4">Kein Spam, nur sinnvolle Einblicke. Abbestellen jederzeit möglich.</p>
                 </div>
             </div>
-        </div>
+        </section>
+    </div>
+</main>
+
+<!-- Call to Action -->
+<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Bereit, etwas Wirkungsvolles zu schaffen?</h2>
+        <p class="text-lg font-light mb-6">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich wichtig sind.</p>
+        <a href="contact-de.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Lasst uns gemeinsam Veränderungen vorantreiben ⚡
+        </a>
     </div>
 </section>
 
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
-    <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profil">
-                <i class="ti-linkedin"></i>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profil" aria-label="LinkedIn Profil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.</a>
+        
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.
         </p>
-        <p class="mt-2">
-            <a href="privacy-policy-de.html" style="color: #fff; font-size: 0.9rem;">Datenschutzerklärung</a> | 
-            <a href="contact-de.html" style="color: #fff; font-size: 0.9rem;">Kontakt</a>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy-de.html" class="text-gray-500 hover:text-white transition">Datenschutzerklärung</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact-de.html" class="text-gray-500 hover:text-white transition">Kontakt</a>
         </p>
     </div>
 </footer>
 
-<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/attention-heatmap.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
 
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
+
+        // Dynamic Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+</script>
 </body>
 </html>

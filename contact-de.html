@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
     <title>Vernetzen - Clifford Omari Ondieki | Lassen Sie uns gemeinsam den Wandel vorantreiben</title>
     
@@ -16,164 +16,128 @@
     </script>
     
     <meta name="description" content="Bereit, Systeme zu bauen, die sowohl technische Exzellenz als auch menschlichen Sinn dienen? Lassen Sie uns gemeinsam sinnvolle Innovation schaffen.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
     
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/heatmap-styles.css">
-    
+    <!-- Custom Configuration -->
     <style>
-        body {
-            padding-top: 80px;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-indigo: #303F9F; 
+            --neutral-charcoal: #374151; 
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
         }
 
-        .contact-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 7rem 0;
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
         }
         
-        .contact-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            margin: 1rem 0;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-method:hover {
-            background: #695aa6;
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        .contact-method i {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            width: 30px;
-        }
-        
-        .contact-method a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        .form-control:focus {
-            border-color: #695aa6;
-            box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
-        }
-        
-        .btn-primary {
-            background-color: #695aa6;
-            border-color: #695aa6;
-        }
-        
-        .btn-primary:hover {
-            background-color: #5a4a8a;
-            border-color: #5a4a8a;
-        }
-        
-        .collaboration-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .berlin-focus {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #695aa6;
-            margin: 1.5rem 0;
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 antialiased">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid-Innovator</small></span>
-        </a>
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index-de.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index-de.html">Startseite</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-de.html">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects-de.html">Projekte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="philosophy-de.html">Philosophie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog-de.html">Einblicke</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="contact-de.html">Vernetzen</a>
-                </li>
-            </ul>
-            <div class="navbar-language-toggles ml-auto">
-                <a href="contact.html" class="nav-link language-toggle en">EN</a>
-                <a href="contact-de.html" class="nav-link language-toggle de active">DE</a>
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Startseite</a>
+                <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Über mich</a>
+                <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projekte</a>
+                <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Philosophie</a>
+                <a href="blog-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Einblicke</a>
+                <a href="contact-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Vernetzen</a>
+                
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="contact.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
+                    <a href="contact-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
+            <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+            <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projekte</a>
+            <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Philosophie</a>
+            <a href="blog-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Einblicke</a>
+            <a href="contact-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Vernetzen</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="contact.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
+                <a href="contact-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
             </div>
         </div>
     </div>
 </nav>
 
-<section class="contact-hero">
-    <div class="container text-center">
-        <h2 class="display-4 mb-2"style="color: #fff;">Lassen Sie uns gemeinsam den Wandel vorantreiben ⚡</h2>
-        <p class="lead"style="color: #fff;">Bereit, Systeme zu bauen, die sowohl technische Exzellenz als auch menschlichen Sinn dienen?</p>
+<!-- Hero Section -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            Lassen Sie uns gemeinsam den Wandel vorantreiben ⚡
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            Bereit, Systeme zu bauen, die sowohl technische Exzellenz als auch menschlichen Sinn dienen?
+        </p>
     </div>
-</section>
+</header>
 
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="contact-card">
-                    <h2 class="text-center mb-4">Beginnen Sie ein bedeutungsvolles Gespräch</h2>
-                    <p class="text-center mb-4">Ob Sie an innovativen Projekten zusammenarbeiten, technische Herausforderungen besprechen oder erkunden möchten, wie wir wirklich wichtige Lösungen schaffen können – ich würde mich freuen, von Ihnen zu hören.</p>
+<!-- Main Content -->
+<main class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Contact Form -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Beginnen Sie ein bedeutungsvolles Gespräch</h2>
+                    <p class="text-center text-gray-600 mb-8">Ob Sie an innovativen Projekten zusammenarbeiten, technische Herausforderungen besprechen oder erkunden möchten, wie wir wirklich wichtige Lösungen schaffen können – ich würde mich freuen, von Ihnen zu hören.</p>
                     
-                    <form id="contactForm" action="https://formspree.io/f/xoqooyrz" method="post">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="name">Ihr Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Geben Sie Ihren Namen ein" required>
+                    <form id="contactForm" action="https://formspree.io/f/xoqooyrz" method="post" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Ihr Name</label>
+                                <input type="text" id="name" name="name" placeholder="Geben Sie Ihren Namen ein" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="email">Ihre E-Mail-Adresse</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Geben Sie Ihre E-Mail-Adresse ein" required>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Ihre E-Mail-Adresse</label>
+                                <input type="email" id="email" name="email" placeholder="Geben Sie Ihre E-Mail-Adresse ein" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="subject">Betreff</label>
-                            <select class="form-control" id="subject" name="subject" required>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Betreff</label>
+                            <select id="subject" name="subject" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
                                 <option value="">Wählen Sie ein Thema</option>
                                 <option value="Technical Program Manager Rolle">Technical Program Manager Rolle</option>
                                 <option value="Projektzusammenarbeit">Projektzusammenarbeit</option>
@@ -183,162 +147,179 @@
                                 <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Ihre Nachricht</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Erzählen Sie mir von Ihrem Projekt, Ihrer Herausforderung oder wie wir zusammenarbeiten könnten..." required></textarea>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Ihre Nachricht</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Erzählen Sie mir von Ihrem Projekt, Ihrer Herausforderung oder wie wir zusammenarbeiten könnten..." required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-lg">Nachricht senden</button>
+                            <button type="submit" class="py-3 px-8 rounded-full bg-indigo-800 text-white font-bold text-lg shadow-xl hover:bg-indigo-700 transition duration-300">
+                                Nachricht senden
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="text-center mb-5">Weitere Kontaktmöglichkeiten</h2>
+        <!-- Contact Methods -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Weitere Kontaktmöglichkeiten</h2>
                 
-                <div class="contact-method">
-                    <i class="ti-email"></i>
-                    <div>
-                        <strong>E-Mail</strong><br>
-                        <a href="mailto:engomari6@gmail.com">engomari6@gmail.com</a>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">📧 E-Mail</h4>
+                        <a href="mailto:engomari6@gmail.com" class="text-indigo-700 hover:text-indigo-900 font-medium">engomari6@gmail.com</a>
                     </div>
-                </div>
-                
-                <div class="contact-method">
-                    <i class="ti-mobile"></i>
-                    <div>
-                        <strong>Telefon</strong><br>
-                        <a href="tel:+254110548473">+254 110 548 473</a><br>
-                        <a href="tel:+4915755653967">+49 1575 5653967</a>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">📱 Telefon</h4>
+                        <div class="space-y-1">
+                            <div><a href="tel:+254110548473" class="text-indigo-700 hover:text-indigo-900 font-medium">+254 110 548 473</a></div>
+                            <div><a href="tel:+4915755653967" class="text-indigo-700 hover:text-indigo-900 font-medium">+49 1575 5653967</a></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="contact-method">
-                    <i class="ti-linkedin"></i>
-                    <div>
-                        <strong>LinkedIn</strong><br>
-                        <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank">Beruflich vernetzen</a>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">💼 LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" class="text-indigo-700 hover:text-indigo-900 font-medium">Beruflich vernetzen</a>
                     </div>
-                </div>
-                
-                <div class="contact-method">
-                    <i class="ti-location-pin"></i>
-                    <div>
-                        <strong>Standort</strong><br>
-                        Berlin, Deutschland (Offen für weltweite Remote-Zusammenarbeit)
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">📍 Standort</h4>
+                        <p class="text-gray-600">Berlin, Deutschland (Offen für weltweite Remote-Zusammenarbeit)</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="berlin-focus">
-                    <h4>🇩🇪 Möglichkeiten in Berlin</h4>
-                    <p>Derzeit suche ich nach Technical Program Manager- und Product Leadership-Rollen in Berlins Energie-Tech-, Erneuerbare-Energien-Sektoren und innovativen Startups. Ich bin besonders an Positionen interessiert, in denen ich technische Exzellenz mit zielgerichteter Innovation verbinden kann.</p>
-                    <p><strong>Ideale Rollen:</strong> Technical Program Manager, Senior Product Manager, Engineering Team Lead, Innovationsberater</p>
-                    <p><strong>Interessengebiete:</strong> Energie-Tech, Erneuerbare Energien, HealthTech, FinTech, SaaS-Plattformen</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="collaboration-card">
-                    <h3 class="mb-4">Was wir gemeinsam aufbauen könnten</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>🚀 Innovationsprojekte</h5>
-                            <p>Domänenübergreifende Lösungen, die Ingenieurprinzipien auf unerwartete Herausforderungen anwenden</p>
+        <!-- Berlin Opportunities -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-amber-50 p-8 rounded-xl border-l-4 border-amber-400">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">🇩🇪 Möglichkeiten in Berlin</h3>
+                    <p class="text-gray-700 mb-4">Derzeit suche ich nach Technical Program Manager- und Product Leadership-Rollen in Berlins Energie-Tech-, Erneuerbare-Energien-Sektoren und innovativen Startups. Ich bin besonders an Positionen interessiert, in denen ich technische Exzellenz mit zielgerichteter Innovation verbinden kann.</p>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p><strong>Ideale Rollen:</strong> Technical Program Manager, Senior Product Manager, Engineering Team Lead, Innovationsberater</p>
                         </div>
-                        <div class="col-md-6">
-                            <h5>🌍 Wirkungsvolle Technologie</h5>
-                            <p>Systeme, die sowohl technische Exzellenz als auch menschliches Gedeihen dienen</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5>🎓 Mentoring & Bildung</h5>
-                            <p>Förderung von MINT-Bildung und Entwicklung technischer Führungskräfte</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5>🤝 Kultureller Brückenbau</h5>
-                            <p>Einführung vielfältiger Perspektiven in europäische Tech-Ökosysteme</p>
+                        <div>
+                            <p><strong>Interessengebiete:</strong> Energie-Tech, Erneuerbare Energien, HealthTech, FinTech, SaaS-Plattformen</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h3 class="mb-4">Mein Engagement für Sie</h3>
-                <p class="lead">Ich lese jede Nachricht persönlich und antworte innerhalb von 24-48 Stunden. Wenn Ihr Projekt oder Ihre Gelegenheit zum Aufbau von Systemen passt, die sowohl technische Exzellenz als auch menschlichen Sinn dienen, lassen Sie uns gemeinsam erkunden, wie wir etwas Bedeutungsvolles schaffen können.</p>
-                <p><em>"Die besten Innovationen entstehen, wenn verschiedene Perspektiven zu einem gemeinsamen Ziel zusammenkommen."</em></p>
+        <!-- Collaboration Opportunities -->
+        <section class="mb-16">
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white text-center">
+                    <h3 class="text-2xl font-bold mb-6">Was wir gemeinsam aufbauen könnten</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div>
+                            <h5 class="text-lg font-semibold mb-2">🚀 Innovationsprojekte</h5>
+                            <p class="text-sm opacity-90">Domänenübergreifende Lösungen, die Ingenieurprinzipien auf unerwartete Herausforderungen anwenden</p>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold mb-2">🌍 Wirkungsvolle Technologie</h5>
+                            <p class="text-sm opacity-90">Systeme, die sowohl technische Exzellenz als auch menschliches Gedeihen dienen</p>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold mb-2">🎓 Mentoring & Bildung</h5>
+                            <p class="text-sm opacity-90">Förderung von MINT-Bildung und Entwicklung technischer Führungskräfte</p>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold mb-2">🤝 Kultureller Brückenbau</h5>
+                            <p class="text-sm opacity-90">Einführung vielfältiger Perspektiven in europäische Tech-Ökosysteme</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Commitment -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Mein Engagement für Sie</h3>
+                <p class="text-lg text-gray-600 mb-4">Ich lese jede Nachricht persönlich und antworte innerhalb von 24-48 Stunden. Wenn Ihr Projekt oder Ihre Gelegenheit zum Aufbau von Systemen passt, die sowohl technische Exzellenz als auch menschlichen Sinn dienen, lassen Sie uns gemeinsam erkunden, wie wir etwas Bedeutungsvolles schaffen können.</p>
+                <p class="text-base italic text-gray-500">"Die besten Innovationen entstehen, wenn verschiedene Perspektiven zu einem gemeinsamen Ziel zusammenkommen."</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Call to Action -->
+<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Bereit, etwas Wirkungsvolles zu schaffen?</h2>
+        <p class="text-lg font-light mb-6">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich wichtig sind.</p>
+        <a href="mailto:engomari6@gmail.com" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Das Gespräch beginnen
+        </a>
     </div>
 </section>
 
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
-    <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profil">
-                <i class="ti-linkedin"></i>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profil" aria-label="LinkedIn Profil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.</a>
+        
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.
         </p>
-        <p class="mt-2">
-            <a href="privacy-policy-de.html" style="color: #fff; font-size: 0.9rem;">Datenschutzerklärung</a> | 
-            <a href="contact-de.html" style="color: #fff; font-size: 0.9rem;">Kontakt</a>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy-de.html" class="text-gray-500 hover:text-white transition">Datenschutzerklärung</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact-de.html" class="text-gray-500 hover:text-white transition">Kontakt</a>
         </p>
     </div>
 </footer>
 
-<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/attention-heatmap.js"></script>
-
 <script>
-// Formularübermittlung
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    submitBtn.textContent = 'Wird gesendet...';
-    submitBtn.disabled = true;
-    
-    // Zurücksetzen nach 3 Sekunden (Formular wird über Formspree gesendet)
-    setTimeout(() => {
-        submitBtn.textContent = 'Nachricht gesendet!';
-        setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    }, 1000);
-});
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
 
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
+
+        // Dynamic Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Wird gesendet...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.textContent = 'Nachricht gesendet!';
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }, 1000);
+        });
+    });
+</script>
 </body>
 </html>

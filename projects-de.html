@@ -2,519 +2,389 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Projekte - Clifford Omari Ondieki | The Journey of a Hybrid Innovator</title>
+    <title>Projekte - Clifford Omari Ondieki | Ingenieurwesen mit Wirkung</title>
+    
+    <!-- Microsoft Clarity Tracking Code -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t41xxbb71x");
+    </script>
+    
     <meta name="description" content="Von der Neugier in Kenia zur Innovation in Berlin - entdecken Sie die Geschichte des hybriden Innovators, der technische Exzellenz mit einer lösungsorientierten Vision verbindet.">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/projects-custom.css">
-    <link rel="stylesheet" href="assets/css/heatmap-styles.css">
-    
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-</head>
-<body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="projects.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="Clifford Ondieki Profile Icon">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
-        </a>
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="philosophy.html">Philosophy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Insights</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <div class="navbar-language-toggles ml-auto">
-                <a href="projects.html" class="nav-link language-toggle en active">EN</a>
-                <a href="projects-de.html" class="nav-link language-toggle de">DE</a>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Configuration -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-indigo: #303F9F; 
+            --neutral-charcoal: #374151; 
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
+        }
+        
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index-de.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Startseite</a>
+                <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Über mich</a>
+                <a href="projects-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Projekte</a>
+                <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Philosophie</a>
+                <a href="blog-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Einblicke</a>
+                <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Kontakt</a>
+                
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="projects.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
+                    <a href="projects-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
+            <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+            <a href="projects-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Projekte</a>
+            <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Philosophie</a>
+            <a href="blog-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Einblicke</a>
+            <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="projects.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
+                <a href="projects-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
             </div>
         </div>
     </div>
 </nav>
 
-<section class="project-hero bg-primary text-white text-center">
-    <div class="container">
-        <h2 class="display-4 mb-2">Ingenieurwesen mit Wirkung</h2>
-        <p class="lead">Projekte, die technische Exzellenz mit menschlichem Zweck verbinden</p>
+<!-- Hero Section -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            Ingenieurwesen mit Wirkung
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            Projekte, die technische Exzellenz mit menschlichem Zweck verbinden
+        </p>
     </div>
-</section>
+</header>
 
-<main class="container py-5">
-    
-    <!-- Offene Projekte Sektion -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2 class="text-center mb-4" style="color: #695aa6;">Aktuelle Innovation & Zukunftsvision</h2>
-            <p class="text-center text-muted mb-5">Technische Exzellenz mit menschenzentrierter Wirkung verbinden</p>
-        </div>
+<!-- Main Content -->
+<main class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Current Innovation Header -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">Aktuelle Innovation & Zukunftsvision</h2>
+                <p class="text-lg text-gray-600">Technische Exzellenz mit menschenzentrierter Wirkung verbinden</p>
+            </div>
+        </section>
+
+        <!-- EV Charger Project -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <div class="grid lg:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Gerechter Einsatz von EV-Ladegeräten in Berlin</h2>
+                        <p class="text-lg text-indigo-700 mb-6">Eine laufende datengesteuerte geospatiale Optimierung zur Ausbalancierung von Abdeckung und räumlicher Gerechtigkeit in der Berliner EV-Ladeinfrastruktur.</p>
+                        
+                        <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                            <h4 class="text-lg font-semibold text-rose-900 mb-2">Die Herausforderung</h4>
+                            <p class="text-gray-600 text-sm">Der Ausbau der öffentlichen Ladeinfrastruktur ist nachfrageorientiert, was zu Ungleichheiten und einer schlechteren Versorgung in weniger frequentierten Gebieten führt. Dies verlangsamt die Akzeptanz von E-Fahrzeugen in unterversorgten Bezirken.</p>
+                        </div>
+                        
+                        <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                            <h4 class="text-lg font-semibold text-teal-900 mb-2">Unsere Lösung</h4>
+                            <p class="text-gray-600 text-sm">Wir haben ein multikriterielles NSGA-II-Modell in Python implementiert, um Abdeckung und räumliche Gerechtigkeit zu optimieren. Das Modell bietet Stadtplanern datengesteuerte Strategien, die den Zugang zur Ladeinfrastruktur fairer gestalten.</p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">NSGA-II</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Geospatiale Optimierung</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Stadtplanung</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">13%</div>
+                                <p class="text-xs text-gray-500 font-medium">Reduzierung des stadtweiten Gini-Koeffizienten</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">6x</div>
+                                <p class="text-xs text-gray-500 font-medium">Mehr Ladegeräte für unterversorgte Gebiete</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">21%</div>
+                                <p class="text-xs text-gray-500 font-medium">Steigerung des lokalen Zugangs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="assets/imgs/berlin.png" alt="Berlin EV Charger Distribution" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                        <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                            <h5 class="text-lg font-bold text-gray-800 mb-2">Philosophie in Aktion</h5>
+                            <p class="text-sm text-gray-600 mb-4">Ziel ist es, die Infrastruktur strategisch zu platzieren, um gerechten Zugang und nachhaltige urbane Mobilität zu fördern. Unser Framework ermöglicht es Städten, Effizienz und Gerechtigkeit datenbasiert abzuwägen.</p>
+                            <a href="ev-de.html" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                Meine Arbeit erkunden
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Projects -->
+        <section class="mb-16">
+            <div class="space-y-12">
+                
+                <!-- Climate Tech Advisory -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Climate Tech Investment Advisory</h2>
+                            <p class="text-lg text-indigo-700 mb-6">Verbindung von Venture Capital-Analyse mit Infrastruktur-Deployment-Expertise zur Risikominimierung bei Climate Tech-Investitionen.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">Die Herausforderung</h4>
+                                <p class="text-gray-600 text-sm">Climate Tech steht vor einer kritischen Lücke: Investoren fehlt Deployment-Expertise, während Infrastruktur-Experten keinen Zugang zu Kapitalmärkten haben.</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">5+</div>
+                                    <p class="text-xs text-gray-500 font-medium">Startups Analysiert</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">6</div>
+                                    <p class="text-xs text-gray-500 font-medium">Investment Thesen</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">3x</div>
+                                    <p class="text-xs text-gray-500 font-medium">Analysetiefe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="assets/imgs/collaboration.png" alt="Climate Tech Advisory" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Full-Stack Vorteil</h5>
+                                <p class="text-sm text-gray-600">Die meisten Berater glänzen in einer Domäne. Ich verbinde Investitionsanalyse mit operativer Umsetzung und biete das vollständige Bild.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Tech Load Balancing -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div class="lg:order-2">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Lastverteilungssystem für Gesundheitstechnologie</h2>
+                            <p class="text-lg text-indigo-700 mb-6">Anwendung von Stromnetzprinzipien zur Optimierung der Gesundheitsdienstleistungsverteilung im ländlichen Kenia.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">Die Herausforderung</h4>
+                                <p class="text-gray-600 text-sm">Ländliche Kliniken erlebten ungleichmäßige Patientenlasten. Das führte zu langen Wartezeiten an überfüllten Standorten und ineffizienter Ressourcennutzung an anderen.</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">50%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Reduzierte Wartezeiten</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">30%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Verbesserte Ressourcennutzung</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">15k+</div>
+                                    <p class="text-xs text-gray-500 font-medium">Patienten monatlich versorgt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:order-1 flex flex-col items-center">
+                            <img src="assets/imgs/change.png" alt="Health Tech Load Balancing" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Domänenübergreifende Innovation</h5>
+                                <p class="text-sm text-gray-600">Dieses Projekt zeigt, dass Ingenieurprinzipien universell anwendbar sind. Systemisches Denken kann scheinbar unabhängige Probleme lösen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Predictive Maintenance AI -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Prädiktive Wartungs-KI für Geothermie</h2>
+                            <p class="text-lg text-indigo-700 mb-6">Ein maschinelles Lernsystem zur Vorhersage von Geräteausfällen in Geothermiekraftwerken, das die Betriebskosten senkt und die Verfügbarkeit erhöht.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">Die Herausforderung</h4>
+                                <p class="text-gray-600 text-sm">Unerwartete Geräteausfälle führten zu kostspieligen Ausfallzeiten und reduzierten die Erzeugung sauberer Energie. Traditionelle Wartung war reaktiv, nicht präventiv.</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">40%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Reduzierung der Ausfallzeiten</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">$2M</div>
+                                    <p class="text-xs text-gray-500 font-medium">Jährliche Kosteneinsparungen</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">95%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Vorhersagegenauigkeit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="assets/imgs/geothermal-drilling-activities.jpg" alt="Predictive Maintenance AI" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Wichtige Erkenntnis</h5>
+                                <p class="text-sm text-gray-600">Datengetriebene Entscheidungen schaffen menschenzentrierte Lösungen. Die Prinzipien der Effizienz und Optimierung aus diesem Projekt wende ich heute auf die Verfügbarkeit von SaaS-Produkten an.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kinangop Wind Integration -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div class="lg:order-2">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Kinangop Windkraftintegration</h2>
+                            <p class="text-lg text-indigo-700 mb-6">Eine dynamische Spannungsstabilitätsanalyse zur Integration der Kinangop Windkraft in Kenias 59-Bus-Nationalnetz.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">Die Herausforderung</h4>
+                                <p class="text-gray-600 text-sm">Kenias Stromnetz musste die intermittierende Natur der Windkraft aufnehmen, ohne die Systemstabilität zu gefährden. Dies betraf die zuverlässige Stromversorgung von Millionen von Menschen.</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">25%</div>
+                                    <p class="text-xs text-gray-500 font-medium">Verbesserte Netzstabilität</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">60MW</div>
+                                    <p class="text-xs text-gray-500 font-medium">Integrierte saubere Energie</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-800">100k+</div>
+                                    <p class="text-xs text-gray-500 font-medium">Haushalte profitiert</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:order-1 flex flex-col items-center">
+                            <img src="assets/imgs/wind farm.jpg" alt="Kinangop Wind Integration" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
+                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                                <h5 class="text-lg font-bold text-gray-800 mb-2">Wichtige Lektion</h5>
+                                <p class="text-sm text-gray-600">Resilienz gilt nicht nur für Stromnetze, sondern auch für den Zugang zu Diensten. Das hier gelernte systemische Denken prägt nun meinen Ansatz bei der Entwicklung robuster Software-Architekturen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    
-    <!-- 1. EV Charger Deployment Optimization (Current/Forward-Looking) -->
-    <section class="project-section" id="ev-charger">
-        <div class="project-card">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h2 class="project-title">Gerechter Einsatz von EV-Ladegeräten in Berlin</h2>
-                <p class="project-lead">Eine laufende datengesteuerte geospatiale Optimierung zur Ausbalancierung von Abdeckung und räumlicher Gerechtigkeit in der Berliner EV-Ladeinfrastruktur.</p>
-                
-                <div class="project-challenge">
-                    <h4>Die Herausforderung</h4>
-                    <p>Der Ausbau der öffentlichen Ladeinfrastruktur ist nachfrageorientiert, was zu Ungleichheiten und einer schlechteren Versorgung in weniger frequentierten Gebieten führt. Dies verlangsamt die Akzeptanz von E-Fahrzeugen in unterversorgten Bezirken.</p>
-                </div>
-                
-                <div class="project-solution">
-                    <h4>Unsere Lösung</h4>
-                    <p>Wir haben ein multikriterielles NSGA-II-Modell in Python implementiert, um Abdeckung und räumliche Gerechtigkeit zu optimieren. Das Modell bietet Stadtplanern datengesteuerte Strategien, die den Zugang zur Ladeinfrastruktur fairer gestalten.</p>
-                </div>
-                
-                <div class="tech-stack">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">NSGA-II</span>
-                    <span class="tech-badge">Geospatiale Optimierung</span>
-                    <span class="tech-badge bg-yellow-100 text-yellow-800">Multikriterielle Optimierung</span>
-                    <span class="tech-badge bg-red-100 text-red-800">Gini-Koeffizient</span>
-                    <span class="tech-badge bg-indigo-100 text-indigo-800">Warteschlangensimulation</span>
-                    <span class="tech-badge bg-pink-100 text-pink-800">Stadtplanung</span>
-                </div>
-                
-                <div class="impact-metrics">
-                    <div class="row">
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">13%</div>
-                        <p class="metric-description">Reduzierung des stadtweiten Gini-Koeffizienten</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">6x</div>
-                        <p class="metric-description">Mehr Ladegeräte für unterversorgte Gebiete</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">21%</div>
-                        <p class="metric-description">Steigerung des lokalen Zugangs</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-                <img src="assets/imgs/berlin.png" class="img-fluid project-image" alt="Berlin EV Charger Distribution">
-                <div class="lesson-card mt-4">
-                    <h5 class="mb-2">Philosophie in Aktion</h5>
-                    <p class="mb-0">Ziel ist es, die Infrastruktur strategisch zu platzieren, um gerechten Zugang und nachhaltige urbane Mobilität zu fördern. Unser Framework ermöglicht es Städten, Effizienz und Gerechtigkeit datenbasiert abzuwägen.</p>
-                    <div class="mt-4 d-flex justify-content-center">
-            <a href="ev-de.html" class="btn btn-primary btn-lg mr-3">Meine Arbeit erkunden</a>
-        </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <hr class="project-separator">
-
-    <!-- Climate Tech Advisory -->
-    <section class="project-section" id="climate-tech-advisory">
-        <div class="project-card">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="project-title">Climate Tech Investment Advisory</h2>
-                    <p class="project-lead">Verbindung von Venture Capital-Analyse mit Infrastruktur-Deployment-Expertise zur Risikominimierung bei Climate Tech-Investitionen.</p>
-                    
-                    <div class="project-challenge">
-                        <h4>Die Herausforderung</h4>
-                        <p>Climate Tech steht vor einer kritischen Lücke: Investoren fehlt Deployment-Expertise, während Infrastruktur-Experten keinen Zugang zu Kapitalmärkten haben. Diese Diskrepanz verlangsamt den Klimafortschritt und verschwendet vielversprechende Technologien.</p>
-                    </div>
-                    
-                    <div class="project-solution">
-                        <h4>Mein Ansatz</h4>
-                        <p>Durch mein Energy Innovation Capital Externship habe ich ein integriertes Framework entwickelt, das Startups durch mehrere Linsen bewertet: Investitionspotenzial, operative Machbarkeit und Deployment-Strategie.</p>
-                    </div>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-badge">Venture Capital-Analyse</span>
-                        <span class="tech-badge">Operative Due Diligence</span>
-                        <span class="tech-badge">Deployment-Strategie</span>
-                        <span class="tech-badge">Marktforschung</span>
-                        <span class="tech-badge">Räumliche Gerechtigkeit</span>
-                        <span class="tech-badge">Risikobewertung</span>
-                    </div>
-                    
-                    <div class="impact-metrics">
-                        <div class="row">
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">5+</div>
-                                <p class="metric-description">Startups Analysiert</p>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">6</div>
-                                <p class="metric-description">Investment Thesen</p>
-                            </div>
-                            <div class="col-md-4 metric-item">
-                                <div class="metric-number">3x</div>
-                                <p class="metric-description">Analysetiefe</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4 mt-lg-0">
-                    <img src="assets/imgs/collaboration.png" class="img-fluid project-image" alt="Climate Tech Advisory">
-                    <div class="lesson-card mt-4">
-                        <h5 class="mb-2">Full-Stack Vorteil</h5>
-                        <p class="mb-0">Die meisten Berater glänzen in einer Domäne. Ich verbinde Investitionsanalyse mit operativer Umsetzung und biete das vollständige Bild, das Investoren benötigen und Startups für den Erfolg brauchen.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="project-separator">
-
-    <!-- 2. Health Tech Load Balancing Project (Cross-domain Innovation) -->
-    <section class="project-section" id="health-tech">
-        <div class="project-card">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h2 class="project-title">Lastverteilungssystem für Gesundheitstechnologie</h2>
-                <p class="project-lead">Anwendung von Stromnetzprinzipien zur Optimierung der Gesundheitsdienstleistungsverteilung im ländlichen Kenia.</p>
-                
-                <div class="project-challenge">
-                    <h4>Die Herausforderung</h4>
-                    <p>Ländliche Kliniken erlebten ungleichmäßige Patientenlasten. Das führte zu langen Wartezeiten an überfüllten Standorten und ineffizienter Ressourcennutzung an anderen.</p>
-                </div>
-                
-                <div class="project-solution">
-                    <h4>Meine Innovation</h4>
-                    <p>Ich entwickelte einen Lastverteilungsalgorithmus, der Patientenströme wie elektrischen Strom behandelt. Das System optimiert die Ressourcennutzung in Echtzeit und minimiert Wartezeiten sowie Reiseentfernungen für Patienten.</p>
-                </div>
-                
-                <div class="tech-stack">
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">MongoDB</span>
-                    <span class="tech-badge">Lastverteilungsalgorithmen</span>
-                    <span class="tech-badge">Geospatiale Analyse</span>
-                    <span class="tech-badge">Echtzeit-Analytik</span>
-                </div>
-                
-                <div class="impact-metrics">
-                    <div class="row">
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">50%</div>
-                        <p class="metric-description">Reduzierte Wartezeiten</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">30%</div>
-                        <p class="metric-description">Verbesserte Ressourcennutzung</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">15k+</div>
-                        <p class="metric-description">Patienten monatlich versorgt</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-                <img src="assets/imgs/change.png" class="img-fluid project-image" alt="Health Tech Load Balancing">
-                <div class="lesson-card mt-4">
-                    <h5 class="mb-2">Domänenübergreifende Innovation</h5>
-                    <p class="mb-0">Dieses Projekt zeigt, dass Ingenieurprinzipien universell anwendbar sind. Systemisches Denken kann scheinbar unabhängige Probleme lösen, von Stromnetzen bis zur Gesundheitsversorgung.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <hr class="project-separator">
-
-    <!-- 3. Predictive Maintenance AI Project (Technical Excellence) -->
-    <section class="project-section" id="predictive-ai">
-        <div class="project-card">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h2 class="project-title">Prädiktive Wartungs-KI für Geothermie</h2>
-                <p class="project-lead">Ein maschinelles Lernsystem zur Vorhersage von Geräteausfällen in Geothermiekraftwerken, das die Betriebskosten senkt und die Verfügbarkeit erhöht.
-                    <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank">Vollständige Dokumentation anzeigen</a>.
-                </p>
-                
-                <div class="project-challenge">
-                    <h4>Die Herausforderung</h4>
-                    <p>Unerwartete Geräteausfälle führten zu kostspieligen Ausfallzeiten und reduzierten die Erzeugung sauberer Energie. Traditionelle Wartung war reaktiv, nicht präventiv.</p>
-                </div>
-                
-                <div class="project-solution">
-                    <h4>Meine Lösung</h4>
-                    <p>Ich entwickelte eine KI-gestützte Lösung, die Sensordaten analysiert, um Muster zu erkennen, die Ausfällen vorausgehen. Dies ermöglicht eine proaktive Wartung und reduziert ungeplante Ausfallzeiten drastisch.</p>
-                </div>
-                
-                <div class="tech-stack">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">TensorFlow</span>
-                    <span class="tech-badge">Zeitreihenanalyse</span>
-                    <span class="tech-badge">Datenvisualisierung</span>
-                </div>
-                
-                <div class="impact-metrics">
-                    <div class="row">
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">40%</div>
-                        <p class="metric-description">Reduzierung der Ausfallzeiten</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">$2M</div>
-                        <p class="metric-description">Jährliche Kosteneinsparungen</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">95%</div>
-                        <p class="metric-description">Vorhersagegenauigkeit</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-                <img src="assets/imgs/geothermal-drilling-activities.jpg" class="img-fluid project-image" alt="Predictive Maintenance AI">
-                <div class="lesson-card mt-4">
-                    <h5 class="mb-2">Wichtige Erkenntnis</h5>
-                    <p class="mb-0">Datengetriebene Entscheidungen schaffen menschenzentrierte Lösungen. Die Prinzipien der Effizienz und Optimierung aus diesem Projekt wende ich heute auf die Verfügbarkeit von SaaS-Produkten an.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <hr class="project-separator">
-
-    <!-- 4. Kinangop Wind Integration Project (Foundational Excellence) -->
-    <section class="project-section" id="kinangop">
-        <div class="project-card">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h2 class="project-title">Kinangop Windkraftintegration</h2>
-                <p class="project-lead">Eine dynamische Spannungsstabilitätsanalyse zur Integration der Kinangop Windkraft in Kenias 59-Bus-Nationalnetz.
-                    <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank">Lesen Sie den technischen Bericht</a>.
-                </p>
-                
-                <div class="project-challenge">
-                    <h4>Die Herausforderung</h4>
-                    <p>Kenias Stromnetz musste die intermittierende Natur der Windkraft aufnehmen, ohne die Systemstabilität zu gefährden. Dies betraf die zuverlässige Stromversorgung von Millionen von Menschen.</p>
-                </div>
-                
-                <div class="project-solution">
-                    <h4>Mein Ansatz</h4>
-                    <p>Ich entwickelte eine umfassende dynamische Spannungsstabilitätsanalyse mit DIgSILENT PowerFactory, die das gesamte Stromsystem simulierte, um Spannungsfluktuationen zu modellieren und zu entschärfen.</p>
-                </div>
-                
-                <div class="tech-stack">
-                    <span class="tech-badge">DIgSILENT PowerFactory</span>
-                    <span class="tech-badge">Integration erneuerbarer Energien</span>
-                    <span class="tech-badge">Netzstabilität</span>
-                    <span class="tech-badge">Gitterstabilitätsmodellierung</span>
-                </div>
-                
-                <div class="impact-metrics">
-                    <div class="row">
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">25%</div>
-                        <p class="metric-description">Verbesserte Netzstabilität</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">60MW</div>
-                        <p class="metric-description">Integrierte saubere Energie</p>
-                    </div>
-                    <div class="col-md-4 metric-item">
-                        <div class="metric-number">100k+</div>
-                        <p class="metric-description">Haushalte profitiert</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-                <img src="assets/imgs/wind farm.jpg" class="img-fluid project-image" alt="Kinangop Wind Integration">
-                <div class="lesson-card mt-4">
-                    <h5 class="mb-2">Wichtige Lektion</h5>
-                    <p class="mb-0">Resilienz gilt nicht nur für Stromnetze, sondern auch für den Zugang zu Diensten. Das hier gelernte systemische Denken prägt nun meinen Ansatz bei der Entwicklung robuster Software-Architekturen.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Premium/Geschützte Projekte Sektion -->
-    <div class="row mt-5 mb-4">
-        <div class="col-12">
-            <hr class="project-separator">
-            <h2 class="text-center mb-4" style="color: #695aa6;">Premium-Fallstudien</h2>
-            <p class="text-center text-muted mb-5">Fortgeschrittene Projekte und sensible Implementierungen - vollständige Details auf Anfrage verfügbar</p>
-        </div>
-    </div>
-
-    <!-- Geschütztes Projekt 1: Erweiterte Netzoptimierung -->
-    <section class="project-section gated-project">
-        <div class="project-card gated-card">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="gated-overlay">
-                        <div class="gated-content">
-                            <h2 class="project-title">Erweiterte Netzoptimierung mit KI-gestützter Lastprognose</h2>
-                            <p class="project-lead">Eine umfassende Smart-Grid-Lösung mit Machine-Learning-Algorithmen für prädiktives Lastmanagement in Kenias nationaler Strominfrastruktur.</p>
-                            
-                            <div class="project-teaser">
-                                <h4>Projekt-Highlights</h4>
-                                <ul>
-                                    <li>Netzinstabilitätsvorfälle um <strong>32%</strong> reduziert</li>
-                                    <li>Lastprognosegenauigkeit auf <strong>94,7%</strong> verbessert</li>
-                                    <li>In <strong>15 Hauptumspannwerken</strong> eingesetzt</li>
-                                    <li>Integration in bestehende SCADA-Systeme</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">TensorFlow</span>
-                                <span class="tech-badge">LSTM-Netzwerke</span>
-                                <span class="tech-badge">SCADA-Integration</span>
-                                <span class="tech-badge">Echtzeit-Analytik</span>
-                            </div>
-                            
-                            <div class="gated-cta">
-                                <p class="gated-message">
-                                    <i class="ti-lock"></i>
-                                    <strong>Vollständige Fallstudie auf Anfrage verfügbar</strong><br>
-                                    <small>Enthält technische Architektur, Implementierungsdetails und Leistungsanalyse</small>
-                                </p>
-                                <a href="contact-de.html" class="btn btn-primary btn-lg">Vollständige Fallstudie anfordern</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4 mt-lg-0">
-                    <div class="gated-preview">
-                        <img src="assets/imgs/Data-Driven.png" class="img-fluid project-image" alt="Erweiterte Netzoptimierung Vorschau">
-                        <div class="preview-overlay">
-                            <div class="preview-content">
-                                <i class="ti-eye"></i>
-                                <p>Vorschau verfügbar</p>
-                                <small>Hover für Details</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Geschütztes Projekt 2: Industrielle IoT-Plattform -->
-    <section class="project-section gated-project">
-        <div class="project-card gated-card">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="gated-overlay">
-                        <div class="gated-content">
-                            <h2 class="project-title">Industrielle IoT-Plattform für Fertigungsexzellenz</h2>
-                            <p class="project-lead">Unternehmenstaugliche IoT-Lösung für Echtzeit-Überwachung und Optimierung von Fertigungsprozessen in mehreren Anlagen.</p>
-                            
-                            <div class="project-teaser">
-                                <h4>Wichtige Erfolge</h4>
-                                <ul>
-                                    <li>Gesamtanlageneffektivität um <strong>28%</strong> gesteigert</li>
-                                    <li>Ungeplante Ausfallzeiten um <strong>45%</strong> reduziert</li>
-                                    <li><strong>500+ Sensoren</strong> in 3 Anlagen verbunden</li>
-                                    <li>Echtzeit-Dashboard mit prädiktiven Warnungen</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="tech-stack">
-                                <span class="tech-badge">Node.js</span>
-                                <span class="tech-badge">InfluxDB</span>
-                                <span class="tech-badge">MQTT</span>
-                                <span class="tech-badge">Docker</span>
-                                <span class="tech-badge">Grafana</span>
-                            </div>
-                            
-                            <div class="gated-cta">
-                                <p class="gated-message">
-                                    <i class="ti-lock"></i>
-                                    <strong>Detaillierter Implementierungsleitfaden auf Anfrage verfügbar</strong><br>
-                                    <small>Enthält Systemarchitektur, Sensorintegration und ROI-Analyse</small>
-                                </p>
-                                <a href="contact-de.html" class="btn btn-primary btn-lg">Implementierungsdetails anfordern</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4 mt-lg-0">
-                    <div class="gated-preview">
-                        <img src="assets/imgs/collaboration.png" class="img-fluid project-image" alt="Industrielle IoT-Plattform Vorschau">
-                        <div class="preview-overlay">
-                            <div class="preview-content">
-                                <i class="ti-eye"></i>
-                                <p>Vorschau verfügbar</p>
-                                <small>Hover für Details</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </main>
 
-<section class="section bg-primary text-white text-center">
-    <div class="container">
-        <h2 class="mb-4">Bereit, etwas Wirkungsvolles zu schaffen?</h2>
-         <p class="lead mb-4" style="color: #fff;">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich wichtig sind.</p>
-        <a href="contact.html" class="btn btn-light btn-lg">Lasst uns gemeinsam Veränderungen vorantreiben ⚡</a>
+<!-- Call to Action -->
+<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Bereit, etwas Wirkungsvolles zu schaffen?</h2>
+        <p class="text-lg font-light mb-6">Lassen Sie uns technische Exzellenz mit zielgerichteter Innovation verbinden, um Lösungen zu schaffen, die wirklich wichtig sind.</p>
+        <a href="contact-de.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Lasst uns gemeinsam Veränderungen vorantreiben ⚡
+        </a>
     </div>
 </section>
 
-<footer class="footer bg-primary text-white text-center py-4">
-    <div class="container">
-        <div class="social-links mb-2">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" title="LinkedIn Profile">
-                <i class="ti-linkedin"></i>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profil" aria-label="LinkedIn Profil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
             </a>
         </div>
-        <p class="mb-0">
-            Copyright <span id="year"></span> &copy;
-            <a href="#">Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.</a>
+        
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.
         </p>
-        <p class="mt-2">
-            <a href="privacy-policy-de.html" style="color: #fff; font-size: 0.9rem;">Datenschutzerklärung</a> | 
-            <a href="contact-de.html" style="color: #fff; font-size: 0.9rem;">Kontakt</a>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy-de.html" class="text-gray-500 hover:text-white transition">Datenschutzerklärung</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact-de.html" class="text-gray-500 hover:text-white transition">Kontakt</a>
         </p>
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="assets/js/attention-heatmap.js"></script>
 <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
 
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
+
+        // Dynamic Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+</script>
 </body>
 </html>

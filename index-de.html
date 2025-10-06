@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
     <title>Clifford Ondieki - Hybrid Innovator | Technical Program Manager</title>
     
@@ -16,433 +16,260 @@
     </script>
     
     <meta name="description" content="Technical Program Manager, der technische Exzellenz mit zielgerichteter Innovation verbindet. Von Kenias Stromnetzen zur Berliner Tech-Landschaft.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Font Icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap CSS -->
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/heatmap-styles.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    
-    <!-- Custom Styles for Enhanced Design -->
+    <!-- Custom Configuration -->
     <style>
-        .hero-tagline {
-            font-size: 1.5rem;
-            color: #fff;
-            background: rgba(105, 90, 166, 0.85);
-            padding: 1rem 2rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            font-weight: 500;
-            display: inline-block;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-indigo: #303F9F; 
+            --neutral-charcoal: #374151; 
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
         }
         
-        .old-language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .language-switcher a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 2px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .language-switcher a.active {
-            background: #695aa6;
-            color: white;
-        }
-        
-        .philosophy-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .story-section {
-            background: #f8f9fa;
-            padding: 4rem 0;
-            margin: 2rem 0;
-            margin-top: 40px;
-        }
-        
-        .journey-timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-        
-        .journey-item {
-            margin-bottom: 2rem;
-            padding-left: 3rem;
-            position: relative;
-        }
-        
-        .journey-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: #695aa6;
-            border-radius: 50%;
-        }
-        
-        .journey-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 12px;
-            width: 2px;
-            height: calc(100% + 1rem);
-            background: #e9ecef;
-        }
-        
-        .journey-item:last-child::after {
-            display: none;
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body id="home">
+<body class="bg-gray-50 antialiased">
 
-<!-- Enhanced Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="Logo">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
-        </a>
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Startseite</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-de.html">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects-de.html">Projekte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="philosophy-de.html">Philosophie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog-de.html">Einblicke</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact-de.html">Kontakt</a>
-                </li>
-            </ul>
-            <div class="navbar-language-toggles ml-auto">
-                <a href="index.html" class="nav-link language-toggle en">EN</a>
-                <a href="index-de.html" class="nav-link language-toggle de active">DE</a>
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index-de.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Startseite</a>
+                <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Über mich</a>
+                <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projekte</a>
+                <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Philosophie</a>
+                <a href="blog-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Einblicke</a>
+                <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Kontakt</a>
+                
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="index.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
+                    <a href="index-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Startseite</a>
+            <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+            <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projekte</a>
+            <a href="philosophy-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Philosophie</a>
+            <a href="blog-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Einblicke</a>
+            <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="index.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
+                <a href="index-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
             </div>
         </div>
     </div>
 </nav>
 
-<!-- Enhanced Hero Section -->
-<header id="home" class="header">
-    <div class="overlay"></div>
-    <div class="header-content container">
-       <h1 class="header-title">
-    Ich helfe Teams, komplexe Systeme in funktionierende Lösungen zu verwandeln
-</h1>
-<p class="lead mb-4"style="color: #212529;">
-    Ich verbinde technische Präzision mit menschlicher Empathie. Von Kenias Stromnetzen bis zur Berliner Tech-Szene entwickle ich Produkte und Programme, die echten Einfluss haben.
-</p>
-        <div class="mt-4 d-flex justify-content-center">
-            <a href="projects.html" class="btn btn-primary btn-lg mr-3">Meine Arbeit erkunden</a>
-            <a href="contact.html" class="btn btn-primary btn-lg mr-3">Lass uns gemeinsam Veränderung bewirken ⚡</a>
-        </div>
+<!-- Hero Section -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            Ich helfe Teams, komplexe Systeme in funktionierende Lösungen zu verwandeln
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            Ich verbinde technische Präzision mit menschlicher Empathie. Von Kenias Stromnetzen bis zur Berliner Tech-Szene entwickle ich Produkte und Programme, die echten Einfluss haben.
+        </p>
     </div>
 </header>
 
-<!-- Story Preview Section -->
-<section class="story-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h2 class="mb-4">Die Reise eines Hybrid-Innovators</h2>
-                <p class="lead">Mein Weg von Kenias Stromnetzen zur Berliner Tech-Landschaft war eine stetige Entwicklung - Lösungen entwickeln und Sinnhaftigkeit verkörpern.</p>
-                <p>Ich glaube, dass wahre Innovation aus dem tiefen Verständnis von Systemen entsteht, seien es elektrische Netze oder menschliche Verbindungen. Jede Herausforderung war eine Neuausrichtung zum Wachstum, jeder Rückschlag eine Lektion in Resilienz.</p>
-                <a href="about.html" class="btn btn-primary">Meine Geschichte entdecken</a>
-            </div>
-            <div class="col-lg-6">
-                <div class="philosophy-card">
-                    <h4 class="mb-3" style="color: #fff;">Engineering Empathy</h4>
-                    <p class="mb-0" style="color: #fff;">
-    "Die robustesten Systeme - ob technisch oder menschlich - werden mit tiefem Verständnis und Engagement für gemeinsame Ziele aufgebaut. Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit, Prinzipien, die meinen Ansatz für hochleistungsfähige, empathische Teams prägen."</p>
+<!-- Main Content -->
+<main class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Story Preview Section -->
+        <section class="mb-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Die Reise eines Hybrid-Innovators</h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Mein Weg von Kenias Stromnetzen zur Berliner Tech-Landschaft war eine stetige Entwicklung - Lösungen entwickeln und Sinnhaftigkeit verkörpern.
+                    </p>
+                    <p class="text-base mb-6">
+                        Ich glaube, dass wahre Innovation aus dem tiefen Verständnis von Systemen entsteht, seien es elektrische Netze oder menschliche Verbindungen. Jede Herausforderung war eine Neuausrichtung zum Wachstum, jeder Rückschlag eine Lektion in Resilienz.
+                    </p>
+                    <a href="about-de.html" class="inline-block py-3 px-6 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-300">
+                        Meine Geschichte entdecken
+                    </a>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
+                    <h4 class="text-xl font-semibold mb-3">Engineering Empathy</h4>
+                    <p class="opacity-90">
+                        "Die robustesten Systeme - ob technisch oder menschlich - werden mit tiefem Verständnis und Engagement für gemeinsame Ziele aufgebaut. Mein kenianisches Erbe betont Gemeinschaft und Zusammenarbeit, Prinzipien, die meinen Ansatz für hochleistungsfähige, empathische Teams prägen."
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Quick Highlights -->
-<section class="section">
-    <div class="container text-center">
-        <h6 class="section-title mb-6">Was mich antreibt</h6>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-card">
-                    <div class="body">
-                        <img src="assets/imgs/analytics.svg" alt="Systemdenken" class="icon">
-                        <h6 class="title">Systemdenken</h6>
-                        <p class="subtitle">Von 11kV-Stromleitungen bis SaaS-Pipelines - vernetzte Systeme zu verstehen ist meine Superkraft.</p>
-                    </div>
+        <!-- Was mich antreibt -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Was mich antreibt</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-800">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Systemdenken</h3>
+                    <p class="text-gray-600">Von 11kV-Stromleitungen bis SaaS-Pipelines - vernetzte Systeme zu verstehen ist meine Superkraft.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-800">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Kulturelle Brücke</h3>
+                    <p class="text-gray-600">Kenianische Gemeinschaftswerte im Berliner Innovationsökosystem - Zusammenarbeit vor Wettbewerb.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-800">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Sinnorientierte Innovation</h3>
+                    <p class="text-gray-600">Jede technische Lösung dient einem menschlichen Bedürfnis - dort entsteht wahre Wirkung.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="service-card">
-                    <div class="body">
-                        <img src="assets/imgs/responsive.svg" alt="Kulturelle Brücke" class="icon">
-                        <h6 class="title">Kulturelle Brücke</h6>
-                        <p class="subtitle">Kenianische Gemeinschaftswerte im Berliner Innovationsökosystem - Zusammenarbeit vor Wettbewerb.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-card">
-                    <div class="body">
-                        <img src="assets/imgs/toolbox.svg" alt="Sinnorientierte Innovation" class="icon">
-                        <h6 class="title">Sinnorientierte Innovation</h6>
-                        <p class="subtitle">Jede technische Lösung dient einem menschlichen Bedürfnis - dort entsteht wahre Wirkung.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section bg-light" id="skills-tools">
-    <div class="container text-center">
-        <h6 class="section-title mb-4">Fähigkeiten, Tools & Plattformen</h6>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <p class="section-subtitle">Eine Mischung aus technischen und beruflichen Kompetenzen.</p>
-                <div class="skills-grid">
-                    <div class="row">
-                        <!-- Technical Skills -->
-                        <div class="col-lg-6">
-                            <div class="skill-category">
-                                <h5>Technische Fähigkeiten</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="ti-check"></i> Python, JavaScript, C++</li>
-                                    <li><i class="ti-check"></i> Node.js, React, MongoDB</li>
-                                    <li><i class="ti-check"></i> DIgSILENT PowerFactory, Energiesystemanalyse</li>
-                                    <li><i class="ti-check"></i> TensorFlow, Zeitreihenanalyse, Datenvisualisierung</li>
-                                    <li><i class="ti-check"></i> Lastverteilungsalgorithmen, Echtzeit-Analytik</li>
-                                    <li><i class="ti-check"></i> AWS, Azure, GCP, Docker, Kubernetes</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Program & Professional Skills -->
-                        <div class="col-lg-6">
-                            <div class="skill-category">
-                                <h5>Programm- & Berufsfähigkeiten</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="ti-check"></i> Agile/Scrum-Methodologien</li>
-                                    <li><i class="ti-check"></i> Projekt- & Produktlebenszyklus</li>
-                                    <li><i class="ti-check"></i> Stakeholder-Management</li>
-                                    <li><i class="ti-check"></i> Systemdenken, Domänenübergreifende Innovation</li>
-                                    <li><i class="ti-check"></i> Stadtplanung, Integration erneuerbarer Energien</li>
-                                </ul>
-                            </div>
-                        </div>
+        <!-- Ausgewählte Projekte -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ausgewählte Arbeit</h2>
+                <p class="text-lg text-gray-600">Technik mit Wirkung</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="assets/imgs/wind farm.jpg" alt="Kinangop Wind Integration" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">⚡ Kinangop Windkraftintegration</h4>
+                        <p class="text-gray-600 text-sm">Netzstabilität trifft auf erneuerbare Innovation - eine Lektion in systemischer Resilienz, die heute mein SaaS-Denken prägt.</p>
                     </div>
-                    <!-- Tools & Platforms - now a central rotating element -->
-                    <div class="row mt-5">
-                        <div class="col-lg-12">
-                            <div class="tools-column">
-                                <h5>Tools & Plattformen</h5>
-                                <div class="tools-marquee">
-                                    <div class="marquee-content">
-                                        <!-- Duplicating content for seamless loop -->
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/tensorflow.svg" alt="TensorFlow logo" class="tool-logo"><span class="tool-name">TensorFlow</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/mongodb.svg" alt="MongoDB logo" class="tool-logo"><span class="tool-name">MongoDB</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/PowerFactory.svg" alt="DIgSILENT PowerFactory logo" class="tool-logo"><span class="tool-name">PowerFactory</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/slack.svg" alt="Slack logo" class="tool-logo"><span class="tool-name">Slack</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/notion.svg" alt="Notion logo" class="tool-logo"><span class="tool-name">Notion</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/Odoo.svg" alt="Odoo logo" class="tool-logo"><span class="tool-name">Odoo</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/wordpress.svg" alt="WordPress logo" class="tool-logo"><span class="tool-name">WordPress</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/illustrator.svg" alt="Adobe Illustrator logo" class="tool-logo"><span class="tool-name">Illustrator</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/photoshop.svg" alt="Adobe Photoshop logo" class="tool-logo"><span class="tool-name">Photoshop</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/canva.svg" alt="Canva logo" class="tool-logo"><span class="tool-name">Canva</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/postman.svg" alt="Postman logo" class="tool-logo"><span class="tool-name">Postman</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/hubspot.svg" alt="HubSpot logo" class="tool-logo"><span class="tool-name">HubSpot</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/metabase.svg" alt="Metabase logo" class="tool-logo"><span class="tool-name">Metabase</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/google.svg" alt="G-Suite logo" class="tool-logo"><span class="tool-name">G-Suite</span></div>
-                                      <div class="tool-logo-wrapper"><img src="assets/imgs/github.svg" alt="Github logo" class="tool-logo"><span class="tool-name">Github</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/microsoft-office-2013-logo.svg" alt="Microsoft Office logo" class="tool-logo"><span class="tool-name">Office</span></div>
-
-                                        <!-- Duplicated content for seamless loop -->
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/tensorflow.svg" alt="TensorFlow logo" class="tool-logo"><span class="tool-name">TensorFlow</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/mongodb.svg" alt="MongoDB logo" class="tool-logo"><span class="tool-name">MongoDB</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/PowerFactory.svg" alt="DIgSILENT PowerFactory logo" class="tool-logo"><span class="tool-name">PowerFactory</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/slack.svg" alt="Slack logo" class="tool-logo"><span class="tool-name">Slack</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/notion.svg" alt="Notion logo" class="tool-logo"><span class="tool-name">Notion</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/Odoo.svg" alt="Odoo logo" class="tool-logo"><span class="tool-name">Odoo</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/wordpress.svg" alt="WordPress logo" class="tool-logo"><span class="tool-name">WordPress</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/illustrator.svg" alt="Adobe Illustrator logo" class="tool-logo"><span class="tool-name">Illustrator</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/photoshop.svg" alt="Adobe Photoshop logo" class="tool-logo"><span class="tool-name">Photoshop</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/canva.svg" alt="Canva logo" class="tool-logo"><span class="tool-name">Canva</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/postman.svg" alt="Postman logo" class="tool-logo"><span class="tool-name">Postman</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/hubspot.svg" alt="HubSpot logo" class="tool-logo"><span class="tool-name">HubSpot</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/metabase.svg" alt="Metabase logo" class="tool-logo"><span class="tool-name">Metabase</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/google.svg" alt="G-Suite logo" class="tool-logo"><span class="tool-name">G-Suite</span></div>
-                                      <div class="tool-logo-wrapper"><img src="assets/imgs/github.svg" alt="Github logo" class="tool-logo"><span class="tool-name">Github</span></div>
-                                        <div class="tool-logo-wrapper"><img src="assets/imgs/microsoft-office-2013-logo.svg" alt="Microsoft Office logo" class="tool-logo"><span class="tool-name">Office</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="assets/imgs/collaboration.png" alt="Predictive Maintenance AI" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">🔧 Predictive Maintenance KI</h4>
+                        <p class="text-gray-600 text-sm">Geothermie-Optimierung, die mir zeigte, wie datengestützte Entscheidungen menschenzentrierte Lösungen schaffen.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="assets/imgs/change.png" alt="Health Tech Innovation" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">🏥 Health Tech Lastenausgleich</h4>
+                        <p class="text-gray-600 text-sm">Stromnetzprinzipien im Gesundheitswesen - Beweis, dass Engineering Empathy domänenübergreifend skaliert.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Featured Projects Preview -->
-<section class="section bg-light">
-    <div class="container text-center">
-        <p class="section-subtitle">Ausgewählte Projekte</p>
-        <h6 class="section-title mb-6">Technik mit Wirkung</h6>
-        <div class="row">
-            <div class="col-md-4">
-                <a href="projects.html#kinangop" class="portfolio-card">
-                    <img src="assets/imgs/wind farm.jpg" class="portfolio-card-img" alt="Kinangop Wind Integration">    
-                    <span class="portfolio-card-overlay">
-                        <span class="portfolio-card-caption">
-                            <h4>Kinangop Wind Integration</h4>
-                            <p class="font-weight-normal">Netzstabilität trifft auf erneuerbare Innovation - eine Lektion in systemischer Resilienz, die heute mein SaaS-Denken prägt.</p>
-                        </span>                         
-                    </span>                     
+            <div class="text-center mt-8">
+                <a href="projects-de.html" class="inline-block py-3 px-6 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-300">
+                    Alle Projekte ansehen
                 </a>
             </div>
-            <div class="col-md-4">
-                <a href="projects.html#predictive-ai" class="portfolio-card">
-                    <img class="portfolio-card-img" src="assets/imgs/collaboration.png" alt="Predictive Maintenance KI">
-                    <span class="portfolio-card-overlay">
-                        <span class="portfolio-card-caption">
-                            <h4>Predictive Maintenance KI</h4>
-                            <p class="font-weight-normal">Geothermie-Optimierung, die mir zeigte, wie datengestützte Entscheidungen menschenzentrierte Lösungen schaffen.</p>
-                        </span>                         
-                    </span>                         
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="projects.html#health-tech" class="portfolio-card">
-                    <img class="portfolio-card-img" src="assets/imgs/change.png" alt="Health Tech Innovation">    
-                    <span class="portfolio-card-overlay">
-                        <span class="portfolio-card-caption">
-                            <h4>Health Tech Lastenausgleich</h4>
-                            <p class="font-weight-normal">Stromnetzprinzipien im Gesundheitswesen - Beweis, dass Engineering Empathy domänenübergreifend skaliert.</p>
-                        </span>                         
-                    </span>                     
-                </a>
-            </div>
-        </div>
-        <div class="mt-4">
-            <a href="projects.html" class="btn btn-primary">Alle Projekte ansehen</a>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Philosophy Preview -->
-<section class="section">
-    <div class="container text-center">
-        <p class="section-subtitle">Kernüberzeugungen</p>
-        <h6 class="section-title mb-6">Meine Philosophie</h6>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="philosophy-card">
-                    <h4 class="mb-3" style="color: #fff;">"Intelligente Faulheit" & Systemeffizienz</h4>
-                    <p class="mb-3" style="color: #fff;">"Wahre Effizienz bedeutet nicht härter zu arbeiten - sondern Systeme so tief zu verstehen, dass man die eine Änderung findet, die zehn Probleme löst."</p>
-                    <p class="mb-0" style="color: #fff;">Dieses Prinzip, gelernt beim Debuggen von Transformatoren in Kenia, leitet heute meinen Ansatz für Code-Architektur und Teamdynamik.</p>
-                </div>
-                <a href="philosophy.html" class="btn btn-outline-primary mt-3">Meine Philosophie erkunden</a>
+        <!-- Philosophie Vorschau -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Meine Philosophie</h2>
+                <p class="text-lg text-gray-600">Kernüberzeugungen</p>
             </div>
-        </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white text-center">
+                    <h4 class="text-2xl font-semibold mb-4">"Intelligente Faulheit" & Systemeffizienz</h4>
+                    <p class="text-lg mb-4">"Wahre Effizienz bedeutet nicht härter zu arbeiten - sondern Systeme so tief zu verstehen, dass man die eine Änderung findet, die zehn Probleme löst."</p>
+                    <p class="opacity-90">Dieses Prinzip, gelernt beim Debuggen von Transformatoren in Kenia, leitet heute meinen Ansatz für Code-Architektur und Teamdynamik.</p>
+                </div>
+                <div class="text-center mt-6">
+                    <a href="philosophy-de.html" class="inline-block py-3 px-6 rounded-full border border-indigo-800 text-indigo-800 font-semibold hover:bg-indigo-800 hover:text-white transition duration-300">
+                        Meine Philosophie erkunden
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
+</main>
 
 <!-- Call to Action -->
-<section class="section-sm bg-primary">
-    <div class="container text-center text-sm-left">
-        <div class="row align-items-center">
-            <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                <h6 class="title text-light">Bereit für gemeinsame Innovation?</h6>
-                <p class="m-0 text-light">Lass uns Systeme bauen, die technischer Exzellenz und menschlichem Sinn dienen</p>
-            </div>
-            <div class="col-sm offset-sm-2 offset-md-3">
-                <a href="contact.html" class="btn btn-lg my-font btn-light rounded">
-                    Lass uns gemeinsam Veränderung bewirken ⚡
-                </a>
-            </div>
-        </div>
+<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Bereit für gemeinsame Innovation?</h2>
+        <p class="text-lg font-light mb-6">Lass uns Systeme bauen, die technischer Exzellenz und menschlichem Sinn dienen</p>
+        <a href="contact-de.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Lass uns gemeinsam Veränderung bewirken ⚡
+        </a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
-    <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profil">
-                <i class="ti-linkedin"></i>
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profil" aria-label="LinkedIn Profil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.</a>
+        
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.
         </p>
-        <p class="mt-2">
-            <a href="privacy-policy-de.html" style="color: #fff; font-size: 0.9rem;">Datenschutzerklärung</a> | 
-            <a href="contact-de.html" style="color: #fff; font-size: 0.9rem;">Kontakt</a>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy-de.html" class="text-gray-500 hover:text-white transition">Datenschutzerklärung</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact-de.html" class="text-gray-500 hover:text-white transition">Kontakt</a>
         </p>
     </div>
 </footer>
 
-<!-- Core JavaScript -->
-<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/attention-heatmap.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('.language-switcher a');
-    links.forEach(link => {
-      if (window.location.pathname.includes(link.getAttribute('href'))) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  });
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
 
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
+
+        // Dynamic Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+</script>
 </body>
 </html>
