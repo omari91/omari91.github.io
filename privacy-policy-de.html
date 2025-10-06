@@ -2,354 +2,288 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Datenschutzerklärung - Clifford Ondieki | Datenschutz &amp; Nutzerprivatsphäre</title>
-    
+    <title>Datenschutzerklärung - Clifford Ondieki | Datenschutz & Nutzerprivatsphäre</title>
+
     <meta name="description" content="Datenschutzerklärung und Datenschutzinformationen für Clifford Ondiekis Portfolio-Website. Erfahren Sie, wie wir Ihre Privatsphäre schützen und Nutzerdaten handhaben.">
-    
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Make Lucide globally available -->
+    <script type="module">
+        import * as lucide from 'https://unpkg.com/lucide@latest';
+        window.lucide = lucide;
+    </script>
+
+    <!-- Custom Configuration -->
     <style>
-        /* Optimierungen für besseres Aussehen und mobile Reaktionsfähigkeit */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        :root {
+            --primary-indigo: #303F9F;
+            --neutral-charcoal: #374151;
+            --accent-fire: #880E4F;
+            --highlight-gold: #F59E0B;
+        }
+
         body {
-            padding-top: 80px; 
             font-family: 'Inter', sans-serif;
-        }
-        
-        .privacy-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 1rem;
-        }
-        
-        .privacy-section {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15); /* Stärkerer Schatten */
-            border-left: 5px solid #695aa6; /* Dickere Akzentlinie */
-        }
-        
-        .privacy-section h3 {
-            color: #695aa6;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-        
-        .privacy-section h4 {
-            color: #333;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        .data-type {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 3px solid #695aa6;
-        }
-        
-        .contact-info {
-            background: linear-gradient(135deg, #695aa6 0%, #764ba2 100%);
-            color: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            margin: 2rem 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .contact-info a {
-            font-weight: bold;
-            text-decoration: underline;
-            color: white; /* Sicherstellen, dass Links weiß bleiben */
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
         }
 
-        .last-updated {
-            background: #e9ecef;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 2rem 0;
-            font-style: italic;
-            border: 1px solid #dee2e6;
-        }
-
-        /* Responsive Anpassungen für Mobilgeräte */
-        @media (max-width: 768px) {
-            .privacy-hero {
-                padding: 3rem 1rem;
-            }
-            .privacy-section {
-                padding: 1.5rem;
-            }
-            .contact-info {
-                padding: 1.5rem;
-            }
-            .navbar-language-toggles {
-                margin-top: 10px;
-                display: flex;
-                justify-content: center;
-            }
+        .language-toggle.active {
+            background-color: var(--primary-indigo) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 antialiased">
 
-<!-- Navbar (Beibehalten, mit data-target Attributen für Bootstrap) -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
-        </a>
-        <!-- Hinzufügen der fehlenden data-toggle und data-target Attribute -->
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index-de.html">Startseite</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-de.html">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects-de.html">Projekte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="philosophy-de.html">Philosophie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog-de.html">Einblicke</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact-de.html">Kontakt</a>
-                </li>
-            </ul>
-            <!-- Sprachumschaltung -->
-            <div class="navbar-language-toggles ml-auto">
-                <a href="privacy-policy.html" class="nav-link language-toggle en">EN</a>
-                <a href="privacy-policy-de.html" class="nav-link language-toggle de active">DE</a>
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index-de.html">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full text-white font-extrabold" style="background-color: var(--primary-indigo);">CO</span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+            </a>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Startseite</a>
+                <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Über mich</a>
+                <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projekte</a>
+                <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Kontakt</a>
+
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="privacy-policy.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
+                    <a href="privacy-policy-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
+            <a href="about-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+            <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projekte</a>
+            <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="privacy-policy.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
+                <a href="privacy-policy-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
             </div>
         </div>
     </div>
 </nav>
 
-<section class="privacy-hero">
-    <div class="container text-center">
-        <h1 class="display-4 mb-2">Datenschutzerklärung</h1>
-        <p class="lead">Ihre Privatsphäre und Datenschutz sind grundlegend für meine Arbeitsweise</p>
+<!-- Hero Section -->
+<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+            Datenschutzerklärung
+        </h1>
+        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
+            Ihre Privatsphäre und Ihr Datenschutz sind grundlegend für meine Arbeitsweise
+        </p>
     </div>
-</section>
+</header>
 
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                
-                <div class="privacy-section">
-                    <h3>Unser Engagement für Ihre Privatsphäre</h3>
-                    <p class="lead">Als Ingenieur, der sowohl technische Exzellenz als auch menschlichen Zweck schätzt, verpflichte ich mich, Ihre Privatsphäre zu schützen und transparent darüber zu sein, wie Daten auf dieser Website gesammelt und verwendet werden.</p>
-                    <p>Diese Datenschutzerklärung erklärt, welche Informationen gesammelt werden, wie sie verwendet werden und Ihre Rechte bezüglich Ihrer persönlichen Daten beim Besuch meiner Portfolio-Website.</p>
-                </div>
+<!-- Main Content -->
+<main class="py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="privacy-section">
-                    <h3>Informationen, die wir sammeln</h3>
-                    
-                    <div class="data-type">
-                        <h4>Analysedaten (Microsoft Clarity)</h4>
-                        <p><strong>Was:</strong> Nutzerinteraktionen, Seitenaufrufe, Scroll-Verhalten, Klickmuster, Sitzungsaufzeichnungen</p>
-                        <p><strong>Zweck:</strong> Verstehen, wie Besucher mit Inhalten interagieren und Nutzererfahrung verbessern</p>
-                        <p><strong>Datenverantwortlicher:</strong> Microsoft Corporation</p>
-                        <p><strong>Aufbewahrung:</strong> Daten werden gemäß Microsofts Datenschutzrichtlinie aufbewahrt</p>
+        <!-- Commitment Section -->
+        <section class="mb-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Unser Engagement für Ihre Privatsphäre</h2>
+                <p class="text-lg text-gray-700 mb-4">Als Ingenieur, der sowohl technische Exzellenz als auch menschlichen Sinn schätzt, bin ich dem Schutz Ihrer Privatsphäre verpflichtet und transparent darüber, wie Daten auf dieser Website gesammelt und verwendet werden.</p>
+                <p class="text-gray-600">Diese Datenschutzerklärung erklärt, welche Informationen gesammelt werden, wie sie verwendet werden und welche Rechte Sie bezüglich Ihrer personenbezogenen Daten haben, wenn Sie meine Portfolio-Website besuchen.</p>
+            </div>
+        </section>
+
+        <!-- Information We Collect -->
+        <section class="mb-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Informationen, die wir sammeln</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Analysedaten (Microsoft Clarity)</h4>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p><strong>Was:</strong> Benutzerinteraktionen, Seitenaufrufe, Scrollverhalten, Klickmuster, Sitzungsaufzeichnungen</p>
+                            <p><strong>Zweck:</strong> Um zu verstehen, wie Besucher mit Inhalten interagieren und die Benutzererfahrung zu verbessern</p>
+                            <p><strong>Datenverantwortlicher:</strong> Microsoft Corporation</p>
+                            <p><strong>Aufbewahrung:</strong> Daten werden gemäß den Datenschutzrichtlinien von Microsoft aufbewahrt</p>
+                        </div>
                     </div>
 
-                    <div class="data-type">
-                        <h4>Kontaktformular-Daten</h4>
-                        <p><strong>Was:</strong> Name, E-Mail-Adresse, Betreff, Nachrichteninhalt</p>
-                        <p><strong>Zweck:</strong> Beantwortung Ihrer Anfragen und potenzieller Kooperationsanfragen</p>
-                        <p><strong>Datenverantwortlicher:</strong> Clifford Ondieki</p>
-                        <p><strong>Aufbewahrung:</strong> Sicher gespeichert für bis zu 2 Jahre oder bis Sie die Löschung beantragen</p>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-green-500">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Kontaktformular-Daten</h4>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p><strong>Was:</strong> Name, E-Mail-Adresse, Betreff, Nachrichteninhalt</p>
+                            <p><strong>Zweck:</strong> Um auf Ihre Anfragen und potenzielle Zusammenarbeitsanfragen zu antworten</p>
+                            <p><strong>Datenverantwortlicher:</strong> Clifford Ondieki</p>
+                            <p><strong>Aufbewahrung:</strong> Sicher gespeichert für bis zu 2 Jahre oder bis Sie die Löschung beantragen</p>
+                        </div>
                     </div>
 
-                    <div class="data-type">
-                        <h4>Technische Daten</h4>
-                        <p><strong>Was:</strong> IP-Adresse, Browser-Typ, Geräteinformationen, verweisende Website</p>
-                        <p><strong>Zweck:</strong> Website-Funktionalität, Sicherheit und grundlegende Analytik</p>
-                        <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse am Website-Betrieb und der Sicherheit</p>
-                    </div>
-
-                    <div class="data-type">
-                        <h4>Benutzerdefinierte Aufmerksamkeitsverfolgung (Optional)</h4>
-                        <p><strong>Was:</strong> Seiteninteraktionsmuster, Scroll-Tiefe, Abschnitts-Engagement-Zeit</p>
-                        <p><strong>Zweck:</strong> Portfolio-Optimierung und Inhaltsverbesserung</p>
-                        <p><strong>Speicherung:</strong> Daten verbleiben nur in Ihrem Browser (werden nicht an Server übertragen)</p>
-                        <p><strong>Kontrolle:</strong> Kann jederzeit deaktiviert oder gelöscht werden</p>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Technische Daten</h4>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p><strong>Was:</strong> IP-Adresse, Browsertyp, Geräteinformationen, verweisende Website</p>
+                            <p><strong>Zweck:</strong> Website-Funktionalität, Sicherheit und grundlegende Analysen</p>
+                            <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse am Betrieb und der Sicherheit der Website</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="privacy-section">
-                    <h3>Wie wir Ihre Informationen verwenden</h3>
-                    <ul>
-                        <li><strong>Website-Verbesserung:</strong> Verstehen des Nutzerverhaltens zur Verbesserung von Inhalten und Navigation</li>
-                        <li><strong>Kommunikation:</strong> Beantwortung von Kontaktformular-Übermittlungen und Kooperationsanfragen</li>
-                        <li><strong>Sicherheit:</strong> Schutz vor Spam, Missbrauch und Sicherheitsbedrohungen</li>
-                        <li><strong>Analytik:</strong> Messung der Website-Leistung und Nutzerengagement</li>
-                    </ul>
+        <!-- How We Use Information -->
+        <section class="mb-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Wie wir Ihre Informationen verwenden</h2>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-2">•</span>
+                        <span><strong>Website-Verbesserung:</strong> Verstehen des Benutzerverhaltens zur Verbesserung von Inhalten und Navigation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-2">•</span>
+                        <span><strong>Kommunikation:</strong> Beantwortung von Kontaktformular-Einreichungen und Zusammenarbeitsanfragen</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-2">•</span>
+                        <span><strong>Sicherheit:</strong> Schutz vor Spam, Missbrauch und Sicherheitsbedrohungen</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-600 mr-2">•</span>
+                        <span><strong>Analysen:</strong> Messung der Website-Leistung und des Benutzerengagements</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Your Rights -->
+        <section class="mb-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Ihre Rechte (DSGVO-Konformität)</h2>
+                <p class="text-gray-600 mb-4">Wenn Sie sich in der Europäischen Union befinden, haben Sie die folgenden Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-3 text-sm text-gray-600">
+                        <div><strong>Recht auf Zugang:</strong> Eine Kopie der personenbezogenen Daten anfordern, die wir über Sie gespeichert haben</div>
+                        <div><strong>Recht auf Berichtigung:</strong> Korrektur unrichtiger oder unvollständiger Daten anfordern</div>
+                        <div><strong>Recht auf Löschung:</strong> Löschung Ihrer personenbezogenen Daten anfordern</div>
+                        <div><strong>Recht auf Einschränkung der Verarbeitung:</strong> Einschränkung der Verarbeitung Ihrer Daten anfordern</div>
+                    </div>
+                    <div class="space-y-3 text-sm text-gray-600">
+                        <div><strong>Recht auf Datenübertragbarkeit:</strong> Übertragung Ihrer Daten an einen anderen Dienst anfordern</div>
+                        <div><strong>Widerspruchsrecht:</strong> Der Verarbeitung Ihrer personenbezogenen Daten widersprechen</div>
+                        <div><strong>Recht auf Widerruf der Einwilligung:</strong> Einwilligung zur Datenverarbeitung jederzeit widerrufen</div>
+                    </div>
                 </div>
+                <p class="text-gray-600 mt-4">Um eines dieser Rechte auszuüben, kontaktieren Sie mich bitte über die unten angegebenen Informationen.</p>
+            </div>
+        </section>
 
-                <div class="privacy-section">
-                    <h3>Drittanbieter-Dienste</h3>
-                    
-                    <h4>Microsoft Clarity</h4>
-                    <p>Diese Website verwendet Microsoft Clarity, um das Nutzerverhalten zu verstehen und die Nutzererfahrung zu verbessern. Clarity erfasst, wie Sie diese Website nutzen, einschließlich Mausbewegungen, Klicks und Scrollen.</p>
-                    <p><strong>Datenverarbeitung:</strong> Microsoft verarbeitet diese Daten gemäß ihrer Datenschutzrichtlinie</p>
-                    <p><strong>Opt-out:</strong> Sie können sich von der Clarity-Verfolgung abmelden, indem Sie <a href="https://clarity.microsoft.com/terms" target="_blank">Microsoft Clarity Bedingungen</a> besuchen</p>
-                    
-                    <h4>Formspree (Kontaktformulare)</h4>
-                    <p>Kontaktformular-Übermittlungen werden über Formspree, einen sicheren Formular-Verarbeitungsdienst, verarbeitet.</p>
-                    <p><strong>Datensicherheit:</strong> Alle Formulardaten werden sicher über HTTPS übertragen</p>
-                    <p><strong>Datenschutzrichtlinie:</strong> <a href="https://formspree.io/legal/privacy-policy/" target="_blank">Formspree Datenschutzrichtlinie</a></p>
-                </div>
-
-                <div class="privacy-section">
-                    <h3>Ihre Rechte (DSGVO-Konformität)</h3>
-                    <p>Wenn Sie sich in der Europäischen Union befinden, haben Sie folgende Rechte bezüglich Ihrer persönlichen Daten:</p>
-                    <ul>
-                        <li><strong>Recht auf Zugang:</strong> Anfrage einer Kopie der persönlichen Daten, die wir über Sie haben</li>
-                        <li><strong>Recht auf Berichtigung:</strong> Anfrage zur Korrektur ungenauer oder unvollständiger Daten</li>
-                        <li><strong>Recht auf Löschung:</strong> Anfrage zur Löschung Ihrer persönlichen Daten</li>
-                        <li><strong>Recht auf Einschränkung der Verarbeitung:</strong> Anfrage zur Begrenzung der Verarbeitung Ihrer Daten</li>
-                        <li><strong>Recht auf Datenübertragbarkeit:</strong> Anfrage zur Übertragung Ihrer Daten an einen anderen Dienst</li>
-                        <li><strong>Widerspruchsrecht:</strong> Widerspruch gegen die Verarbeitung Ihrer persönlichen Daten</li>
-                        <li><strong>Recht auf Widerruf der Einwilligung:</strong> Widerruf der Einwilligung zur Datenverarbeitung jederzeit</li>
-                    </ul>
-                    <p>Um eines dieser Rechte auszuüben, kontaktieren Sie mich bitte über die unten angegebenen Informationen.</p>
-                </div>
-
-                <div class="privacy-section">
-                    <h3>Datensicherheit</h3>
-                    <p>Ich implementiere angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer persönlichen Daten vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung. Dazu gehören:</p>
-                    <ul>
-                        <li>HTTPS-Verschlüsselung für alle Datenübertragungen</li>
-                        <li>Sichere Hosting-Infrastruktur</li>
-                        <li>Regelmäßige Sicherheitsupdates und -überwachung</li>
-                        <li>Begrenzter Zugang zu persönlichen Daten nach dem Need-to-know-Prinzip</li>
-                        <li>Sichere Löschung von Daten, wenn sie nicht mehr benötigt werden</li>
-                    </ul>
-                </div>
-
-                <div class="privacy-section">
-                    <h3>Cookies und lokale Speicherung</h3>
-                    <p>Diese Website verwendet minimale Cookies und lokale Speicherung für:</p>
-                    <ul>
-                        <li><strong>Wesentliche Funktionalität:</strong> Spracheinstellungen, Formulardaten</li>
-                        <li><strong>Analytik:</strong> Microsoft Clarity Tracking-Cookies</li>
-                        <li><strong>Nutzererfahrung:</strong> Speichern Ihrer Einstellungen</li>
-                    </ul>
-                    <p>Sie können Cookies über Ihre Browser-Einstellungen kontrollieren. Beachten Sie, dass das Deaktivieren von Cookies die Website-Funktionalität beeinträchtigen kann.</p>
-                </div>
-
-                <div class="privacy-section">
-                    <h3>Internationale Datenübertragungen</h3>
-                    <p>Ihre Daten können in Länder außerhalb Ihres Wohnsitzes übertragen und verarbeitet werden, einschließlich:</p>
-                    <ul>
-                        <li><strong>Vereinigte Staaten:</strong> Microsoft Clarity Server (als Datenverarbeiter im Auftrag)</li>
-                        <li><strong>Deutschland:</strong> Website-Hosting (Mein Standort)</li>
-                    </ul>
-                    <p>Alle Übertragungen werden mit angemessenen Schutzmaßnahmen durchgeführt, um Ihre Datenschutzrechte zu schützen.</p>
-                </div>
-
-                <div class="privacy-section">
-                    <h3>Datenschutz für Kinder</h3>
-                    <p>Diese Website ist nicht für Kinder unter 16 Jahren bestimmt. Ich sammle wissentlich keine persönlichen Informationen von Kindern unter 16 Jahren. Wenn Sie glauben, dass ein Kind persönliche Informationen bereitgestellt hat, kontaktieren Sie mich bitte sofort.</p>
-                </div>
-
-                <div class="privacy-section">
-                    <h3>Änderungen an dieser Richtlinie</h3>
-                    <p>Ich kann diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen in den Praktiken oder rechtlichen Anforderungen zu reflektieren. Alle Änderungen werden auf dieser Seite mit einem aktualisierten "Zuletzt geändert"-Datum veröffentlicht. Ich ermutige Sie, diese Richtlinie regelmäßig zu überprüfen.</p>
-                </div>
-
-                <div class="contact-info">
-                    <h3>Kontaktinformationen</h3>
-                    <p>Wenn Sie Fragen zu dieser Datenschutzerklärung haben oder Ihre Datenschutzrechte ausüben möchten, kontaktieren Sie mich bitte:</p>
-                    <p><strong>E-Mail:</strong> <a href="mailto:engomari6@gmail.com" style="color: white; text-decoration: underline;">engomari6@gmail.com</a></p>
+        <!-- Contact Information -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white text-center">
+                <h2 class="text-2xl font-bold mb-4">Kontaktinformationen</h2>
+                <p class="mb-4 opacity-90">Wenn Sie Fragen zu dieser Datenschutzerklärung haben oder Ihre Datenschutzrechte ausüben möchten, kontaktieren Sie mich bitte:</p>
+                <div class="space-y-2">
+                    <p><strong>E-Mail:</strong> <a href="mailto:engomari6@gmail.com" class="text-white underline hover:text-gray-200">engomari6@gmail.com</a></p>
                     <p><strong>Telefon:</strong> +49 1575 5653967 (Deutschland) | +254 110 548 473 (Kenia)</p>
                     <p><strong>Standort:</strong> Berlin, Deutschland</p>
                     <p><strong>Antwortzeit:</strong> Ich werde auf datenschutzbezogene Anfragen innerhalb von 72 Stunden antworten</p>
                 </div>
-
-                <div class="last-updated">
-                    <p><strong>Zuletzt aktualisiert:</strong> <span id="last-updated-date"></span></p>
-                    <p><strong>Gültigkeitsdatum:</strong> <span id="effective-date"></span></p>
-                </div>
-
             </div>
-        </div>
+        </section>
+
+        <!-- Last Updated -->
+        <section class="mb-12">
+            <div class="bg-gray-100 p-6 rounded-xl text-center">
+                <p class="text-gray-600"><strong>Zuletzt aktualisiert:</strong> <span id="last-updated-date"></span></p>
+                <p class="text-gray-600"><strong>Gültig ab:</strong> <span id="effective-date"></span></p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Call to Action -->
+<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Fragen zum Datenschutz?</h2>
+        <p class="text-lg font-light mb-6">Ich bin der Transparenz und dem Schutz Ihrer Daten verpflichtet. Kontaktieren Sie mich bei Bedenken.</p>
+        <a href="contact-de.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
+            Kontakt aufnehmen
+        </a>
     </div>
 </section>
 
-<!-- Footer (Beibehalten mit zusätzlichen Links) -->
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center; padding: 20px 0;">
-    <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto mb-3">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin: 0 10px;" title="LinkedIn Profil">
-                <i class="ti-linkedin"></i>
-            </a>
-            <!-- Hinzugefügter GitHub Link -->
-            <a href="https://github.com/your-github-profile" class="link" style="color: #fff; font-size: 30px; margin: 0 10px;" title="GitHub Profil">
-                <i class="ti-github"></i>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profil" aria-label="LinkedIn Profil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
             </a>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff; text-decoration: none;">Technologie mit Sinn verbinden — Wandel ermöglichen, ein System nach dem anderen.</a>
+
+        <p class="text-gray-400 text-sm mb-4">
+            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Technologie mit Sinn verbinden — Wandel vorantreiben, ein System nach dem anderen.
         </p>
-        <p class="mt-2">
-            <a href="privacy-policy-de.html" style="color: #fff; font-size: 0.9rem; margin-right: 10px;">Datenschutzerklärung</a> | 
-            <a href="contact-de.html" style="color: #fff; font-size: 0.9rem; margin-left: 10px;">Kontakt</a>
+        <p class="text-xs space-x-4">
+            <a href="privacy-policy-de.html" class="text-gray-500 hover:text-white transition">Datenschutz</a>
+            <span class="text-gray-600">|</span>
+            <a href="contact-de.html" class="text-gray-500 hover:text-white transition">Kontakt</a>
         </p>
     </div>
 </footer>
 
-<!-- Scripts -->
-<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-<script src="assets/js/script.js"></script>
-
-<!-- Wichtig: Bootstrap 4 JS-Abhängigkeiten für die Navbar -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
 <script>
-    // Setzt das aktuelle Datum für die Felder "Zuletzt aktualisiert" und "Gültigkeitsdatum"
-    const now = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const dateString = now.toLocaleDateString('de-DE', options);
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
 
-    const lastUpdatedElement = document.getElementById('last-updated-date');
-    const effectiveDateElement = document.getElementById('effective-date');
+        mobileMenuButton.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
 
-    if (lastUpdatedElement) {
-        lastUpdatedElement.textContent = dateString;
-    }
+        // Dynamic Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    if (effectiveDateElement) {
-        effectiveDateElement.textContent = dateString;
-    }
+        // Set current date for last updated
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('last-updated-date').textContent = now.toLocaleDateString('de-DE', options);
+        document.getElementById('effective-date').textContent = now.toLocaleDateString('de-DE', options);
+    });
 </script>
-
 </body>
 </html>
