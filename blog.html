@@ -1,380 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Clifford Omari Ondieki">
-    <title>Insights - Clifford Omari Ondieki | Engineering Wisdom & Innovation Thoughts</title>
-    
-    <!-- Microsoft Clarity Tracking Code -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "t41xxbb71x");
-    </script>
-    
-    <meta name="description" content="Explore insights on engineering empathy, smart laziness, and bridging technical excellence with human purpose. Thoughts from a hybrid innovator.">
-    
-    <!-- Font Icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap CSS -->
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/heatmap-styles.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & Reflections | Clifford Ondieki</title>
+    <meta name="description" content="Thoughts on engineering empathy, smart laziness, and bridging worlds through innovation">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            padding-top: 80px;
-        }
-        
-        .old-language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .language-switcher a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 2px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .language-switcher a.active {
-            background: #695aa6;
-            color: white;
-        }
-        
-        .blog-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 7rem 0;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-left: 4px solid #695aa6;
-            min-height: 300px;
-            /* Flex layout for positioning tags at bottom */
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .blog-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-tag {
-            background: #695aa6;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
-        
-        .featured-post {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-left: none;
-        }
-        
-        .coming-soon {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
-            text-align: center;
-            padding: 3rem 2rem;
-            color: #6c757d;
-        }
-        
-        .linkedin-cta {
-            background: #0077b5;
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .linkedin-cta a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        /* Added for tags positioning */
-        .blog-card-content {
-            flex-grow: 1;
-        }
-        
-        .blog-tags-container {
-            padding-top: 1rem;
-            margin-top: auto;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .featured-post .blog-tags-container {
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
+        .mobile-menu-closed { max-height: 0; opacity: 0; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; overflow: hidden; }
+        .mobile-menu-open { max-height: 500px; opacity: 1; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+        .theme-indigo { background-color: #283593; color: #ffffff; }
+        .theme-text-indigo { color: #283593; }
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
-        </a>
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Connect</a>
-                </li>
-            </ul>
-            <div class="navbar-language-toggles ml-auto">
-                <a href="blog.html" class="nav-link language-toggle en active">EN</a>
-                <a href="blog-de.html" class="nav-link language-toggle de">DE</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2 theme-text-indigo font-bold text-lg">
+                    <img src="assets/imgs/man.png" alt="Clifford Ondieki" class="rounded-full h-8 w-8 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/30x30/283593/ffffff?text=C';" />
+                    <span>Clifford Ondieki <small class="text-sm font-normal text-gray-500 hidden sm:inline">| Hybrid Innovator</small></span>
+                </a>
+                <div class="hidden lg:flex lg:items-center lg:space-x-4">
+                    <ul class="flex space-x-4">
+                        <li><a href="index.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Home</a></li>
+                        <li><a href="about.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">About</a></li>
+                        <li><a href="projects.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Projects</a></li>
+                        <li><a href="philosophy.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Philosophy</a></li>
+                        <li><a href="blog.html" class="px-3 py-2 text-sm font-medium rounded-md bg-indigo-900/10 theme-text-indigo font-semibold transition duration-150">Insights</a></li>
+                        <li><a href="contact.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Contact</a></li>
+                    </ul>
+                    <div class="flex space-x-2 ml-4">
+                        <a href="blog.html" class="px-3 py-1 text-sm font-semibold rounded-full bg-indigo-800 text-white">EN</a>
+                        <a href="blog-de.html" class="px-3 py-1 text-sm font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-500 hover:text-indigo-800 focus:outline-none">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    <svg id="x-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6 hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
             </div>
         </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="blog-hero">
-    <div class="container text-center">
-        <h2 class="display-4 mb-2" style="color: #fff;">Insights & Reflections</h2>
-        <p class="lead" style="color: #fff;">Thoughts on engineering empathy, smart laziness, and bridging worlds through innovation</p>
-    </div>
-</section>
-
-<!-- Featured Post -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="blog-card featured-post">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Featured • Engineering Philosophy</div>
-                        <h2 class="mb-3">Engineering Empathy: Why the Best Systems Are Built with Heart</h2>
-                        <p class="lead">The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose.</p>
-                        <p>After years of debugging everything from 11kV transformers in Kenya to SaaS whole architectures in Berlin, I've learned that the most elegant solutions emerge when we approach technical challenges with genuine empathy for the humans who will interact with our systems.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Engineering Philosophy</span>
-                        <span class="blog-tag">Leadership</span>
-                        <span class="blog-tag">Systems Thinking</span>
-                    </div>
+        <div id="mobile-menu" class="lg:hidden mobile-menu-closed">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">About</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Projects</a>
+                <a href="philosophy.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Philosophy</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium bg-indigo-900/10 theme-text-indigo" onclick="toggleMobileMenu()">Insights</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Contact</a>
+                <div class="pt-4 border-t border-gray-200 flex justify-center space-x-4">
+                    <a href="blog.html" class="px-3 py-1 text-base font-semibold rounded-full bg-indigo-800 text-white">EN</a>
+                    <a href="blog-de.html" class="px-3 py-1 text-base font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Blog Posts -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Coming Soon • Cross-Domain Innovation</div>
-                        <h3 class="mb-3">How Kenya's Grid Taught Me to Prioritize SaaS Features</h3>
-                        <p>What I learned about load balancing from Kenya's power infrastructure and how those principles now guide my approach to product prioritization and system architecture.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Systems Thinking</span>
-                        <span class="blog-tag">Product Strategy</span>
-                        <span class="blog-tag">Cultural Impact</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Coming Soon • Life & Technology</div>
-                        <h3 class="mb-3">Parenting & Python: Debugging Life's Algorithms</h3>
-                        <p>Reflections on how raising a daughter has taught me patience, presence, and the profound simplicity that often underlies the most complex systems.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Personal Growth</span>
-                        <span class="blog-tag">Engineering Empathy</span>
-                        <span class="blog-tag">Life Lessons</span>
-                    </div>
-                </div>
-            </div>
+    <section class="pt-24 pb-16 theme-indigo text-white text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Insights & Reflections</h1>
+            <p class="text-xl font-light opacity-90">Thoughts on engineering empathy, smart laziness, and bridging worlds through innovation</p>
         </div>
-        
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Coming Soon • Career Journey</div>
-                        <h3 class="mb-3">From 11kV Lines to SaaS Pipelines: A Systems Thinker's Journey</h3>
-                        <p>A detailed case study of how electrical engineering principles translate to software architecture, and why understanding power grids makes you a better product manager.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Career Journey</span>
-                        <span class="blog-tag">Technical Leadership</span>
-                        <span class="blog-tag">Cross-Domain Learning</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Coming Soon • Innovation Philosophy</div>
-                        <h3 class="mb-3">Smart Laziness: The Art of Systemic Efficiency</h3>
-                        <p>Why the best engineers are strategically lazy, and how understanding systems deeply enough to make one change that eliminates ten problems is the ultimate productivity hack.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Productivity</span>
-                        <span class="blog-tag">Systems Optimization</span>
-                        <span class="blog-tag">Engineering Philosophy</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Coming Soon • Cultural Bridge Building</div>
-                        <h3 class="mb-3">Bringing Ubuntu to Berlin: Community Values in Tech Teams</h3>
-                        <p>How Kenyan community principles create stronger, more resilient technical teams, and why collaboration beats competition in building sustainable innovation.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Team Leadership</span>
-                        <span class="blog-tag">Cultural Diversity</span>
-                        <span class="blog-tag">Community Building</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="blog-card">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">Coming Soon • Technical Deep Dive</div>
-                        <h3 class="mb-3">Predictive Maintenance: When AI Meets Geothermal Energy</h3>
-                        <p>A technical deep dive into building machine learning systems for industrial applications, and the lessons learned from predicting equipment failures in harsh environments.</p>
-                    </div>
-                    <div class="blog-tags-container">
-                        <span class="blog-tag">Machine Learning</span>
-                        <span class="blog-tag">Industrial IoT</span>
-                        <span class="blog-tag">Renewable Energy</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- LinkedIn CTA -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="linkedin-cta">
-                    <h3 class="mb-3">Follow My Journey on LinkedIn</h3>
-                    <p class="mb-4">While I'm developing this blog, I regularly share insights, reflections, and behind-the-scenes thoughts on my LinkedIn. Join me there for real-time updates on engineering empathy, smart laziness, and the intersection of technology and purpose.</p>
-                    <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" class="btn btn-light btn-lg">
-                        <i class="ti-linkedin mr-2" style="color: #000;"></i>
-                        <span style="color: #000;">Connect on LinkedIn</span>
-                    </a>
+    <main class="container mx-auto px-4 py-12 lg:py-20">
+
+        <section class="mb-20">
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-gradient-to-br from-indigo-800 to-purple-900 p-8 md:p-12 rounded-xl text-white shadow-2xl">
+                    <div class="mb-4">
+                        <span class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-semibold">Featured • Engineering Philosophy</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Engineering Empathy: Why the Best Systems Are Built with Heart</h2>
+                    <p class="text-xl mb-4 opacity-90">The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose.</p>
+                    <p class="opacity-90">After years of debugging everything from 11kV transformers in Kenya to SaaS architectures in Berlin, I've learned that the most elegant solutions emerge when we approach technical challenges with genuine empathy for the humans who will interact with our systems.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Engineering Philosophy</span>
+                        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Leadership</span>
+                        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Systems Thinking</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Newsletter Signup -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="blog-card text-center">
-                    <h3 class="mb-3">Stay Updated</h3>
-                    <p class="mb-4">Be the first to know when new insights are published. I'll share thoughts on engineering empathy, cross-domain innovation, and building systems that serve both technical excellence and human purpose.</p>
-                    <form class="form-inline justify-content-center">
-                        <div class="form-group mb-2 mr-3">
-                            <input type="email" class="form-control" placeholder="Enter your email" style="width: 300px;">
+        <section class="mb-20">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-indigo-900 mb-12">Coming Soon</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="mb-4">
+                            <span class="inline-block px-4 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-semibold">Cross-Domain Innovation</span>
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Notify Me</button>
-                    </form>
-                    <small class="text-muted">No spam, just meaningful insights. Unsubscribe anytime.</small>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">How Kenya's Grid Taught Me to Prioritize SaaS Features</h3>
+                        <p class="text-gray-600 mb-4">What I learned about load balancing from Kenya's power infrastructure and how those principles now guide my approach to product prioritization and system architecture.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Systems Thinking</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Product Strategy</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Cultural Impact</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="mb-4">
+                            <span class="inline-block px-4 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-semibold">Life & Technology</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Parenting & Python: Debugging Life's Algorithms</h3>
+                        <p class="text-gray-600 mb-4">Reflections on how raising a daughter has taught me patience, presence, and the profound simplicity that often underlies the most complex systems.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Personal Growth</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Engineering Empathy</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Life Lessons</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="mb-4">
+                            <span class="inline-block px-4 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-semibold">Technical Leadership</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Laziness: The Art of Systemic Efficiency</h3>
+                        <p class="text-gray-600 mb-4">True efficiency isn't about working harder—it's about understanding systems so deeply that you can identify the one change that eliminates ten problems.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Engineering Philosophy</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Efficiency</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Leadership</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="mb-4">
+                            <span class="inline-block px-4 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-semibold">Cultural Bridge</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">From Nairobi to Berlin: Building Teams Across Cultures</h3>
+                        <p class="text-gray-600 mb-4">How my Kenyan heritage and Berlin experience combine to create more inclusive, high-performing teams that value both community and innovation.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Leadership</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Diversity</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Team Building</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="max-w-3xl mx-auto text-center bg-white p-10 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-indigo-900 mb-4">Subscribe for Updates</h3>
+                <p class="text-gray-600 mb-6">Get notified when new insights are published. No spam, just thoughtful reflections on engineering, leadership, and innovation.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <input type="email" placeholder="Enter your email" class="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-800 flex-1 max-w-md">
+                    <button class="px-8 py-3 bg-indigo-800 text-white font-semibold rounded-full hover:bg-indigo-700 transition duration-300">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="py-16 theme-indigo text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Let's Connect</h2>
+            <p class="text-lg font-light mb-6">Interested in collaborating or discussing these ideas further?</p>
+            <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">Get in Touch</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
-    <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
-                <i class="ti-linkedin"></i>
-            </a>
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <div class="container mx-auto px-4">
+            <div class="mb-3">
+                <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6 inline-block"><path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+            <p class="text-sm mb-1">Copyright &copy; <span id="current-year"></span> <a href="#" class="text-amber-400 hover:text-amber-300 ml-1">Bridging technology with purpose — energizing change one system at a time.</a></p>
+            <p class="text-xs mt-2 space-x-3">
+                <a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="contact.html" class="text-gray-400 hover:text-white">Contact</a>
+                <span class="text-gray-600">|</span>
+                <a href="philosophy.html" class="text-white hover:text-amber-400">Philosophy</a>
+                <span class="text-gray-600">|</span>
+                <a href="blog.html" class="text-white hover:text-amber-400">Insights</a>
+            </p>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Bridging technology with purpose — energizing change one system at a time.</a>
-        </p>
-        <p class="mt-2">
-            <a href="privacy-policy.html" style="color: #fff; font-size: 0.9rem;">Privacy Policy</a> | 
-            <a href="contact.html" style="color: #fff; font-size: 0.9rem;">Contact</a> |
-            <a href="philosophy.html" style="color: #fff; font-size: 0.9rem;">Philosophy</a> |
-            <a href="insights.html" style="color: #fff; font-size: 0.9rem;">Insights</a>
-        </p>
-    </div>
-</footer>
+    </footer>
 
-<!-- Core JavaScript -->
-<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/attention-heatmap.js"></script>
-
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuBtn = document.getElementById('mobile-menu-button');
+            const menuIcon = document.getElementById('menu-icon');
+            const xIcon = document.getElementById('x-icon');
+            const isMenuOpen = menu.classList.toggle('mobile-menu-open');
+            menu.classList.toggle('mobile-menu-closed', !isMenuOpen);
+            if (isMenuOpen) {
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuIcon.classList.add('hidden');
+                xIcon.classList.remove('hidden');
+            } else {
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuIcon.classList.remove('hidden');
+                xIcon.classList.add('hidden');
+            }
+        }
+        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
+    </script>
 </body>
 </html>

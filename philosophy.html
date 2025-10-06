@@ -1,391 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Clifford Omari Ondieki">
-    <title>Philosophy - Clifford Omari Ondieki | Engineering Empathy & Smart Laziness</title>
-    
-    <!-- Microsoft Clarity Tracking Code -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "t41xxbb71x");
-    </script>
-    
-    <meta name="description" content="Explore the core philosophies that drive innovation: Engineering Empathy, Smart Laziness, and the principles that bridge technical excellence with human purpose.">
-    
-    <!-- Font Icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap CSS -->
-    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/heatmap-styles.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy - Engineering Empathy | Clifford Ondieki</title>
+    <meta name="description" content="The philosophy that bridges technical excellence with human purpose">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .old-language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .language-switcher a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 2px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .language-switcher a.active {
-            background: #695aa6;
-            color: white;
-        }
-        
-        .philosophy-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 7rem 0; /* Increased padding for more space */
-        }
-        
-        .philosophy-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-left: 4px solid #695aa6;
-            transition: transform 0.3s ease;
-        }
-        
-        .philosophy-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .quote-section {
-            background: #f8f9fa;
-            padding: 3rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #695aa6;
-        }
-        
-        .principle-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .principle-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-        
-        .reflection-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 1.5rem 0;
-            border-left: 4px solid #695aa6;
-        }
-        
-        .rotating-insight {
-            background: linear-gradient(45deg, #695aa6, #764ba2);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            margin: 2rem 0;
-            animation: fadeIn 2s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
+        .mobile-menu-closed { max-height: 0; opacity: 0; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; overflow: hidden; }
+        .mobile-menu-open { max-height: 500px; opacity: 1; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+        .theme-indigo { background-color: #283593; color: #ffffff; }
+        .theme-text-indigo { color: #283593; }
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
-            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
-        </a>
-        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Connect</a>
-                </li>
-            </ul>
-            <div class="navbar-language-toggles ml-auto">
-                <a href="philosophy.html" class="nav-link language-toggle en active">EN</a>
-                <a href="philosophy-de.html" class="nav-link language-toggle de">DE</a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="philosophy-hero">
-    <div class="container text-center">
-        <h2 class="display-4 mb-2"style="color: #fff;">Engineering Empathy</h2>
-        <p class="lead"style="color: #fff;">The philosophy that bridges technical excellence with human purpose</p>
-    </div>
-</section>
-
-<!-- Core Philosophy -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="philosophy-card">
-                    <h2 class="mb-4">My Core Philosophy: Engineering Empathy</h2>
-                    <p class="lead">The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose.</p>
-                    <p>This philosophy stems from a belief that true innovation requires more than technical expertise. It demands the ability to understand the human context behind every problem, the cultural nuances that shape how solutions are received, and the empathy to build systems that serve real human needs.</p>
-                    <p>My Kenyan heritage emphasizes community and collaboration—principles that deeply inform my approach to building high-performing, empathetic teams. In every project, I ask not just "How can we build this?" but "How will this serve the people who need it most?"</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Smart Laziness -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="philosophy-card">
-                    <h2 class="mb-4">"Smart Laziness" & Systemic Efficiency</h2>
-                    <div class="quote-section">
-                        "True efficiency isn't about working harder—it's about understanding systems so deeply that you can identify the one change that eliminates ten problems."
-                    </div>
-                    <p>This principle, learned from debugging transformers in Kenya, now guides how I approach everything from code architecture to team dynamics. It's not about avoiding work; it's about working with systemic intelligence.</p>
-                    
-                    <h4>How Smart Laziness Works:</h4>
-                    <ul>
-                        <li><strong style="color:#222;">Deep System Understanding:</strong> <span style="color:#222;">Before optimizing, I invest time in truly understanding how all components interact</span></li>
-                        <li><strong style="color:#222;">Root Cause Focus:</strong> <span style="color:#222;">Instead of fixing symptoms, I identify the underlying patterns that create multiple problems</span></li>
-                        <li><strong style="color:#222;">Leverage Points:</strong> <span style="color:#222;">I look for the minimal changes that create maximum positive impact across the entire system</span></li>
-                        <li><strong style="color:#222;">Automation Philosophy:</strong> <span style="color:#222;">If I have to do something more than twice, I build a system to do it automatically</span></li>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2 theme-text-indigo font-bold text-lg">
+                    <img src="assets/imgs/man.png" alt="Clifford Ondieki" class="rounded-full h-8 w-8 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/30x30/283593/ffffff?text=C';" />
+                    <span>Clifford Ondieki <small class="text-sm font-normal text-gray-500 hidden sm:inline">| Hybrid Innovator</small></span>
+                </a>
+                <div class="hidden lg:flex lg:items-center lg:space-x-4">
+                    <ul class="flex space-x-4">
+                        <li><a href="index.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Home</a></li>
+                        <li><a href="about.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">About</a></li>
+                        <li><a href="projects.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Projects</a></li>
+                        <li><a href="philosophy.html" class="px-3 py-2 text-sm font-medium rounded-md bg-indigo-900/10 theme-text-indigo font-semibold transition duration-150">Philosophy</a></li>
+                        <li><a href="blog.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Insights</a></li>
+                        <li><a href="contact.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150">Contact</a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Core Principles -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="text-center mb-5">Guiding Principles</h2>
-                <div class="principle-grid">
-                    <div class="principle-card">
-                        <h4 class="mb-3">Failure is Redirection</h4>
-                        <p>Every setback contains valuable information about better paths forward. I've learned to fail fast, learn faster, and use each failure as strategic intelligence for future success.</p>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <h4 class="mb-3">Community Over Competition</h4>
-                        <p>My Kenyan roots taught me that sustainable solutions emerge from collaboration, not competition. The best innovations happen when diverse perspectives combine toward a shared purpose.</p>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <h4 class="mb-3">Stillness is Power</h4>
-                        <p>In a world of constant motion, true clarity emerges from stillness. I practice daily reflection and mindfulness to maintain perspective and make decisions from a place of calm wisdom.</p>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <h4 class="mb-3">Systems Thinking</h4>
-                        <p>Whether debugging power grids or optimizing team dynamics, I approach challenges by understanding the interconnections and feedback loops that create emergent behaviors.</p>
+                    <div class="flex space-x-2 ml-4">
+                        <a href="philosophy.html" class="px-3 py-1 text-sm font-semibold rounded-full bg-indigo-800 text-white">EN</a>
+                        <a href="philosophy-de.html" class="px-3 py-1 text-sm font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
                     </div>
                 </div>
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-500 hover:text-indigo-800 focus:outline-none">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    <svg id="x-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6 hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Personal Reflections -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="text-center mb-5">Daily Reflections</h2>
-                
-                <div class="reflection-card">
-                    <h4>On Self-Leadership</h4>
-                    <p><em>"Where am I still negotiating with my old self?"</em></p>
-                    <p>This question guides my daily practice of self-leadership. Growth requires honest assessment of where I'm holding onto patterns that no longer serve my evolution or my ability to serve others effectively.</p>
-                </div>
-                
-                <div class="reflection-card">
-                    <h4>On Technical Mastery</h4>
-                    <p><em>"Debugging transformers taught me systemic thinking; raising a daughter taught me patience and the profound simplicity of presence."</em></p>
-                    <p>The most important lessons often come from unexpected sources. Technical skills and life wisdom inform each other in ways that create more complete solutions.</p>
-                </div>
-                
-                <div class="reflection-card">
-                    <h4>On Innovation</h4>
-                    <p><em>"Agile isn't just for software—it's for power grids too. It's about adapting, learning, and finding clarity over chaos."</em></p>
-                    <p>The principles that make software development effective—iteration, feedback loops, continuous improvement—apply to any complex system, including personal growth and organizational change.</p>
+        <div id="mobile-menu" class="lg:hidden mobile-menu-closed">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">About</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Projects</a>
+                <a href="philosophy.html" class="block px-3 py-2 rounded-md text-base font-medium bg-indigo-900/10 theme-text-indigo" onclick="toggleMobileMenu()">Philosophy</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Insights</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Contact</a>
+                <div class="pt-4 border-t border-gray-200 flex justify-center space-x-4">
+                    <a href="philosophy.html" class="px-3 py-1 text-base font-semibold rounded-full bg-indigo-800 text-white">EN</a>
+                    <a href="philosophy-de.html" class="px-3 py-1 text-base font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Rotating Insights -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="text-center mb-5">Living Philosophy</h2>
-                <div class="rotating-insight" id="rotatingInsight">
-                    <h4 class="mb-3">Today's Reflection</h4>
-                    <p class="mb-0">"Understanding is more important than memorization" - My grandfather's wisdom that continues to shape how I approach learning, problem-solving, and innovation.</p>
+    <section class="pt-24 pb-16 theme-indigo text-white text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Engineering Empathy</h1>
+            <p class="text-xl font-light opacity-90">The philosophy that bridges technical excellence with human purpose</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-12 lg:py-20">
+
+        <section class="mb-20">
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">My Core Philosophy: Engineering Empathy</h2>
+                <p class="text-xl text-gray-700 mb-4 font-semibold">The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose.</p>
+                <p class="text-gray-600 mb-4">This philosophy stems from a belief that true innovation requires more than technical expertise. It demands the ability to understand the human context behind every problem, the cultural nuances that shape how solutions are received, and the empathy to build systems that serve real human needs.</p>
+                <p class="text-gray-600">My Kenyan heritage emphasizes community and collaboration—principles that deeply inform my approach to building high-performing, empathetic teams. In every project, I ask not just "How can we build this?" but "How will this serve the people who need it most?"</p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="max-w-4xl mx-auto bg-gradient-to-br from-indigo-800 to-purple-900 p-10 rounded-xl text-white shadow-2xl">
+                <h2 class="text-3xl font-bold mb-4">"Smart Laziness" & Systemic Efficiency</h2>
+                <p class="text-2xl mb-6 opacity-90 italic">"True efficiency isn't about working harder—it's about understanding systems so deeply that you can identify the one change that eliminates ten problems."</p>
+                <p class="mb-6 opacity-90">This principle, learned from debugging transformers in Kenya, now guides how I approach everything from code architecture to team dynamics. It's not about avoiding work; it's about working with systemic intelligence.</p>
+
+                <h3 class="text-2xl font-bold mb-4">How Smart Laziness Works:</h3>
+                <ul class="space-y-3 opacity-90">
+                    <li><strong>Deep System Understanding:</strong> Before optimizing, I invest time in truly understanding how all components interact</li>
+                    <li><strong>Root Cause Focus:</strong> Instead of fixing symptoms, I identify the underlying patterns that create multiple problems</li>
+                    <li><strong>Leverage Points:</strong> I look for the minimal changes that create maximum positive impact across the entire system</li>
+                    <li><strong>Automation Philosophy:</strong> If I have to do something more than twice, I build a system to do it automatically</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-indigo-900 mb-4">Guiding Principles</h2>
+            <p class="text-center text-lg text-gray-500 mb-12">Core values that shape my work</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Failure is Redirection</h3>
+                    <p class="text-gray-600">Every setback contains valuable information about better paths forward. I've learned to fail fast, learn faster, and use each failure as strategic intelligence for future success.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Community Over Competition</h3>
+                    <p class="text-gray-600">My Kenyan roots taught me that sustainable solutions emerge from collaboration, not competition. The best innovations happen when diverse perspectives combine toward a shared purpose.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Stillness is Power</h3>
+                    <p class="text-gray-600">In a world of constant motion, true clarity emerges from stillness. I practice daily reflection and mindfulness to maintain perspective and make decisions from a place of calm wisdom.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-indigo-800">
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Systems Thinking</h3>
+                    <p class="text-gray-600">Whether debugging power grids or optimizing team dynamics, I approach challenges by understanding the interconnections and feedback loops that create emergent behaviors.</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Application in Work -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="philosophy-card">
-                    <h2 class="mb-4">Philosophy in Practice</h2>
-                    <p class="lead">These aren't just abstract concepts—they're the practical frameworks I use daily in technical leadership and innovation.</p>
-                    
-                    <h4>In Technical Architecture:</h4>
-                    <p>I design systems with empathy for the developers who will maintain them, the users who will depend on them, and the business stakeholders who need to understand them.</p>
-                    
-                    <h4>In Team Leadership:</h4>
-                    <p>I create psychological safety where failure is treated as valuable data, where diverse perspectives are actively sought, and where individual growth serves collective success.</p>
-                    
-                    <h4>In Problem Solving:</h4>
-                    <p>I invest time in understanding the human context behind technical challenges, ensuring that solutions address not just the immediate problem but the underlying needs.</p>
-                    
-                    <h4>In Innovation:</h4>
-                    <p>I bridge different domains of knowledge—bringing power grid principles to healthcare systems, applying Kenyan community values to Berlin tech teams—because the best innovations happen at the intersection of different worlds.</p>
+        <section class="mb-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-indigo-900 mb-12">Daily Reflections</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-indigo-800">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">On Self-Leadership</h3>
+                        <p class="text-gray-700 italic mb-3">"Where am I still negotiating with my old self?"</p>
+                        <p class="text-gray-600">This question guides my daily practice of self-leadership. Growth requires honest assessment of where I'm holding onto patterns that no longer serve my evolution or my ability to serve others effectively.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-indigo-800">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">On Technical Mastery</h3>
+                        <p class="text-gray-700 italic mb-3">"Debugging transformers taught me systemic thinking; raising a daughter taught me patience and the profound simplicity of presence."</p>
+                        <p class="text-gray-600">The most important lessons often come from unexpected sources. Technical skills and life wisdom inform each other in ways that create more complete solutions.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-indigo-800">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">On Innovation</h3>
+                        <p class="text-gray-700 italic mb-3">"Agile isn't just for software—it's for power grids too. It's about adapting, learning, and finding clarity over chaos."</p>
+                        <p class="text-gray-600">The principles that make software development effective—iteration, feedback loops, continuous improvement—apply to any complex system, including personal growth and organizational change.</p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+    </main>
+
+    <section class="py-16 theme-indigo text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Let's Build with Purpose</h2>
+            <p class="text-lg font-light mb-6">If you value systems thinking and human-centered innovation, let's connect.</p>
+            <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">Get in Touch</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Call to Action -->
-<section class="section bg-primary text-white">
-    <div class="container text-center">
-        <h2 class="mb-4">Let's Build with Purpose</h2>
-        <p class="lead mb-4" style="color: #fff;">If these principles resonate with you, let's explore how we can create solutions that serve both technical excellence and human flourishing.</p>
-        <a href="contact.html" class="btn btn-light btn-lg">Start a Meaningful Conversation</a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
-    <div class="container">
-        <div class="social-links text-center m-auto ml-sm-auto">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
-                <i class="ti-linkedin"></i>
-            </a>
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <div class="container mx-auto px-4">
+            <div class="mb-3">
+                <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6 inline-block"><path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+            <p class="text-sm mb-1">Copyright &copy; <span id="current-year"></span> <a href="#" class="text-amber-400 hover:text-amber-300 ml-1">Bridging technology with purpose — energizing change one system at a time.</a></p>
+            <p class="text-xs mt-2 space-x-3">
+                <a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="contact.html" class="text-gray-400 hover:text-white">Contact</a>
+                <span class="text-gray-600">|</span>
+                <a href="philosophy.html" class="text-white hover:text-amber-400">Philosophy</a>
+                <span class="text-gray-600">|</span>
+                <a href="blog.html" class="text-white hover:text-amber-400">Insights</a>
+            </p>
         </div>
-        <p class="mb-0" style="margin-top: 10px;">
-            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-            <a href="#" style="color: #fff;">Bridging technology with purpose — energizing change one system at a time.</a>
-        </p>
-        <p class="mt-2">
-            <a href="privacy-policy.html" style="color: #fff; font-size: 0.9rem;">Privacy Policy</a> | 
-            <a href="contact.html" style="color: #fff; font-size: 0.9rem;">Contact</a> |
-            <a href="philosophy.html" style="color: #fff; font-size: 0.9rem;">Philosophy</a> |
-            <a href="insights.html" style="color: #fff; font-size: 0.9rem;">Insights</a>
-        </p>
-    </div>
-</footer>
+    </footer>
 
-<!-- Core JavaScript -->
-<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/attention-heatmap.js"></script>
-
-<script>
-// Rotating insights functionality
-const insights = [
-    {
-        title: "Today's Reflection",
-        text: "Understanding is more important than memorization - My grandfather's wisdom that continues to shape how I approach learning, problem-solving, and innovation."
-    },
-    {
-        title: "On Systems",
-        text: "Every complex system has simple principles at its core. The art is finding those principles and designing around them rather than fighting against them."
-    },
-    {
-        title: "On Growth",
-        text: "Where am I still negotiating with my old self? This daily question keeps me honest about the patterns I need to release to serve at my highest level."
-    },
-    {
-        title: "On Innovation",
-        text: "The best solutions often come from bridging different worlds—bringing power grid thinking to software architecture, or Kenyan community values to Berlin tech teams."
-    },
-    {
-        title: "On Leadership",
-        text: "True leadership isn't about having all the answers—it's about creating the conditions where the best answers can emerge from the collective wisdom of the team."
-    }
-];
-
-let currentInsight = 0;
-
-function rotateInsight() {
-    const insightElement = document.getElementById('rotatingInsight');
-    currentInsight = (currentInsight + 1) % insights.length;
-    
-    insightElement.innerHTML = `
-        <h4 class="mb-3">${insights[currentInsight].title}</h4>
-        <p class="mb-0">${insights[currentInsight].text}</p>
-    `;
-}
-
-// Rotate insights every 10 seconds
-setInterval(rotateInsight, 10000);
-</script>
-
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuBtn = document.getElementById('mobile-menu-button');
+            const menuIcon = document.getElementById('menu-icon');
+            const xIcon = document.getElementById('x-icon');
+            const isMenuOpen = menu.classList.toggle('mobile-menu-open');
+            menu.classList.toggle('mobile-menu-closed', !isMenuOpen);
+            if (isMenuOpen) {
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuIcon.classList.add('hidden');
+                xIcon.classList.remove('hidden');
+            } else {
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuIcon.classList.remove('hidden');
+                xIcon.classList.add('hidden');
+            }
+        }
+        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
+    </script>
 </body>
 </html>
