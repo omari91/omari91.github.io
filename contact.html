@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Clifford Omari Ondieki">
     <title>Connect - Clifford Omari Ondieki | Let's Energize Change Together</title>
-
+    
     <!-- Microsoft Clarity Tracking Code -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -13,131 +14,166 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "t41xxbb71x");
     </script>
-
+    
     <meta name="description" content="Ready to build systems that serve both technical excellence and human purpose? Let's connect and create meaningful innovation together.">
-
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="icon" href="assets/imgs/man.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/heatmap-styles.css">
+    
     <style>
-        /* Custom Font */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
+            padding-top: 80px;
         }
-        /* Mobile menu transition helper */
-        .mobile-menu-closed {
-            max-height: 0;
-            opacity: 0;
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            overflow: hidden;
+
+        .contact-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 7rem 0;
         }
-        .mobile-menu-open {
-            max-height: 500px;
-            opacity: 1;
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        /* Theme Colors */
-        .theme-indigo {
-            background-color: #283593;
-            color: #ffffff;
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
         }
-        .theme-text-indigo {
-            color: #283593;
+        
+        .contact-method:hover {
+            background: #695aa6;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-method i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 30px;
+        }
+        
+        .contact-method a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .form-control:focus {
+            border-color: #695aa6;
+            box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
+        }
+        
+        .btn-primary {
+            background-color: #695aa6;
+            border-color: #695aa6;
+        }
+        
+        .btn-primary:hover {
+            background-color: #5a4a8a;
+            border-color: #5a4a8a;
+        }
+        
+        .collaboration-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .berlin-focus {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #695aa6;
+            margin: 1.5rem 0;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Brand/Logo - Deep Indigo -->
-                <a href="index.html" class="flex items-center space-x-2 theme-text-indigo font-bold text-lg">
-                    <img src="assets/imgs/man.png" alt="Clifford Ondieki Profile Icon" class="rounded-full h-8 w-8 object-cover"
-                         onerror="this.onerror=null; this.src='https://placehold.co/30x30/283593/ffffff?text=C';" />
-                    <span>Clifford Ondieki <small class="text-sm font-normal text-gray-500 hidden sm:inline">| Hybrid Innovator</small></span>
-                </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block align-left" alt="">
+            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
+        </a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex lg:items-center lg:space-x-4">
-                    <ul class="flex space-x-4">
-                        <li><a href="index.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">Home</a></li>
-                        <li><a href="about.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">About</a></li>
-                        <li><a href="projects.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">Projects</a></li>
-                        <li><a href="contact.html" class="px-3 py-2 text-sm font-medium rounded-md bg-indigo-900/10 theme-text-indigo font-semibold transition duration-150 ease-in-out">Contact</a></li>
-                    </ul>
-                    <!-- Language Toggles - Deep Indigo -->
-                    <div class="flex space-x-2 ml-4">
-                        <a href="contact.html" class="px-3 py-1 text-sm font-semibold rounded-full bg-indigo-800 text-white">EN</a>
-                        <a href="contact-de.html" class="px-3 py-1 text-sm font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
-                    </div>
-                </div>
+        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <!-- Mobile Menu Button -->
-                <button
-                    id="mobile-menu-button"
-                    class="lg:hidden p-2 text-gray-500 hover:text-indigo-800 focus:outline-none"
-                    aria-expanded="false"
-                    aria-controls="mobile-menu"
-                >
-                    <!-- Menu Icon (default) -->
-                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-                    <!-- X Icon (hidden by default) -->
-                    <svg id="x-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-                </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="philosophy.html">Philosophy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Insights</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Connect</a>
+                </li>
+            </ul>
+            <div class="navbar-language-toggles ml-auto">
+                <a href="contact.html" class="nav-link language-toggle en active">EN</a>
+                <a href="contact-de.html" class="nav-link language-toggle de">DE</a>
             </div>
         </div>
+    </div>
+</nav>
 
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="lg:hidden mobile-menu-closed">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">About</a>
-                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Projects</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium bg-indigo-900/10 theme-text-indigo" onclick="toggleMobileMenu()">Contact</a>
-                <div class="pt-4 border-t border-gray-200 flex justify-center space-x-4">
-                    <a href="contact.html" class="px-3 py-1 text-base font-semibold rounded-full bg-indigo-800 text-white">EN</a>
-                    <a href="contact-de.html" class="px-3 py-1 text-base font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<section class="contact-hero">
+    <div class="container text-center">
+        <h2 class="display-4 mb-2"style="color: #fff;">Let's Energize Change Together ⚡</h2>
+        <p class="lead"style="color: #fff;">Ready to build systems that serve both technical excellence and human purpose?</p>
+    </div>
+</section>
 
-    <!-- Hero Section - Deep Indigo -->
-    <section class="pt-24 pb-16 theme-indigo text-white text-center shadow-inner">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Let's Energize Change Together ⚡</h1>
-            <p class="text-xl font-light opacity-90">Ready to build systems that serve both technical excellence and human purpose?</p>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12 lg:py-20">
-
-        <!-- Contact Form Section -->
-        <section class="mb-20">
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl">
-                    <h2 class="text-3xl font-bold text-center text-indigo-900 mb-4">Start a Meaningful Conversation</h2>
-                    <p class="text-center text-gray-600 mb-8">Whether you're looking to collaborate on innovative projects, discuss technical challenges, or explore how we can create solutions that truly matter—I'd love to hear from you.</p>
-
-                    <form id="contactForm" action="https://formspree.io/f/xoqooyrz" method="post" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:border-transparent" placeholder="Enter your name">
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="contact-card">
+                    <h2 class="text-center mb-4">Start a Meaningful Conversation</h2>
+                    <p class="text-center mb-4">Whether you're looking to collaborate on innovative projects, discuss technical challenges, or explore how we can create solutions that truly matter—I'd love to hear from you.</p>
+                    
+                    <form id="contactForm" action="https://formspree.io/f/xoqooyrz" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                             </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your Email</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:border-transparent" placeholder="Enter your email">
+                            <div class="form-group col-md-6">
+                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                             </div>
                         </div>
-
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                            <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:border-transparent">
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select class="form-control" id="subject" name="subject" required>
                                 <option value="">Select a topic</option>
                                 <option value="Technical Program Manager Role">Technical Program Manager Role</option>
                                 <option value="Project Collaboration">Project Collaboration</option>
@@ -147,156 +183,162 @@
                                 <option value="General Inquiry">General Inquiry</option>
                             </select>
                         </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:border-transparent" placeholder="Tell me about your project, challenge, or how we might collaborate..."></textarea>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project, challenge, or how we might collaborate..." required></textarea>
                         </div>
-
                         <div class="text-center">
-                            <button type="submit" class="inline-block py-3 px-8 rounded-full bg-indigo-800 text-white font-bold text-lg shadow-xl hover:bg-indigo-700 transition duration-300">
-                                Send Message
-                            </button>
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
                         </div>
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Other Ways to Connect Section -->
-        <section class="mb-20">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-center text-indigo-900 mb-8">Other Ways to Connect</h2>
-
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:bg-indigo-50 transition duration-300 flex items-center space-x-4">
-                        <div class="text-indigo-800 text-3xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <strong class="block text-gray-900 font-semibold">Email</strong>
-                            <a href="mailto:engomari6@gmail.com" class="text-indigo-800 hover:text-indigo-600">engomari6@gmail.com</a>
-                        </div>
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center mb-5">Other Ways to Connect</h2>
+                
+                <div class="contact-method">
+                    <i class="ti-email"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:engomari6@gmail.com">engomari6@gmail.com</a>
                     </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:bg-indigo-50 transition duration-300 flex items-center space-x-4">
-                        <div class="text-indigo-800 text-3xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <strong class="block text-gray-900 font-semibold">Phone</strong>
-                            <a href="tel:+4915901790485" class="text-indigo-800 hover:text-indigo-600">+49 159 0179 0485</a>
-                        </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="ti-mobile"></i>
+                    <div>
+                        <strong>Phone</strong><br>
+                        <a href="tel:+254110548473">+254 110 548 473</a><br>
+                        <a href="tel:+4915755653967">+49 1575 5653967</a>
                     </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:bg-indigo-50 transition duration-300 flex items-center space-x-4">
-                        <div class="text-indigo-800 text-3xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z M2 9h4v12H2z M4 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <strong class="block text-gray-900 font-semibold">LinkedIn</strong>
-                            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank" rel="noopener noreferrer" class="text-indigo-800 hover:text-indigo-600">Connect on LinkedIn</a>
-                        </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="ti-linkedin"></i>
+                    <div>
+                        <strong>LinkedIn</strong><br>
+                        <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" target="_blank">Connect professionally</a>
                     </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="ti-location-pin"></i>
+                    <div>
+                        <strong>Location</strong><br>
+                        Berlin, Germany (Open to remote collaboration worldwide)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:bg-indigo-50 transition duration-300 flex items-center space-x-4">
-                        <div class="text-indigo-800 text-3xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="berlin-focus">
+                    <h4>🇩🇪 Berlin-Based Opportunities</h4>
+                    <p>Currently exploring Technical Program Manager and Product Leadership roles in Berlin's energy-tech, renewable sectors, and innovative startups. I'm particularly interested in positions where I can bridge technical excellence with purpose-driven innovation.</p>
+                    <p><strong>Ideal Roles:</strong> Technical Program Manager, Senior Product Manager, Engineering Team Lead, Innovation Consultant</p>
+                    <p><strong>Industries of Interest:</strong> Energy Tech, Renewable Energy, HealthTech, FinTech, SaaS Platforms</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="collaboration-card">
+                    <h3 class="mb-4">What We Could Build Together</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>🚀 Innovation Projects</h5>
+                            <p>Cross-domain solutions that apply engineering principles to unexpected challenges</p>
                         </div>
-                        <div>
-                            <strong class="block text-gray-900 font-semibold">Location</strong>
-                            <span class="text-gray-600">Berlin, Germany</span>
+                        <div class="col-md-6">
+                            <h5>🌍 Impact-Driven Tech</h5>
+                            <p>Systems that serve both technical excellence and human flourishing</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>🎓 Mentorship & Education</h5>
+                            <p>Fostering STEM education and technical leadership development</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>🤝 Cultural Bridge Building</h5>
+                            <p>Bringing diverse perspectives to European tech ecosystems</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Response Time Section -->
-        <section class="mb-20">
-            <div class="max-w-3xl mx-auto bg-gradient-to-br from-indigo-800 to-purple-900 p-10 rounded-xl text-white shadow-2xl text-center">
-                <h3 class="text-2xl font-bold mb-4">What to Expect</h3>
-                <p class="text-lg opacity-90 mb-6">I typically respond within 24-48 hours. For urgent matters, please mention it in your message and I'll prioritize accordingly.</p>
-                <p class="opacity-90">I'm particularly interested in projects that combine technical excellence with meaningful human impact.</p>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h3 class="mb-4">My Commitment to You</h3>
+                <p class="lead">I personally read and respond to every message within 24-48 hours. If your project or opportunity aligns with building systems that serve both technical excellence and human purpose, let's explore how we can create something meaningful together.</p>
+                <p><em>"The best innovations happen when diverse perspectives combine toward a shared purpose."</em></p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-    </main>
-
-    <!-- Call to Action - Deep Indigo -->
-    <section class="py-16 theme-indigo text-white text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Ready to Build Something Impactful?</h2>
-            <p class="text-lg font-light mb-6">Let's combine technical excellence with purpose-driven innovation to create solutions that truly matter.</p>
-            <a href="projects.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-                Explore My Work
+<footer class="footer" style="background-color: #695aa6; color: #fff; text-align: center;">
+    <div class="container">
+        <div class="social-links text-center m-auto ml-sm-auto">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" style="color: #fff; font-size: 30px; margin-right: 20px;" title="LinkedIn Profile">
+                <i class="ti-linkedin"></i>
             </a>
         </div>
-    </section>
+        <p class="mb-0" style="margin-top: 10px;">
+            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
+            <a href="#" style="color: #fff;">Bridging technology with purpose — energizing change one system at a time.</a>
+        </p>
+        <p class="mt-2">
+            <a href="privacy-policy.html" style="color: #fff; font-size: 0.9rem;">Privacy Policy</a> | 
+            <a href="contact.html" style="color: #fff; font-size: 0.9rem;">Contact</a>
+        </p>
+    </div>
+</footer>
 
-    <!-- Footer - Graphite Grey -->
-    <footer class="bg-gray-900 text-white text-center py-6">
-        <div class="container mx-auto px-4">
-            <div class="mb-3">
-                <a
-                    href="https://www.linkedin.com/in/clifford-ondieki-559b9771/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-white transition duration-200"
-                    title="LinkedIn Profile"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 inline-block"><path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-            </div>
-            <p class="text-sm mb-1">
-                Copyright &copy; <span id="current-year"></span>
-                <a href="#" class="text-amber-400 hover:text-amber-300 ml-1">Bridging technology with purpose — energizing change one system at a time.</a>
-            </p>
-            <p class="text-xs mt-2 space-x-3">
-                <a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
-                <span class="text-gray-600">|</span>
-                <a href="contact.html" class="text-gray-400 hover:text-white">Contact</a>
-                <span class="text-gray-600">|</span>
-                <a href="philosophy.html" class="text-white hover:text-amber-400">Philosophy</a>
-                <span class="text-gray-600">|</span>
-                <a href="blog.html" class="text-white hover:text-amber-400">Insights</a>
-            </p>
-        </div>
-    </footer>
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/attention-heatmap.js"></script>
 
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+<script>
+// Form submission handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    // Reset after 3 seconds (form will be submitted via Formspree)
+    setTimeout(() => {
+        submitBtn.textContent = 'Message Sent!';
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    }, 1000);
+});
+</script>
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const menuBtn = document.getElementById('mobile-menu-button');
-            const menuIcon = document.getElementById('menu-icon');
-            const xIcon = document.getElementById('x-icon');
-
-            const isMenuOpen = menu.classList.toggle('mobile-menu-open');
-            menu.classList.toggle('mobile-menu-closed', !isMenuOpen);
-
-            if (isMenuOpen) {
-                menuBtn.setAttribute('aria-expanded', 'true');
-                menuIcon.classList.add('hidden');
-                xIcon.classList.remove('hidden');
-            } else {
-                menuBtn.setAttribute('aria-expanded', 'false');
-                menuIcon.classList.remove('hidden');
-                xIcon.classList.add('hidden');
-            }
-        }
-
-        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
-    </script>
 </body>
 </html>

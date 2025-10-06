@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
     <title>Clifford Ondieki - Hybrid Innovator | Technical Program Manager</title>
-
+    
     <!-- Microsoft Clarity Tracking Code -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -13,302 +14,404 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "t41xxbb71x");
     </script>
-
+    
     <meta name="description" content="I help teams turn complex systems into solutions that work — blending engineering precision with human empathy. From Kenya's power grids to Berlin's tech scene, I build products and programs that deliver real impact.">
+    <meta name="author" content="Clifford Omari Ondieki">
+    <meta name="theme-color" content="#695aa6">
 
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TODO: Replace "your-domain.com" with your actual domain name -->
+    <link rel="canonical" href="https://www.your-domain.com/index.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.your-domain.com/index.html">
+    <meta property="og:title" content="Clifford Ondieki - Hybrid Innovator | Technical Program Manager">
+    <meta property="og:description" content="Bridging engineering excellence with purpose-driven innovation. From Kenya's power grids to Berlin's tech landscape.">
+    <meta property="og:image" content="https://www.your-domain.com/assets/imgs/social-share-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.your-domain.com/index.html">
+    <meta property="twitter:title" content="Clifford Ondieki - Hybrid Innovator | Technical Program Manager">
+    <meta property="twitter:description" content="Bridging engineering excellence with purpose-driven innovation. From Kenya's power grids to Berlin's tech landscape.">
+    <meta property="twitter:image" content="https://www.your-domain.com/assets/imgs/social-share-image.jpg">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="assets/imgs/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/imgs/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Preconnect to CDNs for faster loading -->
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+    
+    <!-- Asynchronously Loaded CSS -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/main.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/theme.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/heatmap-styles.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers with JavaScript disabled -->
+    <noscript>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/theme.css">
+        <link rel="stylesheet" href="assets/css/heatmap-styles.css">
+    </noscript>
+
+    <!-- Consolidated and cleaned CSS -->
     <style>
-        /* Custom Font */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
-        }
-        /* Mobile menu transition helper */
-        .mobile-menu-closed {
-            max-height: 0;
-            opacity: 0;
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            overflow: hidden;
-        }
-        .mobile-menu-open {
-            max-height: 500px;
-            opacity: 1;
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        }
-        /* Theme Colors */
-        .theme-indigo {
-            background-color: #283593;
-            color: #ffffff;
-        }
-        .theme-text-indigo {
-            color: #283593;
-        }
-        .theme-bg-indigo-light {
-             background-color: #eef2ff;
-        }
+        .hero-tagline { font-size: 1.5rem; color: #fff; background: rgba(105, 90, 166, 0.85); padding: 1rem 2rem; border-radius: 20px; margin-bottom: 2rem; font-weight: 500; display: inline-block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+        .language-switcher a { display: inline-block; padding: 8px 15px; margin: 0 2px; border-radius: 20px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease; }
+        .language-switcher a.active { background: #695aa6; color: white; }
+        .philosophy-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .philosophy-card h4, .philosophy-card p { color: #fff; }
+        .story-section { background: #f8f9fa; padding: 4rem 0; margin: 2rem 0; margin-top: 40px; }
+        .journey-timeline { position: relative; padding: 2rem 0; }
+        .journey-item { margin-bottom: 2rem; padding-left: 3rem; position: relative; }
+        .journey-item::before { content: ''; position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #695aa6; border-radius: 50%; }
+        .journey-item::after { content: ''; position: absolute; left: 5px; top: 12px; width: 2px; height: calc(100% + 1rem); background: #e9ecef; }
+        .journey-item:last-child::after { display: none; }
+        .header-subtitle { color: #f8f9fa; }
+        .header-content .lead { color: #fff; font-weight: 500; }
+        .footer { background-color: #695aa6; color: #fff; text-align: center; }
+        .footer p { margin-top: 10px; }
+        .footer a { color: #fff; }
+        .footer .social-links .link { font-size: 30px; margin-right: 20px; }
     </style>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Clifford Ondieki",
+      "url": "https://www.your-domain.com",
+      "image": "https://www.your-domain.com/assets/imgs/Omarselfie.svg",
+      "sameAs": [
+        "https://www.linkedin.com/in/clifford-ondieki-559b9771/"
+      ],
+      "jobTitle": "Technical Program Manager",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Berlin Tech"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Your University Name"
+      },
+      "nationality": "Kenyan",
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Berlin, Germany"
+      },
+      "knowsAbout": ["Technical Program Management", "SaaS", "Renewable Energy", "Systems Thinking", "Agile Methodologies", "Grid Integration"]
+    }
+    </script>
 </head>
-<body class="bg-gray-50">
+<!-- The data-spy and related attributes have been removed from here to fix the mobile nav -->
+<body id="home">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Brand/Logo - Deep Indigo -->
-                <a href="index.html" class="flex items-center space-x-2 theme-text-indigo font-bold text-lg">
-                    <img src="assets/imgs/man.png" alt="Clifford Ondieki Profile Icon" class="rounded-full h-8 w-8 object-cover"
-                         onerror="this.onerror=null; this.src='https://placehold.co/30x30/283593/ffffff?text=C';" />
-                    <span>Clifford Ondieki <small class="text-sm font-normal text-gray-500 hidden sm:inline">| Hybrid Innovator</small></span>
-                </a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex lg:items-center lg:space-x-4">
-                    <ul class="flex space-x-4">
-                        <li><a href="index.html" class="px-3 py-2 text-sm font-medium rounded-md bg-indigo-900/10 theme-text-indigo font-semibold transition duration-150 ease-in-out">Home</a></li>
-                        <li><a href="about.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">About</a></li>
-                        <li><a href="projects.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">Projects</a></li>
-                        <li><a href="philosophy.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">Philosophy</a></li>
-                        <li><a href="blog.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">Insights</a></li>
-                        <li><a href="contact.html" class="px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-indigo-800 transition duration-150 ease-in-out">Connect</a></li>
-                    </ul>
-                    <!-- Language Toggles - Deep Indigo -->
-                    <div class="flex space-x-2 ml-4">
-                        <a href="index.html" class="px-3 py-1 text-sm font-semibold rounded-full bg-indigo-800 text-white">EN</a>
-                        <a href="index-de.html" class="px-3 py-1 text-sm font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button
-                    id="mobile-menu-button"
-                    class="lg:hidden p-2 text-gray-500 hover:text-indigo-800 focus:outline-none"
-                    aria-expanded="false"
-                    aria-controls="mobile-menu"
-                >
-                    <!-- Menu Icon (default) -->
-                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-                    <!-- X Icon (hidden by default) -->
-                    <svg id="x-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-                </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/imgs/Omarselfie.svg" width="30" height="30" class="d-inline-block" alt="Clifford Ondieki's logo">
+            <span class="ml-2">Clifford Ondieki <small>| Hybrid Innovator</small></span>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="philosophy.html">Philosophy</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Connect</a></li>
+            </ul>
+            <div class="navbar-language-toggles ml-auto" aria-label="Language selection">
+                <a href="index.html" class="nav-link language-toggle en active">EN</a>
+                <a href="index-de.html" class="nav-link language-toggle de">DE</a>
             </div>
         </div>
+    </div>
+</nav>
 
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="lg:hidden mobile-menu-closed">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium bg-indigo-900/10 theme-text-indigo" onclick="toggleMobileMenu()">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">About</a>
-                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Projects</a>
-                <a href="philosophy.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Philosophy</a>
-                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Insights</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50" onclick="toggleMobileMenu()">Connect</a>
-                <div class="pt-4 border-t border-gray-200 flex justify-center space-x-4">
-                    <a href="index.html" class="px-3 py-1 text-base font-semibold rounded-full bg-indigo-800 text-white">EN</a>
-                    <a href="index-de.html" class="px-3 py-1 text-base font-medium rounded-full text-gray-600 hover:bg-gray-100">DE</a>
-                </div>
-            </div>
+<header id="home" class="header">
+    <div class="overlay"></div>
+    <div class="header-content container">
+       <h1 class="header-title">
+    I help teams turn complex systems into solutions that work
+</h1>
+<p class="lead mb-4">
+    Blending engineering precision with human empathy. From Kenya's power grids to Berlin's tech scene, I build products and programs that deliver real impact.
+</p>
+        <div class="mt-4 d-flex justify-content-center">
+            <a href="projects.html" class="btn btn-primary btn-lg mr-3">Explore My Work</a>
+            <a href="contact.html" class="btn btn-primary btn-lg">Let's Energize Change Together ⚡</a>
         </div>
-    </nav>
+    </div>
+</header>
 
-    <!-- Hero Section - Deep Indigo -->
-    <section class="pt-24 pb-16 theme-indigo text-white text-center shadow-inner">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">I help teams turn complex systems into solutions that work</h1>
-            <p class="text-xl font-light opacity-90">Blending engineering precision with human empathy. From Kenya's power grids to Berlin's tech scene, I build products and programs that deliver real impact.</p>
-            <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="projects.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-                    Explore My Work
-                </a>
-                <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-                    Let's Energize Change Together ⚡
-                </a>
+<section class="story-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+             <h2 class="mb-4">My Journey as a Hybrid Innovator</h2> 
+                <p class="lead">My path from Kenya's power grids to Berlin's tech landscape has been one of continuous evolution—engineering solutions while embodying purpose.</p> 
+                <p>I believe true innovation springs from deeply understanding systems, whether they're electrical networks or human connections. Every challenge has been a redirection toward growth, every setback a lesson in resilience.</p>
+<a href="about.html" class="btn btn-primary">Discover My Story</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12 lg:py-20">
-
-        <!-- Journey Section -->
-        <section class="mb-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-indigo-900 mb-4">My Journey as a Hybrid Innovator</h2>
-                    <p class="text-lg text-gray-600 mb-4">My path from Kenya's power grids to Berlin's tech landscape has been one of continuous evolution—engineering solutions while embodying purpose.</p>
-                    <p class="text-gray-600 mb-6">I believe true innovation springs from deeply understanding systems, whether they're electrical networks or human connections. Every challenge has been a redirection toward growth, every setback a lesson in resilience.</p>
-                    <a href="about.html" class="inline-block py-3 px-6 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">Discover My Story</a>
-                </div>
-                <div class="bg-gradient-to-br from-indigo-800 to-purple-900 p-8 rounded-xl text-white shadow-xl">
-                    <h4 class="text-2xl font-bold mb-4">Engineering Empathy</h4>
-                    <p class="opacity-90">
+            <div class="col-lg-6">
+                <div class="philosophy-card">
+                    <h4 class="mb-3">Engineering Empathy</h4>
+                    <p class="mb-0">
                         "The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose. My Kenyan heritage emphasizes community and collaboration, principles that deeply inform my approach to building high-performing, empathetic teams."
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- What Drives Me Section -->
-        <section class="mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-900 mb-4">What Drives Me</h2>
-            <p class="text-center text-lg text-gray-500 mb-12">The principles that guide my work</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300">
-                    <div class="text-indigo-800 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
+<section class="section">
+    <div class="container text-center">
+        <h6 class="section-title mb-6">What Drives Me</h6>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="assets/imgs/analytics.svg" alt="Systems Thinking icon" class="icon" loading="lazy" decoding="async" width="80" height="80">
+                        <h6 class="title">Systems Thinking</h6>
+                        <p class="subtitle">From 11kV power lines to SaaS pipelines—understanding interconnected systems is my superpower.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Systems Thinking</h3>
-                    <p class="text-gray-600">From 11kV power lines to SaaS pipelines—understanding interconnected systems is my superpower.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300">
-                    <div class="text-indigo-800 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cultural Bridge</h3>
-                    <p class="text-gray-600">Bringing Kenyan community values to Berlin's innovation ecosystem—collaboration over competition.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300">
-                    <div class="text-indigo-800 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Purpose-Driven Innovation</h3>
-                    <p class="text-gray-600">Every technical solution I build serves a deeper human need—that's where true impact lives.</p>
                 </div>
             </div>
-        </section>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="assets/imgs/responsive.svg" alt="Cultural Bridge icon" class="icon" loading="lazy" decoding="async" width="80" height="80">
+                        <h6 class="title">Cultural Bridge</h6>
+                        <p class="subtitle">Bringing Kenyan community values to Berlin's innovation ecosystem—collaboration over competition.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="assets/imgs/toolbox.svg" alt="Purpose-Driven icon" class="icon" loading="lazy" decoding="async" width="80" height="80">
+                        <h6 class="title">Purpose-Driven Innovation</h6>
+                        <p class="subtitle">Every technical solution I build serves a deeper human need—that's where true impact lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- Featured Work Section -->
-        <section class="mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-900 mb-4">Featured Work</h2>
-            <p class="text-center text-lg text-gray-500 mb-12">Engineering with Impact</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="projects.html" class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <img src="assets/imgs/wind farm.jpg" alt="Kinangop Wind Integration project" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                        <div class="text-white">
-                            <h4 class="text-xl font-bold mb-2">⚡ Kinangop Wind Power Integration</h4>
-                            <p class="text-sm opacity-90">Kenya's national grid needed to absorb intermittent wind power without risking blackouts.</p>
+<section class="section bg-light" id="skills-tools">
+    <div class="container text-center">
+        <h6 class="section-title mb-4">Skills, Tools & Platforms</h6>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <p class="section-subtitle">A blend of technical and professional proficiencies.</p>
+                <div class="skills-grid">
+                    <div class="row">
+                        <!-- Technical Skills -->
+                        <div class="col-lg-6">
+                            <div class="skill-category">
+                                <h5>Technical Skills</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="ti-check"></i> Python, JavaScript, C++</li>
+                                    <li><i class="ti-check"></i> Node.js, React, MongoDB</li>
+                                    <li><i class="ti-check"></i> DIgSILENT PowerFactory, Power System Analysis</li>
+                                    <li><i class="ti-check"></i> TensorFlow, Time Series Analysis, Data Visualization</li>
+                                    <li><i class="ti-check"></i> Load Balancing Algorithms, Real-time Analytics</li>
+                                    <li><i class="ti-check"></i> AWS, Azure, GCP, Docker, Kubernetes</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Program & Professional Skills -->
+                        <div class="col-lg-6">
+                            <div class="skill-category">
+                                <h5>Program & Professional Skills</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="ti-check"></i> Agile/Scrum Methodologies</li>
+                                    <li><i class="ti-check"></i> Project & Product Lifecycle</li>
+                                    <li><i class="ti-check"></i> Stakeholder Management</li>
+                                    <li><i class="ti-check"></i> Systems Thinking, Cross-Domain Innovation</li>
+                                    <li><i class="ti-check"></i> Urban Planning, Renewable Energy Integration</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </a>
-                <a href="projects.html" class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <img src="assets/imgs/collaboration.png" alt="Predictive Maintenance AI project" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                        <div class="text-white">
-                            <h4 class="text-xl font-bold mb-2">🔧 Predictive Maintenance AI</h4>
-                            <p class="text-sm opacity-90">AI-powered predictive analytics that reduced downtime by 40%.</p>
+                    <!-- Tools & Platforms - now a central rotating element -->
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="tools-column">
+                                <h5>Tools & Platforms</h5>
+                                <div class="tools-marquee">
+                                    <div class="marquee-content">
+                                        <!-- Duplicating content for seamless loop -->
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/tensorflow.svg" alt="TensorFlow logo" class="tool-logo"><span class="tool-name">TensorFlow</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/mongodb.svg" alt="MongoDB logo" class="tool-logo"><span class="tool-name">MongoDB</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/PowerFactory.svg" alt="DIgSILENT PowerFactory logo" class="tool-logo"><span class="tool-name">PowerFactory</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/slack.svg" alt="Slack logo" class="tool-logo"><span class="tool-name">Slack</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/notion.svg" alt="Notion logo" class="tool-logo"><span class="tool-name">Notion</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/Odoo.svg" alt="Odoo logo" class="tool-logo"><span class="tool-name">Odoo</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/wordpress.svg" alt="WordPress logo" class="tool-logo"><span class="tool-name">WordPress</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/illustrator.svg" alt="Adobe Illustrator logo" class="tool-logo"><span class="tool-name">Illustrator</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/photoshop.svg" alt="Adobe Photoshop logo" class="tool-logo"><span class="tool-name">Photoshop</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/canva.svg" alt="Canva logo" class="tool-logo"><span class="tool-name">Canva</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/postman.svg" alt="Postman logo" class="tool-logo"><span class="tool-name">Postman</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/hubspot.svg" alt="HubSpot logo" class="tool-logo"><span class="tool-name">HubSpot</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/metabase.svg" alt="Metabase logo" class="tool-logo"><span class="tool-name">Metabase</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/google.svg" alt="G-Suite logo" class="tool-logo"><span class="tool-name">G-Suite</span></div>
+                                      <div class="tool-logo-wrapper"><img src="assets/imgs/github.svg" alt="Github logo" class="tool-logo"><span class="tool-name">Github</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/microsoft-office-2013-logo.svg" alt="Microsoft Office logo" class="tool-logo"><span class="tool-name">Office</span></div>
+
+                                        <!-- Duplicated content for seamless loop -->
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/tensorflow.svg" alt="TensorFlow logo" class="tool-logo"><span class="tool-name">TensorFlow</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/mongodb.svg" alt="MongoDB logo" class="tool-logo"><span class="tool-name">MongoDB</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/PowerFactory.svg" alt="DIgSILENT PowerFactory logo" class="tool-logo"><span class="tool-name">PowerFactory</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/slack.svg" alt="Slack logo" class="tool-logo"><span class="tool-name">Slack</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/notion.svg" alt="Notion logo" class="tool-logo"><span class="tool-name">Notion</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/Odoo.svg" alt="Odoo logo" class="tool-logo"><span class="tool-name">Odoo</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/wordpress.svg" alt="WordPress logo" class="tool-logo"><span class="tool-name">WordPress</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/illustrator.svg" alt="Adobe Illustrator logo" class="tool-logo"><span class="tool-name">Illustrator</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/photoshop.svg" alt="Adobe Photoshop logo" class="tool-logo"><span class="tool-name">Photoshop</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/canva.svg" alt="Canva logo" class="tool-logo"><span class="tool-name">Canva</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/postman.svg" alt="Postman logo" class="tool-logo"><span class="tool-name">Postman</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/hubspot.svg" alt="HubSpot logo" class="tool-logo"><span class="tool-name">HubSpot</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/metabase.svg" alt="Metabase logo" class="tool-logo"><span class="tool-name">Metabase</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/google.svg" alt="G-Suite logo" class="tool-logo"><span class="tool-name">G-Suite</span></div>
+                                      <div class="tool-logo-wrapper"><img src="assets/imgs/github.svg" alt="Github logo" class="tool-logo"><span class="tool-name">Github</span></div>
+                                        <div class="tool-logo-wrapper"><img src="assets/imgs/microsoft-office-2013-logo.svg" alt="Microsoft Office logo" class="tool-logo"><span class="tool-name">Office</span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </a>
-                <a href="projects.html" class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <img src="assets/imgs/change.png" alt="Health Tech Load Balancing project" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                        <div class="text-white">
-                            <h4 class="text-xl font-bold mb-2">🏥 Health Tech Load Balancing</h4>
-                            <p class="text-sm opacity-90">Scalable load-balancing system supporting 500+ clinics.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="text-center mt-8">
-                <a href="projects.html" class="inline-block py-3 px-8 rounded-full bg-indigo-800 text-white font-bold text-lg shadow-xl hover:bg-indigo-700 transition duration-300">
-                    View All Projects
-                </a>
-            </div>
-        </section>
-
-        <!-- Philosophy Section -->
-        <section class="mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-900 mb-4">My Philosophy</h2>
-            <p class="text-center text-lg text-gray-500 mb-12">Core Beliefs</p>
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-gradient-to-br from-indigo-800 to-purple-900 p-10 rounded-xl text-white shadow-2xl">
-                    <h4 class="text-2xl font-bold mb-4">"Smart Laziness" & Systemic Efficiency</h4>
-                    <p class="mb-4 text-lg opacity-90">"True efficiency isn't about working harder—it's about understanding systems so deeply that you can identify the one change that eliminates ten problems."</p>
-                    <p class="opacity-90">This principle, learned from debugging transformers in Kenya, now guides how I approach everything from code architecture to team dynamics.</p>
-                </div>
-                <div class="text-center mt-6">
-                    <a href="philosophy.html" class="inline-block py-3 px-6 rounded-full border-2 border-indigo-800 text-indigo-800 font-semibold hover:bg-indigo-800 hover:text-white transition duration-300">
-                        Explore My Philosophy
-                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+  
+<section class="section bg-light">
+    <div class="container text-center">
+        <p class="section-subtitle">Featured Work</p>
+        <h6 class="section-title mb-6">Engineering with Impact</h6>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="projects.html#kinangop" class="portfolio-card">
+                    <img src="assets/imgs/wind farm.jpg" class="portfolio-card-img" alt="Kinangop Wind Integration project" loading="lazy" decoding="async" width="370" height="270">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>⚡ Kinangop Wind Power Integration</h4>
+                            <p class="font-weight-normal">Kenya's national grid needed to absorb intermittent wind power without risking blackouts. I developed a dynamic stability model that enabled seamless integration, helping bring clean energy to thousands of homes.</p>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="projects.html#predictive-ai" class="portfolio-card">
+                    <img class="portfolio-card-img" src="assets/imgs/collaboration.png" alt="Predictive Maintenance AI project" loading="lazy" decoding="async" width="370" height="270">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>🔧 Predictive Maintenance AI</h4>
+                            <p class="font-weight-normal">Manufacturers were losing time and money to unexpected equipment failures. I led a project deploying AI-powered predictive analytics, which reduced downtime by 40% and improved operational efficiency.</p>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="projects.html#health-tech" class="portfolio-card">
+                    <img class="portfolio-card-img" src="assets/imgs/change.png" alt="Health Tech Load Balancing project" loading="lazy" decoding="async" width="370" height="270">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>🏥 Health Tech Load Balancing</h4>
+                            <p class="font-weight-normal"> In East Africa, digital health platforms faced overwhelming server loads during peak usage. I designed and rolled out a scalable load-balancing system that supported 500+ clinics, ensuring smooth patient care when it mattered most.</p>
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="mt-4">
+            <a href="projects.html" class="btn btn-primary">View All Projects</a>
+        </div>
+    </div>
+</section>
 
-    </main>
+<section class="section">
+    <div class="container text-center">
+        <p class="section-subtitle">Core Beliefs</p>
+        <h6 class="section-title mb-6">My Philosophy</h6>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="philosophy-card">
+                    <h4 class="mb-3">"Smart Laziness" & Systemic Efficiency</h4>
+                    <p class="mb-3">"True efficiency isn't about working harder—it's about understanding systems so deeply that you can identify the one change that eliminates ten problems."</p>
+                    <p class="mb-0">This principle, learned from debugging transformers in Kenya, now guides how I approach everything from code architecture to team dynamics.</p>
+                </div>
+                <a href="philosophy.html" class="btn btn-outline-primary mt-3">Explore My Philosophy</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Call to Action - Deep Indigo -->
-    <section class="py-16 theme-indigo text-white text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Let's build something that lasts</h2>
-            <p class="text-lg font-light mb-6">I bring the structure of an engineer, the insight of a product thinker, and the heart of a collaborator. If you're ready to deliver impact, let's talk.</p>
-            <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-                Let's Energize Change Together ⚡
+<section class="section-sm bg-primary">
+    <div class="container text-center text-sm-left">
+        <div class="row align-items-center">
+            <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                <h6 class="title text-light">Let's build something that lasts.</h6>
+                <p class="m-0 text-light">I bring the structure of an engineer, the insight of a product thinker, and the heart of a collaborator. If you're ready to deliver impact, let's talk.</p>
+            </div>
+            <div class="col-sm offset-sm-2 offset-md-3">
+                <a href="contact.html" class="btn btn-lg my-font btn-light rounded">
+                    Let's Energize Change Together ⚡
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="social-links text-center m-auto ml-sm-auto">
+            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="link" target="_blank" rel="noopener noreferrer" aria-label="Clifford Ondieki's LinkedIn Profile">
+                <i class="ti-linkedin" aria-hidden="true"></i>
             </a>
         </div>
-    </section>
+        <p class="mb-0">
+            Copyright <script>document.write(new Date().getFullYear())</script> &copy;
+            <a href="#">Bridging technology with purpose — energizing change one system at a time.</a>
+        </p>
+        <p class="mt-2">
+            <a href="privacy-policy.html" style="color: #fff; font-size: 0.9rem;">Privacy Policy</a> | 
+            <a href="contact.html" style="color: #fff; font-size: 0.9rem;">Contact</a>
+        </p>
+    </div>
+</footer>
 
-    <!-- Footer - Graphite Grey -->
-    <footer class="bg-gray-900 text-white text-center py-6">
-        <div class="container mx-auto px-4">
-            <div class="mb-3">
-                <a
-                    href="https://www.linkedin.com/in/clifford-ondieki-559b9771/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-white transition duration-200"
-                    title="LinkedIn Profile"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 inline-block"><path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-            </div>
-            <p class="text-sm mb-1">
-                Copyright &copy; <span id="current-year"></span>
-                <a href="#" class="text-amber-400 hover:text-amber-300 ml-1">Bridging technology with purpose — energizing change one system at a time.</a>
-            </p>
-            <p class="text-xs mt-2 space-x-3">
-                <a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
-                <span class="text-gray-600">|</span>
-                <a href="contact.html" class="text-gray-400 hover:text-white">Contact</a>
-                <span class="text-gray-600">|</span>
-                <a href="philosophy.html" class="text-white hover:text-amber-400">Philosophy</a>
-                <span class="text-gray-600">|</span>
-                <a href="blog.html" class="text-white hover:text-amber-400">Insights</a>
-            </p>
-        </div>
-    </footer>
+<!-- Deferred scripts for faster page load -->
+<script src="assets/vendors/jquery/jquery-3.4.1.js" defer></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js" defer></script>
+<script src="assets/js/script.js" defer></script>
+<script src="assets/js/attention-heatmap.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.language-switcher a');
+    links.forEach(link => {
+      if (window.location.pathname.includes(link.getAttribute('href'))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+</script>
 
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const menuBtn = document.getElementById('mobile-menu-button');
-            const menuIcon = document.getElementById('menu-icon');
-            const xIcon = document.getElementById('x-icon');
-
-            const isMenuOpen = menu.classList.toggle('mobile-menu-open');
-            menu.classList.toggle('mobile-menu-closed', !isMenuOpen);
-
-            if (isMenuOpen) {
-                menuBtn.setAttribute('aria-expanded', 'true');
-                menuIcon.classList.add('hidden');
-                xIcon.classList.remove('hidden');
-            } else {
-                menuBtn.setAttribute('aria-expanded', 'false');
-                menuIcon.classList.remove('hidden');
-                xIcon.classList.add('hidden');
-            }
-        }
-
-        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
-    </script>
 </body>
 </html>
