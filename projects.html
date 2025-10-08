@@ -50,6 +50,33 @@
             color: white !important;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        @media (max-width: 1024px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .content-column {
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .image-column {
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -131,58 +158,60 @@
         <!-- EV Charger Project -->
         <section class="mb-16">
             <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                <div class="grid lg:grid-cols-2 gap-8 items-start">
-                    <div>
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Equitable EV Charger Deployment in Berlin</h2>
-                        <p class="text-lg text-indigo-700 mb-6">An ongoing data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.</p>
-                        
-                        <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
-                            <h4 class="text-lg font-semibold text-rose-900 mb-2">The Challenge</h4>
-                            <p class="text-gray-600 text-sm">Public Electric Vehicle (EV) charging infrastructure is largely demand-driven, reinforcing spatial inequities. This creates a 'chicken-and-egg' problem, where a lack of infrastructure suppresses EV adoption in underserved areas, justifying continued underinvestment.</p>
-                        </div>
-                        
-                        <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
-                            <h4 class="text-lg font-semibold text-teal-900 mb-2">Our Data-Driven Solution</h4>
-                            <p class="text-gray-600 text-sm">We implemented a multi-objective NSGA-II model in Python to balance coverage and spatial equity, minimizing the Gini coefficient of EVs per charger. This approach provides different Pareto-optimal deployment strategies for urban planners, directly addressing infrastructure placement under complex geospatial and socio-economic constraints.</p>
-                        </div>
+                <div class="project-grid">
+                    <div class="content-column">
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4">Equitable EV Charger Deployment in Berlin</h2>
+                            <p class="text-lg text-indigo-700 mb-6">An ongoing data-driven geospatial optimization pipeline to balance coverage and spatial equity in Berlin's EV charging infrastructure.</p>
+                            
+                            <div class="mb-6 border-l-4 border-rose-800 pl-4 bg-rose-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-rose-900 mb-2">The Challenge</h4>
+                                <p class="text-gray-600 text-sm">Public Electric Vehicle (EV) charging infrastructure is largely demand-driven, reinforcing spatial inequities. This creates a 'chicken-and-egg' problem, where a lack of infrastructure suppresses EV adoption in underserved areas, justifying continued underinvestment.</p>
+                            </div>
+                            
+                            <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-teal-900 mb-2">Our Data-Driven Solution</h4>
+                                <p class="text-gray-600 text-sm">We implemented a multi-objective NSGA-II model in Python to balance coverage and spatial equity, minimizing the Gini coefficient of EVs per charger. This approach provides different Pareto-optimal deployment strategies for urban planners, directly addressing infrastructure placement under complex geospatial and socio-economic constraints.</p>
+                            </div>
 
-                        <div class="mb-6 border-l-4 border-blue-800 pl-4 bg-blue-50 p-4 rounded-md">
-                            <h4 class="text-lg font-semibold text-blue-900 mb-2">My Role & Timeline</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                                <div>
-                                    <strong class="text-blue-800">My Role:</strong>
-                                    <ul class="list-disc list-inside mt-1 text-gray-600">
-                                        <li>Lead Research Engineer</li>
-                                        <li>NSGA-II Algorithm Development</li>
-                                        <li>Equity Metric Design (Gini coefficient)</li>
-                                    </ul>
+                            <div class="mb-6 border-l-4 border-blue-800 pl-4 bg-blue-50 p-4 rounded-md">
+                                <h4 class="text-lg font-semibold text-blue-900 mb-2">My Role & Timeline</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <strong class="text-blue-800">My Role:</strong>
+                                        <ul class="list-disc list-inside mt-1 text-gray-600">
+                                            <li>Lead Data Scientist & Geospatial Analyst</li>
+                                            <li>NSGA-II Algorithm Development</li>
+                                            <li>Equity Metric Design (Gini coefficient)</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <strong class="text-blue-800">Timeline:</strong>
+                                        <ul class="list-disc list-inside mt-1 text-gray-600">
+                                            <li>Research: 3 months (2024)</li>
+                                            <li>Model Development: 2 months</li>
+                                            <li>Validation & Analysis: 1 month</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div>
-                                    <strong class="text-blue-800">Timeline:</strong>
-                                    <ul class="list-disc list-inside mt-1 text-gray-600">
-                                        <li>Research: 3 months (2025)</li>
-                                        <li>Model Development: 2 months</li>
-                                        <li>Validation & Analysis: 1 month</li>
-                                    </ul>
-                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Python</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">NSGA-II</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Geospatial Optimization</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Urban Planning</span>
                             </div>
                         </div>
                         
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">NSGA-II</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Geospatial Optimization</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Urban Planning</span>
-                        </div>
-                        
-                        <div class="grid grid-cols-3 gap-4 border-t pt-4">
+                        <div class="grid grid-cols-3 gap-4 border-t pt-4 mt-auto">
                             <div class="text-center">
                                 <div class="text-3xl font-bold text-indigo-800">13%</div>
-                                <p class="text-xs text-gray-500 font-medium">Reduction in Citywide Gini Coefficient</p>
+                                <p class="text-xs text-gray-500 font-medium">Reduction in Gini Coefficient</p>
                             </div>
                             <div class="text-center">
                                 <div class="text-3xl font-bold text-indigo-800">6x</div>
-                                <p class="text-xs text-gray-500 font-medium">Model Projects 6x More Chargers to Underserved Areas</p>
+                                <p class="text-xs text-gray-500 font-medium">Model Projects 6x More Chargers</p>
                             </div>
                             <div class="text-center">
                                 <div class="text-3xl font-bold text-indigo-800">21%</div>
@@ -190,9 +219,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <img src="imgs/berlin.png" alt="Berlin EV Charger Distribution" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
-                        <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
+                    
+                    <div class="image-column">
+                        <img src="imgs/berlin.png" alt="Berlin EV Charger Distribution" class="w-full h-64 object-cover rounded-lg shadow-lg border border-gray-200" />
+                        <div class="bg-gray-50 p-5 rounded-xl shadow-inner border border-gray-200 flex-1">
                             <h5 class="text-lg font-bold text-gray-800 mb-2">Philosophy in Action</h5>
                             <p class="text-sm text-gray-600 mb-4">The objective is not just to deploy more chargers, but to deploy them strategically to foster equitable access and sustainable urban mobility. My framework empowers municipalities to navigate the efficiency-equity trade-off with data-driven insights.</p>
                             <a href="ev.html" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
@@ -204,14 +234,23 @@
             </div>
         </section>
 
-        <!-- Other Projects -->
+        <!-- Climate Tech Advisory -->
         <section class="mb-16">
-            <div class="space-y-12">
-                
-                <!-- Climate Tech Advisory -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                    <div class="grid lg:grid-cols-2 gap-8 items-start">
-                        <div class="lg:order-2">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <div class="project-grid">
+                    <div class="image-column">
+                        <img src="imgs/climate-tech.png" alt="Climate Tech Advisory" class="w-full h-64 object-cover rounded-lg shadow-lg border border-gray-200" />
+                        <div class="bg-gray-50 p-5 rounded-xl shadow-inner border border-gray-200 flex-1">
+                            <h5 class="text-lg font-bold text-gray-800 mb-2">Full-Stack Advantage</h5>
+                            <p class="text-sm text-gray-600 mb-4">Most advisors excel in one domain. I bridge investment analysis with operational execution, providing the complete picture that investors need and startups require to succeed.</p>
+                            <a href="climate-tech.html" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                View Case Study
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="content-column">
+                        <div>
                             <h2 class="text-2xl font-bold text-gray-900 mb-4">Climate Tech Investment Consultancy</h2>
                             <p class="text-lg text-indigo-700 mb-6">Bridging venture capital analysis with infrastructure deployment expertise to de-risk climate tech investments.</p>
                             
@@ -239,7 +278,7 @@
                                     <div>
                                         <strong class="text-blue-800">Timeline:</strong>
                                         <ul class="list-disc list-inside mt-1 text-gray-600">
-                                            <li>Externship: 3 months (2025)</li>
+                                            <li>Externship: 3 months (2024)</li>
                                             <li>Startup Analysis: 5+ companies</li>
                                             <li>Investment Thesis Development</li>
                                         </ul>
@@ -252,41 +291,33 @@
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Operational Due Diligence</span>
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Deployment Strategy</span>
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Market Research</span>
-                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Spatial Equity</span>
-                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Risk Assessment</span>
-                            </div>
-                            
-                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">5+</div>
-                                    <p class="text-xs text-gray-500 font-medium">Startups Analyzed</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">6</div>
-                                    <p class="text-xs text-gray-500 font-medium">Investment Theses</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">3x</div>
-                                    <p class="text-xs text-gray-500 font-medium">Analysis Depth</p>
-                                </div>
                             </div>
                         </div>
-                        <div class="lg:order-1 flex flex-col items-center">
-                            <img src="imgs/climate-tech.png" alt="Climate Tech Advisory" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4" />
-                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
-                                <h5 class="text-lg font-bold text-gray-800 mb-2">Full-Stack Advantage</h5>
-                                <p class="text-sm text-gray-600 mb-4">Most advisors excel in one domain. I bridge investment analysis with operational execution, providing the complete picture that investors need and startups require to succeed.</p>
-                                <a href="climate-tech.html" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
-                                    View Case Study
-                                </a>
+                        
+                        <div class="grid grid-cols-3 gap-4 border-t pt-4 mt-auto">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">5+</div>
+                                <p class="text-xs text-gray-500 font-medium">Startups Analyzed</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">6</div>
+                                <p class="text-xs text-gray-500 font-medium">Investment Theses</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">3x</div>
+                                <p class="text-xs text-gray-500 font-medium">Analysis Depth</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Health Tech Load Balancing -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <!-- Health Tech Load Balancing -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <div class="project-grid">
+                    <div class="content-column">
                         <div>
                             <h2 class="text-2xl font-bold text-gray-900 mb-4">Health Tech Load Balancing System</h2>
                             <p class="text-lg text-indigo-700 mb-6">Applying power grid principles to optimize healthcare service distribution across rural Kenya.</p>
@@ -307,7 +338,7 @@
                                     <div>
                                         <strong class="text-blue-800">My Role:</strong>
                                         <ul class="list-disc list-inside mt-1 text-gray-600">
-                                            <li>Product lead</li>
+                                            <li>Full-Stack Developer & Systems Architect</li>
                                             <li>Algorithm Design Lead</li>
                                             <li>Technical Project Manager</li>
                                         </ul>
@@ -315,7 +346,7 @@
                                     <div>
                                         <strong class="text-blue-800">Timeline:</strong>
                                         <ul class="list-disc list-inside mt-1 text-gray-600">
-                                            <li>Research & Planning: 2 months (2022)</li>
+                                            <li>Research & Planning: 2 months (2023)</li>
                                             <li>Development: 3 months</li>
                                             <li>Deployment & Monitoring: 1 month</li>
                                         </ul>
@@ -328,39 +359,56 @@
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">React</span>
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">MongoDB</span>
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Load Balancing Algorithms</span>
-                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Geospatial Analysis</span>
-                                <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Real-time Analytics</span>
-                            </div>
-                            
-                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">50%</div>
-                                    <p class="text-xs text-gray-500 font-medium">Reduced Wait Times</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">30%</div>
-                                    <p class="text-xs text-gray-500 font-medium">Improved Resource Utilization</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">15k+</div>
-                                    <p class="text-xs text-gray-500 font-medium">Patients Served Monthly</p>
-                                </div>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <img src="imgs/health-tech.png" alt="Health Tech Load Balancing" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4">
-                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
-                                <h5 class="text-lg font-bold text-gray-800 mb-2">Cross-Domain Innovation</h5>
-                                <p class="text-sm text-gray-600 mb-4">This project proved that engineering empathy scales across domains. Power grid principles applied to healthcare access demonstrate how systemic thinking can solve seemingly unrelated problems.</p>
+                        
+                        <div class="grid grid-cols-3 gap-4 border-t pt-4 mt-auto">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">50%</div>
+                                <p class="text-xs text-gray-500 font-medium">Reduced Wait Times</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">30%</div>
+                                <p class="text-xs text-gray-500 font-medium">Improved Resource Use</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">15k+</div>
+                                <p class="text-xs text-gray-500 font-medium">Patients Monthly</p>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="image-column">
+                        <img src="imgs/health-tech.png" alt="Health Tech Load Balancing" class="w-full h-64 object-cover rounded-lg shadow-lg border border-gray-200">
+                        <div class="bg-gray-50 p-5 rounded-xl shadow-inner border border-gray-200 flex-1">
+                            <h5 class="text-lg font-bold text-gray-800 mb-2">Cross-Domain Innovation</h5>
+                            <p class="text-sm text-gray-600 mb-4">This project proved that engineering empathy scales across domains. Power grid principles applied to healthcare access demonstrate how systemic thinking can solve seemingly unrelated problems.</p>
+                            <a href="health-tech.html" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Predictive Maintenance AI -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                    <div class="grid lg:grid-cols-2 gap-8 items-start">
-                        <div class="lg:order-2">
+        <!-- Predictive Maintenance AI -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <div class="project-grid">
+                    <div class="image-column">
+                        <img src="imgs/geothermal-drilling-activities.jpg" alt="Predictive Maintenance AI" class="w-full h-64 object-cover rounded-lg shadow-lg border border-gray-200">
+                        <div class="bg-gray-50 p-5 rounded-xl shadow-inner border border-gray-200 flex-1">
+                            <h5 class="text-lg font-bold text-gray-800 mb-2">Key Insight</h5>
+                            <p class="text-sm text-gray-600 mb-4">This project revealed how data-driven decisions create human-centric solutions. The principles of optimization and efficiency I learned here now inform my approach to SaaS uptime and product operational excellence.</p>
+                            <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                View Full Documentation
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="content-column">
+                        <div>
                             <h2 class="text-2xl font-bold text-gray-900 mb-4">Predictive Maintenance AI for Geothermal Plants</h2>
                             <p class="text-lg text-indigo-700 mb-6">A machine learning system for predicting equipment failures in geothermal power generation, reducing operational costs and increasing plant uptime.</p>
                             
@@ -388,7 +436,7 @@
                                     <div>
                                         <strong class="text-blue-800">Timeline:</strong>
                                         <ul class="list-disc list-inside mt-1 text-gray-600">
-                                            <li>Data Collection: 3 months (2015)</li>
+                                            <li>Data Collection: 3 months (2022)</li>
                                             <li>Model Development: 2 months</li>
                                             <li>Validation & Deployment: 1 month</li>
                                         </ul>
@@ -402,38 +450,32 @@
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Time Series Analysis</span>
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Data Visualization</span>
                             </div>
-                            
-                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">40%</div>
-                                    <p class="text-xs text-gray-500 font-medium">Reduction in Downtime</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">$2M</div>
-                                    <p class="text-xs text-gray-500 font-medium">Annual Cost Savings</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">95%</div>
-                                    <p class="text-xs text-gray-500 font-medium">Prediction Accuracy</p>
-                                </div>
-                            </div>
                         </div>
-                        <div class="lg:order-1 flex flex-col items-center">
-                            <img src="imgs/geothermal-drilling-activities.jpg" alt="Predictive Maintenance AI" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4">
-                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
-                                <h5 class="text-lg font-bold text-gray-800 mb-2">Key Insight</h5>
-                                <p class="text-sm text-gray-600 mb-4">This project revealed how data-driven decisions create human-centric solutions. The principles of optimization and efficiency I learned here now inform my approach to SaaS uptime and product operational excellence.</p>
-                                <a href="https://drive.google.com/file/d/0B2ovMeevnDjZd195VHN4UjNXak0/view?usp=sharing&resourcekey=0-OM41Swf1myiikab1d5w7LQ" target="_blank" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
-                                    View full documentation
-                                </a>
+                        
+                        <div class="grid grid-cols-3 gap-4 border-t pt-4 mt-auto">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">40%</div>
+                                <p class="text-xs text-gray-500 font-medium">Reduction in Downtime</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">$2M</div>
+                                <p class="text-xs text-gray-500 font-medium">Annual Cost Savings</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">95%</div>
+                                <p class="text-xs text-gray-500 font-medium">Prediction Accuracy</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Kinangop Wind Integration -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                    <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <!-- Kinangop Wind Integration -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
+                <div class="project-grid">
+                    <div class="content-column">
                         <div>
                             <h2 class="text-2xl font-bold text-gray-900 mb-4">Kinangop Wind Power Integration</h2>
                             <p class="text-lg text-indigo-700 mb-6">A dynamic voltage stability analysis incorporating Kinangop wind power into Kenya's 59-bus national grid.</p>
@@ -462,7 +504,7 @@
                                     <div>
                                         <strong class="text-blue-800">Timeline:</strong>
                                         <ul class="list-disc list-inside mt-1 text-gray-600">
-                                            <li>System Modeling: 4 months (2015)</li>
+                                            <li>System Modeling: 4 months (2021)</li>
                                             <li>Simulation & Analysis: 3 months</li>
                                             <li>Documentation: 1 month</li>
                                         </ul>
@@ -476,38 +518,39 @@
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Renewable Energy Integration</span>
                                 <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">Grid Stability Modeling</span>
                             </div>
-                            
-                            <div class="grid grid-cols-3 gap-4 border-t pt-4">
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">25%</div>
-                                    <p class="text-xs text-gray-500 font-medium">Improved Grid Stability</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">60MW</div>
-                                    <p class="text-xs text-gray-500 font-medium">Clean Energy Integrated</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-indigo-800">100k+</div>
-                                    <p class="text-xs text-gray-500 font-medium">Households Benefited</p>
-                                </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 border-t pt-4 mt-auto">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">25%</div>
+                                <p class="text-xs text-gray-500 font-medium">Improved Grid Stability</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">60MW</div>
+                                <p class="text-xs text-gray-500 font-medium">Clean Energy Integrated</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-800">100k+</div>
+                                <p class="text-xs text-gray-500 font-medium">Households Benefited</p>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <img src="imgs/wind farm.jpg" alt="Kinangop Wind Integration" class="w-full h-auto rounded-lg shadow-lg border border-gray-200 object-cover mb-4">
-                            <div class="bg-gray-50 p-5 w-full rounded-xl shadow-inner border border-gray-200">
-                                <h5 class="text-lg font-bold text-gray-800 mb-2">Key Lesson</h5>
-                                <p class="text-sm text-gray-600 mb-4">This project taught me that resilience isn't just for power lines—it's for people's access to vital services. The systemic thinking I developed here now informs how I approach SaaS architecture and load balancing.</p>
-                                <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
-                                    Read the full technical report
-                                </a>
-                            </div>
+                    </div>
+                    
+                    <div class="image-column">
+                        <img src="imgs/wind farm.jpg" alt="Kinangop Wind Integration" class="w-full h-64 object-cover rounded-lg shadow-lg border border-gray-200">
+                        <div class="bg-gray-50 p-5 rounded-xl shadow-inner border border-gray-200 flex-1">
+                            <h5 class="text-lg font-bold text-gray-800 mb-2">Key Lesson</h5>
+                            <p class="text-sm text-gray-600 mb-4">This project taught me that resilience isn't just for power lines—it's for people's access to vital services. The systemic thinking I developed here now informs how I approach SaaS architecture and load balancing.</p>
+                            <a href="https://drive.google.com/file/d/1NBIsal051Oqn_8JWls9Lhgr8mEcLpKhq/view" target="_blank" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                                Read Technical Report
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Premium Case Studies -->
+        <!-- Premium Case Studies (unchanged) -->
         <section class="mb-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-indigo-900 mb-4">Premium Case Studies</h2>
@@ -532,7 +575,7 @@
                     </div>
 
                     <div class="opacity-50 group-hover:opacity-20 transition-opacity duration-500">
-                        <div class="grid lg:grid-cols-2 gap-8 items-start">
+                        <div class="project-grid">
                             <div>
                                 <h2 class="text-2xl font-bold text-gray-700 mb-4">Advanced Grid Optimization with AI-Driven Load Forecasting</h2>
                                 <p class="text-lg text-gray-500 mb-6">A comprehensive smart grid solution implementing machine learning algorithms for predictive load management across Kenya's national power infrastructure.</p>
@@ -546,7 +589,7 @@
                                         </div>
                                         <div>
                                             <strong class="text-gray-700">Timeline:</strong>
-                                            <p class="text-gray-600 mt-1">6-month enterprise engagement (2020)</p>
+                                            <p class="text-gray-600 mt-1">6-month enterprise engagement (2023)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -566,12 +609,11 @@
                                     <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">TensorFlow</span>
                                     <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">LSTM Networks</span>
                                     <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">SCADA Integration</span>
-                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Real-time Analytics</span>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center">
                                 <div class="relative w-full">
-                                    <img src="imgs/saas.png" alt="Advanced Grid Optimization Preview" class="w-full h-auto rounded-lg shadow-lg object-cover">
+                                    <img src="imgs/saas.png" alt="Advanced Grid Optimization Preview" class="w-full h-64 object-cover rounded-lg shadow-lg">
                                     <div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
                                         <div class="text-center text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-1">
@@ -605,8 +647,23 @@
                     </div>
 
                     <div class="opacity-50 group-hover:opacity-20 transition-opacity duration-500">
-                        <div class="grid lg:grid-cols-2 gap-8 items-start">
-                            <div class="lg:order-2">
+                        <div class="project-grid">
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-full">
+                                    <img src="imgs/iot.png" alt="Industrial IoT Platform Preview" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
+                                        <div class="text-center text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-1">
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                            <p class="font-semibold">Preview Available</p>
+                                            <small>Hover for details</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
                                 <h2 class="text-2xl font-bold text-gray-700 mb-4">Industrial IoT Platform for Manufacturing Excellence</h2>
                                 <p class="text-lg text-gray-500 mb-6">Enterprise-grade IoT solution for real-time monitoring and optimization of manufacturing processes across multiple facilities.</p>
                                 
@@ -637,24 +694,8 @@
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Node.js</span>
                                     <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">InfluxDB</span>
-                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">MQTT</span>
+                                    <span class="px-3py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">MQTT</span>
                                     <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Docker</span>
-                                    <span class="px-3 py-1 text-xs font-medium bg-gray-200 text-gray-700 rounded-full">Grafana</span>
-                                </div>
-                            </div>
-                            <div class="lg:order-1 flex flex-col items-center">
-                                <div class="relative w-full">
-                                    <img src="imgs/iot.png" alt="Industrial IoT Platform Preview" class="w-full h-auto rounded-lg shadow-lg object-cover">
-                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
-                                        <div class="text-center text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-1">
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            <p class="font-semibold">Preview Available</p>
-                                            <small>Hover for details</small>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
