@@ -118,6 +118,24 @@
         .profile-image[width][height] {
              height: auto; 
         }
+              /* Link styling - Crucial fix for color highlighting */
+        .deep-link {
+            @apply underline font-medium cursor-pointer;
+            color: var(--primary-indigo); /* Use a standard color for links */
+        }
+        
+        /* New class for the accent fire color link (The Highlight) */
+        .deep-link-fire {
+            color: var(--accent-fire); /* This ensures the highlight uses the Crimson color */
+            transition: color 0.2s ease-in-out;
+            text-decoration-color: var(--accent-fire);
+        }
+        
+        .deep-link-fire:hover {
+            color: #5d0000; /* Darker red hover state */
+            @apply no-underline;
+            text-decoration-color: transparent;
+        }
 
         /* Styling for the new quote */
         .highlight-quote {
