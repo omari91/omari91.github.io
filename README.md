@@ -79,4 +79,5 @@ You are welcome to reference or build upon the included research materials with 
 MSc Engineer | IEEE Researcher | EV Infrastructure Optimization | Product & Systems Operations Leader
 Turning research into deployable, reliable systems that improve mobility and sustainability.
 
-
+> 🚀 **Update:** This portfolio has moved to [www.cliffordomari.com](https://www.cliffordomari.com).  
+> You’ll be redirected automatically, but please update your bookmarks.
