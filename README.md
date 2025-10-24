@@ -1,5 +1,8 @@
 # Clifford Omari's Portfolio
 
+> 🚀 **Update:** This portfolio has moved to [www.cliffordomari.com](https://www.cliffordomari.com).  
+> You’ll be redirected automatically, but please update your bookmarks.
+> 
 Welcome to my portfolio repository.
 This space highlights my work at the intersection of Electrical & Electronic Engineering, EV infrastructure optimization, and system development, showcasing research, technical builds, and results from both academic and product-operations environments.
 
@@ -78,6 +81,3 @@ You are welcome to reference or build upon the included research materials with 
 
 MSc Engineer | IEEE Researcher | EV Infrastructure Optimization | Product & Systems Operations Leader
 Turning research into deployable, reliable systems that improve mobility and sustainability.
-
-> 🚀 **Update:** This portfolio has moved to [www.cliffordomari.com](https://www.cliffordomari.com).  
-> You’ll be redirected automatically, but please update your bookmarks.
