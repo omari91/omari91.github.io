@@ -81,4 +81,3 @@ Turning research into deployable, reliable systems that improve mobility and sus
 
 > 🚀 **Update:** This portfolio has moved to [www.cliffordomari.com](https://www.cliffordomari.com).  
 > You’ll be redirected automatically, but please update your bookmarks.
-
