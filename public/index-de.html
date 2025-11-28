@@ -71,6 +71,19 @@
         .animate-scroll:hover {
             animation-play-state: paused;
         }
+
+        .animate-blink {
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 49%, 100% {
+                opacity: 1;
+            }
+            50%, 99% {
+                opacity: 0.3;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -145,11 +158,13 @@
 
             <!-- Right Image -->
             <div class="w-full md:w-1/2 flex justify-center">
-                <div class="relative w-64 h-64 sm:w-80 sm:h-80">
-                    <img src="imgs/GOAT.jpg" alt="A professional headshot of Clifford Ondieki" class="rounded-full w-full h-full object-cover shadow-2xl border-8 border-white" />
-                    <div class="absolute -top-3 -right-3 w-16 h-16 rounded-full border-4 border-yellow-400 opacity-75" aria-hidden="true"></div>
-                    <div class="absolute -bottom-3 -left-3 w-24 h-24 rounded-full border-4 border-[#303f9f] opacity-50" aria-hidden="true"></div>
-                </div>
+               <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+            <img src="imgs/GOAT.jpg" alt="Clifford Ondieki" class="rounded-full w-full h-full object-cover shadow-2xl border-8 border-white/10" />
+            <!-- Floating Badge with Blink Animation -->
+            <div class="absolute -bottom-4 -right-4 bg-white text-indigo-900 px-4 py-2 rounded-lg shadow-xl font-bold text-sm flex items-center animate-blink">
+               <span class="text-yellow-500 mr-2">🏆</span> IEEE Best Paper 2025 Winner
+            </div>
+          </div>
             </div>
         </div>
     </div>
