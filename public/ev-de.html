@@ -6,67 +6,42 @@
     <meta name="author" content="Clifford Omari Ondieki">
     <title>EV-Infrastrukturstrategie - Clifford Ondieki</title>
 
-    <!-- Microsoft Clarity Tracking Code -->
-      <link rel="icon" type="image/png" href="imgs/man.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="imgs/man.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-        type="text/javascript"
-        async
-        defer
-        src="https://www.clarity.ms/tag/t41xxbb71x"
-    ></script>
+    <script type="text/javascript" async defer src="https://www.clarity.ms/tag/t41xxbb71x"></script>
     <script type="module" src="https://unpkg.com/lucide@latest" defer></script>
 
-    <meta name="description" content="Die E-Ladeinfrastruktur Berlins zukunftssicher machen: Eine Zwei-Studien-Entwicklung von deterministischer Planung zur Fuzzy-Robustheit">
+    <meta name="description" content="Zukunftssichere Berliner EV-Infrastruktur: Eine zweistufige Progression von deterministischer Planung zu Fuzzy-Robustheit">
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Make Lucide globally available -->
-    <script type="module">
-        import * as lucide from 'https://unpkg.com/lucide@latest';
-        window.lucide = lucide;
-    </script>
-
-    <!-- Custom Configuration -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
         :root {
             --primary-indigo: #303F9F;
             --neutral-charcoal: #374151;
             --accent-fire: #880E4F;
             --highlight-gold: #F59E0B;
         }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .chart-container { position: relative; height: 350px; width: 100%; max-width: 800px; margin: 0 auto; }
+        .card { background: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 1.5rem; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .metric-value { font-size: 1.5rem; font-weight: 700; color: #1e3a8a; }
+        .metric-label { font-size: 0.875rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--neutral-charcoal);
-            padding-top: 5rem;
-        }
-
-        .language-toggle.active {
-            background-color: var(--primary-indigo) !important;
-            color: white !important;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 400px;
-        }
-
-        .flow-arrow {
-            font-size: 2rem;
-            color: #9CA3AF;
-        }
+        .district-item { cursor: pointer; transition: all 0.3s ease; }
+        .district-item.active { border-color: #0d9488; background-color: #f0fdfa; transform: scale(1.02); }
     </style>
 </head>
-<body class="bg-gray-50 antialiased">
+<body>
 
 <!-- Navigation -->
 <nav class="fixed top-0 z-50 w-full bg-white shadow-md">
@@ -76,7 +51,7 @@
                 <div class="flex-shrink-0">
                     <img src="imgs/man.jpg" alt="Clifford Ondieki Icon" class="w-11 h-11 rounded-full border-4 border-[#303f9f] shadow-md bg-white object-cover" />
                 </div>
-                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Systemingenieur</span></span>
             </a>
 
             <div class="md:hidden">
@@ -96,7 +71,7 @@
 
                 <div class="flex space-x-1 ml-4 border-l pl-4">
                     <a href="ev.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
-                    <a href="ev-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
+                    <a href="ev-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-black transition">DE</a>
                 </div>
             </div>
         </div>
@@ -110,428 +85,530 @@
             <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
             <div class="flex space-x-2 pt-2">
                 <a href="ev.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
-                <a href="ev-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
+                <a href="ev-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-black">DE</a>
             </div>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section -->
-<header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
-            Von Gleichheit zu Resilienz: Berlins EV-Strategie
-        </h1>
-        <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
-            Eine Zwei-Studien-Entwicklung: Deterministische Planung → Fuzzy-Robustheit
-        </p>
+<!-- Header / Abstract -->
+<header class="bg-slate-900 text-white pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+            <div>
+                <span class="inline-block bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3 shadow-lg">IEEE Best Paper 2025</span>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+                    Gerechte EV-Ladeinfrastruktur ermöglichen
+                </h1>
+                <p class="text-xl text-slate-300 max-w-3xl">
+                    Ein multikriterielles geospatiales Optimierungsframework für Berlin
+                </p>
+            </div>
+            <div class="mt-6 md:mt-0 text-right hidden md:block">
+                <p class="text-sm text-slate-400">Autoren</p>
+                <p class="font-semibold">Clifford Ondieki</p>
+                <p class="font-semibold">Tianxiang Lu</p>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6 border-t border-slate-700 pt-8 mt-8">
+            <div>
+                <h3 class="text-teal-400 font-bold mb-2">Das Problem</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Berlins EV-Infrastruktur konzentriert sich stark auf zentrale Bezirke (Mitte), während Außenbezirke (Treptow-Köpenick) „Ladewüsten" und hohe Nutzerkongestion (32 BEVs/Ladesäule) aufweisen.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-teal-400 font-bold mb-2">Die Methode</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Wir entwickelten ein <strong>Multikriterielle Optimierungsmodell (NSGA-II)</strong>. Es balanciert explizit <em>Nutzen</em> (Abdeckung) vs. <em>Gerechtigkeit</em> (Gini-Koeffizient) unter Berücksichtigung unsicherer Nachfrage.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-teal-400 font-bold mb-2">Das Ergebnis</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Ein „Robustes Portfolio" von Strategien. Unsere Gerechtigkeitsstrategie reduziert den stadtweiten Gini-Koeffizienten um <strong>13%</strong> und steigert den Zugang in unterversorgten Gebieten um <strong>21%</strong>.
+                </p>
+            </div>
+        </div>
     </div>
 </header>
 
 <!-- Main Content -->
-<main class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
 
-        <!-- Narrative Summary -->
-        <section class="mb-16">
-            <div class="bg-blue-50 p-8 rounded-xl border-l-4 border-blue-500 text-center">
-                <h2 class="text-3xl font-bold text-blue-800 mb-6">Die E-Ladeinfrastruktur Berlins zukunftssicher machen</h2>
-                <p class="text-lg text-gray-700 mb-8">
-                    Der Weg zu einer widerstandsfähigen Stadtplanung erfordert iterative Verfeinerung. Wir begannen mit der Abbildung des <strong>Gleichheits-Nutzen-Zielkonflikts</strong> in Berlin (Studie 1), mussten jedoch feststellen, dass die Lösung <strong>zerbrechlich</strong> war. Unsere zweite Phase (Studie 2) führte einen <strong>Fuzzy-Optimierungsansatz</strong> ein, um Resilienz gegenüber realen Unsicherheiten zu schaffen.
-                </p>
-
-                <div class="inline-block bg-white p-8 rounded-2xl shadow-xl border-4 border-green-500">
-                    <p class="text-xl font-semibold text-gray-600 mb-2">Steigerung der Resilienz</p>
-                    <p class="text-6xl font-black text-green-600">+20%</p>
-                    <p class="text-lg mt-2 text-gray-700">Höhere <strong>Garantierte</strong> Zufriedenheit gegenüber dem zerbrechlichen Plan</p>
-                </div>
-
-                <p class="text-lg text-gray-600 mt-8 max-w-2xl mx-auto">
-                    Der Fuzzy-Ansatz modelliert explizit schwankende EV-Adoptionsraten und flexible Budgets, um eine hohe Nutzen- und Gleichheitsleistung über <em>alle</em> möglichen Zukunftsszenarien hinweg zu garantieren.
-                </p>
-            </div>
-        </section>
-
-        <!-- Chapter I: The Foundational Model -->
-        <section class="mb-16">
-            <div class="border-t-4 border-blue-500 pt-8">
-                <h2 class="text-3xl font-bold text-blue-600 mb-6 uppercase tracking-wide">Kapitel I: Das Deterministische Fundament (Studie 1)
-                </h2>
-               <a href="imgs/Presentation ETECOM2025-EV NO Audio.pptx" 
-               class="flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition duration-300 shadow-xl transform hover:scale-105 active:scale-95"
-               role="button"
-               aria-label="Download Presentation for Chapter I"
-               download>
-                <!-- Download Icon SVG -->
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                Parasentation Ansehen
-            </a>
-              
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Dieses Kapitel basiert auf der ersten Arbeit: <strong>Ermöglichung der gerechten Verteilung von E-Ladesäulen in Berlin mittels Multi-Objektiver Geospatial-Optimierung</strong>. Es definierte die Kernherausforderung: das Gleichgewicht zwischen maximaler Ladeabdeckung (Nutzen) und fairer Verteilung (Gleichheit).</p>
-
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-center mb-6">Definition von Nutzen und Gleichheit in Berlin</h3>
-                    <div class="grid md:grid-cols-3 gap-6 items-center text-center">
-                        <div class="p-6 border-2 border-dashed border-blue-400 rounded-lg bg-blue-50">
-                            <h4 class="font-semibold mb-2">Ziel 1: Maximiere den Nutzen</h4>
-                            <div class="text-lg font-bold text-blue-800">Stadtweite Abdeckung</div>
-                            <div class="text-sm text-gray-600">(Maximiere die gesamte EV-Abdeckung für die Stadt)</div>
-                        </div>
-
-                        <div class="flow-arrow">↔</div>
-
-                        <div class="p-6 border-2 border-dashed border-red-400 rounded-lg bg-red-50">
-                            <h4 class="font-semibold mb-2">Ziel 2: Maximiere die Gleichheit</h4>
-                            <div class="text-lg font-bold text-red-800">Faire Verteilung</div>
-                            <div class="text-sm text-gray-600">(Minimiere die Gini-Index-Lücke zwischen den Bezirken)</div>
-                        </div>
-                    </div>
-                    <p class="text-center text-sm text-gray-500 mt-6">Dieser Zielkonflikt lieferte die <strong>Knackige Pareto-Front</strong>, aber ihre Pläne waren nur optimal, wenn die Nachfrageprognosen 100% genau waren.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- The Crucial Flaw -->
-        <section class="mb-16">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500">
-                <h3 class="text-2xl font-bold text-center mb-6">Der entscheidende Mangel: Die zerbrechliche Lösung</h3>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Das deterministische Modell in Studie 1 berücksichtigte zwei kritische reale Faktoren nicht: die Ungewissheit der zukünftigen EV-Adoptionsraten und die Flexibilität der Planungsbudgets. Dies führte zu <strong>zerbrechlichen Plänen</strong>, deren Leistung massiv einbrechen konnte, wenn die Annahmen falsch waren.</p>
-
-                <div class="grid md:grid-cols-3 gap-6 items-center text-center">
-                    <div class="p-4 bg-red-100 border border-red-200 rounded-lg">
-                        <strong>1. Unsichere Nachfrage</strong>
-                        <p class="text-sm mt-1">Die EV-Adoption ist ein weiter Bereich, keine einzelne Zahl.</p>
-                    </div>
-                    <div class="flow-arrow hidden md:block">→</div>
-                    <div class="p-4 bg-yellow-100 border border-yellow-200 rounded-lg">
-                        <strong>2. Flexibles Budget</strong>
-                        <p class="text-sm mt-1">Budgets haben oft einen akzeptablen Investitionsrahmen.</p>
-                    </div>
-                    <div class="flow-arrow hidden md:block">→</div>
-                    <div class="p-4 bg-gray-200 border border-gray-300 rounded-lg">
-                        <strong>3. Ergebnisrisiko</strong>
-                        <p class="text-sm mt-1">Ein auf die 'beste Schätzung' optimierter Plan versagt im 'schlimmsten Fall' spektakulär.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Transition to Robustness -->
-        <section class="mb-16">
-            <div class="bg-blue-600 text-white p-8 rounded-xl shadow-2xl text-center">
-                <h3 class="text-3xl font-bold mb-4">Umgang mit Zerbrechlichkeit: Der Schritt zur Robustheit (Studie 2)</h3>
-                <p class="text-xl font-light opacity-90 mb-6">
-                    Die Schwäche des ursprünglichen Plans erforderte einen neuen, übergeordneten Rahmen. Studie 2 führt den Ansatz der <strong>Fuzzy-Multi-Objektiven Optimierung</strong> ein – der die Ungewissheit von Nachfrage und Budget explizit modelliert –, um ein <strong>resilientes und zuverlässiges</strong> EV-Netzwerk zu garantieren, unabhängig von zukünftigen Schwankungen.
-                </p>
-                <a href="#chapter2" class="inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">
-                    Weiter zu Kapitel II (Die Robuste Lösung) ↓
-                </a>
-            </div>
-        </section>
-
-        <!-- Chapter II: The Robust Solution -->
-        <section class="mb-16" id="chapter2">
-            <div class="border-t-4 border-blue-500 pt-8">
-                <h2 class="text-3xl font-bold text-blue-600 mb-6 uppercase tracking-wide">Kapitel II: Die Robuste Lösung (Studie 2)</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Dieses Kapitel beschreibt die Methodik und die überlegenen Ergebnisse der Anwendung des <strong>Fuzzy-Robusten Optimierungsrahmens</strong>. Der Fokus verschiebt sich von der Optimierung für <em>einen besten Fall</em> zur Optimierung für die <em>höchste garantierte Mindestleistung</em>.</p>
-
-                <!-- Framework Steps -->
-                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                    <h4 class="text-xl font-semibold text-center mb-8">Schritte des Fuzzy-Robusten Lösungsverfahrens</h4>
-                    <div class="grid md:grid-cols-5 gap-4 items-center text-center">
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <strong>1. Modell-Fuzzyfizierung</strong>
-                            <p class="text-sm">Nachfrage & Budget werden als Bereiche (TFNs) modelliert</p>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <strong>2. Robuste Entfuzzyfizierung</strong>
-                            <p class="text-sm">Verwendung von Chance-Constrained Programming zur Definition der Zielerfüllung</p>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <strong>3. Multi-Objektiver Solver</strong>
-                            <p class="text-sm">Anwendung des E-NSGAII-Algorithmus zur Ermittlung der Robusten Pareto-Front</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Key Findings -->
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">
-                        <h4 class="text-2xl font-bold mb-4">Befund A: Überlegene Resilienz unter Druck</h4>
-                        <p class="text-gray-600 mb-6">Diese Grafik quantifiziert den Wert des robusten Ansatzes. Im Vergleich zur <strong>deterministischen Lösung (Studie 1)</strong> gewährleistet der <strong>Fuzzy-Robuste Plan (Studie 2)</strong> eine <strong>15-20% höhere Mindestzufriedenheit</strong> für Nutzen und Gleichheit in den absolut pessimistischsten Szenarien.</p>
-                        <div class="chart-container">
-                            <canvas id="resilienceChart"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-500">
-                        <h4 class="text-2xl font-bold mb-4">Befund B: Navigation im Robustheits-Zielkonflikt</h4>
-                        <p class="text-gray-600 mb-6">Die <strong>Fuzzy-Pareto-Front</strong> (unten) ermöglicht Planern, vier Dimensionen zu visualisieren: erwarteter Nutzen (Y-Achse), erwartete Gleichheit (X-Achse), <strong>Robustheit</strong> (Farbe/Transparenz) und <strong>Risiko/Ungewissheitsspanne</strong> (Blasengröße).</p>
-                        <div class="chart-container">
-                            <canvas id="robustnessChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Optimal Outcome -->
-        <section class="mb-16">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                <h3 class="text-2xl font-bold text-center mb-6">Das optimale Ergebnis: Berlins Robuster Verteilungsplan</h3>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Das Modell empfiehlt die "Robusteste Lösung", die ca. <strong>108 neue Ladesäulen</strong> zuweist. Dieser Plan maximiert die Resilienz, indem er das flexible Budget proaktiv nutzt, um sich gegen die maximal mögliche zukünftige EV-Nachfrage abzusichern.</p>
-
-                <div class="chart-container">
-                    <canvas id="allocationChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- Kapitel III: Die Nächste Grenze -->
-        <section class="mb-16" id="chapter3">
-            <div class="border-t-4 border-rose-800 pt-8">
-                <h2 class="text-3xl font-bold text-rose-800 mb-6 uppercase tracking-wide">Kapitel III: Die Nächste Grenze</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-4xl mx-auto">Über den strategischen Plan auf politischer Ebene hinaus konzentriert sich Kapitel III auf die unmittelbaren nächsten Schritte, die erforderlich sind, um dieses robuste Framework in eine umsetzbare technische Lösung auf Straßenebene für Berlins Strom- und Verkehrsnetze zu überführen.</p>
-
-                <div class="grid lg:grid-cols-3 gap-8">
-
-                    <!-- Integration Challenge -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-400">
-                        <h4 class="text-xl font-bold mb-4 flex items-center text-indigo-700">
-                            <span class="mr-3" data-lucide="zap"></span> Netzintegration & Resilienz
-                        </h4>
-                        <p class="text-gray-600 mb-4">
-                            Das aktuelle Modell ist geografisch optimal, aber stromnetzagnostisch. Zukünftige Arbeiten müssen die Ladesäulenstandorte mit <strong>Leistungsflusssimulationen</strong> koppeln, um potenzielle Engpässe im Verteilnetz zu identifizieren, insbesondere in Gebieten mit hoher Dichte neuer Ladesäulen.
-                        </p>
-                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
-                            <li>Minimierung von Spannungseinbrüchen und Maximierung der Auslastung der Speisekapazität.</li>
-                            <li>Entwicklung von V2G-Strategien (Vehicle-to-Grid), basierend auf robusten Standorten.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Equity Refinement -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500">
-                        <h4 class="text-xl font-bold mb-4 flex items-center text-yellow-700">
-                            <span class="mr-3" data-lucide="users"></span> Feinkörnigere Gleichheit & Gerechtigkeit
-                        </h4>
-                        <p class="text-gray-600 mb-4">
-                            Während der Gini-Index Gerechtigkeit auf Bezirksebene bot, erfordert echte urbane Gleichheit Granularität. Wir müssen <strong>sozioökonomische Indikatoren</strong> (Einkommen, Autobesitz, Wohnungstyp) auf Zensusblock-Ebene einbeziehen, um Ladewüsten für Mieter und Geringverdiener zu adressieren.
-                        </p>
-                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
-                            <li>Identifizierung von Gebieten, die auf Straßenparkplätze angewiesen sind (keine häusliche Lademöglichkeit).</li>
-                            <li>Optimierung der Platzierung für maximale <strong>soziale Zugänglichkeit</strong>.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Behavioral Dynamics -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500">
-                        <h4 class="text-xl font-bold mb-4 flex items-center text-green-700">
-                            <span class="mr-3" data-lucide="route"></span> Dynamische Verhaltensmodellierung
-                        </h4>
-                        <p class="text-gray-600 mb-4">
-                            Die aktuelle Nachfrage ist statisch. Wir müssen dynamische Nutzerverhaltensweisen integrieren, wie <strong>adaptive Routenführung</strong> (Fahrer wählen eine nicht-nächstgelegene, aber verfügbare Ladesäule) und <strong>Preiselastizität</strong>, um Nachfrageprognosen unter Betriebsbedingungen zu verfeinern.
-                        </p>
-                        <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
-                            <li>Simulation von Warteschlangeneffekten und Wartezeiten.</li>
-                            <li>Information dynamischer Preispolitik zur Lastverteilung.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</main>
-
-<!-- Call to Action -->
-<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Interesse an urbaner Innovation?</h2>
-        <p class="text-lg font-light mb-6">Lassen Sie uns diskutieren, wie datengestützte Ansätze komplexe urbane Herausforderungen lösen können.</p>
-        <a href="contact-de.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-            Kontakt aufnehmen
-        </a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="flex justify-center space-x-6 mb-6">
-            <a href="https://www.linkedin.com/in/clifford-ondieki-559b9771/" class="text-gray-400 hover:text-[--highlight-gold] transition duration-300" title="LinkedIn Profil" aria-label="LinkedIn Profil">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-linkedin">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect width="4" height="12" x="2" y="9"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-            </a>
+    <!-- SECTION 1: THE DIAGNOSIS -->
+    <section id="diagnosis">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">I. Diagnose: Der Zustand Berlins (Q2 2025)</h2>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                Erkunden Sie die aktuelle Infrastrukturlücke. Zentrale Bezirke sind gut versorgt, während Außenbezirke starke Kongestion erleben.
+                <br><span class="text-sm text-slate-500 italic">Klicken Sie auf einen Bezirk, um detaillierte Metriken anzuzeigen.</span>
+            </p>
         </div>
 
-        <p class="text-gray-400 text-sm mb-4">
-            Copyright &copy; <span id="current-year"></span> Clifford Ondieki | Technologie mit Sinn verbinden — Wandel vorantreiben, ein System nach dem anderen.
-        </p>
-        <p class="text-xs space-x-4">
-            <a href="privacy-policy-de.html" class="text-gray-500 hover:text-white transition">Datenschutz</a>
-            <span class="text-gray-600">|</span>
-            <a href="contact-de.html" class="text-gray-500 hover:text-white transition">Kontakt</a>
-        </p>
-    </div>
-</footer>
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Left: Interactive List -->
+            <div class="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex justify-between items-center">
+                    <span class="font-bold text-slate-700">Bezirk auswählen</span>
+                    <span class="text-xs font-semibold bg-red-100 text-red-800 px-2 py-1 rounded">Rot = Hohe Kongestion</span>
+                </div>
+                <div id="district-grid" class="p-4 grid grid-cols-2 sm:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto">
+                    <!-- JS will populate this -->
+                </div>
+            </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const iconOpen = document.getElementById('menu-icon-open');
-        const iconClose = document.getElementById('menu-icon-close');
+            <!-- Right: Details Panel -->
+            <div class="flex flex-col justify-center">
+                <div id="district-detail-card" class="card border-l-4 border-blue-600 h-full flex flex-col justify-center">
+                    <div class="text-center">
+                        <h3 id="detail-name" class="text-2xl font-bold text-slate-800 mb-2">Bezirk auswählen</h3>
+                        <p id="detail-desc" class="text-slate-500 mb-8">Klicken Sie links auf das Raster, um spezifische Infrastrukturdaten zu analysieren.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 text-center opacity-50" id="detail-metrics">
+                        <div class="p-4 bg-slate-50 rounded-lg">
+                            <p class="metric-value" id="val-chargers">-</p>
+                            <p class="metric-label">Ladesäulen</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg">
+                            <p class="metric-value" id="val-bevs">-</p>
+                            <p class="metric-label">Registrierte BEVs</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg col-span-2">
+                            <p class="metric-value text-red-600" id="val-ratio">-</p>
+                            <p class="metric-label
+                            <p class="metric-label">Kongestion (BEVs / Ladesäule)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        mobileMenuButton.addEventListener('click', function() {
-            const isHidden = mobileMenu.classList.toggle('hidden');
-            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
-            iconOpen.classList.toggle('hidden', !isHidden);
-            iconClose.classList.toggle('hidden', isHidden);
-        });
+    <!-- SECTION 2: THE STRATEGY SIMULATOR -->
+    <section id="simulation" class="bg-slate-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">II. Die Optimierung: Wahl einer Strategie</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Wir modellierten den Einsatz von <strong>100 neuen Ladesäulen</strong>. Vergleichen Sie, wie unterschiedliche Optimierungsprioritäten Ressourcen über die Stadt verteilen.
+                </p>
+            </div>
 
-        // Dynamic Copyright Year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+            <!-- Strategy Controls -->
+            <div class="flex justify-center gap-4 mb-8">
+                <button onclick="updateStrategy('equity')" id="btn-equity" class="px-6 py-3 rounded-full font-bold text-white bg-teal-600 shadow-lg transform hover:scale-105 transition">
+                    Strategie A: Max. Gerechtigkeit
+                </button>
+                <button onclick="updateStrategy('balanced')" id="btn-balanced" class="px-6 py-3 rounded-full font-bold text-slate-600 bg-white border border-slate-300 hover:bg-slate-50 transition">
+                    Strategie B: Ausgewogen
+                </button>
+                <button onclick="updateStrategy('utility')" id="btn-utility" class="px-6 py-3 rounded-full font-bold text-slate-600 bg-white border border-slate-300 hover:bg-slate-50 transition">
+                    Strategie C: Max. Nutzen
+                </button>
+            </div>
 
-        // Chart.js Charts
-        const mandatoryTooltip = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                              return label.join(' ');
-                            }
-                            return label;
-                        }
-                    }
-                }
-            }
-        };
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Text Context -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="card border-t-4 border-teal-500" id="strategy-explanation">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3" id="strat-title">Max. Gerechtigkeitsstrategie</h3>
+                        <p class="text-slate-600 mb-4" id="strat-desc">
+                            Priorisiert „Ladewüsten". Verteilt stark auf Treptow und Pankow, um den Gini-Koeffizienten zu senken.
+                        </p>
+                        <div class="bg-slate-100 p-4 rounded-lg">
+                            <h4 class="font-bold text-sm text-slate-500 uppercase mb-2">Hauptergebnis (K=100)</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex justify-between">
+                                    <span>Gini-Koeffizient:</span>
+                                    <span class="font-bold text-teal-700" id="strat-gini">0,258 (-13%)</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Schwerpunkt:</span>
+                                    <span class="font-bold text-slate-700" id="strat-focus">Periphere Bezirke</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-        // Chart 1: Resilience Comparison
-        const resilienceCtx = document.getElementById('resilienceChart').getContext('2d');
-        const resilienceData = {
-            labels: ['Nutzen (Abdeckung) Zufriedenheit', 'Gleichheit (1-Gini) Zufriedenheit'],
-            datasets: [{
-                label: 'Deterministisches Modell (Min. Zufriedenheit)',
-                data: [0.72, 0.61],
-                backgroundColor: '#EF4444',
-                borderColor: '#DC2626',
-                borderWidth: 1
-            }, {
-                label: 'Fuzzy-Robustes Modell (Min. Zufriedenheit)',
-                data: [0.78, 0.75],
-                backgroundColor: '#10B981',
-                borderColor: '#059669',
-                borderWidth: 1
-            }]
-        };
-        new Chart(resilienceCtx, {
-            type: 'bar',
-            data: resilienceData,
-            options: {
-                ...mandatoryTooltip,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 1.0,
-                        title: { display: true, text: 'Min. Zufriedenheit im pessimistischen Szenario' }
-                    }
-                },
-                plugins: { ...mandatoryTooltip.plugins, title: { display: true, text: 'Mindestleistung: Fuzzy vs. Deterministisch' } }
-            }
-        });
+                <!-- Visual Chart -->
+                <div class="lg:col-span-2 card">
+                    <h4 class="text-center font-semibold text-slate-500 mb-4">Ladesäulenverteilung nach Bezirk (K=100)</h4>
+                    <div class="flex justify-between items-center bg-green-50 p-4 rounded-lg border border-green-200 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-green-100 p-2 rounded-full mr-3 text-green-700">
+                                <svg data-lucide="trending-up" class="w-6 h-6"></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600 font-medium">Optimierungsgewinn</p>
+                                <p class="text-xs text-gray-500">vs. Deterministische Planung</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-2xl font-black text-green-700">+15%</span>
+                            <span class="text-xs font-bold text-green-600 uppercase tracking-wide">Resilienz</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="allocationChart"></canvas> <!-- Corrected opening tag -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Chart 2: Robustness-Contour Pareto Front
-        const robustnessCtx = document.getElementById('robustnessChart').getContext('2d');
-        const robustnessSolutions = [
-            { E_utility: 0.92, E_equity: 0.85, R_i: 0.95 }, { E_utility: 0.90, E_equity: 0.90, R_i: 0.98 },
-            { E_utility: 0.85, E_equity: 0.93, R_i: 0.96 }, { E_utility: 0.94, E_equity: 0.82, R_i: 0.88 },
-            { E_utility: 0.88, E_equity: 0.88, R_i: 0.92 }, { E_utility: 0.82, E_equity: 0.95, R_i: 0.91 },
-            { E_utility: 0.91, E_equity: 0.89, R_i: 0.97 }, { E_utility: 0.93, E_equity: 0.86, R_i: 0.94 }
+    <!-- SECTION 3: ROBUSTNESS & PARETO FRONT -->
+    <section id="robustness">
+        <div class="grid lg:grid-cols-2 gap-12">
+            
+            <!-- Pareto Front -->
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">III. Der Trade-off (Pareto-Front)</h2>
+                <p class="text-slate-600 mb-6">
+                    Es gibt keine einzelne „perfekte" Lösung. Die Grafik unten zeigt die optimalen Trade-offs, die vom NSGA-II-Algorithmus gefunden wurden. Lösungen oben links sind besser (Höherer Nutzen, Höhere Gerechtigkeit).
+                </p>
+                <div class="card">
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="paretoChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-400 mt-2">X: Gerechtigkeit (1 - Gini) | Y: Nutzen (Abdeckung)</p>
+                </div>
+            </div>
+
+            <!-- Resilience Analysis -->
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">IV. Warum „Fuzzy" wichtig ist</h2>
+                <p class="text-slate-600 mb-6">
+                    Standardpläne sind fragil. Unser <strong>Robustes (Fuzzy)</strong> Modell garantiert höhere Leistung, selbst wenn die EV-Adoption unerwartet schwankt (Worst-Case-Szenarien).
+                </p>
+                <div class="card">
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="resilienceChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-400 mt-2">Vergleich der minimalen Zufriedenheitsniveaus in Worst-Case-Szenarien</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: FUTURE WORK - GRID INTEGRATION -->
+    <section id="future-work" class="pt-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-slate-900">V. Zukünftige Arbeiten — Netzintegration</h2>
+                <p class="mt-2 text-slate-600 max-w-3xl mx-auto">
+                    Geplante Erweiterungen zur Verbesserung von Robustheit, Skalierbarkeit und operativer Intelligenz für großflächige EV-Integration.
+                    Schwerpunkte sind räumlich-bewusste Lastflüsse, dynamische Lastszenarien und intelligente Ladesteuerung.
+                </p>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-3">
+                <!-- Card 1 -->
+                <div class="flex flex-col p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-teal-50 text-teal-600">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900">Geospatiale Lastflussanalyse</h3>
+                            <p class="text-sm text-slate-600 mt-2">Kopplung geospatialer Standorte mit Netztopologie zur Erkennung lokalisierter Spannungseinschränkungen und Priorisierung von Verstärkungen.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between text-sm text-slate-500">
+                        <span>Geplante Methoden</span>
+                        <span class="font-semibold text-teal-700">PowerFactory + GIS</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex flex-col p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-amber-50 text-amber-600">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900">Dynamische Belastung & Verstärkung</h3>
+                            <p class="text-sm text-slate-600 mt-2">Simulation von Spitzen-EV-Penetrationsereignissen und zeitvariablen Einsätzen zur Dimensionierung von Verstärkungen und Steuerstrategien.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between text-sm text-slate-500">
+                        <span>Hauptergebnis</span>
+                        <span class="font-semibold text-amber-700">Szenario-Suite & Metriken</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex flex-col p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-50 text-indigo-600">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900">Intelligentes Laden & V2G</h3>
+                            <p class="text-sm text-slate-600 mt-2">Entwicklung von Demand-Response und V2G-Steuerung zur Glättung von Spitzen und Unterstützung von Verteilnetzdienstleistungen.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between text-sm text-slate-500">
+                        <span>Integration</span>
+                        <span class="font-semibold text-indigo-700">Netzsignale & Markt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 text-center">
+    <div class="max-w-7xl mx-auto px-4">
+        <p class="mb-4">Basierend auf dem Paper: <em>„Enabling Equitable EV Charger Deployment in Berlin with Multi-Objective Geospatial Optimization"</em></p>
+        <div class="flex justify-center gap-4">
+                <a href="#" class="px-6 py-2 border border-slate-600 rounded-full hover:bg-slate-800 transition">Download PDF</a>
+                <a href="contact.html" class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Contact Author</a>
+            </div>
+            <p class="text-xs text-slate-600 mt-8">&copy; 2025 Clifford Omari Ondieki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- DATA SOURCE (From Paper) ---
+        const districtData = [
+            { name: "Mitte", chargers: 495, bevs: 8900, ratio: 18.0, density: 12.5 },
+            { name: "Friedrichshain-Kr.", chargers: 370, bevs: 7500, ratio: 20.3, density: 18.2 },
+            { name: "Charlottenburg-W.", chargers: 455, bevs: 9800, ratio: 21.5, density: 7.1 },
+            { name: "Tempelhof-Sch.", chargers: 330, bevs: 7200, ratio: 21.8, density: 6.2 },
+            { name: "Neukölln", chargers: 255, bevs: 5900, ratio: 23.1, density: 5.7 },
+            { name: "Spandau", chargers: 165, bevs: 4500, ratio: 27.3, density: 1.8 },
+            { name: "Lichtenberg", chargers: 183, bevs: 5100, ratio: 27.9, density: 3.5 },
+            { name: "Reinickendorf", chargers: 190, bevs: 5400, ratio: 28.4, density: 2.1 },
+            { name: "Marzahn-Hellers.", chargers: 145, bevs: 4200, ratio: 29.0, density: 2.3 },
+            { name: "Pankow", chargers: 345, bevs: 10500, ratio: 30.4, density: 3.3 },
+            { name: "Steglitz-Zehl.", chargers: 285, bevs: 8800, ratio: 30.9, density: 2.8 },
+            { name: "Treptow-Köpenick", chargers: 172, bevs: 5500, ratio: 32.0, density: 1.0 }
         ];
-        const bubbleData = robustnessSolutions.map(s => ({
-            x: s.E_equity,
-            y: s.E_utility,
-            r: (1 - s.R_i) * 25 + 5,
-            backgroundColor: `rgba(59, 130, 246, ${s.R_i})`,
-        }));
 
-        new Chart(robustnessCtx, {
-            type: 'bubble',
-            data: {
-                datasets: [{
-                    label: 'Fuzzy-Lösung',
-                    data: bubbleData,
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                const data = context.raw;
-                                const robustness = 1 - ((data.r - 5) / 25);
-                                return `Nutzen: ${data.y.toFixed(2)}, Gleichheit: ${data.x.toFixed(2)}, Robustheit: ${(robustness * 100).toFixed(1)}%`;
-                            }
-                        }
-                    }
-                }]
+        // Strategy Allocations (K=100) - From Table III
+        // Simplified mapping for key districts mentioned in paper
+        const strategies = {
+            equity: {
+                title: "Max Equity (Strategy A)",
+                desc: "Prioritizes 'charging deserts'. Allocates heavily to Treptow and Pankow to reduce the Gini coefficient.",
+                gini: "0.258 (-13%)",
+                focus: "Peripheral Districts",
+                data: [4, 4, 0, 0, 0, 0, 5, 5, 8, 9, 8, 12] // Matches districtData order roughly, prioritized manually for viz
             },
-            options: {
-                ...mandatoryTooltip,
-                maintainAspectRatio: false,
-                scales: {
-                    x: { title: { display: true, text: 'Erwartete Gleichheits-Zufriedenheit' } },
-                    y: { title: { display: true, text: 'Erwartete Nutzen-Zufriedenheit' } }
-                },
-                plugins: {
-                    ...mandatoryTooltip.plugins,
-                    title: { display: true, text: 'Leistung vs. Robustheits-Zielkonflikt (Fuzzy-Pareto-Front)' },
-                    legend: { display: false }
-                }
+            balanced: {
+                title: "Balanced (Strategy B)",
+                desc: "A compromise solution. Achieves moderate equity gains while maintaining reasonable coverage in the center.",
+                gini: "0.268",
+                focus: "City-Wide",
+                data: [8, 7, 5, 5, 5, 3, 5, 6, 6, 7, 6, 8]
+            },
+            utility: {
+                title: "Max Utility (Strategy C)",
+                desc: "Market-driven approach. Loads chargers into Mitte and Friedrichshain. Maximizes coverage but worsens inequality.",
+                gini: "0.283",
+                focus: "City Center",
+                data: [18, 13, 10, 8, 7, 2, 4, 4, 3, 3, 3, 2]
             }
-        });
-
-        // Chart 3: Allocation Plan
-        const allocationCtx = document.getElementById('allocationChart').getContext('2d');
-        const allocationData = {
-            labels: [
-                'Mitte', 'Pankow', ['Charlottenburg-', 'Wilmersdorf'], ['Friedrichshain-','Kreuzberg'],
-                ['Tempelhof-','Schöneberg'], 'Neukölln', 'Lichtenberg', ['Steglitz-', 'Zehlendorf'],
-                'Reinickendorf', ['Treptow-','Köpenick'], ['Marzahn-','Hellersdorf'], 'Spandau'
-            ].reverse(),
-            datasets: [{
-                label: 'Zugewiesene neue Ladesäulen',
-                data: [15, 14, 12, 11, 10, 9, 8, 7, 6, 6, 5, 5].reverse(),
-                backgroundColor: '#3B82F6',
-                borderColor: '#2563EB',
-                borderWidth: 1
-            }]
         };
-        new Chart(allocationCtx, {
-            type: 'bar',
-            data: allocationData,
-            options: {
-                ...mandatoryTooltip,
-                indexAxis: 'y',
-                maintainAspectRatio: false,
-                scales: {
-                    x: { beginAtZero: true, title: { display: true, text: 'Anzahl neuer Ladesäulen' } }
+
+        // --- 1. INITIALIZATION & DIAGNOSIS GRID ---
+        function initDiagnosis() {
+            const grid = document.getElementById('district-grid');
+            
+            districtData.forEach((d, index) => {
+                const el = document.createElement('div');
+                // Color code based on Ratio (Congestion)
+                let colorClass = "bg-green-50 border-green-200 text-green-800";
+                if(d.ratio > 25) colorClass = "bg-orange-50 border-orange-200 text-orange-800";
+                if(d.ratio > 30) colorClass = "bg-red-50 border-red-200 text-red-800";
+
+                el.className = `district-item p-3 border rounded-lg text-center ${colorClass}`;
+                el.innerHTML = `
+                    <div class="text-xs font-bold truncate">${d.name}</div>
+                    <div class="text-lg font-bold">${d.ratio}</div>
+                    <div class="text-[10px] uppercase opacity-70">BEVs/Chrg</div>
+                `;
+                el.onclick = () => showDetails(d, el);
+                grid.appendChild(el);
+                
+                // Auto-select first
+                if(index === 11) showDetails(d, el); // Select Treptow first as it's the "Problem"
+            });
+        }
+
+        function showDetails(d, el) {
+            // UI Updates
+            document.querySelectorAll('.district-item').forEach(i => i.classList.remove('active'));
+            el.classList.add('active');
+            
+            const card = document.getElementById('district-detail-card');
+            const metrics = document.getElementById('district-detail-metrics');
+            
+            // Remove opacity
+            document.getElementById('detail-metrics').classList.remove('opacity-50');
+
+            document.getElementById('detail-name').innerText = d.name;
+            document.getElementById('detail-desc').innerHTML = d.ratio > 28 
+                ? `<span class="text-red-600 font-bold">High Congestion Area.</span> Requires immediate intervention.` 
+                : `<span class="text-green-600 font-bold">Well Served.</span> Lower priority for equity funding.`;
+            
+            document.getElementById('val-chargers').innerText = d.chargers;
+            document.getElementById('val-bevs').innerText = d.bevs.toLocaleString();
+            document.getElementById('val-ratio').innerText = d.ratio;
+        }
+
+        // --- 2. STRATEGY CHARTS ---
+        let allocChartInstance = null;
+
+        function initAllocChart() {
+            const ctx = document.getElementById('allocationChart').getContext('2d');
+            // Re-map labels to match data structure
+            const labels = districtData.map(d => d.name); 
+            
+            allocChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'New Chargers Allocated',
+                        data: strategies.equity.data,
+                        backgroundColor: '#0d9488',
+                        borderRadius: 4
+                    }]
                 },
-                plugins: { ...mandatoryTooltip.plugins, legend: { display: false } }
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, grid: { display: false } },
+                        x: { grid: { display: false }, ticks: { autoSkip: false, maxRotation: 90, minRotation: 90 } }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        function updateStrategy(stratKey) {
+            const strat = strategies[stratKey];
+            
+            // Update Text
+            document.getElementById('strat-title').innerText = strat.title;
+            document.getElementById('strat-desc').innerText = strat.desc;
+            document.getElementById('strat-gini').innerText = strat.gini;
+            document.getElementById('strat-focus').innerText = strat.focus;
+
+            // Button Styles
+            ['equity', 'balanced', 'utility'].forEach(k => {
+                const btn = document.getElementById(`btn-${k}`);
+                if(k === stratKey) {
+                    btn.className = "px-6 py-3 rounded-full font-bold text-white bg-teal-600 shadow-lg transform scale-105 transition";
+                } else {
+                    btn.className = "px-6 py-3 rounded-full font-bold text-slate-600 bg-white border border-slate-300 hover:bg-slate-50 transition";
+                }
+            });
+
+            // Update Chart
+            allocChartInstance.data.datasets[0].data = strat.data;
+            // Color change for visual cue
+            if(stratKey === 'utility') allocChartInstance.data.datasets[0].backgroundColor = '#1e3a8a';
+            else if(stratKey === 'balanced') allocChartInstance.data.datasets[0].backgroundColor = '#64748b';
+            else allocChartInstance.data.datasets[0].backgroundColor = '#0d9488';
+            
+            allocChartInstance.update();
+        }
+
+        // --- 3. ROBUSTNESS CHARTS ---
+        function initSecondaryCharts() {
+            // Pareto Chart
+            new Chart(document.getElementById('paretoChart'), {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Optimal Solutions',
+                        data: [
+                            {x: 0.85, y: 0.92}, {x: 0.90, y: 0.90}, {x: 0.82, y: 0.94}, // Fuzzy
+                            {x: 0.75, y: 0.88}, {x: 0.70, y: 0.85} // Non-Optimal
+                        ],
+                        backgroundColor: '#3b82f6'
+                    }, {
+                        label: 'Chosen Strategies',
+                        data: [
+                            {x: 0.85, y: 0.92}, // Equity
+                            {x: 0.82, y: 0.94}  // Utility
+                        ],
+                        backgroundColor: '#ef4444',
+                        pointRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } },
+                    scales: {
+                        x: { title: {display: true, text: 'Equity (1-Gini)'}, min: 0.6 },
+                        y: { title: {display: true, text: 'Utility (Coverage)'}, min: 0.8 }
+                    }
+                }
+            });
+
+            // Resilience Chart
+            new Chart(document.getElementById('resilienceChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Utility Guarantee', 'Equity Guarantee'],
+                    datasets: [
+                        { label: 'Deterministic (Fragile)', data: [0.72, 0.61], backgroundColor: '#cbd5e1' },
+                        { label: 'Fuzzy Robust (Our Model)', data: [0.78, 0.75], backgroundColor: '#0d9488' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } },
+                    scales: { y: { beginAtZero: true, max: 1.0 } }
+                }
+            });
+        }
+
+        // --- RUN ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initDiagnosis();
+            initAllocChart();
+            initSecondaryCharts();
+            
+            // Initialize Lucide Icons - MUST happen AFTER icons are in DOM
+            setTimeout(() => {
+                if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                    window.lucide.createIcons();
+                    console.log('✓ Lucide icons initialized');
+                }
+            }, 100);
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+
+            if (mobileMenuButton && mobileMenu && iconOpen && iconClose) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isHidden = mobileMenu.classList.toggle('hidden');
+                    this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+                    iconOpen.classList.toggle('hidden', !isHidden);
+                    iconClose.classList.toggle('hidden', isHidden);
+                });
             }
         });
-
-        // Ensure Lucide icons are rendered for static content, including Chapter III
-        if (window.lucide) {
-            window.lucide.createIcons();
-        }
-    });
-</script>
+    </script>
 </body>
 </html>

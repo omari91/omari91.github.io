@@ -4,34 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Philosophy - Clifford Omari Ondieki</title>
+    <title>Philosophy - Engineering & Innovation</title>
     
-    <!-- Microsoft Clarity Tracking Code -->
-      <link rel="icon" type="image/png" href="imgs/man.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="imgs/man.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-        type="text/javascript"
-        async
-        defer
-        src="https://www.clarity.ms/tag/t41xxbb71x"
-    ></script>
+    <script type="text/javascript" async defer src="https://www.clarity.ms/tag/t41xxbb71x"></script>
     <script type="module" src="https://unpkg.com/lucide@latest" defer></script>
     
-    <meta name="description" content="Explore the core philosophies that drive innovation: Engineering Empathy, Smart Laziness, and the principles that bridge technical excellence with human purpose.">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
-    <script type="module" src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Make Lucide globally available -->
-    <script type="module">
-        import * as lucide from 'https://unpkg.com/lucide@latest';
-        window.lucide = lucide;
-    </script>
-    
-    <!-- Custom Configuration -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
@@ -53,6 +33,17 @@
             color: white !important;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        /* Fade transition class */
+        .fade-enter {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .fade-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -65,11 +56,11 @@
                 <div class="flex-shrink-0">
                     <img src="imgs/man.jpg" alt="Clifford Ondieki Icon" class="w-11 h-11 rounded-full border-4 border-[#303f9f] shadow-md bg-white object-cover" />
                 </div>
-                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Power Systems Engineer</span></span>
             </a>
             
             <div class="md:hidden">
-                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -99,10 +90,6 @@
             <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
             <a href="philosophy.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Philosophy</a>
             <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            <div class="flex space-x-2 pt-2">
-                <a href="philosophy.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
-                <a href="philosophy-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
-            </div>
         </div>
     </div>
 </nav>
@@ -114,12 +101,11 @@
             Engineering Empathy
         </h1>
         <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
-            The philosophy that bridges technical excellence with human purpose
+            Bridging technical precision with human purpose to build resilient systems.
         </p>
     </div>
 </header>
 
-<!-- Main Content -->
 <main class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -127,10 +113,9 @@
         <section class="mb-16">
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">My Core Philosophy: Engineering Empathy</h2>
-                    <p class="text-lg text-gray-700 mb-4">The most robust systems—whether technical or human—are built with deep understanding and a commitment to shared purpose.</p>
-                    <p class="text-gray-600 mb-4">This philosophy stems from a belief that true innovation requires more than technical expertise. It demands the ability to understand the human context behind every problem, the cultural nuances that shape how solutions are received, and the empathy to build systems that serve real human needs.</p>
-                    <p class="text-gray-600">My Kenyan heritage emphasizes community and collaboration—principles that deeply inform my approach to building high-performing, empathetic teams. In every project, I ask not just "How can we build this?" but "How will this serve the people who need it most?"</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Core Philosophy: Systems & People</h2>
+                    <p class="text-lg text-gray-700 mb-4">The most robust grids—whether electrical or organizational—are built with deep understanding and a commitment to stability.</p>
+                    <p class="text-gray-600 mb-4">This philosophy stems from a belief that true engineering requires more than calculation. It demands the ability to understand the context behind every fault, the operational nuances that shape how systems behave, and the empathy to build solutions that work in the real world, not just in simulation.</p>
                 </div>
             </div>
         </section>
@@ -139,142 +124,113 @@
         <section class="mb-16">
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">"Smart Laziness" & Systemic Efficiency</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">"Smart Laziness" & Efficiency</h2>
                     <div class="bg-gray-50 p-6 rounded-lg text-center mb-6">
                         <p class="text-xl italic text-indigo-800 font-medium">"True efficiency isn't about working harder—it's about understanding systems so deeply that you can identify the one change that eliminates ten problems."</p>
                     </div>
-                    <p class="text-gray-600 mb-6">This principle, learned from debugging transformers in Kenya, now guides how I approach everything from code architecture to team dynamics. It's not about avoiding work; it's about working with systemic intelligence.</p>
+                    <p class="text-gray-600 mb-6">This principle, learned from debugging transformers in Kenya, guides how I approach engineering tasks. It's about systemic intelligence.</p>
                     
-                    <h4 class="text-xl font-semibold text-gray-800 mb-4">How Smart Laziness Works:</h4>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">How It Works in Engineering:</h4>
                     <div class="space-y-4">
                         <div class="border-l-4 border-rose-800 pl-4">
                             <h5 class="font-semibold text-gray-800">Deep System Understanding</h5>
-                            <p class="text-gray-600">Before optimizing, I invest time in truly understanding how all components interact</p>
+                            <p class="text-gray-600">Before coding or modeling, I invest time in understanding component interactions to prevent cascading failures.</p>
                         </div>
                         <div class="border-l-4 border-rose-800 pl-4">
                             <h5 class="font-semibold text-gray-800">Root Cause Focus</h5>
-                            <p class="text-gray-600">Instead of fixing symptoms, I identify the underlying patterns that create multiple problems</p>
-                        </div>
-                        <div class="border-l-4 border-rose-800 pl-4">
-                            <h5 class="font-semibold text-gray-800">Leverage Points</h5>
-                            <p class="text-gray-600">I look for the minimal changes that create maximum positive impact across the entire system</p>
+                            <p class="text-gray-600">Instead of patching symptoms, I use data to identify the underlying anomalies in the grid or workflow.</p>
                         </div>
                         <div class="border-l-4 border-rose-800 pl-4">
                             <h5 class="font-semibold text-gray-800">Automation Philosophy</h5>
-                            <p class="text-gray-600">If I have to do something more than twice, I build a system to do it automatically</p>
+                            <p class="text-gray-600">If a task is repetitive (like data cleaning or reporting), I write the script to automate it forever.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Guiding Principles -->
-        <section class="mb-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">Guiding Principles</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
-                    <h4 class="text-xl font-semibold mb-3">Failure is Redirection</h4>
-                    <p class="opacity-90">Every setback contains valuable information about better paths forward. I've learned to fail fast, learn faster, and use each failure as strategic intelligence for future success.</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
-                    <h4 class="text-xl font-semibold mb-3">Community Over Competition</h4>
-                    <p class="opacity-90">My Kenyan roots taught me that sustainable solutions emerge from collaboration, not competition. The best innovations happen when diverse perspectives combine toward a shared purpose.</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
-                    <h4 class="text-xl font-semibold mb-3">Stillness is Power</h4>
-                    <p class="opacity-90">In a world of constant motion, true clarity emerges from stillness. I practice daily reflection and mindfulness to maintain perspective and make decisions from a place of calm wisdom.</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-indigo-900 to-gray-700 p-8 rounded-xl text-white">
-                    <h4 class="text-xl font-semibold mb-3">Systems Thinking</h4>
-                    <p class="opacity-90">Whether debugging power grids or optimizing team dynamics, I approach challenges by understanding the interconnections and feedback loops that create emergent behaviors.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Daily Reflections -->
+        <!-- ROTATING Reflections on Tech & Life -->
         <section class="mb-16">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Daily Reflections</h2>
-                
-                <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-400">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-2">On Self-Leadership</h4>
-                        <p class="text-gray-600 italic mb-3">"Where am I still negotiating with my old self?"</p>
-                        <p class="text-gray-600">This question guides my daily practice of self-leadership. Growth requires honest assessment of where I'm holding onto patterns that no longer serve my evolution or my ability to serve others effectively.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-400">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-2">On Technical Mastery</h4>
-                        <p class="text-gray-600 italic mb-3">"Debugging transformers taught me systemic thinking; raising a daughter taught me patience and the profound simplicity of presence."</p>
-                        <p class="text-gray-600">The most important lessons often come from unexpected sources. Technical skills and life wisdom inform each other in ways that create more complete solutions.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-400">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-2">On Innovation</h4>
-                        <p class="text-gray-600 italic mb-3">"Agile isn't just for software—it's for power grids too. It's about adapting, learning, and finding clarity over chaos."</p>
-                        <p class="text-gray-600">The principles that make software development effective—iteration, feedback loops, continuous improvement—apply to any complex system, including personal growth and organizational change.</p>
-                    </div>
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Reflections on Tech & Life</h2>
+                <!-- Dynamic Container -->
+                <div id="rotatingReflection" class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-400 transition-all duration-500 min-h-[220px] flex flex-col justify-center">
+                    <!-- Content injected by JS -->
                 </div>
             </div>
         </section>
 
-        <!-- Living Philosophy -->
+        <!-- ROTATING Living Philosophy -->
         <section class="mb-16">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Living Philosophy</h2>
-                <div id="rotatingInsight" class="bg-gradient-to-br from-rose-800 to-indigo-900 p-8 rounded-xl text-white text-center">
-                    <h4 class="text-xl font-semibold mb-3">Today's Reflection</h4>
-                    <p class="opacity-90">"Understanding is more important than memorization" - My grandfather's wisdom that continues to shape how I approach learning, problem-solving, and innovation.</p>
+                <div id="rotatingInsight" class="bg-gradient-to-br from-rose-800 to-indigo-900 p-8 rounded-xl text-white text-center min-h-[180px] flex flex-col justify-center items-center">
+                    <!-- Content injected by JS -->
                 </div>
             </div>
         </section>
 
-        <!-- Philosophy in Practice -->
+        <!-- RESTORED: Philosophy in Practice -->
         <section class="mb-16">
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Philosophy in Practice</h2>
-                    <p class="text-lg text-gray-700 mb-6">These aren't just abstract concepts—they're the practical frameworks I use daily in technical leadership and innovation.</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Philosophy in Practice</h2>
+                    <p class="text-lg text-gray-700 mb-8">These aren't just abstract concepts—they're the practical frameworks I use daily in technical leadership and innovation.</p>
                     
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">In Technical Architecture:</h4>
-                            <p class="text-gray-600">I design systems with empathy for the developers who will maintain them, the users who will depend on them, and the business stakeholders who need to understand them.</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Technical Architecture -->
+                        <div class="p-6 rounded-lg bg-gray-50 border border-gray-100 hover:shadow-md transition">
+                            <div class="text-[--primary-indigo] mb-3"><svg data-lucide="layers" class="w-8 h-8"></svg></div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">In Technical Architecture</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                I design systems with empathy for the developers who will maintain them, the users who will depend on them, and the business stakeholders who need to understand them.
+                            </p>
                         </div>
-                        
-                        <div>
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">In Team Leadership:</h4>
-                            <p class="text-gray-600">I create psychological safety where failure is treated as valuable data, where diverse perspectives are actively sought, and where individual growth serves collective success.</p>
+
+                        <!-- Team Leadership -->
+                        <div class="p-6 rounded-lg bg-gray-50 border border-gray-100 hover:shadow-md transition">
+                            <div class="text-[--highlight-gold] mb-3"><svg data-lucide="users" class="w-8 h-8"></svg></div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">In Team Leadership</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                I create psychological safety where failure is treated as valuable data, where diverse perspectives are actively sought, and where individual growth serves collective success.
+                            </p>
                         </div>
-                        
-                        <div>
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">In Problem Solving:</h4>
-                            <p class="text-gray-600">I invest time in understanding the human context behind technical challenges, ensuring that solutions address not just the immediate problem but the underlying needs.</p>
+
+                        <!-- Problem Solving -->
+                        <div class="p-6 rounded-lg bg-gray-50 border border-gray-100 hover:shadow-md transition">
+                            <div class="text-[--accent-fire] mb-3"><svg data-lucide="puzzle" class="w-8 h-8"></svg></div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">In Problem Solving</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                I invest time in understanding the human context behind technical challenges, ensuring that solutions address not just the immediate problem but the underlying needs.
+                            </p>
                         </div>
-                        
-                        <div>
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">In Innovation:</h4>
-                            <p class="text-gray-600">I bridge different domains of knowledge—bringing power grid principles to healthcare systems, applying Kenyan community values to Berlin tech teams—because the best innovations happen at the intersection of different worlds.</p>
+
+                        <!-- Innovation -->
+                        <div class="p-6 rounded-lg bg-gray-50 border border-gray-100 hover:shadow-md transition">
+                            <div class="text-indigo-600 mb-3"><svg data-lucide="lightbulb" class="w-8 h-8"></svg></div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">In Innovation</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                I bridge different domains of knowledge—bringing power grid principles to healthcare systems, applying Kenyan community values to Berlin tech teams—because the best innovations happen at the intersection of different worlds.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </div>
 </main>
 
-<!-- Call to Action -->
-<section class="py-16 text-white" style="background-color: var(--primary-indigo);">
+<!-- Call to Action (ADDED) -->
+<section class="py-20 text-white" style="background-color: var(--primary-indigo);">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Let's Build with Purpose</h2>
-        <p class="text-lg font-light mb-6">If these principles resonate with you, let's explore how we can create solutions that serve both technical excellence and human flourishing.</p>
-        <a href="contact.html" class="inline-block py-3 px-8 rounded-full bg-white text-indigo-900 font-bold text-lg shadow-xl hover:bg-gray-100 transition duration-300">
-            Start a Meaningful Conversation
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Let's Build Resilient Systems</h2>
+        <p class="text-lg font-light mb-8 opacity-90">
+            If these values—systemic thinking, engineering empathy, and innovation—align with your team's mission, let's explore how we can collaborate.
+        </p>
+        <a href="contact.html" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-lg bg-white text-[--primary-indigo] hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+            Start the Conversation
+            <svg data-lucide="arrow-right" class="w-5 h-5 ml-2"></svg>
         </a>
     </div>
 </section>
@@ -305,60 +261,103 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Menu Toggle
+        // Mobile Menu
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const iconOpen = document.getElementById('menu-icon-open');
-        const iconClose = document.getElementById('menu-icon-close');
+        if(mobileMenuButton && mobileMenu){
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
-        mobileMenuButton.addEventListener('click', function() {
-            const isHidden = mobileMenu.classList.toggle('hidden');
-            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
-            iconOpen.classList.toggle('hidden', !isHidden);
-            iconClose.classList.toggle('hidden', isHidden);
-        });
-
-        // Dynamic Copyright Year
+        // Year
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Rotating insights functionality
+        // Lucide Icons
+        lucide.createIcons();
+
+        // --- 1. Living Philosophy Data (Bottom Section) ---
         const insights = [
+            { title: "Today's Reflection", text: "Understanding is more important than memorization - My grandfather's wisdom." },
+            { title: "On Systems", text: "Every complex system has simple principles at its core. Find them." },
+            { title: "On Growth", text: "Where am I still negotiating with my old self? Growth requires release." },
+            { title: "On Innovation", text: "The best solutions come from bridging different worlds—like power grids and data." }
+        ];
+
+        // --- 2. Tech & Life Reflections Data (Middle Section) ---
+        const reflections = [
             {
-                title: "Today's Reflection",
-                text: "Understanding is more important than memorization - My grandfather's wisdom that continues to shape how I approach learning, problem-solving, and innovation."
-            },
-            {
-                title: "On Systems",
-                text: "Every complex system has simple principles at its core. The art is finding those principles and designing around them rather than fighting against them."
-            },
-            {
-                title: "On Growth",
-                text: "Where am I still negotiating with my old self? This daily question keeps me honest about the patterns I need to release to serve at my highest level."
+                title: "On Technical Mastery",
+                quote: "Debugging transformers taught me systemic thinking; raising a daughter taught me patience.",
+                text: "Technical skills and life wisdom inform each other. Patience in debugging is patience in life."
             },
             {
                 title: "On Innovation",
-                text: "The best solutions often come from bridging different worlds—bringing power grid thinking to software architecture, or Kenyan community values to Berlin tech teams."
+                quote: "Agile isn't just for software—it's for power grids too.",
+                text: "The principles of iteration, feedback loops, and continuous improvement apply to any complex infrastructure."
             },
             {
-                title: "On Leadership",
-                text: "True leadership isn't about having all the answers—it's about creating the conditions where the best answers can emerge from the collective wisdom of the team."
+                title: "On Self-Leadership",
+                quote: "Where am I still negotiating with my old self?",
+                text: "Growth requires honest assessment of where I'm holding onto patterns that no longer serve my evolution."
             }
         ];
 
-        let currentInsight = 0;
+        let insightIndex = 0;
+        let reflectionIndex = 0;
 
+        // Function to update Living Philosophy (Indigo Box)
         function rotateInsight() {
-            const insightElement = document.getElementById('rotatingInsight');
-            currentInsight = (currentInsight + 1) % insights.length;
+            const el = document.getElementById('rotatingInsight');
+            // Add fade out
+            el.style.opacity = '0';
             
-            insightElement.innerHTML = `
-                <h4 class="text-xl font-semibold mb-3">${insights[currentInsight].title}</h4>
-                <p class="opacity-90">${insights[currentInsight].text}</p>
-            `;
+            setTimeout(() => {
+                insightIndex = (insightIndex + 1) % insights.length;
+                el.innerHTML = `
+                    <h4 class="text-xl font-semibold mb-3">${insights[insightIndex].title}</h4>
+                    <p class="opacity-90">${insights[insightIndex].text}</p>
+                `;
+                // Fade in
+                el.style.opacity = '1';
+            }, 500);
         }
 
-        // Rotate insights every 10 seconds
-        setInterval(rotateInsight, 10000);
+        // Function to update Reflections (White Box)
+        function rotateReflection() {
+            const el = document.getElementById('rotatingReflection');
+            el.style.opacity = '0';
+
+            setTimeout(() => {
+                reflectionIndex = (reflectionIndex + 1) % reflections.length;
+                const item = reflections[reflectionIndex];
+                el.innerHTML = `
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">${item.title}</h4>
+                    <p class="text-gray-600 italic mb-3">"${item.quote}"</p>
+                    <p class="text-gray-600">${item.text}</p>
+                `;
+                el.style.opacity = '1';
+            }, 500);
+        }
+
+        // Initial Load
+        const reflectionContainer = document.getElementById('rotatingReflection');
+        const insightContainer = document.getElementById('rotatingInsight');
+
+        // Set initial content
+        reflectionContainer.innerHTML = `
+            <h4 class="text-xl font-semibold text-gray-800 mb-2">${reflections[0].title}</h4>
+            <p class="text-gray-600 italic mb-3">"${reflections[0].quote}"</p>
+            <p class="text-gray-600">${reflections[0].text}</p>
+        `;
+        insightContainer.innerHTML = `
+            <h4 class="text-xl font-semibold mb-3">${insights[0].title}</h4>
+            <p class="opacity-90">${insights[0].text}</p>
+        `;
+
+        // Start Intervals (Staggered times for better UX)
+        setInterval(rotateInsight, 10000);      // Every 10 seconds
+        setInterval(rotateReflection, 8000);    // Every 8 seconds
     });
 </script>
 </body>

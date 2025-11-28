@@ -4,55 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>About Me - Clifford Omari Ondieki</title>
+    <!-- TWEAK: Added specific engineering title for SEO/Recruiters -->
+    <title>About Me - Hybrid Innovator & Power Systems Engineer</title>
     
     <!-- Microsoft Clarity Tracking Code (Kept for continuity) -->
     <link rel="icon" type="image/png" href="imgs/man.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-        type="text/javascript"
-        async
-        defer
-        src="https://www.clarity.ms/tag/t41xxbb71x"
-    ></script>
+    <script type="text/javascript" async defer src="https://www.clarity.ms/tag/t41xxbb71x"></script>
     <script type="module" src="https://unpkg.com/lucide@latest" defer></script>
     
-    <meta name="description" content="I help teams turn complex systems into solutions that work — blending engineering precision with human empathy. From Kenya’s power grids to Berlin’s tech scene, I deliver programs and products that create lasting impact.">
+    <meta name="description" content="Power Systems Engineer and Hybrid Innovator. Bridging simulation (PowerFactory) with operational reality. From Kenya’s power grids to Berlin’s energy transition.">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
-    <script type="module" src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Make Lucide globally available -->
-    <script type="module">
-        import * as lucide from 'https://unpkg.com/lucide@latest';
-        window.lucide = lucide;
-    </script>
-    
-    <!-- Custom Configuration and Timeline Styling -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
         :root {
-            /* 1. Deep Indigo / Midnight Blue - Insight, depth, intuition (Primary Authority) */
             --primary-indigo: #303F9F; 
-            /* 2. Graphite Grey / Charcoal - Structure, professionalism (Neutral Text/Dark BG) */
             --neutral-charcoal: #374151; 
-            /* 3. Crimson / Deep Burgundy - Life force, passion (Accent for Key Moments) */
             --accent-fire: #880E4F;
-            /* 5. Soft Gold - Illumination, earned wisdom (Accent for Icons/Highlights) */
             --highlight-gold: #F59E0B;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--neutral-charcoal); /* Graphite Grey */
-            padding-top: 5rem; /* Space for fixed navbar */
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
         }
         
-        /* Custom Timeline Styling (Essential part of your narrative structure) */
+        /* Timeline Styling */
         .journey-timeline {
             position: relative;
             padding: 2rem 0;
@@ -72,11 +52,11 @@
             top: 0.25rem;
             width: 1rem;
             height: 1rem;
-            background: var(--primary-indigo); /* Deep Indigo */
+            background: var(--primary-indigo); 
             border: 3px solid white;
             border-radius: 50%;
             z-index: 10;
-            box-shadow: 0 0 0 3px #e5e7eb; /* Light gray ring (White/Ivory principle) */
+            box-shadow: 0 0 0 3px #e5e7eb; 
         }
         
         .journey-item::after {
@@ -86,16 +66,15 @@
             top: 1.5rem;
             width: 2px;
             height: calc(100% + 1rem);
-            background: #d1d5db; /* Light gray line */
+            background: #d1d5db; 
         }
         
         .journey-item:last-child::after {
             display: none;
         }
 
-        /* Language Toggles */
         .language-toggle.active {
-            background-color: var(--primary-indigo) !important; /* Deep Indigo */
+            background-color: var(--primary-indigo) !important;
             color: white !important;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -103,7 +82,6 @@
         .profile-image-container {
             position: relative;
             padding: 1rem;
-            /* Gradient: Deep Indigo to Darker Indigo */
             background: linear-gradient(135deg, var(--primary-indigo) 0%, #1A237E 100%); 
             border-radius: 1.5rem;
         }
@@ -118,40 +96,34 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        .profile-image[width][height] {
-             height: auto; 
-        }
-              /* Link styling - Crucial fix for color highlighting */
         .deep-link {
-            @apply underline font-medium cursor-pointer;
-            color: var(--primary-indigo); /* Use a standard color for links */
+            text-decoration: underline;
+            font-weight: 500;
+            cursor: pointer;
+            color: var(--primary-indigo);
         }
         
-        /* New class for the accent fire color link (The Highlight) */
         .deep-link-fire {
-            color: var(--accent-fire); /* This ensures the highlight uses the Crimson color */
+            color: var(--accent-fire);
             transition: color 0.2s ease-in-out;
             text-decoration-color: var(--accent-fire);
         }
         
         .deep-link-fire:hover {
-            color: #5d0000; /* Darker red hover state */
-            @apply no-underline;
-            text-decoration-color: transparent;
+            color: #5d0000;
+            text-decoration: none;
         }
 
-        /* Styling for the new quote */
         .highlight-quote {
             font-style: italic;
-            font-size: 0.875rem; /* text-sm */
+            font-size: 0.875rem; 
             line-height: 1.5;
             margin-top: 0.5rem;
         }
 
-        /* Responsive Testimonial Avatar Fix */
         .testimonial-avatar {
-            width: 4rem; /* 64px, w-16 */
-            height: 4rem; /* h-16 */
+            width: 4rem; 
+            height: 4rem; 
         }
     </style>
 </head>
@@ -161,19 +133,15 @@
 <nav class="fixed top-0 z-50 w-full bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <!-- Logo and Brand -->
             <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index.html">
-                <!-- Changed logo background to Deep Indigo -->
                 <div class="flex-shrink-0">
                     <img src="imgs/man.jpg" alt="Clifford Ondieki Icon" class="w-11 h-11 rounded-full border-4 border-[#303f9f] shadow-md bg-white object-cover" />
                 </div>
-                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrid Innovator</span></span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Power Systems Engineer</span></span>
             </a>
             
-            <!-- Mobile Menu Button (Hamburger) -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
-                    <!-- Icon for open/close -->
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -181,16 +149,13 @@
                 </button>
             </div>
 
-            <!-- Desktop Menu and Language Toggles -->
             <div class="hidden md:flex md:items-center md:space-x-6">
                 <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
-                <!-- Active link changed to Deep Indigo background accent -->
                 <a href="about.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">About</a>
                 <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projects</a>
                 <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
                 
                 <div class="flex space-x-1 ml-4 border-l pl-4">
-                    <!-- Active toggle color change handled by CSS style block -->
                     <a href="about.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">EN</a>
                     <a href="about-de.html" class="language-toggle de text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">DE</a>
                 </div>
@@ -198,30 +163,24 @@
         </div>
     </div>
     
-    <!-- Mobile menu, hidden by default -->
     <div class="md:hidden hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Home</a>
             <a href="about.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">About</a>
             <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
             <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            <div class="flex space-x-2 pt-2">
-                <a href="about.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
-                <a href="about-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
-            </div>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section: High Impact Brand Statement -->
-<!-- Changed header background to Deep Indigo -->
+<!-- Hero Section -->
 <header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
             The Journey of a Hybrid Innovator.
         </h1>
         <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
-            From Kenya’s power grids to Berlin’s tech scene — blending engineering precision with human empathy.
+            From Kenya’s power grids to Berlin’s energy transition — blending engineering precision with systemic thinking.
         </p>
     </div>
 </header>
@@ -233,34 +192,57 @@
             
             <!-- Text Block -->
             <div class="order-2 lg:order-1">
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="border-left: 4px solid var(--primary-indigo);">
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 mb-8" style="border-left: 4px solid var(--primary-indigo);">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">Who I Am: The System Builder</h2>
                     <p class="text-lg leading-relaxed mb-4">
-                        I'm Clifford Ondieki, a technical specialist who believes true innovation springs from a deep understanding of systems and connections – whether in power grids or human teams.
+                        I'm Clifford Ondieki, a Power Systems Engineer who believes true innovation springs from a deep understanding of connections whether in <strong>high-voltage grids</strong> or human teams.
                     </p>
                     <p class="text-base mb-4">
-                        My path from the vibrant communities in Kitale, Kenya, to the dynamic landscape of Berlin has been a continuous journey of solution development. Every challenge was a reorientation towards growth, every setback a lesson in resilience that now shapes my approach to technical architecture and team leadership.
+                        My path from analyzing grid stability in Kenya to optimizing energy systems in Berlin has been defined by one goal: bridging the gap between simulation and reality. Every challenge—from commissioning hardware to modeling renewable integration—shapes my approach to <strong>grid resilience</strong> and <strong>technical architecture</strong>.
                     </p>
                     <p class="text-base font-medium">
-                        For me, building systems is not just about efficiency – it's about building bridges between people, purpose, and possibilities to create lasting impact.
+                        For me, engineering is not just about efficiency; it's about building robust systems that adapt to the future.
                     </p>
                 </div>
+
+                <!-- NEW: Education Block (Crucial for German Market, style matched to above) -->
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="border-left: 4px solid var(--highlight-gold);">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <script>document.write(lucide.createIcons()['graduation-cap'].toSvg({ class: 'w-6 h-6 mr-2 text-indigo-700' }));</script>
+                        Technical Foundation
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-gray-800">M.Sc. Engineering Management (Candidate)</p>
+                            <p class="text-sm text-gray-600">Focus: Power Systems & Automation | Arden University, Berlin (2026)</p>
+                        </div>
+                        <div class="border-t pt-2">
+                            <p class="font-bold text-gray-800">B.Sc. Electrical & Electronic Engineering</p>
+                            <p class="text-sm text-gray-600">Major: Power Systems | JKUAT (Anabin H+ Recognized)</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Image Block -->
-            <div class="order-1 lg:order-2 flex justify-center">
-                <div class="profile-image-container flex flex-col items-center">
-                    <!-- Main Image with robust placeholder/fallback for GOAT.jpg -->
-                    <img src="imgs/GOAT.jpg" 
-                        alt="Clifford Ondieki, The Innovator" 
-                        class="profile-image mb-3" 
-                        width="300" height="340" 
-                        onerror="this.onerror=null;this.src='https://placehold.co/300x340/303F9F/ffffff?text=The+Architect';"
-                        loading="lazy"> 
-                    
-                    <p class="text-sm font-medium text-white text-center highlight-quote fade-in-on-scroll mt-2">
-                        From Kitale to Europe – where cliffs become stairs, each step carved with quiet strength. 🐐
-                    </p>
+           <!-- Image Block -->
+            <div class="order-2 lg:order-3 flex justify-center">
+                <!-- Match height/visual weight of the two stacked text blocks -->
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 w-full max-w-md h-full flex flex-col items-center justify-center"
+                     style="border-left: 4px solid var(--primary-indigo); min-height: 520px;">
+                    <div class="w-full">
+                        <!-- Main Image with robust placeholder/fallback for GOAT.jpg -->
+                        <img src="imgs/GOAT.jpg"
+                            alt="Clifford Ondieki, Der Innovator"
+                            class="w-full h-800 object-cover rounded-lg mb-4"
+                            width="300" height="540"
+                            onerror="this.onerror=null;this.src='https://placehold.co/300x340/303F9F/ffffff?text=Der+Architekt';"
+                            loading="lazy">
+                        
+                        <p class="text-sm font-medium text-[--primary-indigo] text-center mt-2">
+                            From Kitale to Europe – validating models in the field where engineering truly happens. 🐐
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,25 +256,22 @@
         
         <div class="journey-timeline">
             
-            <!-- Item 1: Radio (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
                 <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">The Radio That Changed Everything</h4>
                 <p class="text-sm text-gray-500 mb-2">Kitale, Kenya - Age 12</p>
-                <p class="text-[--neutral-charcoal]">It started with a broken radio. This moment of disassembling and understanding how each component contributes to the overall system – that was my first experience with "<a href="https://www.google.com/search?q=Engineering+Empathy+broken+radio" target="_blank" rel="noopener noreferrer" class="deep-link deep-link-fire">Engineering Empathy</a>." This principle now guides everything from SaaS architectures to team leadership.</p>
+                <p class="text-[--neutral-charcoal]">It started with a broken radio. Disassembling it wasn't just play; it was my first lesson in <strong>system topology</strong>. Understanding how each component contributes to the whole is a principle that now guides my work in commissioning and SCADA systems.</p>
             </div>
             
-            <!-- Item 2: Failure (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
-                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">The University Project That Taught Me Redirection</h4>
+                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">Grid Stability & The "Perfect" Model</h4>
                 <p class="text-sm text-gray-500 mb-2">JKUAT, Kenya - 2015</p>
-                <p class="text-[--neutral-charcoal]">My power grid optimization project initially failed spectacularly because we overlooked the human factor of implementation. This taught me that "<a href="https://www.google.com/search?q=Failure+is+Redirection+project" target="_blank" rel="noopener noreferrer" class="deep-link deep-link-fire">failure is redirection</a>" – it's not about avoiding mistakes, but about learning so quickly that every setback becomes a strategic advantage.</p>
+                <p class="text-[--neutral-charcoal]">My bachelor's project on <strong>Voltage Stability Analysis (PowerFactory)</strong> taught me a critical lesson: models are perfect, but reality is messy. Mitigating voltage collapse in a weak grid required not just calculation, but understanding the operational constraints of the network.</p>
             </div>
             
-            <!-- Item 3: Berlin Move (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
-                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">The Decision to Connect Worlds</h4>
+                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">The Berlin Energy Transition</h4>
                 <p class="text-sm text-gray-500 mb-2">Nairobi to Berlin - 2025</p>
-                <p class="text-[--neutral-charcoal]">The move to Berlin was a conscious decision to be a bridge between the community-oriented problem-solving from Kenya and the innovation-driven tech ecosystem of Europe. My added value lies in this <a href="https://www.google.com/search?q=Global+Perspective+on+Solution+Development" target="_blank" rel="noopener noreferrer" class="deep-link deep-link-fire">unique, global perspective on solution development</a>.</p>
+                <p class="text-[--neutral-charcoal]">Moving to Berlin was a strategic decision to join the heart of the <em>Energiewende</em>. I bring a unique perspective: the resourcefulness of Kenyan engineering combined with the precision of German standards, focused on the integration of Renewables and EV infrastructure.</p>
             </div>
         </div>
     </div>
@@ -304,16 +283,14 @@
         <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Overcoming & Development</h2>
         
         <div class="space-y-8">
-            <!-- Border color changed to Deep Burgundy -->
             <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg" style="border-top: 4px solid var(--accent-fire);">
-                <h4 class="text-2xl font-semibold text-gray-800 mb-3">Finding the Balance: The Art of Systemic Intelligence</h4>
-                <p class="text-[--neutral-charcoal] mb-4">One of my biggest challenges was balancing studies, work, and leadership without burning out. This led me to develop "Intelligent Laziness" – the art of understanding systems so deeply that you find the single, strategic change that solves ten problems. It's about systemic intelligence over brute force work.</p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-3">Finding the Balance: Systemic Intelligence</h4>
+                <p class="text-[--neutral-charcoal] mb-4">One of my biggest challenges was balancing academic rigor with field operations. This led me to develop "Smart Laziness" – the engineering art of deep analysis to find the single, strategic change that solves ten problems. It's about <strong>optimization over brute force</strong>.</p>
             </div>
             
-            <!-- Border color changed to Deep Burgundy -->
             <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg" style="border-top: 4px solid var(--accent-fire);">
                 <h4 class="text-2xl font-semibold text-gray-800 mb-3">Cultural Navigation: The Competitive Advantage</h4>
-                <p class="text-[--neutral-charcoal] mb-4">Settling in Berlin brought the challenge of communicating my Kenyan approach to problem-solving in a new cultural context. This experience deepened my understanding that cultural diversity is not just desirable—it is a competitive advantage. My heritage emphasizes community and cooperation, principles that create stronger, more sustainable teams.</p>
+                <p class="text-[--neutral-charcoal] mb-4">Settling in Berlin brought the challenge of adapting my problem-solving style. I've learned that diversity is a technical advantage—my heritage emphasizes <strong>resilience and adaptation</strong>, qualities essential for stabilizing modern power grids.</p>
             </div>
         </div>
     </div>
@@ -322,176 +299,120 @@
 <!-- Guiding Stars and Philosophy -->
 <section class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">My Guiding Stars & Core Philosophy</h2>
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">My Guiding Stars</h2>
         
-        <!-- Interactive Quote Card -->
-        <div class="max-w-3xl mx-auto mb-4 text-center">
-            <!-- New: Highlight button for the quote -->
-            <button id="highlight-quote-btn" class="inline-flex items-center text-sm font-medium rounded-full py-2 px-5 transition duration-500 transform hover:scale-105" style="background-color: var(--highlight-gold); color: var(--neutral-charcoal);">
-                <span class="inline-block mr-1"><script>document.write(lucide.createIcons()['target'].toSvg({ class: 'w-4 h-4' }));</script></span>
-                Focus on Philosophy
-            </button>
-        </div>
         <div id="guiding-quote-card" class="max-w-3xl mx-auto p-8 sm:p-10 text-white rounded-2xl shadow-xl mb-12 transition-colors duration-500" style="background-color: var(--neutral-charcoal);">
             <blockquote class="text-center">
                 <p class="text-2xl italic mb-4 font-light leading-relaxed">
                     "Understanding is more important than memorization"
                 </p>
-                <footer class="text-sm opacity-80">— My Grandfather's Wisdom, Shaping my learning and problem-solving approach</footer>
+                <footer class="text-sm opacity-80">— My Grandfather's Wisdom, shaping my approach to First Principles Engineering</footer>
             </blockquote>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
             <div class="p-6 bg-white rounded-xl shadow-md" style="border-bottom: 4px solid var(--primary-indigo);">
                 <div class="flex items-center space-x-3 mb-2">
-                    <!-- Icon color changed to Soft Gold -->
                     <span style="color: var(--highlight-gold);"><script>document.write(lucide.createIcons()['cpu'].toSvg());</script></span>
                     <h5 class="text-xl font-semibold text-gray-800">Technical Mentors</h5>
                 </div>
-                <p class="text-[--neutral-charcoal]">Engineers who showed me that the most elegant solutions are often the simplest, and true mastery lies in understanding the 'why' behind every decision.</p>
+                <p class="text-[--neutral-charcoal]">Engineers who showed me that true mastery lies in understanding the 'why' behind every Grid Code and VDE regulation, not just following the manual.</p>
             </div>
             <div class="p-6 bg-white rounded-xl shadow-md" style="border-bottom: 4px solid var(--primary-indigo);">
                 <div class="flex items-center space-x-3 mb-2">
-                    <!-- Icon color changed to Soft Gold -->
                     <span style="color: var(--highlight-gold);"><script>document.write(lucide.createIcons()['users'].toSvg());</script></span>
                     <h5 class="text-xl font-semibold text-gray-800">Community Leaders</h5>
                 </div>
-                <p class="text-[--neutral-charcoal]">Organizers in Kenya who showed me that sustainable change happens when you empower others to solve their own problems – not when you solve them for them.</p>
+                <p class="text-[--neutral-charcoal]">Leaders who taught me that sustainable infrastructure happens when you empower local teams to maintain their own systems.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Skills Grid -->
+<!-- Skills Grid: TWEAKED FOR ENGINEERING -->
 <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Skills Forged Through Experience</h2>
         <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
-            My unique journey has forged a hybrid skill set, combining technical expertise with human understanding.
+            A hybrid skill set combining technical precision with operational strategy.
         </p>
         
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Skill cards border changed to Deep Indigo -->
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Systems Architecture</h5>
-                <p class="text-[--neutral-charcoal] text-sm">From 11kV power lines to scalable SaaS pipelines – mastering complex system design.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Grid & Systems Architecture</h5>
+                <p class="text-[--neutral-charcoal] text-sm">From 11kV power lines to complex data pipelines – mastering system topology.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Intercultural Leadership</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Leading diverse teams by bridging different cultural approaches to problem-solving (Kenya/Europe).</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Intercultural Engineering</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Bridging German standards (VDE) with adaptable problem-solving from emerging markets.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Product Strategy</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Aligning technical capability with deep user needs through empathetic understanding.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Operational Strategy</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Aligning technical capability (Simulation) with deployment reality (Commissioning).</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Predictive Analytics</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Using data not just to understand the past, but to predict and prevent future systemic problems.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Grid Analytics & Data</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Using SCADA data and NSGA-II to predict behaviors and optimize performance.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Change Management</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Focusing on the human aspects of technical transformations to ensure adoption and success.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Commissioning & Testing</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Experience in validating systems in the field to ensure adoption and success.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Stakeholder Communication</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Translating complex technical concepts into clear, actionable, business-focused insights.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Technical Communication</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Translating complex engineering concepts into clear insights for stakeholders.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Testimonials (Refactored to a responsive grid) -->
+<!-- Testimonials (Kept Intact) -->
 <section class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Professional Endorsements</h2>
-        <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">What colleagues and leaders say about my execution and mindset.</p>
-        
         <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Testimonial 1 - Border changed to Deep Indigo, text changed to Deep Indigo -->
             <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Yukabeth.jpg" alt="Yukabeth Kidenda portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="imgs/testimonials/Yukabeth.jpg" alt="Yukabeth Kidenda" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Yukabeth Kidenda</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Co-Founder & CEO at Teach for Kenya</div>
-                        <div class="text-xs text-gray-500">January 29, 2020</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">CEO at Teach for Kenya</div>
                     </div>
                 </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "Clifford is a very focused young professional with an eagerness to learn and a willingness to go the extra mile to ensure the delivery of high-quality outcomes. Clifford is well-organized and possesses a unique growth mindset that has enabled him to take on unique challenges."
-                </p>
+                <p class="text-[--neutral-charcoal] italic flex-grow">"Clifford is a very focused young professional... eager to learn and willing to go the extra mile to ensure high-quality outcomes."</p>
             </div>
-            
-            <!-- Testimonial 2 - Border changed to Deep Indigo, text changed to Deep Indigo -->
             <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Valarie.jpg" alt="Valerie O. portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="imgs/testimonials/Valarie.jpg" alt="Valerie O." class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Valerie O.</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Customer Success | Change Management</div>
-                        <div class="text-xs text-gray-500">January 6, 2022</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Customer Success Manager</div>
                     </div>
                 </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "A sales and product aficionado...Clifford embodies leadership with his hands-on approach to execute and deliver on set objectives. He ensures set targets are achieved in a timely manner. I strongly recommend him."
-                </p>
+                <p class="text-[--neutral-charcoal] italic flex-grow">"Clifford embodies leadership with his hands-on approach to execute and deliver on set objectives... I strongly recommend him."</p>
             </div>
-
-            <!-- Testimonial 3 - Border changed to Deep Indigo, text changed to Deep Indigo -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
-                <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Alisha.jpg" alt="Alisha Eberle portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
-                    <div>
-                        <h5 class="text-lg font-semibold text-gray-900">Alisha Eberle</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Marketing Manager at Pembroke</div>
-                        <div class="text-xs text-gray-500">January 5, 2022</div>
-                    </div>
-                </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "While working with Clifford at Elephant Healthcare, I was impressed by his can-do attitude and friendly demeanor... He would be an asset to any sales organization due to his professional approach and ability to connect with people."
-                </p>
-            </div>
-            
-            <!-- Testimonial 4 - Border changed to Deep Indigo, text changed to Deep Indigo -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
-                <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Darren.jpg" alt="Darren Oyoo portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
-                    <div>
-                        <h5 class="text-lg font-semibold text-gray-900">Darren Oyoo</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Head of Sales at gtxn Co.</div>
-                        <div class="text-xs text-gray-500">January 5, 2022</div>
-                    </div>
-                </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "Clifford is a committed and result-oriented individual. He demonstrates high levels of professionalism and a clear vision. Enjoyed working together and learning from each other during our interaction."
-                </p>
-            </div>
-            
         </div>
     </div>
 </section>
 
-
-<!-- Looking Ahead / Call to Action -->
-<!-- Background changed to Deep Indigo -->
+<!-- Call to Action -->
 <section class="py-20 text-white" style="background-color: var(--primary-indigo);">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl font-bold mb-4">Looking Ahead: Purpose-Driven Systems</h2>
+        <h2 class="text-4xl font-bold mb-4">Looking Ahead: Grid Transformation</h2>
         <p class="text-xl font-light mb-6">
-            I aim to lead projects that combine technical excellence with AI-driven solutions in automation and efficiency. My goal is to create systems that serve both technical mastery and human purpose.
+            I aim to apply my hybrid skills in simulation and operations to the challenges of the German grid. My goal is to create systems that are resilient, efficient, and future-proof.
         </p>
         <p class="mb-8 opacity-90">
             Long-term, I will continue to mentor the next generation of engineers, advance STEM education in Africa, and break barriers – always driven by purpose-oriented problem-solving.
         </p>
         <a href="contact.html" class="inline-flex items-center px-8 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105" style="color: var(--primary-indigo);">
-            Shape the Future Together
+            Discuss Opportunities
             <script>document.write(lucide.createIcons()['arrow-right'].toSvg({ class: 'w-5 h-5 ml-2' }));</script>
         </a>
     </div>
@@ -529,66 +450,22 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // --- Utility Functions & Constants ---
-        const ROOT_STYLES = getComputedStyle(document.documentElement);
-        const ORIGINAL_QUOTE_BG = ROOT_STYLES.getPropertyValue('--neutral-charcoal').trim();
-        const HIGHLIGHT_QUOTE_COLOR = ROOT_STYLES.getPropertyValue('--highlight-gold').trim();
-        const PRIMARY_TEXT_COLOR = ROOT_STYLES.getPropertyValue('--neutral-charcoal').trim();
-
-        // 1. Mobile Menu Toggle Logic
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const iconOpen = document.getElementById('menu-icon-open');
-        const iconClose = document.getElementById('menu-icon-close');
-
-        mobileMenuButton.addEventListener('click', function() {
-            const isHidden = mobileMenu.classList.toggle('hidden');
-            this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
-            iconOpen.classList.toggle('hidden', !isHidden);
-            iconClose.classList.toggle('hidden', isHidden);
-        });
-
-        // 2. Dynamic Copyright Year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // 3. Highlight Quote Feature (New Interactive Element)
-        const highlightButton = document.getElementById('highlight-quote-btn');
-        const quoteCard = document.getElementById('guiding-quote-card');
-
-        if (highlightButton && quoteCard) {
-            highlightButton.addEventListener('click', function() {
-                // Apply highlight style
-                quoteCard.style.backgroundColor = HIGHLIGHT_QUOTE_COLOR;
-                quoteCard.style.color = PRIMARY_TEXT_COLOR; // Change text color for better contrast against gold
-                
-                // Reset after a short delay
-                setTimeout(() => {
-                    quoteCard.style.backgroundColor = ORIGINAL_QUOTE_BG;
-                    quoteCard.style.color = 'white'; // Reset text color back to white
-                }, 1500); // Highlight for 1.5 seconds
-
-                // Provide visual feedback on the button itself
-                highlightButton.classList.add('opacity-50');
-                highlightButton.disabled = true;
-                setTimeout(() => {
-                    highlightButton.classList.remove('opacity-50');
-                    highlightButton.disabled = false;
-                }, 2000);
+        if(mobileMenuButton && mobileMenu){
+             mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
             });
         }
-
-        // 4. Testimonial Avatar Fallback Logic
-        const imagePlaceholderBase = 'https://placehold.co/72x72/303F9F/FFFFFF?text='; // Base placeholder
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Avatar fallback
+        const imagePlaceholderBase = 'https://placehold.co/72x72/303F9F/FFFFFF?text=';
         document.querySelectorAll('.testimonial-avatar').forEach(img => {
-            // Extract the text for the placeholder from the alt tag (e.g., 'Yukabeth Kidenda' -> 'Y')
             const text = img.alt ? img.alt.charAt(0).toUpperCase() : 'U';
-            const placeholderUrl = `${imagePlaceholderBase}${text}`;
-            
-            // If the original image fails to load, use the generated placeholder
             img.onerror = function() {
-                this.onerror = null; // Prevent infinite loop if placeholder fails
-                this.src = placeholderUrl;
-                this.alt = 'Placeholder Avatar';
+                this.onerror = null; 
+                this.src = `${imagePlaceholderBase}${text}`;
             };
         });
     });

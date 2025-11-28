@@ -4,55 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Clifford Omari Ondieki">
-    <title>Über mich - Clifford Omari Ondieki</title>
+    <title>Über mich - Systemingenieur für Energietechnik</title>
     
-    <!-- Microsoft Clarity Tracking Code (Für die Kontinuität beibehalten) -->
-      <link rel="icon" type="image/png" href="imgs/man.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="imgs/man.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-        type="text/javascript"
-        async
-        defer
-        src="https://www.clarity.ms/tag/t41xxbb71x"
-    ></script>
+    <script type="text/javascript" async defer src="https://www.clarity.ms/tag/t41xxbb71x"></script>
     <script type="module" src="https://unpkg.com/lucide@latest" defer></script>
     
-    <meta name="description" content="Ich helfe Teams, komplexe Systeme in funktionierende Lösungen zu verwandeln – eine Mischung aus technischer Präzision und menschlicher Empathie. Von Kenias Stromnetzen bis zur Berliner Technologieszene liefere ich Programme und Produkte, die nachhaltige Wirkung erzielen.">
+    <meta name="description" content="Systemingenieur für Energietechnik und Netzintegration. Von Kenias Stromnetzen zur Berliner Energiewende. PowerFactory-Simulation trifft operative Realität.">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
-    <script type="module" src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Make Lucide globally available -->
-    <script type="module">
-        import * as lucide from 'https://unpkg.com/lucide@latest';
-        window.lucide = lucide;
-    </script>
-    
-    <!-- Custom Configuration and Timeline Styling -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
         :root {
-            /* 1. Deep Indigo / Midnight Blue - Insight, depth, intuition (Primary Authority) */
             --primary-indigo: #303F9F; 
-            /* 2. Graphite Grey / Charcoal - Structure, professionalism (Neutral Text/Dark BG) */
             --neutral-charcoal: #374151; 
-            /* 3. Crimson / Deep Burgundy - Life force, passion (Accent for Key Moments) */
             --accent-fire: #880E4F;
-            /* 5. Soft Gold - Illumination, earned wisdom (Accent for Icons/Highlights) */
             --highlight-gold: #F59E0B;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--neutral-charcoal); /* Graphite Grey */
-            padding-top: 5rem; /* Space for fixed navbar */
+            color: var(--neutral-charcoal);
+            padding-top: 5rem;
         }
         
-        /* Custom Timeline Styling (Essential part of your narrative structure) */
         .journey-timeline {
             position: relative;
             padding: 2rem 0;
@@ -72,37 +49,29 @@
             top: 0.25rem;
             width: 1rem;
             height: 1rem;
-            background: var(--primary-indigo); /* Deep Indigo */
+            background: var(--primary-indigo); 
             border: 3px solid white;
             border-radius: 50%;
             z-index: 10;
-            box-shadow: 0 0 0 3px #e5e7eb; /* Light gray ring (White/Ivory principle) */
+            box-shadow: 0 0 0 3px #e5e7eb; 
         }
         
-        .journey-timeline::before {
-             /* Main vertical line for the timeline */
+        .journey-item::after {
             content: '';
             position: absolute;
             left: 0.25rem;
-            top: 0;
+            top: 1.5rem;
             width: 2px;
-            height: 100%;
-            background: #d1d5db; /* Light gray line */
-            z-index: 5;
-        }
-
-        .journey-item::after {
-            /* Remove the individual line segment after each dot, let the main line handle it */
-            display: none;
+            height: calc(100% + 1rem);
+            background: #d1d5db; 
         }
         
         .journey-item:last-child::after {
             display: none;
         }
 
-        /* Language Toggles */
         .language-toggle.active {
-            background-color: var(--primary-indigo) !important; /* Deep Indigo */
+            background-color: var(--primary-indigo) !important;
             color: white !important;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -110,7 +79,6 @@
         .profile-image-container {
             position: relative;
             padding: 1rem;
-            /* Gradient: Deep Indigo to Darker Indigo */
             background: linear-gradient(135deg, var(--primary-indigo) 0%, #1A237E 100%); 
             border-radius: 1.5rem;
         }
@@ -125,40 +93,34 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        .profile-image[width][height] {
-             height: auto; 
-        }
-
-              /* Link styling - Crucial fix for color highlighting */
         .deep-link {
-            @apply underline font-medium cursor-pointer;
-            color: var(--primary-indigo); /* Use a standard color for links */
+            text-decoration: underline;
+            font-weight: 500;
+            cursor: pointer;
+            color: var(--primary-indigo);
         }
         
-        /* New class for the accent fire color link (The Highlight) */
         .deep-link-fire {
-            color: var(--accent-fire); /* This ensures the highlight uses the Crimson color */
+            color: var(--accent-fire);
             transition: color 0.2s ease-in-out;
             text-decoration-color: var(--accent-fire);
         }
         
         .deep-link-fire:hover {
-            color: #5d0000; /* Darker red hover state */
-            @apply no-underline;
-            text-decoration-color: transparent;
+            color: #5d0000;
+            text-decoration: none;
         }
-        /* Styling for the new quote */
+
         .highlight-quote {
             font-style: italic;
-            font-size: 0.875rem; /* text-sm */
+            font-size: 0.875rem; 
             line-height: 1.5;
             margin-top: 0.5rem;
         }
 
-        /* Responsive Testimonial Avatar Fix */
         .testimonial-avatar {
-            width: 4rem; /* 64px, w-16 */
-            height: 4rem; /* h-16 */
+            width: 4rem; 
+            height: 4rem; 
         }
     </style>
 </head>
@@ -168,19 +130,15 @@
 <nav class="fixed top-0 z-50 w-full bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <!-- Logo and Brand -->
-            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index.html">
-                <!-- Changed logo background to Deep Indigo -->
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index-de.html">
                 <div class="flex-shrink-0">
                     <img src="imgs/man.jpg" alt="Clifford Ondieki Icon" class="w-11 h-11 rounded-full border-4 border-[#303f9f] shadow-md bg-white object-cover" />
                 </div>
-              <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Hybrider Innovator</span></span>
+                <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Power Systems Engineer</span></span>
             </a>
             
-            <!-- Mobile Menu Button (Hamburger) -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
-                    <!-- Icon for open/close -->
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -188,48 +146,38 @@
                 </button>
             </div>
 
-            <!-- Desktop Menu and Language Toggles -->
             <div class="hidden md:flex md:items-center md:space-x-6">
-                <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Startseite</a>
-                <!-- Active link changed to Deep Indigo background accent -->
+                <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Startseite</a>
                 <a href="about-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Über mich</a>
                 <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projekte</a>
                 <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Kontakt</a>
                 
                 <div class="flex space-x-1 ml-4 border-l pl-4">
-                    <!-- Updated Language Toggles for DE page -->
                     <a href="about.html" class="language-toggle en text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">EN</a>
-                    <a href="about-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition" style="background-color: var(--primary-indigo);">DE</a>
+                    <a href="about-de.html" class="language-toggle de active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">DE</a>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Mobile menu, hidden by default -->
     <div class="md:hidden hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
+            <a href="index-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Startseite</a>
             <a href="about-de.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Über mich</a>
             <a href="projects-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projekte</a>
             <a href="contact-de.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
-            <div class="flex space-x-2 pt-2">
-                <!-- Updated Language Toggles for DE page -->
-                <a href="about.html" class="language-toggle en text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">EN</a>
-                <a href="about-de.html" class="language-toggle de active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">DE</a>
-            </div>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section: High Impact Brand Statement -->
-<!-- Changed header background to Deep Indigo -->
+<!-- Hero Section -->
 <header class="py-20 lg:py-24 text-white" style="background-color: var(--primary-indigo);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">
-            Die Reise eines hybriden Innovators.
+            Der Weg eines Systemingenieurs
         </h1>
         <p class="text-xl sm:text-2xl font-light opacity-90 max-w-3xl mx-auto">
-            Von Kenias Stromnetzen bis zur Berliner Technologieszene – eine Mischung aus technischer Präzision und menschlicher Empathie.
+            Von Kenias Stromnetzen zur Berliner Energiewende – Ingenieurskunst trifft systemisches Denken.
         </p>
     </div>
 </header>
@@ -241,34 +189,54 @@
             
             <!-- Text Block -->
             <div class="order-2 lg:order-1">
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="border-left: 4px solid var(--primary-indigo);">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Wer ich bin: Der Systembauer</h2>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 mb-8" style="border-left: 4px solid var(--primary-indigo);">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Wer ich bin: Der Systemarchitekt</h2>
                     <p class="text-lg leading-relaxed mb-4">
-                        Ich bin Clifford Ondieki, ein technischer Spezialist, der davon überzeugt ist, dass wahre Innovation aus einem tiefen Verständnis von Systemen und Zusammenhängen entsteht – ob in Stromnetzen oder menschlichen Teams.
+                        Ich bin Clifford Ondieki, Systemingenieur für Energietechnik, der überzeugt ist, dass echte Innovation aus einem tiefen Verständnis von Verbindungen entsteht – sei es in <strong>Hochspannungsnetzen</strong> oder in menschlichen Teams.
                     </p>
                     <p class="text-base mb-4">
-                        Mein Weg von den lebhaften Gemeinschaften in Kitale, Kenia, zur dynamischen Landschaft Berlins war eine kontinuierliche Reise der Lösungsentwicklung. Jede Herausforderung war eine Neuorientierung hin zum Wachstum, jeder Rückschlag eine Lektion in Widerstandsfähigkeit, die heute meinen Ansatz in der technischen Architektur und Teamleitung prägt.
+                        Mein Weg von der Netzstabilitätsanalyse in Kenia zur Optimierung von Energiesystemen in Berlin wird von einem Ziel bestimmt: die Lücke zwischen Simulation und Realität zu schließen. Jede Herausforderung – von der Inbetriebnahme von Hardware bis zur Modellierung der Integration erneuerbarer Energien – prägt meinen Ansatz für <strong>Netzresilienz</strong> und <strong>technische Architektur</strong>.
                     </p>
                     <p class="text-base font-medium">
-                        Für mich geht es beim Aufbau von Systemen nicht nur um Effizienz – es geht darum, Brücken zwischen Menschen, Zielen und Möglichkeiten zu bauen, um eine nachhaltige Wirkung zu erzielen.
+                        Für mich ist Ingenieurwesen mehr als Effizienz – es geht darum, robuste Systeme zu entwickeln, die sich an die Zukunft anpassen.
                     </p>
+                </div>
+
+                <!-- Education Block -->
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="border-left: 4px solid var(--highlight-gold);">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <script>document.write(lucide.createIcons()['graduation-cap'].toSvg({ class: 'w-6 h-6 mr-2 text-indigo-700' }));</script>
+                        Technische Ausbildung
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-gray-800">M.Sc. Engineering Management (Kandidat)</p>
+                            <p class="text-sm text-gray-600">Schwerpunkt: Energiesysteme & Automatisierungstechnik | Arden University, Berlin (2026)</p>
+                        </div>
+                        <div class="border-t pt-2">
+                            <p class="font-bold text-gray-800">B.Sc. Elektrotechnik & Elektronik</p>
+                            <p class="text-sm text-gray-600">Schwerpunkt: Energietechnik | JKUAT (Anabin H+ anerkannt)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Image Block -->
-            <div class="order-1 lg:order-2 flex justify-center">
-                <div class="profile-image-container flex flex-col items-center">
-                    <!-- Main Image with robust placeholder/fallback for GOAT.jpg -->
-                    <img src="imgs/GOAT.jpg" 
-                        alt="Clifford Ondieki, Der Innovator" 
-                        class="profile-image mb-3" 
-                        width="300" height="340" 
-                        onerror="this.onerror=null;this.src='https://placehold.co/300x340/303F9F/ffffff?text=Der+Architekt';"
-                        loading="lazy"> 
-                    
-                    <p class="text-sm font-medium text-white text-center highlight-quote fade-in-on-scroll mt-2">
-                        Von Kitale nach Europa – wo Klippen zu Treppen werden, jeder Schritt gemeißelt mit stiller Stärke. 🐐
-                    </p>
+           <!-- Image Block -->
+            <div class="order-2 lg:order-3 flex justify-center">
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 w-full max-w-md h-full flex flex-col items-center justify-center"
+                     style="border-left: 4px solid var(--primary-indigo); min-height: 520px;">
+                    <div class="w-full">
+                        <img src="imgs/GOAT.jpg"
+                            alt="Clifford Ondieki, Der Innovator"
+                            class="w-full h-800 object-cover rounded-lg mb-4"
+                            width="300" height="540"
+                            onerror="this.onerror=null;this.src='https://placehold.co/300x340/303F9F/ffffff?text=Der+Architekt';"
+                            loading="lazy">
+                        
+                        <p class="text-sm font-medium text-[--primary-indigo] text-center mt-2">
+                            Von Kitale nach Europa – Modelle im Feld validieren, wo Ingenieurwesen wirklich stattfindet. 🐐
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,25 +250,22 @@
         
         <div class="journey-timeline">
             
-            <!-- Item 1: Radio (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
                 <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">Das Radio, das alles veränderte</h4>
-                <p class="text-sm text-gray-500 mb-2">Kitale, Kenia - Alter 12</p>
-                <p class="text-[--neutral-charcoal]">Es begann mit einem kaputten Radio. Dieser Moment des Zerlegens und Verstehens, wie jede Komponente zum Gesamtsystem beiträgt – das war meine erste Erfahrung mit "<a href="https://www.google.com/search?q=Engineering+Empathy+broken+radio" target="_blank" rel="noopener noreferrer" class="deep-link deep-link-fire">Engineering Empathy</a>.". Dieses Prinzip leitet heute alles, von SaaS-Architekturen bis zur Teamleitung.</p>
+                <p class="text-sm text-gray-500 mb-2">Kitale, Kenia - 12 Jahre alt</p>
+                <p class="text-[--neutral-charcoal]">Es begann mit einem kaputten Radio. Es auseinanderzunehmen war nicht nur Spielerei – es war meine erste Lektion in <strong>Systemtopologie</strong>. Zu verstehen, wie jede Komponente zum Ganzen beiträgt, ist ein Prinzip, das heute meine Arbeit in Inbetriebnahme und SCADA-Systemen leitet.</p>
             </div>
             
-            <!-- Item 2: Failure (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
-                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">Das Universitätsprojekt, das mich Umorientierung lehrte</h4>
+                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">Netzstabilität & das „perfekte" Modell</h4>
                 <p class="text-sm text-gray-500 mb-2">JKUAT, Kenia - 2015</p>
-                <p class="text-[--neutral-charcoal]">Mein Projekt zur Optimierung des Stromnetzes scheiterte zunächst spektakulär, weil wir den menschlichen Faktor der Implementierung übersehen hatten. Das lehrte mich, dass "<a href="https://www.google.com/search?q=Failure+is+Redirection+project" target="_blank" rel="noopener noreferrer" class="deep-link deep-link-fire">Scheitern Umorientierung ist</a>" – es geht nicht darum, Fehler zu vermeiden, sondern so schnell zu lernen, dass jeder Rückschlag zu einem strategischen Vorteil wird.</p>
+                <p class="text-[--neutral-charcoal]">Mein Bachelor-Projekt zur <strong>Spannungsstabilitätsanalyse (PowerFactory)</strong> lehrte mich eine wichtige Lektion: Modelle sind perfekt, aber die Realität ist komplex. Die Minderung eines Spannungskollapses in einem schwachen Netz erforderte nicht nur Berechnungen, sondern auch das Verständnis der betrieblichen Einschränkungen des Netzes.</p>
             </div>
             
-            <!-- Item 3: Berlin Move (Title color changed to Deep Burgundy for Passion/Fire accent) -->
             <div class="journey-item">
-                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">Die Entscheidung, Welten zu verbinden</h4>
+                <h4 class="text-xl font-semibold" style="color: var(--accent-fire);">Die Berliner Energiewende</h4>
                 <p class="text-sm text-gray-500 mb-2">Nairobi nach Berlin - 2025</p>
-                <p class="text-[--neutral-charcoal]">Der Umzug nach Berlin war eine bewusste Entscheidung, eine Brücke zu schlagen zwischen der gemeinschaftsorientierten Problemlösung aus Kenia und dem innovationsgetriebenen Tech-Ökosystem Europas. Mein Mehrwert liegt in dieser einzigartigen,<a href="https://www.google.com/search?q=Global+Perspective+on+Solution+Development" target="_blank" rel="noopener noreferrer" class="deep-link deep-link-fire">globalen Perspektive auf die Lösungsentwicklung.</a>. </p>
+                <p class="text-[--neutral-charcoal]">Der Umzug nach Berlin war eine strategische Entscheidung, um ins Herz der <em>Energiewende</em> zu kommen. Ich bringe eine einzigartige Perspektive mit: die Ressourcenstärke kenianischer Ingenieurskunst kombiniert mit der Präzision deutscher Standards, fokussiert auf die Integration erneuerbarer Energien und EV-Infrastruktur.</p>
             </div>
         </div>
     </div>
@@ -309,19 +274,17 @@
 <!-- Overcoming & Development -->
 <section class="py-16 lg:py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Überwindung & Entwicklung</h2>
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Herausforderungen & Entwicklung</h2>
         
         <div class="space-y-8">
-            <!-- Border color changed to Deep Burgundy -->
             <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg" style="border-top: 4px solid var(--accent-fire);">
-                <h4 class="text-2xl font-semibold text-gray-800 mb-3">Die Balance finden: Die Kunst der Systemischen Intelligenz</h4>
-                <p class="text-[--neutral-charcoal] mb-4">Eine meiner größten Herausforderungen war es, Studium, Arbeit und Führung in Einklang zu bringen, ohne auszubrennen. Dies führte zur Entwicklung der "Intelligenten Faulheit" – der Kunst, Systeme so tiefgreifend zu verstehen, dass man die eine strategische Änderung findet, die zehn Probleme löst. Es geht um systemische Intelligenz statt stumpfer Routinearbeit.</p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-3">Die Balance finden: Systemische Intelligenz</h4>
+                <p class="text-[--neutral-charcoal] mb-4">Eine meiner größten Herausforderungen war es, akademische Strenge mit Feldbetrieb in Einklang zu bringen. Dies führte zur Entwicklung meiner „intelligenten Faulheit" – die Ingenieurskunst, durch tiefgehende Analyse die eine strategische Änderung zu finden, die zehn Probleme löst. Es geht um <strong>Optimierung statt rohe Gewalt</strong>.</p>
             </div>
             
-            <!-- Border color changed to Deep Burgundy -->
             <div class="p-6 sm:p-8 bg-white rounded-xl shadow-lg" style="border-top: 4px solid var(--accent-fire);">
                 <h4 class="text-2xl font-semibold text-gray-800 mb-3">Kulturelle Navigation: Der Wettbewerbsvorteil</h4>
-                <p class="text-[--neutral-charcoal] mb-4">Die Eingewöhnung in Berlin brachte die Herausforderung mit sich, meinen kenianischen Problemlösungsansatz in einem neuen kulturellen Kontext zu vermitteln. Diese Erfahrung vertiefte mein Verständnis dafür, dass kulturelle Vielfalt nicht nur wünschenswert ist – sie ist ein Wettbewerbsvorteil. Mein Erbe betont Gemeinschaft und Kooperation, Prinzipien, die stärkere, nachhaltigere Teams schaffen.</p>
+                <p class="text-[--neutral-charcoal] mb-4">Die Anpassung in Berlin brachte die Herausforderung mit sich, meinen Problemlösungsstil anzupassen. Ich habe gelernt, dass Vielfalt ein technischer Vorteil ist – meine Herkunft betont <strong>Resilienz und Anpassungsfähigkeit</strong>, Qualitäten, die für die Stabilisierung moderner Stromnetze unerlässlich sind.</p>
             </div>
         </div>
     </div>
@@ -330,41 +293,31 @@
 <!-- Guiding Stars and Philosophy -->
 <section class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Meine Leitsterne & Kernphilosophie</h2>
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Meine Leitsterne</h2>
         
-        <!-- Interactive Quote Card -->
-        <div class="max-w-3xl mx-auto mb-4 text-center">
-            <!-- New: Highlight button for the quote -->
-            <button id="highlight-quote-btn" class="inline-flex items-center text-sm font-medium rounded-full py-2 px-5 transition duration-500 transform hover:scale-105" style="background-color: var(--highlight-gold); color: var(--neutral-charcoal);">
-                <span class="inline-block mr-1"><script>document.write(lucide.createIcons()['target'].toSvg({ class: 'w-4 h-4' }));</script></span>
-                Fokus auf die Philosophie
-            </button>
-        </div>
         <div id="guiding-quote-card" class="max-w-3xl mx-auto p-8 sm:p-10 text-white rounded-2xl shadow-xl mb-12 transition-colors duration-500" style="background-color: var(--neutral-charcoal);">
             <blockquote class="text-center">
                 <p class="text-2xl italic mb-4 font-light leading-relaxed">
-                    "Verständnis ist wichtiger als Auswendiglernen"
+                    „Verstehen ist wichtiger als Auswendiglernen"
                 </p>
-                <footer class="text-sm opacity-80">— Die Weisheit meines Großvaters, die mein Lernen und meine Problemlösung prägt</footer>
+                <footer class="text-sm opacity-80">— Die Weisheit meines Großvaters, die meinen Ansatz zum First-Principles-Engineering prägt</footer>
             </blockquote>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
             <div class="p-6 bg-white rounded-xl shadow-md" style="border-bottom: 4px solid var(--primary-indigo);">
                 <div class="flex items-center space-x-3 mb-2">
-                    <!-- Icon color changed to Soft Gold -->
                     <span style="color: var(--highlight-gold);"><script>document.write(lucide.createIcons()['cpu'].toSvg());</script></span>
                     <h5 class="text-xl font-semibold text-gray-800">Technische Mentoren</h5>
                 </div>
-                <p class="text-[--neutral-charcoal]">Ingenieure, die mir zeigten, dass die elegantesten Lösungen oft die einfachsten sind, und wahre Meisterschaft darin liegt, das 'Warum' hinter jeder Entscheidung zu verstehen.</p>
+                <p class="text-[--neutral-charcoal]">Ingenieure, die mir zeigten, dass wahre Meisterschaft darin liegt, das „Warum" hinter jedem Grid Code und jeder VDE-Norm zu verstehen, nicht nur das Handbuch zu befolgen.</p>
             </div>
             <div class="p-6 bg-white rounded-xl shadow-md" style="border-bottom: 4px solid var(--primary-indigo);">
                 <div class="flex items-center space-x-3 mb-2">
-                    <!-- Icon color changed to Soft Gold -->
                     <span style="color: var(--highlight-gold);"><script>document.write(lucide.createIcons()['users'].toSvg());</script></span>
                     <h5 class="text-xl font-semibold text-gray-800">Community-Führungskräfte</h5>
                 </div>
-                <p class="text-[--neutral-charcoal]">Organisatoren in Kenia, die mir zeigten, dass nachhaltiger Wandel dann geschieht, wenn man andere befähigt, ihre eigenen Probleme zu lösen – und nicht, wenn man sie für sie löst.</p>
+                <p class="text-[--neutral-charcoal]">Führungskräfte, die mir beibrachten, dass nachhaltige Infrastruktur dann entsteht, wenn man lokale Teams befähigt, ihre eigenen Systeme zu warten.</p>
             </div>
         </div>
     </div>
@@ -373,133 +326,87 @@
 <!-- Skills Grid -->
 <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Fähigkeiten, geschmiedet durch Erfahrung</h2>
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Durch Erfahrung geschmiedete Kompetenzen</h2>
         <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
-            Meine einzigartige Reise hat ein hybrides Fähigkeitsprofil geschmiedet, das technisches Fachwissen mit menschlichem Verständnis verbindet.
+            Ein hybrides Kompetenzprofil, das technische Präzision mit operativer Strategie verbindet.
         </p>
         
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Skill cards border changed to Deep Indigo -->
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Systemarchitektur</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Von 11-kV-Stromleitungen bis hin zu skalierbaren SaaS-Pipelines – Beherrschung komplexer Systemgestaltung.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Netz- & Systemarchitektur</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Von 11kV-Stromleitungen bis zu komplexen Daten-Pipelines – Beherrschung der Systemtopologie.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Interkulturelle Führung</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Führung diverser Teams durch Überbrückung unterschiedlicher kultureller Ansätze zur Problemlösung (Kenia/Europa).</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Interkulturelle Ingenieurarbeit</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Brückenbau zwischen deutschen Standards (VDE) und anpassungsfähiger Problemlösung aus Schwellenländern.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Produktstrategie</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Abstimmung technischer Fähigkeiten mit tiefgreifenden Nutzerbedürfnissen durch empathisches Verständnis.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Operative Strategie</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Abstimmung technischer Fähigkeiten (Simulation) mit der Realität der Implementierung (Inbetriebnahme).</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Prädiktive Analyse</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Nutzung von Daten, um nicht nur die Vergangenheit zu verstehen, sondern auch zukünftige systemische Probleme vorherzusagen und zu verhindern.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Netzanalyse & Daten</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Nutzung von SCADA-Daten und NSGA-II zur Verhaltensvorhersage und Leistungsoptimierung.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Veränderungsmanagement</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Fokus auf die menschlichen Aspekte technischer Transformationen, um Akzeptanz und Erfolg zu sichern.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Inbetriebnahme & Testing</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Erfahrung in der Validierung von Systemen im Feld, um Akzeptanz und Erfolg sicherzustellen.</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300" style="border-top: 4px solid var(--primary-indigo);">
-                <h5 class="text-xl font-semibold text-gray-800 mb-1">Stakeholder-Kommunikation</h5>
-                <p class="text-[--neutral-charcoal] text-sm">Übersetzung komplexer technischer Konzepte in klare, umsetzbare und geschäftsrelevante Erkenntnisse.</p>
+                <h5 class="text-xl font-semibold text-gray-800 mb-1">Technische Kommunikation</h5>
+                <p class="text-[--neutral-charcoal] text-sm">Übersetzung komplexer Ingenieurkonzepte in klare Einsichten für Stakeholder.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Testimonials (Refactored to a responsive grid) -->
+<!-- Testimonials -->
 <section class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Professionelle Empfehlungen</h2>
-        <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">Was Kollegen und Führungskräfte über meine Umsetzung und Denkweise sagen.</p>
-        
         <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Testimonial 1 - Border changed to Deep Indigo, text changed to Deep Indigo -->
             <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Yukabeth.jpg" alt="Yukabeth Kidenda portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="imgs/testimonials/Yukabeth.jpg" alt="Yukabeth Kidenda" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Yukabeth Kidenda</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Mitbegründerin & CEO bei Teach for Kenya</div>
-                        <div class="text-xs text-gray-500">29. Januar 2020</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">CEO bei Teach for Kenya</div>
                     </div>
                 </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "Clifford ist ein sehr fokussierter junger Fachmann mit großem Lernwillen und der Bereitschaft, die Extrameile zu gehen, um qualitativ hochwertige Ergebnisse zu gewährleisten. Clifford ist gut organisiert und besitzt eine einzigartige Wachstumsmentalität, die es ihm ermöglicht hat, einzigartige Herausforderungen anzunehmen."
-                </p>
+                <p class="text-[--neutral-charcoal] italic flex-grow">„Clifford ist ein sehr fokussierter junger Fachmann... lernbegierig und bereit, die Extrameile zu gehen, um qualitativ hochwertige Ergebnisse zu gewährleisten."</p>
             </div>
-            
-            <!-- Testimonial 2 - Border changed to Deep Indigo, text changed to Deep Indigo -->
             <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
                 <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Valarie.jpg" alt="Valerie O. portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
+                    <img src="imgs/testimonials/Valarie.jpg" alt="Valerie O." class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
                     <div>
                         <h5 class="text-lg font-semibold text-gray-900">Valerie O.</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Customer Success | Veränderungsmanagement</div>
-                        <div class="text-xs text-gray-500">6. Januar 2022</div>
+                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Customer Success Manager</div>
                     </div>
                 </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "Ein Verkaufs- und Produkt-Aficionado... Clifford verkörpert Führung mit seinem praktischen Ansatz zur Umsetzung und Erreichung gesteckter Ziele. Er sorgt dafür, dass gesetzte Ziele zeitnah erreicht werden. Ich empfehle ihn nachdrücklich."
-                </p>
+                <p class="text-[--neutral-charcoal] italic flex-grow">„Clifford verkörpert Führung mit seinem hands-on Ansatz zur Umsetzung und Erfüllung gesetzter Ziele... Ich empfehle ihn uneingeschränkt."</p>
             </div>
-
-            <!-- Testimonial 3 - Border changed to Deep Indigo, text changed to Deep Indigo -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
-                <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Alisha.jpg" alt="Alisha Eberle portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
-                    <div>
-                        <h5 class="text-lg font-semibold text-gray-900">Alisha Eberle</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Marketing Manager bei Pembroke</div>
-                        <div class="text-xs text-gray-500">5. Januar 2022</div>
-                    </div>
-                </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "Während der Zusammenarbeit mit Clifford bei Elephant Healthcare war ich beeindruckt von seiner 'Can-Do'-Einstellung und seinem freundlichen Auftreten... Aufgrund seines professionellen Ansatzes und seiner Fähigkeit, mit Menschen in Kontakt zu treten, wäre er ein Gewinn für jede Vertriebsorganisation."
-                </p>
-            </div>
-            
-            <!-- Testimonial 4 - Border changed to Deep Indigo, text changed to Deep Indigo -->
-            <div class="p-6 bg-white rounded-2xl shadow-xl flex flex-col h-full" style="border-left: 4px solid var(--primary-indigo);">
-                <div class="flex items-center mb-4">
-                    <img src="imgs/testimonials/Darren.jpg" alt="Darren Oyoo portrait" class="testimonial-avatar rounded-full object-cover border-4 border-indigo-200 mr-4">
-                    <div>
-                        <h5 class="text-lg font-semibold text-gray-900">Darren Oyoo</h5>
-                        <div class="text-sm font-medium" style="color: var(--primary-indigo);">Vertriebsleiter bei gtxn Co.</div>
-                        <div class="text-xs text-gray-500">5. Januar 2022</div>
-                    </div>
-                </div>
-                <p class="text-[--neutral-charcoal] italic flex-grow">
-                    "Clifford ist eine engagierte und ergebnisorientierte Persönlichkeit. Er zeigt ein hohes Maß an Professionalität und eine klare Vision. Ich habe unsere Zusammenarbeit und das voneinander Lernen während unserer Interaktion genossen."
-                </p>
-            </div>
-            
         </div>
     </div>
 </section>
 
-
-<!-- Looking Ahead / Call to Action -->
-<!-- Background changed to Deep Indigo -->
+<!-- Call to Action -->
 <section class="py-20 text-white" style="background-color: var(--primary-indigo);">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl font-bold mb-4">Blick nach vorn: Zweckorientierte Systeme</h2>
+        <h2 class="text-4xl font-bold mb-4">Blick nach vorn: Netztransformation</h2>
         <p class="text-xl font-light mb-6">
-            Ich möchte Projekte leiten, die technische Exzellenz mit KI-gesteuerten Lösungen in Automatisierung und Effizienz verbinden. Mein Ziel ist es, Systeme zu schaffen, die sowohl technisches Können als auch menschlichen Zweck erfüllen.
+            Ich möchte meine hybriden Fähigkeiten in Simulation und Betrieb auf die Herausforderungen des deutschen Stromnetzes anwenden. Mein Ziel ist es, Systeme zu schaffen, die widerstandsfähig, effizient und zukunftssicher sind.
         </p>
         <p class="mb-8 opacity-90">
             Langfristig werde ich weiterhin die nächste Generation von Ingenieuren betreuen, die MINT-Bildung in Afrika voranbringen und Barrieren überwinden – stets angetrieben durch zweckorientierte Problemlösung.
         </p>
         <a href="contact.html" class="inline-flex items-center px-8 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105" style="color: var(--primary-indigo);">
-            Die Zukunft gemeinsam gestalten
+            Möglichkeiten besprechen
             <script>document.write(lucide.createIcons()['arrow-right'].toSvg({ class: 'w-5 h-5 ml-2' }));</script>
         </a>
     </div>
