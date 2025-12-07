@@ -35,7 +35,7 @@ A scalable digital twin demonstrating **VDE-AR-N 4110 compliance** with validate
 
 ## 🔧 About
 
-I'm an MSc Electrical & Electronic Engineering candidate based in Berlin, Germany, and an IEEE researcher presenting at the Forum for Innovative Sustainable Transportation Systems (FISTS 2026).
+I'm an MSc Electrical & Electronic Engineering candidate based in Berlin, Germany, and an IEEE researcher.
 
 My work spans **grid digital twins**, **EV charging infrastructure optimization**, and **real-time power systems engineering**, with a focus on German energy regulations (VDE-AR-N 4110, §14a EnWG) and production-grade implementations.
 
@@ -72,8 +72,8 @@ This hybrid background allows me to connect engineering precision with operation
 ## 🧠 Education
 
 - **MSc Electrical & Electronic Engineering** – Arden University, Germany (in progress, graduating 2026)
-- **Postgraduate Diploma** – Project Planning & Management
-- **BSc Electrical & Electronic Engineering**
+- **Postgraduate Diploma** – Project Planning & Management, UON
+- **BSc Electrical & Electronic Engineering** - JKUAT
 
 ---
 
@@ -121,3 +121,4 @@ This project is released under the [MIT License](LICENSE). You are welcome to re
 - ✅ Proven operational leadership (87%+ CSAT, cross-functional team scaling)
 - ✅ Technical depth (Python, Pandapower, AC power flow, Monte Carlo validation)
 - ✅ Based in Berlin, Germany — EU work authorization
+
