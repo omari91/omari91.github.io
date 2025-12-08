@@ -60,7 +60,7 @@
             </a>
             
             <div class="md:hidden">
-                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -71,8 +71,9 @@
             <div class="hidden md:flex md:items-center md:space-x-6">
                 <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
                 <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
-                <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projects</a>
-                <a href="philosophy.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Philosophy</a>
+                <a href="projects.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Projects</a>
+                <a href="philosophy.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Philosophy</a>
+                <a href="blog.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Insights</a>
                 <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
                 
                 <div class="flex space-x-1 ml-4 border-l pl-4">
@@ -87,9 +88,14 @@
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Home</a>
             <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="projects.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-            <a href="philosophy.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Philosophy</a>
+            <a href="projects.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Projects</a>
+            <a href="philosophy.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Philosophy</a>
+            <a href="blog.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Insights</a>
             <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="philosophy.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
+                <a href="philosophy-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
+            </div>
         </div>
     </div>
 </nav>

@@ -88,48 +88,55 @@
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
-  <!--NAVIGATION -->
-  <nav class="fixed top-0 z-50 w-full bg-white shadow-md">
+  
+<!-- Navigation -->
+<nav class="fixed top-0 z-50 w-full bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a class="flex items-center space-x-3 text-xl font-bold text-gray-800" href="index.html">
-  <div class="flex-shrink-0">
-    <img src="imgs/man.jpg" alt="Clifford Ondieki Icon" class="w-11 h-11 rounded-full border-4 border-[#303f9f] shadow-md bg-white object-cover" />
-  </div>
+        <div class="flex justify-between items-center h-16">
+            <a class="flex items-center space-x-2 text-xl font-bold text-gray-800" href="index.html">
+                <div class="flex-shrink-0">
+                    <img src="imgs/man.jpg" alt="Clifford Ondieki Icon" class="w-11 h-11 rounded-full border-4 border-[#303f9f] shadow-md bg-white object-cover" />
+                </div>
                 <span>Clifford Ondieki <span class="text-sm font-normal text-[--primary-indigo] ml-1 hidden sm:inline-block">| Power Systems Engineer</span></span>
-        <div class="md:hidden">
-          <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[#303f9f] focus:outline-none focus:ring-2 focus:ring-[#303f9f] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+            </a>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-gray-500 hover:text-[--primary-indigo] focus:outline-none focus:ring-2 focus:ring-[--primary-indigo] rounded-lg p-2" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
+                <a href="projects.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Projects</a>
+                <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                
+                <div class="flex space-x-1 ml-4 border-l pl-4">
+                    <a href="index.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-[--primary-indigo] text-white transition">EN</a>
+                    <a href="index-de.html" class="language-toggle de text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">DE</a>
+                </div>
+            </div>
         </div>
-        <div class="hidden md:flex md:items-center md:space-x-6">
-          <a href="index.html" class="text-[#303f9f] bg-[#303f9f]/10 px-3 py-2 rounded-md text-sm font-bold transition duration-150">Home</a>
-          <a href="about.html" class="text-gray-600 hover:text-[#303f9f] px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
-          <a href="projects.html" class="text-gray-600 hover:text-[#303f9f] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Projects</a>
-          <a href="contact.html" class="text-gray-600 hover:text-[#303f9f] px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
-          <div class="flex space-x-1 ml-4 border-l pl-4">
-            <a href="index.html" class="language-toggle en active text-xs font-semibold py-1 px-3 rounded-full border border-[#303f9f] text-white transition cta-primary">EN</a>
-            <a href="index-de.html" class="language-toggle de text-xs font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700 transition">DE</a>
-          </div>
-        </div>
-      </div>
     </div>
+    
     <div class="md:hidden hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="index.html" class="text-[#303f9f] bg-[#303f9f]/10 block px-3 py-2 rounded-md text-base font-bold">Home</a>
-        <a href="about.html" class="text-gray-600 hover:text-[#303f9f] block px-3 py-2 rounded-md text-base font-medium">About</a>
-        <a href="projects.html" class="text-gray-600 hover:text-[#303f9f] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-        <a href="contact.html" class="text-gray-600 hover:text-[#303f9f] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-        <div class="flex space-x-2 pt-2">
-          <a href="index.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[#303f9f] text-white">EN</a>
-          <a href="index-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="about.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="projects.html" class="text-[--primary-indigo] bg-[--primary-indigo]/10 block px-3 py-2 rounded-md text-base font-bold">Projects</a>
+            <a href="contact.html" class="text-gray-600 hover:text-[--primary-indigo] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <div class="flex space-x-2 pt-2">
+                <a href="index.html" class="language-toggle en active text-sm font-semibold py-1 px-3 rounded-full bg-[--primary-indigo] text-white">EN</a>
+                <a href="index-de.html" class="language-toggle de text-sm font-semibold py-1 px-3 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-700">DE</a>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
+
   <!-- HERO SECTION -->
   <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('imgs/website 2.png');" aria-label="Professional background image of Clifford Ondieki">
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-indigo-900/70 to-gray-900/80" aria-hidden="true"></div>
@@ -346,6 +353,42 @@
     </div>
   </div>
 </section>
+           <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-800">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Tools & Plattforms</h3>
+            <div class="overflow-hidden">
+                <div class="flex animate-scroll space-x-8">
+                    <div class="flex space-x-8 min-w-max">
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/tensorflow.svg" alt="TensorFlow" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">TensorFlow</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/mongodb.svg" alt="MongoDB" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">MongoDB</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/PowerFactory.svg" alt="PowerFactory" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">PowerFactory</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/slack.svg" alt="Slack" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Slack</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/notion.svg" alt="Notion" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Notion</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/Odoo.svg" alt="Odoo" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Odoo</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/wordpress.svg" alt="WordPress" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">WordPress</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/illustrator.svg" alt="Illustrator" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Illustrator</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/photoshop.svg" alt="Photoshop" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Photoshop</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/canva.svg" alt="Canva" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Canva</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/postman.svg" alt="Postman" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Postman</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/hubspot.svg" alt="HubSpot" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">HubSpot</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/metabase.svg" alt="Metabase" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Metabase</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/google.svg" alt="Google" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Google</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/github.svg" alt="GitHub" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">GitHub</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/microsoft-office-2013-logo.svg" alt="Office" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Office</span></div>
+                    </div>
+                    <div class="flex space-x-8 min-w-max">
+                         <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300"><svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/></svg></div><span class="text-sm text-gray-600 text-center font-medium">TensorFlow</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/mongodb.svg" alt="MongoDB" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">MongoDB</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/PowerFactory.svg" alt="PowerFactory" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">PowerFactory</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/slack.svg" alt="Slack" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Slack</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/notion.svg" alt="Notion" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Notion</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/Odoo.svg" alt="Odoo" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Odoo</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/wordpress.svg" alt="WordPress" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">WordPress</span></div>
+                        <div class="flex flex-col items-center group min-w-[100px]"><div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition duration-300 p-2"><img src="imgs/illustrator.svg" alt="Illustrator" class="w-full h-full object-contain"></div><span class="text-sm text-gray-600 text-center font-medium">Illustrator</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <section class="mb-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

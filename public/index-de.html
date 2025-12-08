@@ -135,42 +135,64 @@
     </div>
 </nav>
 
-<section class="relative h-screen flex items-center justify-center bg-cover bg-center"
+<!-- HERO SECTION (German) -->
+<section class="relative min-h-screen md:h-screen flex items-center justify-center bg-cover bg-center"
          style="background-image: url('imgs/website 2.png');">
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-indigo-900/70 to-gray-900/80"></div>
+  
+  <!-- Gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-indigo-900/70 to-gray-900/80"></div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+  <!-- Content container -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 z-10 w-full">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
 
-            <!-- Left Content -->
-            <div class="w-full md:w-1/2 text-center md:text-left">
-                <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-6">
-                    Spezialist für Energiesysteme & Netzintegration
-                </h1>
-                <p class="text-lg text-gray-200 mb-8">
-                   Ich überbrücke die Lücke zwischen <span class="font-semibold text-yellow-400">Netzsimulation (PowerFactory)</span> und <span class="font-semibold text-yellow-400">realer Netzintegration. Spezialisierung auf Spannungsstabilität, erneuerbare Integration und Automatisierung;</span> um das <span class="font-semibold text-rose-400">Zielnetz 2045</span> zu gestalten.
-                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="projects-de.html" class="py-3 px-8 rounded-full bg-yellow-500 text-gray-900 font-bold shadow-lg hover:bg-yellow-600 transition duration-300">Ingenieurportfolio ansehen</a>
-                    <a href="contact-de.html" class="py-3 px-8 rounded-full border-2 border-yellow-400 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-gray-900 transition duration-300">Gespräch vereinbaren</a>
-                </div>
-            </div>
-
-            <!-- Right Image -->
-            <div class="w-full md:w-1/2 flex justify-center">
-               <div class="relative w-64 h-64 sm:w-80 sm:h-80">
-            <img src="imgs/GOAT.jpg" alt="Clifford Ondieki" class="rounded-full w-full h-full object-cover shadow-2xl border-8 border-white/10" />
-            <!-- Floating Badge with Blink Animation -->
-            <div class="absolute -bottom-4 -right-4 bg-white text-indigo-900 px-4 py-2 rounded-lg shadow-xl font-bold text-sm flex items-center animate-blink">
-               <span class="text-yellow-500 mr-2">🏆</span> IEEE Best Paper 2025 Winner (Intelligent Transportation Track)
-            </div>
-          </div>
-            </div>
+      <!-- Left Content -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6 break-words">
+          Spezialist für Energiesysteme & Netzintegration
+        </h1>
+        <p class="text-base sm:text-lg text-gray-200 mb-8 break-words whitespace-normal">
+          Ich überbrücke die Lücke zwischen 
+          <span class="font-semibold text-yellow-400">Netzsimulation (PowerFactory)</span> 
+          und <span class="font-semibold text-yellow-400">realer Netzintegration</span>. 
+          Spezialisierung auf Spannungsstabilität, erneuerbare Integration und Automatisierung; 
+          um das <span class="font-semibold text-rose-400">Zielnetz 2045</span> zu gestalten.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="projects-de.html" 
+             class="py-3 px-8 rounded-full bg-yellow-500 text-gray-900 font-bold shadow-lg transition duration-300 transform hover:scale-105 text-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
+             Ingenieurportfolio ansehen
+          </a>
+          <a href="contact-de.html" 
+             class="py-3 px-8 rounded-full border-2 border-yellow-400 text-yellow-400 font-bold transition duration-300 transform hover:bg-yellow-50 hover:text-gray-900 hover:scale-105 text-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
+             Gespräch vereinbaren
+          </a>
         </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="w-full md:w-1/2 flex justify-center mt-12 md:mt-0">
+        <div class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80">
+          <img src="imgs/GOAT.jpg" alt="Clifford Ondieki" 
+               class="rounded-full w-full h-full object-cover shadow-2xl border-8 border-white/10" />
+          
+          <!-- Floating Badge -->
+          <div class="absolute -bottom-4 -right-4 bg-white text-indigo-900 px-4 py-2 rounded-lg shadow-xl font-bold text-xs sm:text-sm flex items-center animate-blink">
+            <span class="text-yellow-500 mr-2">🏆</span> IEEE Best Paper 2025 Winner (Intelligent Transportation Track)
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
-<main class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<!-- MAIN CONTENT -->
+<main class="py-4 lg:py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Weitere Inhalte hier -->
+  </div>
+</main>
+
 <!-- SERVICEBEREICHE -->
 <section class="mb-16">
   <div class="bg-white p-10 rounded-xl shadow-2xl border-l-8 border-indigo-800" role="region" aria-labelledby="section-engineering-intelligence">
