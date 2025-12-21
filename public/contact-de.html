@@ -25,11 +25,13 @@
             --highlight-gold: #F59E0B;
         }
 
+        /* Ensure content isn't hidden behind the fixed nav on small screens */
         body {
             font-family: 'Inter', sans-serif;
             color: var(--neutral-charcoal);
-            padding-top: 5rem;
+            padding-top: 4rem;
         }
+        @media (min-width: 768px) { body { padding-top: 5rem; } }
         
         .language-toggle.active {
             background-color: var(--primary-indigo) !important;

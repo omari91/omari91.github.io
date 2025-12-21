@@ -14,9 +14,8 @@
 
     <meta name="description" content="Zukunftssichere Berliner EV-Infrastruktur: Eine zweistufige Progression von deterministischer Planung zu Fuzzy-Robustheit">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="https://unpkg.com/lucide@latest" defer></script>
     
     <style>
         :root {
@@ -25,7 +24,9 @@
             --accent-fire: #880E4F;
             --highlight-gold: #F59E0B;
         }
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        /* Ensure content isn't hidden behind the fixed nav on small screens */
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; padding-top: 4rem; }
+        @media (min-width: 768px) { body { padding-top: 5rem; } }
         .chart-container { position: relative; height: 350px; width: 100%; max-width: 800px; margin: 0 auto; }
         .card { background: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 1.5rem; transition: transform 0.2s; }
         .card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }

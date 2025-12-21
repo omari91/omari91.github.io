@@ -20,17 +20,6 @@
     
     <meta name="description" content="Entdecken Sie Einblicke in Ingenieuremphatie, smarte Faulheit und die Verbindung von technischer Exzellenz mit menschlichem Sinn. Gedanken eines Hybridinnovators.">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
-    <script type="module" src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Make Lucide globally available -->
-    <script type="module">
-        import * as lucide from 'https://unpkg.com/lucide@latest';
-        window.lucide = lucide;
-    </script>
-    
     <!-- Custom Configuration -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -42,11 +31,13 @@
             --highlight-gold: #F59E0B;
         }
 
+        /* Ensure content isn't hidden behind the fixed nav on small screens */
         body {
             font-family: 'Inter', sans-serif;
             color: var(--neutral-charcoal);
-            padding-top: 5rem;
+            padding-top: 4rem;
         }
+        @media (min-width: 768px) { body { padding-top: 5rem; } }
         
         .language-toggle.active {
             background-color: var(--primary-indigo) !important;
