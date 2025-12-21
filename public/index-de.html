@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Energiesystemingenieur spezialisiert auf Netzintegration, PowerFactory-Simulation und KI-gestützte Optimierung. Verbindet elektrotechnische Präzision mit digitaler operativer Exzellenz für die deutsche Energiewende." />
     <meta name="keywords" content="Clifford Omari Ondieki, Energiesystemingenieur, Netzintegration, PowerFactory, VDE 4110, Python, IEEE, Erneuerbare Energien, Berlin, Engineering Management, Redispatch 3.0" />
     <title>Clifford Ondieki | Energiesystemingenieur & Netzarchitekt</title>
@@ -32,7 +33,9 @@
         /* CSS remains the same */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         :root { --primary-indigo: #303F9F; --neutral-charcoal: #374151; --accent-fire: #880E4F; --highlight-gold: #F59E0B; }
-        body { font-family: 'Inter', sans-serif; color: var(--neutral-charcoal); padding-top: 5rem; }
+        /* Ensure content isn't hidden behind the fixed nav on small screens */
+        body { font-family: 'Inter', sans-serif; color: var(--neutral-charcoal); padding-top: 4rem; }
+        @media (min-width: 768px) { body { padding-top: 5rem; } }
         .language-toggle.active { background-color: var(--primary-indigo) !important; color: white !important; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
         .animate-scroll { animation: scroll 30s linear infinite; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
