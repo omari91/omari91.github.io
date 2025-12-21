@@ -146,7 +146,115 @@
 <main class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Current Innovation Header -->
+        <section class="mb-20">
+            <div class="flex items-center mb-10">
+                <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                    <svg data-lucide="cloud-lightning" class="w-8 h-8 text-indigo-700"></svg>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900">Cloud-Native Grid Automation</h2>
+                    <p class="text-gray-600">Serverless pipelines and Digital Twins for Redispatch 3.0.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800 mb-12 transform transition hover:-translate-y-1 duration-300">
+                <div class="project-grid">
+                    <div class="content-column">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h2 class="text-2xl font-bold text-gray-900 mb-3">Serverless Grid Compliance Pipeline</h2>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-1 rounded border border-yellow-400">New 2025</span>
+                            </div>
+                            <p class="text-lg text-indigo-700 mb-6">Automating VDE-AR-N 4110 voltage stability checks using Cloud-Native architecture.</p>
+                            
+                            <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                                <h4 class="text-sm font-bold text-teal-900 mb-1">The Innovation</h4>
+                                <p class="text-gray-600 text-sm">Traditional grid studies are manual. This pipeline triggers physics-based simulations automatically via <strong>AWS S3 & Lambda</strong>, enabling "Cloud-Bursting" for massive scenario analysis without on-premise hardware.</p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full border">Python</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full border">AWS Lambda</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full border">Pandapower</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full border">DynamoDB</span>
+                            </div>
+                        </div>
+
+                        <a href="https://github.com/omari91/serverless-grid-compliance" target="_blank" class="inline-flex items-center text-white bg-gray-900 hover:bg-gray-700 px-6 py-3 rounded-full font-bold transition w-fit shadow-md">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View Architecture & Code
+                        </a>
+                    </div>
+
+                    <div class="image-column">
+                        <div class="bg-gray-900 rounded-lg shadow-2xl overflow-hidden border border-gray-700 h-full flex flex-col">
+                            <div class="bg-gray-800 px-4 py-2 flex items-center space-x-2 border-b border-gray-700">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-2 text-xs text-gray-400 font-mono">aws-lambda-logs</span>
+                            </div>
+                            <div class="p-4 font-mono text-xs sm:text-sm text-green-400 overflow-y-auto">
+                                <p class="opacity-50">$ aws lambda invoke --function vde4110-check</p>
+                                <p class="mt-2 text-white">> INIT: Loading Pandapower Engine...</p>
+                                <p class="text-white">> INGEST: Downloaded 'berlin_grid_v2.json' from S3</p>
+                                <p class="text-yellow-300">> PHYSICS: Running Newton-Raphson Power Flow...</p>
+                                <p class="text-white">> CHECK: VDE-AR-N 4110 Compliance</p>
+                                <p class="text-red-400 mt-1">[ALERT] Voltage Violation at Bus 42 (0.88 p.u.)</p>
+                                <p class="text-blue-300">> ACTION: Violation logged to DynamoDB</p>
+                                <p class="mt-2 animate-pulse">_</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-800 mb-12 transform transition hover:-translate-y-1 duration-300">
+                <div class="project-grid">
+                    <div class="image-column">
+                        <div class="bg-gray-900 rounded-lg shadow-2xl overflow-hidden border border-gray-700 h-full flex flex-col">
+                            <div class="bg-gray-800 px-4 py-2 flex items-center space-x-2 border-b border-gray-700">
+                                <span class="ml-2 text-xs text-gray-400 font-mono">cim_parser.xml</span>
+                            </div>
+                            <div class="p-4 font-mono text-xs sm:text-sm text-blue-300 overflow-y-auto">
+                                <p><span class="text-purple-400">&lt;cim:Terminal</span> <span class="text-orange-400">rdf:ID</span>=<span class="text-green-300">"Term_45A"</span>&gt;</p>
+                                <p class="pl-4"><span class="text-purple-400">&lt;cim:Terminal.ConductingEquipment</span></p>
+                                <p class="pl-8"><span class="text-orange-400">rdf:resource</span>=<span class="text-green-300">"#Trafo_Berlin_1"</span>/&gt;</p>
+                                <p class="pl-4"><span class="text-purple-400">&lt;cim:ACDCTerminal.connected</span>&gt;true&lt;/...&gt;</p>
+                                <p><span class="text-purple-400">&lt;/cim:Terminal&gt;</span></p>
+                                <p class="mt-2 text-gray-500">&lt;!-- Interoperability Layer --&gt;</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-column">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h2 class="text-2xl font-bold text-gray-900 mb-3">Hybrid Grid Control Engine (CIM)</h2>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded border border-blue-400">Research</span>
+                            </div>
+                            <p class="text-lg text-indigo-700 mb-6">A Python engine for parsing IEC 61970 (CIM) data models and executing Fuzzy Logic Volt-VAR control.</p>
+                            
+                            <div class="mb-6 border-l-4 border-teal-700 pl-4 bg-teal-50 p-4 rounded-md">
+                                <h4 class="text-sm font-bold text-teal-900 mb-1">Why This Matters</h4>
+                                <p class="text-gray-600 text-sm">German TSOs rely on the Common Information Model (CIM) for data exchange. This engine demonstrates the ability to parse complex XML grid definitions and apply custom control logic, solving the interoperability challenge.</p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full border">IEC 61970 (CIM)</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full border">NetworkX</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full border">Fuzzy Logic</span>
+                            </div>
+                        </div>
+                         <a href="https://github.com/omari91/cim-grid-control-engine" target="_blank" class="inline-flex items-center text-white bg-gray-900 hover:bg-gray-700 px-6 py-3 rounded-full font-bold transition w-fit shadow-md">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View Architecture & Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
        <!-- SECTION 1: CORE GRID INTEGRATION (Targeting TSOs & OEMs) -->
         <section class="mb-20">
             <div class="flex items-center mb-10">
@@ -461,7 +569,7 @@
                         <div class="bg-gray-50 p-5 rounded-xl shadow-inner border border-gray-200 flex-1">
                             <h5 class="text-lg font-bold text-gray-800 mb-2">Full-Stack Advantage</h5>
                             <p class="text-sm text-gray-600 mb-4">Most advisors excel in one domain. I bridge investment analysis with operational execution, providing the complete picture that investors need and startups require to succeed.</p>
-                            <a href="contact.html" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
+                            <a href="https://www.linkedin.com/in/clifford-ondieki-tpm/details/volunteering-experiences/" class="block w-full text-center py-2 px-4 rounded-full bg-indigo-800 text-white font-semibold hover:bg-indigo-700 transition duration-150">
                                 View Case Study
                             </a>
                         </div>
