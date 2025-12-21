@@ -469,17 +469,23 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Lucide Icons
         lucide.createIcons();
+
+        // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const iconOpen = document.getElementById('menu-icon-open');
         const iconClose = document.getElementById('menu-icon-close');
+
         mobileMenuButton.addEventListener('click', function() {
             const isHidden = mobileMenu.classList.toggle('hidden');
             this.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
             iconOpen.classList.toggle('hidden', !isHidden);
             iconClose.classList.toggle('hidden', isHidden);
         });
+
+        // Dynamic Copyright Year
         document.getElementById('current-year').textContent = new Date().getFullYear();
     });
 </script>
