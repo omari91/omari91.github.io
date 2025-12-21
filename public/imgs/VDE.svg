@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="1024"
+   height="235"
+   id="svg6125">
+  <defs
+     id="defs6127">
+    <clipPath
+       id="clipPath3925">
+      <path
+         d="m 446.268,55.688 93.175,0 0,19.5 -93.175,0 0,-19.5 z"
+         id="path3927" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata6130">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-533)"
+     id="layer1">
+    <g
+       transform="matrix(1.1558844,0,0,1.1558844,-3.494043,-106.32283)"
+       id="g6269">
+      <g
+         transform="matrix(10,0,0,-10,107.10096,752.292)"
+         id="g3917">
+        <path
+           d="m 0,0 9.343,0 9.855,19.178 -9.382,0 -5.164,-12.758 -4.967,12.758 -9.383,0 L 0,0 z"
+           id="path3919"
+           style="fill:#006ab2;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <g
+         transform="matrix(10,0,0,-10,455.861,752.292)"
+         id="g3929">
+        <path
+           d="m 0,0 c 9.106,0 15.059,2.77 15.059,9.989 0,6.312 -5.677,9.189 -14.823,9.189 l -12.457,0 L -12.221,0 0,0 z m -2.917,14.703 1.774,0 c 4.967,0 6.898,-1.065 6.898,-5.061 0,-3.622 -2.365,-5.167 -6.701,-5.167 l -1.971,0 0,10.228 z"
+           id="path3931"
+           style="fill:#006ab2;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+      </g>
+      <g
+         transform="matrix(10,0,0,-10,881.489,752.292)"
+         id="g3933">
+        <path
+           d="m 0,0 0,4.475 -14.389,0 0,3.01 11.708,0 0,4.475 -11.708,0 0,2.743 13.837,0 0,4.475 -23.14,0 L -23.692,0 0,0 z"
+           id="path3935"
+           style="fill:#006ab2;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+    </g>
+  </g>
+</svg>
